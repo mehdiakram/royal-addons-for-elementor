@@ -5,7 +5,7 @@ Tags: elementor, addons, widgets, elementor page builder, royal addons
 Requires at least: 6.4
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 26.11.10
+Stable tag: 26.11.11
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -66,6 +66,9 @@ Please check the `docs` folder inside the plugin directory for the complete user
 3. Custom Fonts Manager - Upload and manage local fonts.
 
 == Changelog ==
+
+= 26.11.11 =
+* Enhancement: GitHub Release & Cloud Distribution automation, asset delivery optimizations, and stability improvements.
 
 = 26.11.10 =
 * Feature: Royal Scroll To Top Widget Complete Modernization (RoyalScrollToTop):
