@@ -1,0 +1,1523 @@
+.royalimagehoverwrapper {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    list-style: none;
+    --royalimagehoverdesc-after-color: #fff;
+    --royalimagehoverdesc-before-color: #fff;
+    --royalimagehoverdesc-border-color: #fff;
+    --royalimagehoverfig-after-color: #fff;
+    --royalimagehoverfig-before-color: #fff;
+    --royalimagehovertitle-after-color: #fff;
+    --royalimagehovertitle-before-color: #fff;
+}
+.royalimagehoverwrapper .royalimagehoverfig {
+    position: relative;
+    overflow: hidden;
+    margin: 10px 1%;
+    width: 100%;
+    height: 100%;
+    background: #3085a3;
+    text-align: center;
+    cursor: pointer;
+}
+.royalimagehoverwrapper .royalimagehoverfig,
+.royalimagehoverwrapper .royalimagehoverfig:hover {
+    -webkit-transition-duration: 0.35s;
+    transition-duration: 0.35s;
+}
+.royalimagehoverwrapper .royalimagehoverfig .royalimagehoverimg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+}
+.royalimagehoverwrapper .royalimagehoverfig .royalimagehovercaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding: 2em;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.royalimagehoverwrapper .royalimagehoverfig .royalimagehovercaption a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+.royalimagehoverwrapper .royalimagehoverfig .royalimagehovercaption::after,
+.royalimagehoverwrapper .royalimagehoverfig .royalimagehovercaption::before {
+    pointer-events: none;
+}
+.royalimagehoverwrapper .royalimagehoverfig .royalimagehovertitle {
+    margin: 0;
+    color: #fff;
+    font-weight: 300;
+}
+.royalimagehoverwrapper .royalimagehoverfig .royalimagehovertitle span {
+    font-weight: 800;
+}
+.royalimagehoverwrapper .royalimagehoverfig .royalimagehoverdesc {
+    margin: 0;
+    font-weight: 300;
+    font-size: 16px;
+}
+.royalimagehoverfig.royaleffect-lily .royalimagehoverimg {
+    max-width: none;
+    width: calc(100% + 50px);
+    opacity: 0.7;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+    -webkit-transform: translate3d(-40px, 0, 0);
+    transform: translate3d(-40px, 0, 0);
+}
+.royalimagehoverfig.royaleffect-lily .royalimagehovercaption {
+    text-align: left;
+}
+.royalimagehoverfig.royaleffect-lily .royalimagehovercaption > div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2em;
+    width: 100%;
+    height: 50%;
+}
+.royalimagehoverfig.royaleffect-lily .royalimagehoverdesc,
+.royalimagehoverfig.royaleffect-lily .royalimagehovertitle {
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
+    -webkit-transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 40px, 0);
+}
+.royalimagehoverfig.royaleffect-lily .royalimagehoverdesc {
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
+    transition: opacity 0.2s, transform 0.35s;
+    transition: opacity 0.2s, transform 0.35s, -webkit-transform 0.35s;
+}
+.royalimagehoverfig.royaleffect-lily:hover .royalimagehoverimg,
+.royalimagehoverfig.royaleffect-sadie:hover .royalimagehovercaption::before {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.royalimagehoverfig.royaleffect-lily:hover .royalimagehoverdesc {
+    opacity: 1;
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+    -webkit-transition-duration: 0.35s;
+    transition-duration: 0.35s;
+}
+.royalimagehoverfig.royaleffect-lily:hover .royalimagehoverdesc,
+.royalimagehoverfig.royaleffect-lily:hover .royalimagehovertitle {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.royalimagehoverfig.royaleffect-sadie .royalimagehovercaption::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(72, 76, 97, 0.8);
+    content: "";
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50%, 0);
+    transform: translate3d(0, 50%, 0);
+}
+.royalimagehoverfig.royaleffect-sadie .royalimagehovertitle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    color: #484c61;
+    -webkit-transition: color 0.35s, -webkit-transform 0.35s;
+    transition: transform 0.35s, color 0.35s;
+    transition: transform 0.35s, color 0.35s, -webkit-transform 0.35s;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+}
+.royalimagehoverfig.royaleffect-roxy .royalimagehoverimg,
+.royalimagehoverfig.royaleffect-sadie .royalimagehovercaption::before,
+.royalimagehoverfig.royaleffect-sadie .royalimagehoverdesc {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+.royalimagehoverfig.royaleffect-sadie .royalimagehoverdesc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2em;
+    width: 100%;
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+}
+.royalimagehoverfig.royaleffect-sadie:hover .royalimagehovertitle {
+    color: #fff;
+    -webkit-transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+    transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+}
+.royalimagehoverfig.royaleffect-roxy:hover .royalimagehovercaption::before,
+.royalimagehoverfig.royaleffect-sadie:hover .royalimagehoverdesc {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.royalimagehoverfig.royaleffect-roxy {
+    background-color: #ff89e9;
+}
+.royalimagehoverfig.royaleffect-roxy .royalimagehoverimg {
+    max-width: none;
+    width: calc(100% + 60px);
+    -webkit-transform: translate3d(-50px, 0, 0);
+    transform: translate3d(-50px, 0, 0);
+}
+.royalimagehoverfig.royaleffect-roxy .royalimagehovercaption {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    -ms-flex-align: start;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding: 3em;
+    text-align: left;
+}
+.royalimagehoverfig.royaleffect-roxy .royalimagehovercaption::before {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    border: 1px solid var(--royalimagehoverfig-before-color);
+    content: "";
+    -webkit-transform: translate3d(-20px, 0, 0);
+    transform: translate3d(-20px, 0, 0);
+}
+.royalimagehoverfig.royaleffect-roxy .royalimagehovertitle {
+    padding: 30% 0 10px;
+}
+.royalimagehoverfig.royaleffect-bubba .royalimagehovercaption::before,
+.royalimagehoverfig.royaleffect-roxy .royalimagehovercaption::before,
+.royalimagehoverfig.royaleffect-roxy .royalimagehoverdesc {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+.royalimagehoverfig.royaleffect-roxy .royalimagehoverdesc {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+}
+.royalimagehoverfig.royaleffect-roxy:hover .royalimagehoverdesc,
+.royalimagehoverfig.royaleffect-roxy:hover .royalimagehoverimg {
+    opacity: 0.7;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.royalimagehoverfig.royaleffect-roxy:hover .royalimagehoverdesc {
+    opacity: 1;
+}
+.royalimagehoverfig.royaleffect-bubba {
+    background-color: #9e5406;
+}
+.royalimagehoverfig.royaleffect-bubba .royalimagehoverimg {
+    opacity: 0.7;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+.royalimagehoverfig.royaleffect-bubba:hover .royalimagehoverimg {
+    opacity: 0.4;
+}
+.royalimagehoverfig.royaleffect-bubba:hover .royalimagehovercaption::after,
+.royalimagehoverfig.royaleffect-bubba:hover .royalimagehovercaption::before {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+.royalimagehoverfig.royaleffect-bubba:hover .royalimagehoverdesc,
+.royalimagehoverfig.royaleffect-bubba:hover .royalimagehovertitle,
+.royalimagehoverfig.royaleffect-romeo:hover .royalimagehoverimg {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.royalimagehoverfig.royaleffect-bubba .royalimagehovercaption::before {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    border-top: 1px solid var(--royalimagehoverfig-before-color);
+    border-bottom: 1px solid var(--royalimagehoverfig-before-color);
+    content: "";
+    -webkit-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    transform: scale(0, 1);
+}
+.royalimagehoverfig.royaleffect-bubba .royalimagehovercaption::after {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    border-right: 1px solid var(--royalimagehoverfig-after-color);
+    border-left: 1px solid var(--royalimagehoverfig-after-color);
+    content: "";
+    -webkit-transform: scale(1, 0);
+    -ms-transform: scale(1, 0);
+    transform: scale(1, 0);
+}
+.royalimagehoverfig.royaleffect-bubba .royalimagehovertitle {
+    padding-top: 1em;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+}
+.royalimagehoverfig.royaleffect-bubba .royalimagehovercaption::after,
+.royalimagehoverfig.royaleffect-bubba .royalimagehoverdesc {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+.royalimagehoverfig.royaleffect-bubba .royalimagehoverdesc {
+    padding: 20px 2.5em;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+}
+.royalimagehoverfig.royaleffect-romeo {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+.royalimagehoverfig.royaleffect-romeo .royalimagehovercaption::after,
+.royalimagehoverfig.royaleffect-romeo .royalimagehovercaption::before,
+.royalimagehoverfig.royaleffect-romeo .royalimagehoverimg {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+    -webkit-transform: translate3d(0, 0, 300px);
+    transform: translate3d(0, 0, 300px);
+}
+.royalimagehoverfig.royaleffect-romeo:hover .royalimagehoverimg {
+    opacity: 0.6;
+}
+.royalimagehoverfig.royaleffect-romeo:hover .royalimagehovercaption::before {
+    opacity: 0.5;
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(45deg);
+    transform: translate3d(-50%, -50%, 0) rotate(45deg);
+}
+.royalimagehoverfig.royaleffect-romeo:hover .royalimagehovercaption::after {
+    opacity: 0.5;
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+    transform: translate3d(-50%, -50%, 0) rotate(-45deg);
+}
+.royalimagehoverfig.royaleffect-romeo:hover .royalimagehovertitle {
+    -webkit-transform: translate3d(0, -50%, 0) translate3d(0, -100%, 0);
+    transform: translate3d(0, -50%, 0) translate3d(0, -100%, 0);
+}
+.royalimagehoverfig.royaleffect-romeo:hover .royalimagehoverdesc {
+    -webkit-transform: translate3d(0, -50%, 0) translate3d(0, 100%, 0);
+    transform: translate3d(0, -50%, 0) translate3d(0, 100%, 0);
+}
+.royalimagehoverfig.royaleffect-romeo .royalimagehovercaption::after,
+.royalimagehoverfig.royaleffect-romeo .royalimagehovercaption::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 1px;
+    content: "";
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+}
+.royalimagehoverfig.royaleffect-romeo .royalimagehovercaption::before {
+    background: var(--royalimagehoverfig-before-color);
+}
+.royalimagehoverfig.royaleffect-romeo .royalimagehovercaption::after {
+    background: var(--royalimagehoverfig-after-color);
+}
+.royalimagehoverfig.royaleffect-romeo .royalimagehoverdesc,
+.royalimagehoverfig.royaleffect-romeo .royalimagehovertitle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
+    -webkit-transform: translate3d(0, -50%, 0) translate3d(0, -150%, 0);
+    transform: translate3d(0, -50%, 0) translate3d(0, -150%, 0);
+}
+.royalimagehoverfig.royaleffect-romeo .royalimagehoverdesc {
+    padding: 0.25em 2em;
+    -webkit-transform: translate3d(0, -50%, 0) translate3d(0, 150%, 0);
+    transform: translate3d(0, -50%, 0) translate3d(0, 150%, 0);
+}
+.royalimagehoverfig.royaleffect-layla {
+    background-color: #18a367;
+}
+.royalimagehoverfig.royaleffect-layla .royalimagehovercaption::before,
+.royalimagehoverfig.royaleffect-layla .royalimagehoverimg {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+.royalimagehoverfig.royaleffect-layla .royalimagehoverimg {
+    height: 100%;
+    -webkit-transform: scale(1.3) translateY(-30px);
+    -ms-transform: scale(1.3) translateY(-30px);
+    transform: scale(1.3) translateY(-30px);
+    -o-object-position: top;
+    object-position: top;
+}
+.royalimagehoverfig.royaleffect-layla .royalimagehovercaption {
+    padding: 3em;
+}
+.royalimagehoverfig.royaleffect-layla .royalimagehovercaption::before {
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    bottom: 50px;
+    left: 30px;
+    border-top: 1px solid var(--royalimagehoverfig-before-color);
+    border-bottom: 1px solid var(--royalimagehoverfig-before-color);
+    content: "";
+    opacity: 0;
+    -webkit-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+.royalimagehoverfig.royaleffect-layla .royalimagehovercaption::after {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    bottom: 30px;
+    left: 50px;
+    border-right: 1px solid var(--royalimagehoverfig-after-color);
+    border-left: 1px solid var(--royalimagehoverfig-after-color);
+    content: "";
+    -webkit-transform: scale(1, 0);
+    -ms-transform: scale(1, 0);
+    transform: scale(1, 0);
+    -webkit-transform-origin: 100% 0;
+    -ms-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+}
+.royalimagehoverfig.royaleffect-layla .royalimagehovertitle {
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+}
+.royalimagehoverfig.royaleffect-honey .royalimagehovertitle i,
+.royalimagehoverfig.royaleffect-layla .royalimagehovercaption::after,
+.royalimagehoverfig.royaleffect-layla .royalimagehoverdesc {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+.royalimagehoverfig.royaleffect-layla .royalimagehoverdesc {
+    text-transform: none;
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+}
+.royalimagehoverfig.royaleffect-layla:hover .royalimagehoverimg {
+    opacity: 0.7;
+    -webkit-transform: translateY(0) scale(1.3);
+    -ms-transform: translateY(0) scale(1.3);
+    transform: translateY(0) scale(1.3);
+}
+.royalimagehoverfig.royaleffect-layla:hover .royalimagehovercaption::after,
+.royalimagehoverfig.royaleffect-layla:hover .royalimagehovercaption::before {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+.royalimagehoverfig.royaleffect-layla:hover .royalimagehovercaption::after,
+.royalimagehoverfig.royaleffect-layla:hover .royalimagehoverimg {
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+}
+.royalimagehoverfig.royaleffect-layla:hover .royalimagehoverdesc,
+.royalimagehoverfig.royaleffect-layla:hover .royalimagehovertitle {
+    opacity: 1;
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.royalimagehoverfig.royaleffect-honey {
+    background-color: #4a3753;
+}
+.royalimagehoverfig.royaleffect-honey .royalimagehoverimg {
+    opacity: 0.9;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+.royalimagehoverfig.royaleffect-honey:hover .royalimagehoverimg {
+    opacity: 0.5;
+}
+.royalimagehoverfig.royaleffect-honey:hover .royalimagehovercaption::before,
+.royalimagehoverfig.royaleffect-honey:hover .royalimagehovertitle,
+.royalimagehoverfig.royaleffect-honey:hover .royalimagehovertitle i {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.royalimagehoverfig.royaleffect-honey .royalimagehovercaption::before,
+.royalimagehoverfig.royaleffect-honey .royalimagehovertitle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
+}
+.royalimagehoverfig.royaleffect-honey .royalimagehovercaption::before {
+    height: 10px;
+    background: var(--royalimagehoverfig-before-color);
+    content: "";
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+}
+.royalimagehoverfig.royaleffect-honey .royalimagehovertitle {
+    padding: 1em 1.5em;
+    text-align: left;
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+}
+.royalimagehoverfig.royaleffect-honey .royalimagehovertitle i {
+    font-style: normal;
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+}
+.royalimagehoverfig.royaleffect-oscar {
+    background-color: rgba(155, 74, 27, 0.5294117647);
+}
+.royalimagehoverfig.royaleffect-oscar .royalimagehoverimg {
+    opacity: 0.9;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+.royalimagehoverfig.royaleffect-oscar .royalimagehovercaption {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding: 3em;
+    background-color: rgba(58, 52, 42, 0.7);
+    -webkit-transition: background-color 0.35s;
+    transition: background-color 0.35s;
+}
+.royalimagehoverfig.royaleffect-oscar .royalimagehovercaption::before {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    border: 1px solid var(--royalimagehoverfig-before-color);
+    content: "";
+}
+.royalimagehoverfig.royaleffect-oscar .royalimagehovertitle {
+    margin-bottom: 10px;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+}
+.royalimagehoverfig.royaleffect-oscar .royalimagehovercaption::before,
+.royalimagehoverfig.royaleffect-oscar .royalimagehoverdesc {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+}
+.royalimagehoverfig.royaleffect-oscar:hover .royalimagehovertitle {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.royalimagehoverfig.royaleffect-oscar:hover .royalimagehovercaption {
+    background-color: transparent;
+}
+.royalimagehoverfig.royaleffect-oscar:hover .royalimagehovercaption::before,
+.royalimagehoverfig.royaleffect-oscar:hover .royalimagehoverdesc {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+.royalimagehoverfig.royaleffect-oscar:hover .royalimagehoverimg {
+    opacity: 0.4;
+}
+.royalimagehoverfig.royaleffect-marley .royalimagehovercaption {
+    text-align: right;
+}
+.royalimagehoverfig.royaleffect-marley .royalimagehovertitle {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    left: 30px;
+    padding: 10px 0;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+}
+.royalimagehoverfig.royaleffect-marley .royalimagehovertitle::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--royalimagehovertitle-after-color);
+    content: "";
+    opacity: 0;
+    -webkit-transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 40px, 0);
+}
+.royalimagehoverfig.royaleffect-marley .royalimagehoverdesc,
+.royalimagehoverfig.royaleffect-marley .royalimagehovertitle::after,
+.royalimagehoverfig.royaleffect-ruby .royalimagehoverimg {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+.royalimagehoverfig.royaleffect-marley .royalimagehoverdesc {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    padding: 10px 0;
+    line-height: 1.5;
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+}
+.royalimagehoverfig.royaleffect-marley:hover .royalimagehovertitle {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.royalimagehoverfig.royaleffect-marley:hover .royalimagehoverdesc,
+.royalimagehoverfig.royaleffect-marley:hover .royalimagehovertitle::after {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.royalimagehoverfig.royaleffect-ruby {
+    background-color: #17819c;
+}
+.royalimagehoverfig.royaleffect-ruby .royalimagehoverimg {
+    opacity: 0.7;
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+}
+.royalimagehoverfig.royaleffect-ruby:hover .royalimagehoverimg {
+    opacity: 0.5;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+.royalimagehoverfig.royaleffect-dexter:hover .royalimagehovercaption::after,
+.royalimagehoverfig.royaleffect-ruby:hover .royalimagehovertitle,
+.royalimagehoverfig.royaleffect-sarah:hover .royalimagehovertitle::after {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.royalimagehoverfig.royaleffect-milo:hover .royalimagehoverimg,
+.royalimagehoverfig.royaleffect-ruby:hover .royalimagehoverdesc {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+    transform: translate3d(0, 0, 0) scale(1);
+}
+.royalimagehoverfig.royaleffect-ruby .royalimagehovertitle {
+    margin-top: 20%;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+}
+.royalimagehoverfig.royaleffect-milo .royalimagehoverimg,
+.royalimagehoverfig.royaleffect-ruby .royalimagehoverdesc {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+.royalimagehoverfig.royaleffect-ruby .royalimagehoverdesc {
+    margin: 1em 0 0;
+    padding: 3em;
+    border: 1px solid var(--royalimagehoverdesc-border-color);
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0) scale(1.1);
+    transform: translate3d(0, 20px, 0) scale(1.1);
+}
+.royalimagehoverfig.royaleffect-milo {
+    background-color: #2e5d5a;
+}
+.royalimagehoverfig.royaleffect-milo .royalimagehoverimg {
+    max-width: none;
+    width: calc(100% + 60px);
+    opacity: 1;
+    -webkit-transform: translate3d(-30px, 0, 0) scale(1.12);
+    transform: translate3d(-30px, 0, 0) scale(1.12);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.royalimagehoverfig.royaleffect-milo:hover .royalimagehoverimg {
+    opacity: 0.5;
+}
+.royalimagehoverfig.royaleffect-milo:hover .royalimagehoverdesc {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.royalimagehoverfig.royaleffect-milo .royalimagehovertitle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 1em 1.2em;
+}
+.royalimagehoverfig.royaleffect-milo .royalimagehoverdesc {
+    margin: 0 auto auto 0;
+    padding: 0 10px 0 0;
+    width: 50%;
+    border-right: 1px solid var(--royalimagehoverdesc-border-color);
+    text-align: right;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+    -webkit-transform: translate3d(-40px, 0, 0);
+    transform: translate3d(-40px, 0, 0);
+}
+.royalimagehoverfig.royaleffect-dexter {
+    background-color: #258dc8;
+}
+.royalimagehoverfig.royaleffect-dexter .royalimagehoverimg {
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+.royalimagehoverfig.royaleffect-dexter:hover .royalimagehoverimg {
+    opacity: 0.4;
+}
+.royalimagehoverfig.royaleffect-dexter:hover .royalimagehoverdesc {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.royalimagehoverfig.royaleffect-dexter .royalimagehovercaption {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    padding: 3em;
+    text-align: left;
+}
+.royalimagehoverfig.royaleffect-dexter .royalimagehovercaption::after,
+.royalimagehoverfig.royaleffect-sarah .royalimagehovertitle::after {
+    position: absolute;
+    content: "";
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
+}
+.royalimagehoverfig.royaleffect-dexter .royalimagehovercaption::after {
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    height: calc(50% - 30px);
+    border: 7px solid var(--royalimagehoverfig-after-color);
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+}
+.royalimagehoverfig.royaleffect-dexter .royalimagehoverdesc,
+.royalimagehoverfig.royaleffect-sarah .royalimagehoverimg {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+.royalimagehoverfig.royaleffect-dexter .royalimagehoverdesc {
+    position: absolute;
+    right: 60px;
+    bottom: 60px;
+    left: 60px;
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100px, 0);
+    transform: translate3d(0, -100px, 0);
+}
+.royalimagehoverfig.royaleffect-sarah {
+    background-color: #42b078;
+}
+.royalimagehoverfig.royaleffect-sarah .royalimagehoverimg {
+    max-width: none;
+    width: calc(100% + 20px);
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.royalimagehoverfig.royaleffect-sarah:hover .royalimagehoverdesc,
+.royalimagehoverfig.royaleffect-sarah:hover .royalimagehoverimg {
+    opacity: 0.4;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.royalimagehoverfig.royaleffect-sarah:hover .royalimagehoverdesc {
+    opacity: 1;
+}
+.royalimagehoverfig.royaleffect-sarah .royalimagehovercaption {
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    -ms-flex-align: stretch;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+}
+.royalimagehoverfig.royaleffect-sarah .royalimagehovertitle {
+    position: relative;
+    overflow: hidden;
+    padding: 0.5em 0;
+}
+.royalimagehoverfig.royaleffect-sarah .royalimagehovertitle::after {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--royalimagehovertitle-after-color);
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+.royalimagehoverfig.royaleffect-chico .royalimagehoverimg,
+.royalimagehoverfig.royaleffect-sarah .royalimagehoverdesc {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+.royalimagehoverfig.royaleffect-sarah .royalimagehoverdesc {
+    padding: 1em 0;
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+.royalimagehoverfig.royaleffect-chico .royalimagehoverimg {
+    -webkit-transform: scale(1.12);
+    -ms-transform: scale(1.12);
+    transform: scale(1.12);
+}
+.royalimagehoverfig.royaleffect-chico:hover .royalimagehoverimg {
+    opacity: 0.5;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+.royalimagehoverfig.royaleffect-chico:hover .royalimagehovercaption::before,
+.royalimagehoverfig.royaleffect-chico:hover .royalimagehoverdesc {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+.royalimagehoverfig.royaleffect-chico .royalimagehovercaption {
+    padding: 3em;
+}
+.royalimagehoverfig.royaleffect-chico .royalimagehovercaption::before,
+.royalimagehoverfig.royaleffect-chico .royalimagehoverdesc {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+.royalimagehoverfig.royaleffect-chico .royalimagehovercaption::before {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    border: 1px solid var(--royalimagehoverfig-before-color);
+    content: "";
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.royalimagehoverfig.royaleffect-chico .royalimagehoverdesc {
+    margin: 0 auto;
+    max-width: 200px;
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+}
+.royalimagehoverfig.royaleffect-chico .royalimagehovertitle {
+    padding: 10% 0 5%;
+}
+.royalimagehoverfig.royaleffect-julia {
+    background-color: #2f3238;
+}
+.royalimagehoverfig.royaleffect-julia .royalimagehoverimg {
+    max-width: none;
+    height: 400px;
+    -webkit-transition: opacity 1s, -webkit-transform 1s;
+    transition: opacity 1s, transform 1s;
+    transition: opacity 1s, transform 1s, -webkit-transform 1s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.royalimagehoverfig.royaleffect-julia .royalimagehovercaption {
+    text-align: left;
+}
+.royalimagehoverfig.royaleffect-julia .royalimagehovertitle {
+    position: relative;
+    padding: 0.5em 0;
+}
+.royalimagehoverfig.royaleffect-julia .royalimagehoverdesc {
+    display: inline-block;
+    margin: 0 0 0.25em;
+    padding: 0.4em 1em;
+    background: rgba(255, 255, 255, 0.9);
+    color: #2f3238;
+    text-transform: none;
+    font-size: 75%;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+    -webkit-transform: translate3d(-360px, 0, 0);
+    transform: translate3d(-360px, 0, 0);
+}
+.royalimagehoverfig.royaleffect-julia .royalimagehoverdesc:first-child {
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+}
+.royalimagehoverfig.royaleffect-julia .royalimagehoverdesc:nth-of-type(2) {
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+.royalimagehoverfig.royaleffect-julia .royalimagehoverdesc:nth-of-type(3) {
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+}
+.royalimagehoverfig.royaleffect-julia:hover .royalimagehoverdesc {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.royalimagehoverfig.royaleffect-julia:hover .royalimagehoverdesc:first-child {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.royalimagehoverfig.royaleffect-julia:hover .royalimagehoverdesc:nth-of-type(2) {
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+}
+.royalimagehoverfig.royaleffect-julia:hover .royalimagehoverdesc:nth-of-type(3) {
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+.royalimagehoverfig.royaleffect-julia:hover .royalimagehoverimg {
+    opacity: 0.4;
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1);
+}
+.royalimagehoverfig.royaleffect-goliath {
+    background-color: #df4e4e;
+}
+.royalimagehoverfig.royaleffect-goliath .royalimagehoverimg,
+.royalimagehoverfig.royaleffect-goliath .royalimagehovertitle {
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
+}
+.royalimagehoverfig.royaleffect-goliath .royalimagehoverimg {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.royalimagehoverfig.royaleffect-goliath .royalimagehovertitle {
+    position: absolute;
+    bottom: 0;
+    left: auto;
+    padding: 1em;
+}
+.royalimagehoverfig.royaleffect-apollo .royalimagehoverimg,
+.royalimagehoverfig.royaleffect-goliath .royalimagehoverdesc {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+.royalimagehoverfig.royaleffect-goliath .royalimagehoverdesc {
+    position: absolute;
+    bottom: 0;
+    left: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    padding: 1em;
+    height: 80px;
+    text-transform: none;
+    font-size: 90%;
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 50px, 0);
+}
+.royalimagehoverfig.royaleffect-goliath:hover .royalimagehoverimg {
+    -webkit-transform: translate3d(0, -80px, 0);
+    transform: translate3d(0, -80px, 0);
+}
+.royalimagehoverfig.royaleffect-goliath:hover .royalimagehovertitle {
+    -webkit-transform: translate3d(0, -100px, 0);
+    transform: translate3d(0, -100px, 0);
+}
+.royalimagehoverfig.royaleffect-goliath:hover .royalimagehoverdesc {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.royalimagehoverfig.royaleffect-apollo {
+    background-color: #3498db;
+}
+.royalimagehoverfig.royaleffect-apollo .royalimagehoverimg {
+    opacity: 0.95;
+    -webkit-transform: scale3d(1.05, 1.05, 1);
+    transform: scale3d(1.05, 1.05, 1);
+}
+.royalimagehoverfig.royaleffect-apollo .royalimagehovercaption {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    -ms-flex-align: start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+.royalimagehoverfig.royaleffect-apollo .royalimagehovercaption::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    content: "";
+    -webkit-transition: -webkit-transform 0.6s;
+    transition: transform 0.6s;
+    transition: transform 0.6s, -webkit-transform 0.6s;
+    -webkit-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, -109%, 0);
+    transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, -109%, 0);
+}
+.royalimagehoverfig.royaleffect-apollo .royalimagehoverdesc {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 3em;
+    padding: 0 1em;
+    max-width: 150px;
+    border-right: 4px solid var(--royalimagehoverdesc-border-color);
+    text-align: right;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+.royalimagehoverfig.royaleffect-apollo .royalimagehovertitle {
+    text-align: left;
+}
+.royalimagehoverfig.royaleffect-apollo:hover .royalimagehoverimg {
+    opacity: 0.6;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+.royalimagehoverfig.royaleffect-apollo:hover .royalimagehovercaption::before {
+    -webkit-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 109%, 0);
+    transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 109%, 0);
+}
+.royalimagehoverfig.royaleffect-apollo:hover .royalimagehoverdesc {
+    opacity: 1;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+.royalimagehoverfig.royaleffect-moses {
+    background-color: #ec65b7;
+}
+.royalimagehoverfig.royaleffect-moses .royalimagehoverimg {
+    opacity: 0.85;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+.royalimagehoverfig.royaleffect-moses .royalimagehovercaption {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    -ms-flex-align: start;
+}
+.royalimagehoverfig.royaleffect-moses .royalimagehovertitle {
+    padding: 20px;
+    width: 50%;
+    height: 50%;
+    border: 2px solid #fff;
+    text-align: left;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
+    -webkit-transform: translate3d(10px, 10px, 0);
+    transform: translate3d(10px, 10px, 0);
+}
+.royalimagehoverfig.royaleffect-moses .royalimagehoverdesc {
+    float: right;
+    padding: 20px;
+    width: 50%;
+    height: 50%;
+    border: 2px solid var(--royalimagehoverdesc-border-color);
+    text-align: right;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+    -webkit-transform: translate3d(50%, -50%, 0);
+    transform: translate3d(50%, -50%, 0);
+}
+.royalimagehoverfig.royaleffect-moses:hover .royalimagehovertitle {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.royalimagehoverfig.royaleffect-moses:hover .royalimagehoverdesc {
+    opacity: 1;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+.royalimagehoverfig.royaleffect-moses:hover .royalimagehoverimg {
+    opacity: 0.6;
+}
+.royalimagehoverfig.royaleffect-jazz {
+    background-color: #f3cf3f;
+}
+.royalimagehoverfig.royaleffect-jazz .royalimagehovercaption::after,
+.royalimagehoverfig.royaleffect-jazz .royalimagehoverdesc,
+.royalimagehoverfig.royaleffect-jazz .royalimagehoverimg {
+    opacity: 0.9;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+.royalimagehoverfig.royaleffect-jazz .royalimagehovercaption::after,
+.royalimagehoverfig.royaleffect-jazz .royalimagehoverdesc {
+    opacity: 0;
+}
+.royalimagehoverfig.royaleffect-jazz .royalimagehovercaption::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid var(--royalimagehoverfig-after-color);
+    border-bottom: 1px solid var(--royalimagehoverfig-after-color);
+    content: "";
+    -webkit-transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 0, 1);
+    transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 0, 1);
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+.royalimagehoverfig.royaleffect-jazz .royalimagehoverdesc {
+    padding: 0.5em 2em;
+    text-transform: none;
+    font-size: 0.85em;
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.8, 0.8, 1);
+}
+.royalimagehoverfig.royaleffect-jazz .royalimagehovertitle {
+    opacity: 1;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.8, 0.8, 1);
+}
+.royalimagehoverfig.royaleffect-jazz:hover .royalimagehoverimg {
+    opacity: 0.7;
+    -webkit-transform: scale3d(1.05, 1.05, 1);
+    transform: scale3d(1.05, 1.05, 1);
+}
+.royalimagehoverfig.royaleffect-jazz:hover .royalimagehovercaption::after {
+    opacity: 1;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 1, 1);
+    transform: rotate3d(0, 0, 1, 45deg) scale3d(1, 1, 1);
+}
+.royalimagehoverfig.royaleffect-jazz:hover .royalimagehoverdesc,
+.royalimagehoverfig.royaleffect-jazz:hover .royalimagehovertitle,
+.royalimagehoverfig.royaleffect-ming:hover .royalimagehovercaption::before {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+.royalimagehoverfig.royaleffect-ming {
+    background-color: #030c17;
+}
+.royalimagehoverfig.royaleffect-ming .royalimagehoverimg {
+    opacity: 0.9;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+.royalimagehoverfig.royaleffect-ming .royalimagehovercaption::before {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    border: 2px solid var(--royalimagehoverfig-before-color);
+    -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.2);
+    content: "";
+    opacity: 0;
+    -webkit-transform: scale3d(1.4, 1.4, 1);
+    transform: scale3d(1.4, 1.4, 1);
+}
+.royalimagehoverfig.royaleffect-ming .royalimagehovertitle {
+    margin: 20% 0 10px;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
+}
+.royalimagehoverfig.royaleffect-lexi .royalimagehoverimg,
+.royalimagehoverfig.royaleffect-ming .royalimagehovercaption::before,
+.royalimagehoverfig.royaleffect-ming .royalimagehoverdesc {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+.royalimagehoverfig.royaleffect-ming .royalimagehoverdesc {
+    padding: 1em;
+    opacity: 0;
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+}
+.royalimagehoverfig.royaleffect-ming:hover .royalimagehovertitle {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+}
+.royalimagehoverfig.royaleffect-ming:hover .royalimagehovercaption {
+    background-color: transparent;
+}
+.royalimagehoverfig.royaleffect-lexi:hover .royalimagehovercaption::before,
+.royalimagehoverfig.royaleffect-ming:hover .royalimagehoverdesc {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+.royalimagehoverfig.royaleffect-ming:hover .royalimagehoverimg {
+    opacity: 0.4;
+}
+.royalimagehoverfig.royaleffect-lexi {
+    background-color: rgba(255, 255, 255, 0.2784313725);
+}
+.royalimagehoverfig.royaleffect-lexi .royalimagehoverimg {
+    margin: -10px 0 0 -10px;
+    max-width: none;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    opacity: 0.9;
+    -webkit-transform: translate3d(10px, 10px, 0);
+    transform: translate3d(10px, 10px, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.royalimagehoverfig.royaleffect-lexi .royalimagehovercaption {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    -ms-flex-align: start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+.royalimagehoverfig.royaleffect-lexi .royalimagehovercaption::before,
+.royalimagehoverfig.royaleffect-lexi .royalimagehoverdesc {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+.royalimagehoverfig.royaleffect-lexi .royalimagehovercaption::before {
+    right: -100px;
+    bottom: -100px;
+    width: 300px;
+    height: 300px;
+    border: 2px solid var(--royalimagehoverfig-before-color);
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 0 900px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 900px rgba(255, 255, 255, 0.2);
+    content: "";
+    -webkit-transform: scale3d(0.5, 0.5, 1);
+    transform: scale3d(0.5, 0.5, 1);
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+.royalimagehoverfig.royaleffect-lexi .royalimagehoverdesc {
+    right: 0;
+    bottom: 0;
+    padding: 0 1.5em 1.5em 0;
+    width: 140px;
+    text-align: right;
+    -webkit-transform: translate3d(20px, 20px, 0);
+    transform: translate3d(20px, 20px, 0);
+}
+.royalimagehoverfig.royaleffect-lexi:hover .royalimagehoverimg {
+    opacity: 0.6;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.royalimagehoverfig.royaleffect-lexi:hover .royalimagehoverdesc,
+.royalimagehoverfig.royaleffect-lexi:hover .royalimagehovertitle {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.royalimagehoverfig.royaleffect-lexi .royalimagehovertitle {
+    text-align: left;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
+    -webkit-transform: translate3d(5px, 5px, 0);
+    transform: translate3d(5px, 5px, 0);
+}
+.royalimagehoverfig.royaleffect-duke {
+    background-color: rgba(204, 96, 85, 0.5294117647);
+}
+.royalimagehoverfig.royaleffect-duke .royalimagehovercaption {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+.royalimagehoverfig.royaleffect-duke .royalimagehoverdesc,
+.royalimagehoverfig.royaleffect-duke .royalimagehoverimg {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+.royalimagehoverfig.royaleffect-duke .royalimagehoverdesc {
+    margin-top: auto;
+    padding: 30px;
+    width: 100%;
+    border: 2px solid var(--royalimagehoverdesc-border-color);
+    text-transform: none;
+    font-size: 90%;
+    opacity: 0;
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.8, 0.8, 1);
+    -webkit-transform-origin: 50% -100%;
+    -ms-transform-origin: 50% -100%;
+    transform-origin: 50% -100%;
+}
+.royalimagehoverfig.royaleffect-duke:hover .royalimagehoverimg {
+    opacity: 0.1;
+    -webkit-transform: scale3d(2, 2, 1);
+    transform: scale3d(2, 2, 1);
+}
+.royalimagehoverfig.royaleffect-duke:hover .royalimagehoverdesc,
+.royalimagehoverfig.royaleffect-duke:hover .royalimagehovertitle {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+.royalimagehoverfig.royaleffect-duke .royalimagehovertitle {
+    margin-bottom: auto;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.8, 0.8, 1);
+    -webkit-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
+@media (max-width: 767px) {
+    .royalimagehoverwrapper .royalimagehoverfig {
+        display: inline-block;
+        float: none;
+        margin: 10px auto;
+        width: 100%;
+    }
+    .royalimagehoverfig.royaleffect-lily .royalimagehovercaption > div,
+    .royalimagehoverwrapper .royalimagehoverfig .royalimagehovercaption {
+        padding: 1em;
+    }
+    .royalimagehoverwrapper .royalimagehoverfig .royalimagehoverdesc {
+        font-size: 12px;
+    }
+    .royalimagehoverfig.royaleffect-lexi .royalimagehovercaption::before {
+        right: -65px;
+        bottom: -65px;
+        width: 200px;
+        height: 200px;
+    }
+    .royalimagehoverfig.royaleffect-ming .royalimagehovercaption::before {
+        top: 20px;
+        right: 20px;
+        bottom: 20px;
+        left: 20px;
+    }
+    .royalimagehoverfig.royaleffect-moses .royalimagehoverdesc,
+    .royalimagehoverfig.royaleffect-moses .royalimagehovertitle {
+        padding: 10px;
+    }
+    .royalimagehoverfig.royaleffect-ruby .royalimagehoverdesc {
+        padding: 1.5em;
+    }
+    .royalimagehoverfig.royaleffect-dexter .royalimagehovertitle {
+        position: absolute;
+        top: 45px;
+    }
+    .royalimagehoverfig.royaleffect-dexter:hover .royalimagehoverdesc {
+        -webkit-transform: translate3d(0, 10px, 0);
+        transform: translate3d(0, 10px, 0);
+    }
+    .royalimagehoverfig.royaleffect-duke .royalimagehoverdesc {
+        padding: 20px;
+    }
+    .royalimagehoverfig.royaleffect-goliath:hover .royalimagehovertitle {
+        -webkit-transform: translate3d(0, -60px, 0);
+        transform: translate3d(0, -60px, 0);
+    }
+    .royalimagehoverfig.royaleffect-layla .royalimagehovercaption::after {
+        top: 20px;
+        right: 35px;
+        bottom: 20px;
+        left: 35px;
+    }
+    .royalimagehoverfig.royaleffect-layla .royalimagehovercaption::before {
+        top: 35px;
+        right: 20px;
+        bottom: 35px;
+        left: 20px;
+    }
+    .royalimagehoverfig.royaleffect-layla .royalimagehoverimg {
+        -webkit-transform: scale(1.5) translateY(-30px);
+        -ms-transform: scale(1.5) translateY(-30px);
+        transform: scale(1.5) translateY(-30px);
+    }
+    .royalimagehoverfig.royaleffect-layla:hover .royalimagehoverimg {
+        -webkit-transform: translateY(0) scale(1.5);
+        -ms-transform: translateY(0) scale(1.5);
+        transform: translateY(0) scale(1.5);
+    }
+    .royalimagehoverfig.royaleffect-oscar .royalimagehovercaption::before,
+    .royalimagehoverfig.royaleffect-roxy .royalimagehovercaption::before {
+        top: 20px;
+        right: 20px;
+        bottom: 20px;
+        left: 20px;
+    }
+    .royalimagehoverfig.royaleffect-roxy .royalimagehoverdesc,
+    .royalimagehoverfig.royaleffect-roxy .royalimagehovertitle {
+        margin-left: 10px;
+    }
+}
+@-webkit-keyframes pulse_animation {
+    0%,
+    to {
+        -webkit-box-shadow: 0 0 0 0 var(--pulse-color);
+        box-shadow: 0 0 0 0 var(--pulse-color);
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 20px var(--pulse-color);
+        box-shadow: 0 0 0 20px var(--pulse-color);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@keyframes pulse_animation {
+    0%,
+    to {
+        -webkit-box-shadow: 0 0 0 0 var(--pulse-color);
+        box-shadow: 0 0 0 0 var(--pulse-color);
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 20px var(--pulse-color);
+        box-shadow: 0 0 0 20px var(--pulse-color);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,197 @@
+/**
+ * Royal Ambient & Decorative Background Animation Styles
+ * Supports:
+ * 1. Corner Rotating Dashed Rings (All 4 Corners: Top-Left, Top-Right, Bottom-Left, Bottom-Right)
+ * 2. Soft Drifting Ambient Blobs (Our Eight Pillars Style)
+ * 3. Hero Dual Blurred Drifting Blobs
+ * 4. Animated Vignette Radial Dot Grid Matrix
+ * 5. Floating Rising Bubbles
+ */
+
+.royal-background-ambient-wrapper {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: var(--royal-ambient-zindex, 0);
+}
+
+/* Ensure container clips overflowing decorative elements */
+.royal-background-effects-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   1. Corner Rotating Dashed Rings (All 4 Corners)
+   ───────────────────────────────────────────────────────────── */
+.royal-ambient-ring {
+    position: absolute;
+    border-radius: 50%;
+    box-sizing: border-box;
+    pointer-events: none;
+    will-change: transform;
+}
+
+.royal-ambient-ring.anim-spin {
+    animation-name: royalAmbientSpin;
+    animation-duration: var(--spin-speed, 40s);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.royal-ambient-ring.anim-reverse {
+    animation-direction: reverse;
+}
+
+.royal-ambient-ring.anim-spin-pulse {
+    animation: royalAmbientSpinPulse var(--spin-speed, 40s) ease-in-out infinite;
+}
+
+.royal-ambient-ring.anim-spin-pulse.anim-reverse {
+    animation-direction: reverse;
+}
+
+@keyframes royalAmbientSpin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes royalAmbientSpinPulse {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.08);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   2. Soft Drifting Ambient Blobs / Glowing Spheres
+   ───────────────────────────────────────────────────────────── */
+.royal-ambient-blob {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    will-change: transform;
+}
+
+.royal-ambient-blob.anim-drift-1 {
+    animation: royalAmbientDrift 18s ease-in-out infinite alternate;
+}
+
+.royal-ambient-blob.anim-drift-2 {
+    animation: royalAmbientDrift2 20s ease-in-out infinite alternate;
+}
+
+@keyframes royalAmbientDrift {
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+    to {
+        transform: translate(var(--drift-x, 60px), var(--drift-y, 40px)) scale(var(--drift-scale, 1.15));
+    }
+}
+
+@keyframes royalAmbientDrift2 {
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+    to {
+        transform: translate(calc(var(--drift-x, 60px) * -1), calc(var(--drift-y, 40px) * -0.75)) scale(var(--drift-scale, 1.18));
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   3. Vignette Radial Dot Grid Matrix (ed-dots with motion)
+   ───────────────────────────────────────────────────────────── */
+.royal-ambient-dots {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: radial-gradient(var(--dot-color, rgba(11, 77, 38, 0.12)) var(--dot-size, 1.5px), transparent var(--dot-size, 1.5px));
+    background-size: var(--dot-gap, 26px) var(--dot-gap, 26px);
+    opacity: var(--dot-opacity, 1);
+}
+
+.royal-ambient-dots.has-vignette {
+    -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+    mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+}
+
+.royal-ambient-dots.anim-drift {
+    animation: royalAmbientDotsDrift 28s ease-in-out infinite alternate;
+}
+
+@keyframes royalAmbientDotsDrift {
+    0% {
+        background-position: 0px 0px;
+        opacity: var(--dot-opacity, 1);
+    }
+    50% {
+        background-position: 26px 13px;
+        opacity: calc(var(--dot-opacity, 1) * 0.8);
+    }
+    100% {
+        background-position: 52px 26px;
+        opacity: var(--dot-opacity, 1);
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   4. Floating Rising Bubbles (ed-bubble)
+   ───────────────────────────────────────────────────────────── */
+.royal-ambient-bubble {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    will-change: transform, opacity;
+    animation: royalAmbientRise var(--bubble-speed, 10s) ease-in-out infinite;
+}
+
+@keyframes royalAmbientRise {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.65;
+    }
+    50% {
+        transform: translateY(var(--bubble-dist, -26px));
+        opacity: 1;
+    }
+}
+
+/* Responsive: mobile disable */
+@media (max-width: 767.98px) {
+    .royal-background-ambient-wrapper.disable-on-mobile {
+        display: none !important;
+    }
+    .royal-ambient-ring {
+        transform: scale(0.7);
+    }
+    .royal-ambient-ring.tl {
+        transform-origin: top left;
+    }
+    .royal-ambient-ring.tr, .royal-ambient-ring.r1 {
+        transform-origin: top right;
+    }
+    .royal-ambient-ring.bl, .royal-ambient-ring.r2 {
+        transform-origin: bottom left;
+    }
+    .royal-ambient-ring.br {
+        transform-origin: bottom right;
+    }
+    .royal-ambient-blob {
+        transform: scale(0.7);
+    }
+}

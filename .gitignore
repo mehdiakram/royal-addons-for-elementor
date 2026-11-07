@@ -1,0 +1,17 @@
+# OS / System
+.DS_Store
+Thumbs.db
+*.log
+
+# Build & Dist
+/build_dir/
+/dist/
+*.zip
+
+# Sensitive / Temporary
+.env
+node_modules/
+vendor/
+
+# Internal Server API (Keep local only, do not track in public repo)
+server-api/

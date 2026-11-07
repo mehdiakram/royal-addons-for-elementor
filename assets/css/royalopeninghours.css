@@ -1,0 +1,34 @@
+.royal-openinghours-wrapper {
+	position: relative;
+}
+
+.elementor-widget-mt-openinghours .elementor-widget-container {
+	overflow: hidden;
+}
+
+.royal-openinghours-wrapper .royal-oh-row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.royal-openinghours-wrapper .royal-oh-day,
+.royal-openinghours-wrapper .royal-oh-time {
+	flex-grow: 1;
+	padding: 0 2px;
+}
+
+.royal-openinghours-wrapper .royal-oh-header {
+	text-align: center;
+}
+
+.royal-openinghours-wrapper .royal-oh-footer {
+	text-align: center;
+}
+
+.royal-openinghours-wrapper .royal-oh-header {
+	font-size: 30px;
+}
+
+.royal-openinghours-wrapper .royal-oh-footer {
+	font-size: 20px;
+}

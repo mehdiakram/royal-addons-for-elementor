@@ -1,0 +1,141 @@
+:root {
+    --container-max-width: 1140px; /* <--- Set your desired maximum container width here */
+    /* You might find this value in your theme's CSS or Elementor's site settings */
+}
+.royal_mega_menu_item {
+    position: inherit !important;
+}
+
+/* Common Menu Styles */
+.royal-menu-area {
+    width: fit-content;
+    display: flex; /* Horizontal Layout */
+}
+.royal-menu-area.enabled-vertical-menu { display: unset; }
+.royal-mega-menu {
+    display: flex; /* Horizontal primary menu */
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    flex-wrap: wrap;
+}
+.royal-mega-menu.vertical {
+    display: block;
+}
+
+.royal-mega-menu > .menu-item > .menu-link {
+    display: block;
+    position: relative;
+}
+
+.royal-mega-menu .sub-menu {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    position: absolute;
+    z-index: 99999;
+    background: #fff;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    display: block !important;
+    transform: scaleY(0);
+    opacity: 0;
+    transform-origin: top;
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+    pointer-events: none;
+}
+.royal-mega-menu .menu-item-has-children:hover > .sub-menu {
+    transform: scaleY(1);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Mega Menu Specific Styles */
+.royal-mega-menu .actual-width-mega-menu {
+    width: 100%;
+    overflow: hidden;
+    left: 50%!important;
+    right: auto;
+    transform: translateX(-50%)!important;
+    max-width: var(--container-max-width);
+}
+
+.royal-mega-menu .full-width-mega-menu {
+    width: 100%;
+    left: 0;
+    right: 0;
+    max-width:100%!important;
+}
+
+.royal-mega-menu .royal-megamenu-contents .elementor-element{
+	margin: 0 auto;
+    display: block;
+}
+
+
+.royal-mega-menu .royal-megamenu-contents .elementor-element ul{
+	opacity: 1!important;
+    visibility: visible!important;
+    position: unset!important;
+    margin: unset!important;
+}
+
+.royal-mega-menu .menu-text {
+    display: flex;
+}
+
+span.submenu-parent-icon.submenuicon-hide {
+    display: none;
+}
+
+.royal-mega-menu .menu-text .submenu-parent-icon {
+    padding-left: 5px;
+}
+
+.royal-mega-menu .submenu-parent-icon.royal-hide-submenu-icon {
+    display: none !important;
+}
+
+/* Mobile Menu Specific Styles */
+.royal-menu-area .mobile-menu-area {
+    display: none;
+}
+@media (max-width: 1024px) { /* Adjust breakpoint as needed */
+    .royal-menu-area .desktop-menu-area { display: none; }
+    .royal-menu-area.enabled-mobile-menu .mobile-menu-area { display: block; }
+
+    .royal-menu-area .mobile-menu-area.opened .overlay {
+        position: fixed; width: 100%; height: 100%; top: 0; left: 0;
+        background: rgba(0,0,0,0.5); z-index: 9999; visibility: visible;
+    }
+    .royal-menu-area .mobile-menu-area .royal-menu-mobile-sidebar {
+        position: fixed; top: 0; right: 0; width: 80%; max-width: 320px;
+        height: 100%; background: #fff; z-index: 99999; overflow-y: auto;
+        transform: translateX(100%); transition: transform 0.4s ease-out;
+    }
+    .royal-menu-area .mobile-menu-area.opened .royal-menu-mobile-sidebar {
+        transform: translateX(0%);
+    }
+    .royal-menu-area .mobile-menu-area .royal-menu-mobile-close {
+        position: absolute; top: 10px; left: 10px;
+        font-size: 24px; color: #333; cursor: pointer; z-index: 100;
+    }
+}
+
+/* Sticky Header Styles */
+header.sticky-header-on {
+    position: fixed; top: 0; left: 0; width: 100%; z-index: 9999;
+    transition: all 0.3s ease;
+}
+header.sticky-header {
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    /* Background color from widget control */
+}
+header.sticky-header-on.rt-mega-up-scroll-hide { /* Class name from original plugin */
+    transform: translateY(-100%);
+}
+header.sticky-header-on:not(.sticky-headers).rt-mega-up-scroll-hide { /* Class name from original plugin */
+    transform: translateY(0);
+}
+

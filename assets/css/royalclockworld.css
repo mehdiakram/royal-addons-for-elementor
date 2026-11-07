@@ -1,0 +1,611 @@
+/**World Clock*/
+  
+  .royal-world-clock__clock-wrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .royal-world-clock__clock-wrapper .royal-world-clock__time-wrapper,
+  .royal-world-clock__clock-wrapper .royal-world-clock__additonal-info {
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  
+  .royal-world-clock__clock-wrapper .royal-world-clock__time-wrapper,
+  .royal-world-clock__clock-wrapper .royal-world-clock__days-wrapper,
+  .royal-world-clock__clock-wrapper .royal-world-clock__date-wrapper,
+  .royal-world-clock__clock-wrapper .royal-world-clock__additonal-info {
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  
+  .royal-world-clock__clock-wrapper .royal-world-clock__clock-title {
+    padding: 3px 0px;
+  }
+  
+  .royal-world-clock__clock-wrapper,
+  .royal-world-clock__additonal-info {
+    gap: 10px;
+  }
+  
+  .royal-world-clock__info-row .royal-world-clock__additonal-info {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  
+  .royal-world-clock__info-column .royal-world-clock__additonal-info {
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  
+  .royal-world-clock__row .royal-world-clock__clock-wrapper {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  
+  .royal-world-clock__column .royal-world-clock__clock-wrapper {
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  
+  .royal-world-clock__separator {
+    -webkit-animation: tick 1s infinite;
+    animation: tick 1s infinite;
+    -webkit-transition: all 0s;
+    transition: all 0s;
+  }
+  
+  .elementor-element.elementor-widget-empty.elementor-widget-royal-world-clock {
+    background-color: unset !important;
+  }
+  
+  .royal-world-clock__meridiem {
+    position: relative;
+    font-size: 20px;
+  }
+  
+  .royal-world-clock__meridiem > svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /**Analog Skins*/
+  .royal-world-clock__skin-1 .royal-world-clock__circle,
+  .royal-world-clock__skin-5 .royal-world-clock__circle,
+  .royal-world-clock__skin-6 .royal-world-clock__circle,
+  .royal-world-clock__skin-7 .royal-world-clock__circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    box-shadow: -6px -6px 16px #fff, 6px 6px 16px #d1d1e6, inset 6px 6px 16px #d1d1e6, inset -6px -6px 16px #fff;
+    border-radius: 50%;
+    justify-self: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  
+  .royal-world-clock__skin-1 .royal-world-clock__clock-numbers,
+  .royal-world-clock__skin-5 .royal-world-clock__clock-numbers,
+  .royal-world-clock__skin-6 .royal-world-clock__clock-numbers,
+  .royal-world-clock__skin-7 .royal-world-clock__clock-numbers {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  
+  .royal-world-clock__skin-1 .royal-world-clock__clock-number,
+  .royal-world-clock__skin-5 .royal-world-clock__clock-number,
+  .royal-world-clock__skin-6 .royal-world-clock__clock-number,
+  .royal-world-clock__skin-7 .royal-world-clock__clock-number {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  
+  .royal-world-clock__skin-1 .royal-world-clock__rounder,
+  .royal-world-clock__skin-5 .royal-world-clock__rounder,
+  .royal-world-clock__skin-6 .royal-world-clock__rounder,
+  .royal-world-clock__skin-7 .royal-world-clock__rounder {
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #3b3bbf;
+    border-radius: 50%;
+    border: 2px solid #ececf3;
+    z-index: 10;
+  }
+  
+  .royal-world-clock__skin-1 .royal-world-clock__hand,
+  .royal-world-clock__skin-5 .royal-world-clock__hand,
+  .royal-world-clock__skin-6 .royal-world-clock__hand,
+  .royal-world-clock__skin-7 .royal-world-clock__hand {
+    position: absolute;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 3;
+  }
+  
+  .royal-world-clock__skin-1 .royal-world-clock__hand::before,
+  .royal-world-clock__skin-5 .royal-world-clock__hand::before,
+  .royal-world-clock__skin-6 .royal-world-clock__hand::before,
+  .royal-world-clock__skin-7 .royal-world-clock__hand::before {
+    content: "";
+    position: absolute;
+    height: 50%;
+  }
+  
+  .royal-world-clock__skin-1 .royal-world-clock__hours::before, 
+  .royal-world-clock__skin-1 .royal-world-clock__minutes::before,
+  .royal-world-clock__skin-5 .royal-world-clock__hours::before,
+  .royal-world-clock__skin-5 .royal-world-clock__minutes::before,
+  .royal-world-clock__skin-6 .royal-world-clock__hours::before,
+  .royal-world-clock__skin-6 .royal-world-clock__minutes::before,
+  .royal-world-clock__skin-7 .royal-world-clock__hours::before,
+  .royal-world-clock__skin-7 .royal-world-clock__minutes::before {
+    width: 0.25rem;
+  }
+  
+  .royal-world-clock__skin-1 .royal-world-clock__hours,
+  .royal-world-clock__skin-5 .royal-world-clock__hours,
+  .royal-world-clock__skin-6 .royal-world-clock__hours,
+  .royal-world-clock__skin-7 .royal-world-clock__hours {
+    width: 105px;
+    height: 105px;
+  }
+  
+  .royal-world-clock__skin-1 .royal-world-clock__minutes,
+  .royal-world-clock__skin-5 .royal-world-clock__minutes,
+  .royal-world-clock__skin-6 .royal-world-clock__minutes,
+  .royal-world-clock__skin-7 .royal-world-clock__minutes {
+    width: 136px;
+    height: 136px;
+  }
+  
+  .royal-world-clock__skin-1 .royal-world-clock__seconds,
+  .royal-world-clock__skin-5 .royal-world-clock__seconds,
+  .royal-world-clock__skin-6 .royal-world-clock__seconds,
+  .royal-world-clock__skin-7 .royal-world-clock__seconds {
+    width: 130px;
+    height: 130px;
+  }
+  
+  .royal-world-clock__skin-1 .royal-world-clock__seconds::before,
+  .royal-world-clock__skin-5 .royal-world-clock__seconds::before,
+  .royal-world-clock__skin-6 .royal-world-clock__seconds::before,
+  .royal-world-clock__skin-7 .royal-world-clock__seconds::before {
+    width: 0.125rem;
+    height: 62%;
+    z-index: 3;
+    background-color: #3b3bbf;
+  }
+  
+  .royal-world-clock__skin-1 .royal-world-clock__face {
+    position: absolute;
+    width: 1rem;
+    height: 1px;
+    background-color: #9b9bb0;
+  }
+  
+  .royal-world-clock__skin-1 .royal-world-clock__twelve, 
+  .royal-world-clock__skin-1 .royal-world-clock__six {
+    -webkit-transform: translateX(-50%) rotate(90deg);
+    -ms-transform: translateX(-50%) rotate(90deg);
+    transform: translateX(-50%) rotate(90deg);
+  }
+  
+  .royal-world-clock__skin-1 .royal-world-clock__twelve {
+    top: 1.25rem;
+    left: 50%;
+  }
+  
+  .royal-world-clock__skin-1 .royal-world-clock__three {
+    top: 50%;
+    right: 0.75rem;
+  }
+  
+  .royal-world-clock__skin-1 .royal-world-clock__six {
+    bottom: 1.25rem;
+    left: 50%;
+  }
+  
+  .royal-world-clock__skin-1 .royal-world-clock__nine {
+    left: 0.75rem;
+    top: 50%;
+  }
+  
+  .royal-world-clock__skin-5 .royal-world-clock__circle,
+  .royal-world-clock__skin-6 .royal-world-clock__circle,
+  .royal-world-clock__skin-7 .royal-world-clock__circle {
+    position: relative;
+  }
+  
+  .royal-world-clock__skin-5 .royal-world-clock__circle > svg,
+  .royal-world-clock__skin-6 .royal-world-clock__circle > svg,
+  .royal-world-clock__skin-7 .royal-world-clock__circle > svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+  
+  /** Hands Style*/
+  .royal-world-clock__hand-0 .royal-world-clock__hours::before, 
+  .royal-world-clock__hand-0 .royal-world-clock__minutes::before, 
+  .royal-world-clock__hand-0 .royal-world-clock__seconds::before {
+    border-radius: 0.75rem;
+    z-index: 1;
+  }
+  
+  .royal-world-clock__hand-0 .royal-world-clock__hours::before, 
+  .royal-world-clock__hand-0 .royal-world-clock__minutes::before {
+    background-color: #4f4f64;
+  }
+  
+  .royal-world-clock__hand-1 .royal-world-clock__hours, 
+  .royal-world-clock__hand-1 .royal-world-clock__minutes,
+  .royal-world-clock__hand-2 .royal-world-clock__hours,
+  .royal-world-clock__hand-2 .royal-world-clock__minutes,
+  .royal-world-clock__hand-3 .royal-world-clock__hours,
+  .royal-world-clock__hand-3 .royal-world-clock__minutes,
+  .royal-world-clock__hand-4 .royal-world-clock__hours,
+  .royal-world-clock__hand-4 .royal-world-clock__minutes,
+  .royal-world-clock__hand-5 .royal-world-clock__hours,
+  .royal-world-clock__hand-5 .royal-world-clock__minutes {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+  
+  .royal-world-clock__hand-1 .royal-world-clock__hours::before, 
+  .royal-world-clock__hand-1 .royal-world-clock__minutes::before,
+  .royal-world-clock__hand-2 .royal-world-clock__hours::before,
+  .royal-world-clock__hand-2 .royal-world-clock__minutes::before,
+  .royal-world-clock__hand-3 .royal-world-clock__hours::before,
+  .royal-world-clock__hand-3 .royal-world-clock__minutes::before,
+  .royal-world-clock__hand-4 .royal-world-clock__hours::before,
+  .royal-world-clock__hand-4 .royal-world-clock__minutes::before,
+  .royal-world-clock__hand-5 .royal-world-clock__hours::before,
+  .royal-world-clock__hand-5 .royal-world-clock__minutes::before {
+    width: 0.5rem;
+    background-color: #000;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    z-index: 1;
+  }
+  
+  .royal-world-clock__hand-1 .royal-world-clock__hours::before {
+    -webkit-mask-image: url("../world-clock/analog-clock-hours-hand-1.svg");
+    mask-image: url("../world-clock/analog-clock-hours-hand-1.svg");
+  }
+  
+  .royal-world-clock__hand-1 .royal-world-clock__minutes::before {
+    -webkit-mask-image: url("../world-clock/analog-clock-min-hand-1.svg");
+    mask-image: url("../world-clock/analog-clock-min-hand-1.svg");
+  }
+  
+  .royal-world-clock__hand-2 .royal-world-clock__hours::before {
+    -webkit-mask-image: url("../world-clock/analog-clock-hours-hand-2.svg");
+    mask-image: url("../world-clock/analog-clock-hours-hand-2.svg");
+  }
+  
+  .royal-world-clock__hand-2 .royal-world-clock__minutes::before {
+    -webkit-mask-image: url("../world-clock/analog-clock-min-hand-2.svg");
+    mask-image: url("../world-clock/analog-clock-min-hand-2.svg");
+  }
+  
+  .royal-world-clock__hand-3 .royal-world-clock__hours::before {
+    -webkit-mask-image: url("../world-clock/analog-clock-hours-hand-3.svg");
+    mask-image: url("../world-clock/analog-clock-hours-hand-3.svg");
+  }
+  
+  .royal-world-clock__hand-3 .royal-world-clock__minutes::before {
+    -webkit-mask-image: url("../world-clock/analog-clock-min-hand-3.svg");
+    mask-image: url("../world-clock/analog-clock-min-hand-3.svg");
+  }
+  
+  .royal-world-clock__hand-4 .royal-world-clock__hours::before {
+    -webkit-mask-image: url("../world-clock/analog-clock-hours-hand-4.svg");
+    mask-image: url("../world-clock/analog-clock-hours-hand-4.svg");
+  }
+  
+  .royal-world-clock__hand-4 .royal-world-clock__minutes::before {
+    -webkit-mask-image: url("../world-clock/analog-clock-min-hand-4.svg");
+    mask-image: url("../world-clock/analog-clock-min-hand-4.svg");
+  }
+  
+  .royal-world-clock__hand-5 .royal-world-clock__hours::before {
+    -webkit-mask-image: url("../world-clock/analog-clock-hours-hand-5.svg");
+    mask-image: url("../world-clock/analog-clock-hours-hand-5.svg");
+  }
+  
+  .royal-world-clock__hand-5 .royal-world-clock__minutes::before {
+    -webkit-mask-image: url("../world-clock/analog-clock-min-hand-5.svg");
+    mask-image: url("../world-clock/analog-clock-min-hand-5.svg");
+  }
+  
+  /**Digital Skins*/
+  .royal-world-clock__skin-2 .royal-world-clock__separator {
+    -webkit-animation: tick 1s infinite;
+    animation: tick 1s infinite;
+  }
+  
+  .royal-world-clock__skin-2 .royal-world-clock__time-wrapper {
+    position: relative;
+    border: 3px solid #4ab7f4;
+    border-radius: 2px;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 3px;
+    padding: 12px 38px;
+  }
+  
+  .royal-world-clock__skin-2 .royal-world-clock__hand,
+  .royal-world-clock__skin-2 .royal-world-clock__separator {
+    color: #4ab7f4;
+    font-size: 43px;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  
+  .royal-world-clock__skin-2 .royal-world-clock__meridiem {
+    position: relative;
+    font-size: 20px;
+  }
+  
+  .royal-world-clock__skin-2.royal-world-clock__unit-column .royal-world-clock__separator {
+    display: none;
+  }
+  
+  .royal-world-clock__skin-2 .royal-world-clock__hand,
+  .royal-world-clock__skin-2 .royal-world-clock__separator {
+    font-family: "DS-DIGI", Sans-serif;
+    font-weight: 800;
+  }
+  
+  .royal-world-clock__skin-3 .royal-world-clock__date-wrapper, 
+  .royal-world-clock__skin-3 .royal-world-clock__clock-wrapper, 
+  .royal-world-clock__skin-3 .royal-world-clock__days-wrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .royal-world-clock__skin-3 .royal-world-clock__clock-wrapper {
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  
+  .royal-world-clock__skin-3 .royal-world-clock__days-wrapper {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    margin-right: 10px;
+  }
+  
+  .royal-world-clock__skin-3 .royal-world-clock__days-wrapper .current-day {
+    color: red;
+  }
+  
+  .royal-world-clock__skin-3 .royal-world-clock__days-wrapper span {
+    font-size: 20px;
+  }
+  
+  .royal-world-clock__skin-3 .royal-world-clock__hand, 
+  .royal-world-clock__skin-3 .royal-world-clock__separator, 
+  .royal-world-clock__skin-3 .royal-world-clock__date-segment {
+    font-family: "DS-DIGI", Sans-serif;
+  }
+  
+  .royal-world-clock__skin-3 .royal-world-clock__time-wrapper {
+    text-align: center;
+    line-height: 1;
+  }
+  
+  .royal-world-clock__skin-3 .royal-world-clock__time-wrapper > *:not(.royal-world-clock__meridiem) {
+    font-size: 210px;
+  }
+  
+  .royal-world-clock__skin-3 .royal-world-clock__date-wrapper, 
+  .royal-world-clock__skin-3 .royal-world-clock__time-wrapper {
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+  
+  .royal-world-clock__skin-3 .royal-world-clock__date-wrapper, 
+  .royal-world-clock__skin-3 .royal-world-clock__time-wrapper, 
+  .royal-world-clock__skin-3 .royal-world-clock__days-wrapper {
+    position: relative;
+  }
+  
+  .royal-world-clock__skin-3 .royal-world-clock__sec-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0px;
+  }
+  
+  .royal-world-clock__skin-3 .royal-world-clock__seconds, 
+  .royal-world-clock__skin-3 .royal-world-clock__date-segment {
+    font-size: 36px;
+  }
+  
+  .royal-world-clock__skin-3 .royal-world-clock__symbol {
+    position: relative;
+    right: 3px;
+    top: 0px;
+    font-size: 15px;
+  }
+  
+  .royal-world-clock__skin-3 .royal-world-clock__meridiem {
+    position: absolute;
+    top: 40px;
+    right: 101%;
+  }
+  
+  .royal-world-clock__skin-3 .royal-world-clock__date-wrapper {
+    margin-left: 10px;
+    min-width: 50px;
+  }
+  
+  .royal-world-clock__skin-3 .royal-world-clock__additonal-info {
+    width: 100%;
+  }
+  
+  .royal-world-clock__skin-4 .royal-world-clock__clock-wrapper {
+    gap: 0;
+  }
+  
+  .royal-world-clock__skin-4 .royal-world-clock__time-wrapper {
+    width: 200px;
+    border-bottom: 2px solid currentColor;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 45px;
+  }
+  
+  .royal-world-clock__skin-4 .royal-world-clock__date-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    width: 200px;
+    font-size: 30px;
+  }
+  
+  .royal-world-clock__skin-4 .royal-world-clock__time-wrapper, 
+  .royal-world-clock__skin-4 .royal-world-clock__date-wrapper {
+    font-family: "DS-DIGI";
+    font-weight: bold;
+  }
+  
+  .royal-world-clock__skin-4 .royal-world-clock__date-segment {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  
+  .royal-world-clock__skin-4 .royal-world-clock__date-segment:nth-child(2) {
+    border-left: 2px solid currentColor;
+  }
+  
+  .royal-world-clock__skin-4 .royal-world-clock__date-segment:nth-child(3) {
+    border-left: 2px solid currentColor;
+  }
+  
+  .royal-world-clock__skin-4 .royal-world-clock__hand {
+    text-align: center;
+  }
+  
+  .royal-world-clock__circle .royal-world-clock__meridiem {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-size: 12px;
+    padding: 0 5px;
+    color: #000;
+    z-index: 1;
+  }
+  
+  .royal-world-clock__skin-7 .royal-world-clock__circle .royal-world-clock__meridiem {
+    top: 65%;
+  }
+  
+  @-webkit-keyframes tick {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes tick {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

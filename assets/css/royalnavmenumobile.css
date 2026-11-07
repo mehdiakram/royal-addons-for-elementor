@@ -1,0 +1,666 @@
+/* Royal Mobile Menu Start--------------------------------------- */
+.royalmobilemenu {
+    margin: 0;
+    padding: 0;
+  }
+  .royalmobilemenu li {
+    display: block;
+  }
+  .royalmobilemenu li a {
+    position: relative;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #2e2e2e;
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid #eee;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+  
+  .royalmobilemenu li:hover > a, 
+  .royalmobilemenu li.selected > a {
+    background-color: #ecf0f1;
+    color: #495d62;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  .royalmobilemenu li ul {
+    display: none;
+    padding: 0;
+  }
+  .royalmobilemenu li ul.open {
+    display: block;
+  }
+  .royalmobilemenu li ul li a {
+    color: #495d62;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .royalmobilemenu li ul li:hover > a, 
+  .royalmobilemenu li ul li.selected > a {
+    background-color: #e6ebed;
+  }
+  
+  .royalmobilemenu li ul li.selected.selected--last > a {
+    background-color: #94aab0;
+    color: #fff;
+  }
+  .royalmobilemenu li ul li.selected.selected--last > a:before {
+    background-color: #fff;
+  }
+  
+  .royalmobilenavmenu .menu-item-has-children>a:before {
+    content: '\f107';
+    font-family: "royalicon";
+    font-size: 16px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px;
+    border-radius: 50%;
+    display: inline-block;
+    font-weight: 900;
+  }
+  
+  .royalmobilenavmenu .menu-item-has-children.selected>a:before {
+    content: "\f106"; 
+  }
+  
+  .royalmobilemenushow {
+    display: block;
+    cursor: pointer;
+  }
+  
+  .royalmobilemenucontainer .top {
+    padding: 10px 20px;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;  
+  }
+  
+  
+  .royalmobilemenucontainer .close,
+  .royalmobilemenucontainer .close .hamburgerclose {
+    cursor: pointer;
+    width: var(--closesize);
+    height: var(--closesize);
+  }
+
+.royalmobilemenucontainer{
+  transition: transform .3s ease-out .4s;
+  transform: translateX(-100%);
+  width: 100%;
+  max-width: 100%;
+  left: 0;
+  position: fixed;
+  background: #00000030;
+  top: 0;
+  z-index: 999999;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.cursor-mode-plugin .royalmobilemenucontainer {
+  cursor: url(../images/close.png), auto;
+}
+
+.admin-bar .royalmobilemenucontainer{
+  top: 32px;
+}
+
+.royalmobilemenucontainer .royalmobilemenuwarper{
+    width: 350px;
+    height: 100%;
+    position: fixed;
+    cursor: default;
+  }
+
+.elementor-widget-royalnavmenumobile.displayblock .royalmobilemenucontainer {
+    transform: translateX(0)!important;
+  }
+
+  
+/* Hamburger */
+.hamburgericon{
+  width: var(--size);
+  height: var(--size);
+}
+
+
+/* Hamburger Iocn */
+.hamburgerstyle1icon i{
+  font-size: 32px;
+  color: var(--hamburgercolor);
+}
+
+.hamburgerstyle1close i{
+  font-size: 32px;
+  color: var(--hamburgerclosecolor);
+}
+
+/*Hamburger SVG Style 1*/
+.elementor-widget-royalnavmenumobile .hamburgersvg1open,
+.elementor-widget-royalnavmenumobile .hamburgersvg1close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg1open svg,
+.elementor-widget-royalnavmenumobile .hamburgersvg1close svg {
+  position: absolute;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg1open svg.burger,
+.elementor-widget-royalnavmenumobile .hamburgersvg1close svg.burger {
+  height: var(--size);
+  width: var(--size);
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg1open svg.x,
+.elementor-widget-royalnavmenumobile .hamburgersvg1close svg.x {
+  height: var(--closesize);
+  width: var(--closesize);
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg1open svg.x,
+.elementor-widget-royalnavmenumobile .hamburgersvg1close svg.x{
+  transform: scale(0);
+  transition: transform 400ms;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg1open .line,
+.elementor-widget-royalnavmenumobile .hamburgersvg1close .line {
+  fill: none;
+  stroke-width: min(5px, max(15px, calc(var(--size) / 20)));
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform-origin: 50%;
+  transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg1open .burger .line,
+.elementor-widget-royalnavmenumobile .hamburgersvg1close .burger .line {
+  stroke: var(--hamburgercolor);
+}
+
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg1open .line,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg1close .line{
+  transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, transform 500ms;
+  stroke: var(--hamburgerclosecolor);
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg1open svg.x,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg1close svg.x{
+  transform: scale(1);
+  transition: transform 400ms 350ms;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg1open .line1,
+.elementor-widget-royalnavmenumobile .hamburgersvg1close .line1{
+  stroke-dasharray: 21 185.62753295898438;
+  transition-delay: 0;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg1open .line2,
+.elementor-widget-royalnavmenumobile .hamburgersvg1close .line2{
+  stroke-dasharray: 21 178.6514129638672;
+  transition-delay: 30ms;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg1open .line3,
+.elementor-widget-royalnavmenumobile .hamburgersvg1close .line3{
+  stroke-dasharray: 21 197.92425537109375;
+  transition-delay: 60ms;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg1open .line4,
+.elementor-widget-royalnavmenumobile .hamburgersvg1close .line4{
+  stroke-dasharray: 21 190.6597137451172;
+  transition-delay: 90ms;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg1open .line5,
+.elementor-widget-royalnavmenumobile .hamburgersvg1close .line5{
+  stroke-dasharray: 21 208.52874755859375;
+  transition-delay: 120ms;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg1open .line6,
+.elementor-widget-royalnavmenumobile .hamburgersvg1close .line6{
+  stroke-dasharray: 21 186.59703063964844;
+  transition-delay: 150ms;
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg1open .line1,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg1close .line1{
+  stroke-dasharray: 5 185.62753295898438;
+  stroke-dashoffset: -151px;
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg1open .line2,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg1close .line2{
+  stroke-dasharray: 5 178.6514129638672;
+  stroke-dashoffset: -147px;
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg1open .line3,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg1close .line3{
+  stroke-dasharray: 5 197.92425537109375;
+  stroke-dashoffset: -186px;
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg1open .line4,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg1close .line4{
+  stroke-dasharray: 5 190.6597137451172;
+  stroke-dashoffset: -169px;
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg1open .line5,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg1close .line5{
+  stroke-dasharray: 5 208.52874755859375;
+  stroke-dashoffset: -149px;
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg1open .line6,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg1close .line6{
+  stroke-dasharray: 5 186.59703063964844;
+  stroke-dashoffset: -186px;
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg1open .x,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg1close .x{
+  transition: transform 400ms 250ms;
+}
+
+
+
+/*Hamburger SVG Style2*/
+.hamburgersvg2open svg{
+  width: var(--size);
+  height: var(--size);
+  stroke: var(--hamburgercolor);
+}
+
+.hamburgersvg2close svg{
+  width: var(--closesize);
+  height: var(--closesize);
+  stroke: var(--hamburgerclosecolor);
+}
+
+.hamburgersvg2open,
+.hamburgersvg2close {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburgersvg2open .line,
+.hamburgersvg2close .line {
+    fill: none;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hamburgersvg2open .line1,
+.hamburgersvg2close .line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+.hamburgersvg2open .line2,
+.hamburgersvg2close .line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+}
+.hamburgersvg2open .line3,
+.hamburgersvg2close .line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg2open .line1,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg2close .line1{
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg2open .line2,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg2close .line2{
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg2open .line3,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg2close .line3{
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+
+
+/* Hamburger SVG Style3 */
+.elementor-widget-royalnavmenumobile .hamburgersvg3open,
+.elementor-widget-royalnavmenumobile .hamburgersvg3close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg3open svg,
+.elementor-widget-royalnavmenumobile .hamburgersvg3close svg {
+  position: absolute;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg3open svg.burger,
+.elementor-widget-royalnavmenumobile .hamburgersvg3close svg.burger {
+  height: var(--size);
+  width: var(--size);
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg3open svg.x,
+.elementor-widget-royalnavmenumobile .hamburgersvg3close svg.x {
+  height: var(--closesize);
+  width: var(--closesize);
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg3open svg.x,
+.elementor-widget-royalnavmenumobile .hamburgersvg3close svg.x{
+  transform: scale(0);
+  transition: transform 400ms;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg3open .line,
+.elementor-widget-royalnavmenumobile .hamburgersvg3close .line {
+  fill: none;
+  stroke-width: min(5px, max(15px, calc(var(--size) / 20)));
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform-origin: 50%;
+  transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg3open .burger .line,
+.elementor-widget-royalnavmenumobile .hamburgersvg3close .burger .line {
+  stroke: var(--hamburgercolor);
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg3open .line,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg3close .line {
+  transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, transform 500ms;
+  stroke: var(--hamburgerclosecolor);
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg3open svg.x,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg3close svg.x {
+  transform: scale(1);
+  transition: transform 400ms 350ms;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg3open .line,
+.elementor-widget-royalnavmenumobile .hamburgersvg3close .line {
+  transition: stroke-dasharray 400ms 100ms, stroke-dashoffset 400ms 100ms, transform 400ms 100ms;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg3open .line1,
+.elementor-widget-royalnavmenumobile .hamburgersvg3close .line1 {
+  stroke-dasharray: 21 102;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg3open .line2,
+.elementor-widget-royalnavmenumobile .hamburgersvg3close .line2 {
+  stroke-dasharray: 21 92;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg3open .line3,
+.elementor-widget-royalnavmenumobile .hamburgersvg3close .line3 {
+  stroke-dasharray: 21 97;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg3open .line4,
+.elementor-widget-royalnavmenumobile .hamburgersvg3close .line4 {
+  stroke-dasharray: 21 97;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg3open .line5,
+.elementor-widget-royalnavmenumobile .hamburgersvg3close .line5 {
+  stroke-dasharray: 21 92;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg3open .line6,
+.elementor-widget-royalnavmenumobile .hamburgersvg3close .line6 {
+  stroke-dasharray: 21 102;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg3open .x,
+.elementor-widget-royalnavmenumobile .hamburgersvg3close .x {
+  transition: transform 400ms 50ms;
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg3open .line {
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms, transform 400ms;
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg3open .line1,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg3close .line1 {
+  stroke-dasharray: 2 102;
+  stroke-dashoffset: -102px;
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg3open .line2,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg3close .line2 {
+  stroke-dasharray: 2 92;
+  stroke-dashoffset: -92px;
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg3open .line3,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg3close .line3 {
+  stroke-dasharray: 2 97;
+  stroke-dashoffset: -97px;
+  transition-delay: 20ms;
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg3open .line4,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg3close .line4 {
+  stroke-dasharray: 2 97;
+  stroke-dashoffset: -97px;
+  transition-delay: 20ms;
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg3open .line5,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg3close .line5 {
+  stroke-dasharray: 2 92;
+  stroke-dashoffset: -90px;
+  transition-delay: 40ms;
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg3open .line6,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg3close .line6 {
+  stroke-dasharray: 2 102;
+  stroke-dashoffset: -100px;
+  transition-delay: 40ms;
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg3open svg.x,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg3close svg.x {
+  transition: transform 400ms 50ms;
+}
+
+
+/* Hamburger SVG Style4 */
+.elementor-widget-royalnavmenumobile .hamburgersvg4open svg,
+.elementor-widget-royalnavmenumobile .hamburgersvg4close svg{
+  position: absolute;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg4open svg.burger,
+.elementor-widget-royalnavmenumobile .hamburgersvg4open svg.x{
+  height: var(--size);
+  width: var(--size);
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg4close svg.burger,
+.elementor-widget-royalnavmenumobile .hamburgersvg4close svg.x {
+  height: var(--closesize);
+  width: var(--closesize);
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg4open svg.burger .line,
+.elementor-widget-royalnavmenumobile .hamburgersvg4close svg.burger .line {
+  stroke: var(--hamburgercolor);
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg4open svg.x,
+.elementor-widget-royalnavmenumobile .hamburgersvg4close svg.x {
+  transform: scale(0);
+  transition: transform 400ms;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg4open .line,
+.elementor-widget-royalnavmenumobile .hamburgersvg4close .line {
+  fill: none;
+  stroke-width: min(5px, max(15px, calc(var(--size) / 20)));
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform-origin: 50%;
+  transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg4open .line2,
+.elementor-widget-royalnavmenumobile .hamburgersvg4close .line2 {
+  stroke-dasharray: 40 200;
+  stroke-dashoffset: 0px;
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg4open .line3,
+.elementor-widget-royalnavmenumobile .hamburgersvg4close .line3 {
+  stroke-dasharray: 40 179;
+  stroke-dashoffset: 0px;
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg4open svg.x .line,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg4close svg.x .line {
+  transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, transform 500ms;
+  stroke: var(--hamburgerclosecolor);
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg4open .line1,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg4close .line1 {
+  transform: scale(0, 1);
+  transition: transform 500ms 100ms;
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg4open .line2,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg4close .line2 {
+  stroke-dasharray: 0px 200;
+  stroke-dashoffset: -164.5px;
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg4open .line3,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg4close .line3 {
+  stroke-dasharray: 0px 179;
+  stroke-dashoffset: -142.8px;
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg4open svg.x,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg4close svg.x {
+  transform: scale(1);
+  transition: transform 400ms 350ms;
+}
+
+
+/* Hamburger SVG Style5 */
+.elementor-widget-royalnavmenumobile .hamburgersvg5open svg{
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: var(--size);
+  height: var(--size);
+  stroke-width: clamp(6.5px, 15px, calc(var(--size) / 30));
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg5close svg {
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  height: var(--closesize);
+  width: var(--closesize);
+  stroke-width: clamp(6.5px, 15px, calc(var(--size) / 30));
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg5open svg{
+  stroke: var(--hamburgercolor);
+}
+
+.elementor-widget-royalnavmenumobile .hamburgersvg5close svg {
+  stroke: var(--hamburgerclosecolor);
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg5open svg,
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg5close svg {
+  transform: rotate(90deg);
+}
+.elementor-widget-royalnavmenumobile .hamburgersvg5open path,
+.elementor-widget-royalnavmenumobile .hamburgersvg5close path {
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dasharray 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.elementor-widget-royalnavmenumobile .hamburgersvg5open path:nth-child(1),
+.elementor-widget-royalnavmenumobile .hamburgersvg5close path:nth-child(1) {
+  transform-origin: 36% 40%;
+}
+.elementor-widget-royalnavmenumobile .hamburgersvg5open path:nth-child(2),
+.elementor-widget-royalnavmenumobile .hamburgersvg5close path:nth-child(2) {
+  stroke-dasharray: 29 299;
+}
+.elementor-widget-royalnavmenumobile .hamburgersvg5open path:nth-child(3),
+.elementor-widget-royalnavmenumobile .hamburgersvg5close path:nth-child(3) {
+  transform-origin: 35% 63%;
+}
+.elementor-widget-royalnavmenumobile .hamburgersvg5open path:nth-child(4),
+.elementor-widget-royalnavmenumobile .hamburgersvg5close path:nth-child(4) {
+  stroke-dasharray: 29 299;
+}
+.elementor-widget-royalnavmenumobile .hamburgersvg5open path:nth-child(5),
+.elementor-widget-royalnavmenumobile .hamburgersvg5close path:nth-child(5) {
+  transform-origin: 61% 52%;
+}
+.elementor-widget-royalnavmenumobile .hamburgersvg5open path:nth-child(6),
+.elementor-widget-royalnavmenumobile .hamburgersvg5close path:nth-child(6) {
+  transform-origin: 62% 52%;
+}
+
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg5open path:nth-child(1),
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg5close path:nth-child(1) {
+  transform: translateX(9px) translateY(1px) rotate(45deg);
+}
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg5open path:nth-child(2),
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg5close path:nth-child(2) {
+  stroke-dasharray: 225 299;
+  stroke-dashoffset: -72px;
+}
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg5open path:nth-child(3),
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg5close path:nth-child(3) {
+  transform: translateX(9px) translateY(1px) rotate(-45deg);
+}
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg5open path:nth-child(4),
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg5close path:nth-child(4) {
+  stroke-dasharray: 225 299;
+  stroke-dashoffset: -72px;
+}
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg5open path:nth-child(5),
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg5close path:nth-child(5) {
+  transform: translateX(9px) translateY(1px) rotate(-45deg);
+}
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg5open path:nth-child(6),
+.elementor-widget-royalnavmenumobile.displayblock .hamburgersvg5close path:nth-child(6) {
+  transform: translateX(9px) translateY(1px) rotate(45deg);
+}

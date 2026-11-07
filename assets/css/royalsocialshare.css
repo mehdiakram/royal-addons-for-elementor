@@ -1,0 +1,55 @@
+
+.royalsocialshare .royal-share-buttons {
+    display: block;
+    padding: 0;
+    list-style: none;
+}
+.royalsocialshare .royal-share-buttons .royal-share-button {
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+.royalsocialshare .royal-share-buttons .royal-share-button:last-child {
+    margin: 0;
+}
+.royalsocialshare .royal-share-button .royal-share-network {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 15px 20px;
+    background-color: #5636d1;
+    color: #fff;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.royalsocialshare .royal-share-button .royal-share-network i {
+    width: 1em;
+    height: 1em;
+}
+.royalsocialshare .royal-share-button .royal-share-network:hover {
+    background-color: #e2498a;
+    color: #fff;
+}
+.royalsocialshare .royal-share-label {
+    padding-left: 10px;
+}
+.royalsocialshare.royal-separator-yes .royal-share-network i {
+    margin-right: 10px;
+}
+.royalsocialshare.royal-separator-yes .royal-share-label {
+    border-left: 1px solid #fff;
+}
+@media (max-width: 767px) {
+    .royalsocialshare .royal-share-buttons .royal-share-button {
+        margin: 0 0 10px;
+    }
+}

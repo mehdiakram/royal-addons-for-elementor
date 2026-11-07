@@ -1,0 +1,113 @@
+/* Royal Off-Canvas Widget Styles */
+
+.royal-offcanvas-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.royal-offcanvas-btn i,
+.royal-offcanvas-btn svg {
+    margin-right: 8px;
+    fill: currentColor;
+}
+
+/* Overlay */
+.royal-offcanvas-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.royal-offcanvas-overlay.royal-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Panel */
+.royal-offcanvas-panel {
+    position: fixed;
+    top: 0;
+    width: 350px;
+    height: 100vh;
+    background: #ffffff;
+    z-index: 99999;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Position Left */
+.royal-offcanvas-panel.position-left {
+    left: 0;
+    transform: translateX(-100%);
+}
+.royal-offcanvas-panel.position-left.royal-open {
+    transform: translateX(0);
+}
+
+/* Position Right */
+.royal-offcanvas-panel.position-right {
+    right: 0;
+    transform: translateX(100%);
+}
+.royal-offcanvas-panel.position-right.royal-open {
+    transform: translateX(0);
+}
+
+/* Header */
+.royal-offcanvas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.royal-offcanvas-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.royal-offcanvas-close {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    color: #333;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.royal-offcanvas-close:hover {
+    color: #ff0000;
+}
+
+/* Content */
+.royal-offcanvas-content {
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Prevent body scroll when open */
+body.royal-offcanvas-active {
+    overflow: hidden;
+}

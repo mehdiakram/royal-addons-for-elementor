@@ -1,0 +1,573 @@
+.royal-badge {
+    padding: 10px 18px;
+    border-radius: 50px;
+    background-color: #fff;
+    font-size: 12px;
+    line-height: 1;
+    -webkit-transform: translate(var(--royal-badge-translate-x), var(--royal-badge-translate-y));
+    -ms-transform: translate(var(--royal-badge-translate-x), var(--royal-badge-translate-y));
+    transform: translate(var(--royal-badge-translate-x), var(--royal-badge-translate-y));
+    --royal-badge-translate-x: 0;
+    --royal-badge-translate-y: 0;
+}
+.royal-badge--top-left {
+    top: 25px;
+    left: 25px;
+}
+.royal-badge--top-center {
+    top: 25px;
+    left: 50%;
+    --royal-badge-translate-x: -50%;
+}
+.royal-badge--top-right {
+    top: 25px;
+    right: 25px;
+}
+.royal-badge--middle-center,
+.royal-badge--middle-left {
+    top: 50%;
+    left: 25px;
+    --royal-badge-translate-x: -50%;
+}
+.royal-badge--middle-center {
+    left: 50%;
+    --royal-badge-translate-y: -50%;
+}
+.royal-badge--middle-right {
+    top: 50%;
+    right: 25px;
+    --royal-badge-translate-y: -50%;
+}
+.royal-badge--bottom-left {
+    bottom: 25px;
+    left: 25px;
+}
+.royal-badge--bottom-center {
+    bottom: 25px;
+    left: 50%;
+    --royal-badge-translate-x: -50%;
+}
+.royal-badge--bottom-right {
+    right: 25px;
+    bottom: 25px;
+}
+@-webkit-keyframes pulse_animation {
+    0%,
+    to {
+        -webkit-box-shadow: 0 0 0 0 var(--icon-pulse-color);
+        box-shadow: 0 0 0 0 var(--icon-pulse-color);
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 20px var(--icon-pulse-color);
+        box-shadow: 0 0 0 20px var(--icon-pulse-color);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@keyframes pulse_animation {
+    0%,
+    to {
+        -webkit-box-shadow: 0 0 0 0 var(--icon-pulse-color);
+        box-shadow: 0 0 0 0 var(--icon-pulse-color);
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 20px var(--icon-pulse-color);
+        box-shadow: 0 0 0 20px var(--icon-pulse-color);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+.royal-icon-box > .elementor-widget-container {
+    position: relative;
+    padding: 25px;
+    border-radius: 5px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 3px 40px rgba(36, 36, 36, 0.1);
+    box-shadow: 0 3px 40px rgba(36, 36, 36, 0.1);
+}
+.royal-icon-box-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #151515;
+    font-size: 24px;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+}
+.royal-icon-box-icon {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #151515;
+    text-align: center;
+    font-size: 48px;
+    -webkit-transition: border 0.3s, background 0.3s, color 0.3s, -webkit-transform 0.3s;
+    transition: transform 0.3s, border 0.3s, background 0.3s, color 0.3s;
+    transition: transform 0.3s, border 0.3s, background 0.3s, color 0.3s, -webkit-transform 0.3s;
+}
+.royal-icon-box-icon i,
+.royal-icon-box-icon svg {
+    position: relative;
+    display: block;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+}
+.royal-icon-box-icon i {
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.royal-icon-box-icon i:before {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.royal-icon-box-link {
+    display: block;
+    color: transparent;
+    text-decoration: none;
+}
+.royal-icon-box .royal-badge {
+    position: absolute;
+    z-index: 10;
+    background-color: #e2498a;
+    color: #fff;
+}
+.pulse_effect {
+    -webkit-box-shadow: 0 0 0 0 var(--icon-pulse-color);
+    box-shadow: 0 0 0 0 var(--icon-pulse-color);
+    -webkit-animation: pulse_animation 1.5s infinite;
+    animation: pulse_animation 1.5s infinite;
+}
+.royalflipboxcontainer:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: " ";
+    font-size: 0;
+}
+.royalflipboxcontainer .royalflipboxinner {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.royalflipboxcontainer .royalflipboxinner:hover .royal-flip-box-back {
+    z-index: 1;
+}
+.royalflipboxcontainer .royalflipboxinner:hover .royal-flip-box-front {
+    z-index: -1;
+}
+.royalflipboxcontainer .royalflipboxinner .royalflipboxinner-wrapper {
+    position: relative;
+    -webkit-transform: translateZ(0);
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-back,
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-front {
+    top: 0;
+    right: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    height: 250px;
+    background-position: center;
+    background-clip: padding-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-front {
+    background-color: transparent;
+    position: relative;
+    bottom: 0;
+    z-index: 10;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 0.3rem;
+}
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-back:before,
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-front:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -9;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    content: "";
+}
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-back {
+    position: absolute;
+    z-index: -1;
+    padding: 46px;
+    border-radius: 0.3rem;
+    background-color: #562dd4;
+    color: #fff;
+}
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-back-inner,
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-front-inner {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+}
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-back-inner .royal-text,
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-front-inner .royal-text {
+    text-align: center;
+}
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-back-inner .royal-text p,
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-front-inner .royal-text p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-front-inner .royal-flip-icon.icon {
+    padding: 20px;
+    border-radius: 50%;
+    background-color: #f1f4f8;
+    color: #242424;
+}
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-front-inner .royal-flip-icon {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 28px;
+}
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-front-inner .royal-flip-icon i,
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-front-inner .royal-flip-icon svg {
+    display: block;
+    width: 1em;
+    height: 1em;
+}
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-front-inner .royal-flip-icon i {
+    position: relative;
+}
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-back-inner .royal-flip-icon i:before,
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-front-inner .royal-flip-icon i:before {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-back-inner .royal-flip-icon img,
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-front-inner .royal-flip-icon img {
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+}
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-front-inner .royal-flip-box-heading {
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+}
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-front-inner p {
+    margin-bottom: 0;
+    font-size: 16px;
+}
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-back-inner .royal-flip-box-heading-back {
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+}
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-back-inner .royal-flip-icon {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-back-inner .royal-flip-icon i,
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-back-inner .royal-flip-icon svg {
+    display: block;
+    width: 1em;
+    height: 1em;
+}
+.royalflipboxcontainer .royalflipboxinner .royal-flip-box-back-inner .royal-flip-icon i {
+    position: relative;
+    color: #fff;
+}
+.royalflipboxcontainer .royal-flip-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 2.5rem;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #562dd4;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.royalflipboxcontainer .royal-flip-btn:hover {
+    background-color: #fff;
+    color: #562dd4;
+}
+.royalflipboxcontainer .royalflipboxinner.royal-flip-right .royal-flip-box-front,
+.royalflipboxcontainer .royalflipboxinner.royal-flip-right.flip .royal-flip-box-back {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+}
+.royalflipboxcontainer .royalflipboxinner.royal-flip-right .royal-flip-box-back {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+.royalflipboxcontainer .royalflipboxinner.royal-flip-right.flip .royal-flip-box-front {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.royalflipboxcontainer .royalflipboxinner.royal-flip-up .royal-flip-box-front,
+.royalflipboxcontainer .royalflipboxinner.royal-flip-up.flip .royal-flip-box-back {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+}
+.royalflipboxcontainer .royalflipboxinner.royal-flip-up .royal-flip-box-back {
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+}
+.royalflipboxcontainer .royalflipboxinner.royal-flip-up.flip .royal-flip-box-front {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.royalflipboxcontainer .royalflipboxinner.royal-flip-left .royal-flip-box-front,
+.royalflipboxcontainer .royalflipboxinner.royal-flip-left.flip .royal-flip-box-back {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+}
+.royalflipboxcontainer .royalflipboxinner.royal-flip-left .royal-flip-box-back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.royalflipboxcontainer .royalflipboxinner.royal-flip-left.flip .royal-flip-box-front {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+.royalflipboxcontainer .royalflipboxinner.royal-flip-down .royal-flip-box-front,
+.royalflipboxcontainer .royalflipboxinner.royal-flip-down.flip .royal-flip-box-back {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+}
+.royalflipboxcontainer .royalflipboxinner.royal-flip-down .royal-flip-box-back {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+.royalflipboxcontainer .royalflipboxinner.royal-flip-down.flip .royal-flip-box-front {
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+}
+.royalflipboxcontainer.royal-flip-effect-classic .royal-flip-box-back,
+.royalflipboxcontainer.royal-flip-effect-classic .royal-flip-box-front {
+    -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.2, 0.85, 0.4, 1.275);
+    transition: transform 0.6s cubic-bezier(0.2, 0.85, 0.4, 1.275);
+    transition: transform 0.6s cubic-bezier(0.2, 0.85, 0.4, 1.275), -webkit-transform 0.6s cubic-bezier(0.2, 0.85, 0.4, 1.275);
+}
+.royalflipboxcontainer.royal-flip-effect-3d .royalflipboxinner-wrapper {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.royalflipboxcontainer.royal-flip-effect-3d .royal-flip-box-back,
+.royalflipboxcontainer.royal-flip-effect-3d .royal-flip-box-front {
+    -webkit-transition: -webkit-transform 0.75s ease-in-out;
+    transition: transform 0.75s ease-in-out;
+    transition: transform 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.royalflipboxcontainer.royal-flip-effect-3d .royal-flip-box-back-inner,
+.royalflipboxcontainer.royal-flip-effect-3d .royal-flip-box-front-inner {
+    -webkit-transform: translateZ(50px) scale(0.9);
+    transform: translateZ(50px) scale(0.9);
+}
+
+/* ===== Rotate Box Style ===== */
+.royalflipboxcontainer.rotate-box-style .royalflipboxinner .royal-flip-box-front {
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transform: rotate(0deg);
+    opacity: 1;
+}
+.royalflipboxcontainer.rotate-box-style .royalflipboxinner .royal-flip-box-back {
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    transform: rotate(-180deg);
+    opacity: 0;
+}
+.royalflipboxcontainer.rotate-box-style .royalflipboxinner:hover .royal-flip-box-front {
+    transform: rotate(180deg);
+    opacity: 0;
+    z-index: -1;
+}
+.royalflipboxcontainer.rotate-box-style .royalflipboxinner:hover .royal-flip-box-back {
+    transform: rotate(0deg);
+    opacity: 1;
+    z-index: 1;
+}
+
+/* ===== Zoom In Box Style ===== */
+.royalflipboxcontainer.zoomin-box-style .royalflipboxinner .royal-flip-box-front {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: scale(1);
+    opacity: 1;
+}
+.royalflipboxcontainer.zoomin-box-style .royalflipboxinner .royal-flip-box-back {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: scale(0.5);
+    opacity: 0;
+}
+.royalflipboxcontainer.zoomin-box-style .royalflipboxinner:hover .royal-flip-box-front {
+    transform: scale(1.3);
+    opacity: 0;
+    z-index: -1;
+}
+.royalflipboxcontainer.zoomin-box-style .royalflipboxinner:hover .royal-flip-box-back {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+/* ===== Zoom Out Box Style ===== */
+.royalflipboxcontainer.zoomout-box-style .royalflipboxinner .royal-flip-box-front {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: scale(1);
+    opacity: 1;
+}
+.royalflipboxcontainer.zoomout-box-style .royalflipboxinner .royal-flip-box-back {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: scale(1.5);
+    opacity: 0;
+}
+.royalflipboxcontainer.zoomout-box-style .royalflipboxinner:hover .royal-flip-box-front {
+    transform: scale(0.5);
+    opacity: 0;
+    z-index: -1;
+}
+.royalflipboxcontainer.zoomout-box-style .royalflipboxinner:hover .royal-flip-box-back {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 1;
+}
+
+/* ===== Side Right Style ===== */
+.royalflipboxcontainer.side-right-style .royalflipboxinner .royal-flip-box-front {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateX(0);
+    opacity: 1;
+}
+.royalflipboxcontainer.side-right-style .royalflipboxinner .royal-flip-box-back {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+.royalflipboxcontainer.side-right-style .royalflipboxinner:hover .royal-flip-box-front {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: -1;
+}
+.royalflipboxcontainer.side-right-style .royalflipboxinner:hover .royal-flip-box-back {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 1;
+}
+
+/* ===== Side Left Style ===== */
+.royalflipboxcontainer.side-left-style .royalflipboxinner .royal-flip-box-front {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateX(0);
+    opacity: 1;
+}
+.royalflipboxcontainer.side-left-style .royalflipboxinner .royal-flip-box-back {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateX(100%);
+    opacity: 0;
+}
+.royalflipboxcontainer.side-left-style .royalflipboxinner:hover .royal-flip-box-front {
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: -1;
+}
+.royalflipboxcontainer.side-left-style .royalflipboxinner:hover .royal-flip-box-back {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 1;
+}
+
+/* ===== To Top Style ===== */
+.royalflipboxcontainer.to-top-style .royalflipboxinner .royal-flip-box-front {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateY(0);
+    opacity: 1;
+}
+.royalflipboxcontainer.to-top-style .royalflipboxinner .royal-flip-box-back {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateY(100%);
+    opacity: 0;
+}
+.royalflipboxcontainer.to-top-style .royalflipboxinner:hover .royal-flip-box-front {
+    transform: translateY(-100%);
+    opacity: 0;
+    z-index: -1;
+}
+.royalflipboxcontainer.to-top-style .royalflipboxinner:hover .royal-flip-box-back {
+    transform: translateY(0);
+    opacity: 1;
+    z-index: 1;
+}
+
+/* ===== To Bottom Style ===== */
+.royalflipboxcontainer.to-bottom-style .royalflipboxinner .royal-flip-box-front {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateY(0);
+    opacity: 1;
+}
+.royalflipboxcontainer.to-bottom-style .royalflipboxinner .royal-flip-box-back {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateY(-100%);
+    opacity: 0;
+}
+.royalflipboxcontainer.to-bottom-style .royalflipboxinner:hover .royal-flip-box-front {
+    transform: translateY(100%);
+    opacity: 0;
+    z-index: -1;
+}
+.royalflipboxcontainer.to-bottom-style .royalflipboxinner:hover .royal-flip-box-back {
+    transform: translateY(0);
+    opacity: 1;
+    z-index: 1;
+}
+
+/* ===== Shared overflow fix for slide/move styles ===== */
+.royalflipboxcontainer.side-right-style .royalflipboxinner,
+.royalflipboxcontainer.side-left-style .royalflipboxinner,
+.royalflipboxcontainer.to-top-style .royalflipboxinner,
+.royalflipboxcontainer.to-bottom-style .royalflipboxinner {
+    overflow: hidden;
+}
+
+/** Widgets: icon-box, flip-box **/

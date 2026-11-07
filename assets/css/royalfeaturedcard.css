@@ -1,0 +1,89 @@
+/* Royal Featured Card */
+.royal-featured-card {
+    position: relative;
+    z-index: 1;
+    background-color: #f9f9f9;
+    padding: 45px 35px 40px;
+    transition: all 500ms ease;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.royal-featured-card:hover {
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.08);
+    transform: translateY(-5px);
+}
+
+.royal-featured-card .inner-block {
+    position: relative;
+    z-index: 1;
+}
+
+/* Big Number in Background */
+.royal-featured-card .count-block {
+    position: absolute;
+    right: -10px;
+    top: -20px;
+    z-index: -1;
+}
+
+.royal-featured-card .count-text {
+    font-size: 120px;
+    line-height: 1;
+    font-weight: 800;
+    color: #e2e2e2;
+    transition: all 500ms ease;
+}
+
+.royal-featured-card:hover .count-text {
+    color: #ffd7c4; /* Hover color shift */
+}
+
+/* Text Block */
+.royal-featured-card .text-block .title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.royal-featured-card .text-block .title a {
+    color: #222222;
+    transition: all 300ms ease;
+    text-decoration: none;
+}
+
+.royal-featured-card .text-block .title a:hover {
+    color: #ff5e14;
+}
+
+.royal-featured-card .text-block .description {
+    font-size: 15px;
+    line-height: 26px;
+    color: #777777;
+    margin-bottom: 25px;
+}
+
+/* Read More Button */
+.royal-featured-card .read-more {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #222222;
+    transition: all 300ms ease;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.royal-featured-card .read-more i {
+    margin-left: 5px;
+    transition: margin-left 300ms ease;
+}
+
+.royal-featured-card .read-more:hover {
+    color: #ff5e14;
+}
+
+.royal-featured-card .read-more:hover i {
+    margin-left: 10px;
+}

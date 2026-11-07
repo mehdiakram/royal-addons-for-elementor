@@ -1,0 +1,623 @@
+/* ==========================================================================
+   Royal Advanced Tabs Widget Styles
+   Includes 5 Unique Design Styles & Responsive Layouts
+   ========================================================================== */
+
+.royal-advanced-tabs-wrapper {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.royal-advanced-tabs-wrapper *,
+.royal-advanced-tabs-wrapper *::before,
+.royal-advanced-tabs-wrapper *::after {
+    box-sizing: border-box;
+}
+
+/* --------------------------------------------------------------------------
+   Vertical Layout (Side-by-Side)
+   -------------------------------------------------------------------------- */
+.royal-advanced-tabs-wrapper.layout-vertical {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.royal-advanced-tabs-wrapper.layout-vertical .royal-advanced-tabs-nav {
+    flex-direction: column;
+    min-width: 250px;
+    width: 35%;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.royal-advanced-tabs-wrapper.layout-vertical .royal-advanced-tabs-content-container {
+    flex: 1;
+    min-width: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Horizontal Layout (Top & Bottom)
+   -------------------------------------------------------------------------- */
+.royal-advanced-tabs-wrapper.layout-horizontal {
+    flex-direction: column;
+}
+
+.royal-advanced-tabs-wrapper.layout-horizontal .royal-advanced-tabs-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.royal-advanced-tabs-wrapper.layout-horizontal .royal-advanced-tabs-content-container {
+    width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Base Nav & Items
+   -------------------------------------------------------------------------- */
+.royal-advanced-tabs-nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.royal-advanced-tabs-nav-item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    user-select: none;
+    outline: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.royal-advanced-tabs-nav-item:focus-visible {
+    outline: 2px solid #245d47;
+    outline-offset: 2px;
+}
+
+/* Nav Media (Perfect Circle Guaranteed) */
+.royal-advanced-tabs-nav-media {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    overflow: hidden !important;
+    margin-right: 14px;
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+    max-width: 48px !important;
+    max-height: 48px !important;
+    flex: 0 0 48px !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 50% !important;
+    box-sizing: border-box !important;
+}
+
+.royal-advanced-tabs-nav-media img {
+    width: 100% !important;
+    height: 100% !important;
+    min-width: 100% !important;
+    min-height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 50% !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+.royal-advanced-tabs-nav-media.royal-media-icon {
+    font-size: 20px;
+    background-color: rgba(36, 93, 71, 0.08);
+    color: #245d47;
+}
+
+.royal-advanced-tabs-nav-media.royal-media-icon i,
+.royal-advanced-tabs-nav-media.royal-media-icon svg {
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+}
+
+/* Nav Typography Stack */
+.royal-advanced-tabs-nav-text {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+}
+
+.royal-advanced-tabs-nav-title {
+    display: block !important;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #1e293b;
+    word-break: break-word;
+    margin: 0 !important;
+    transition: color 0.2s ease;
+}
+
+.royal-advanced-tabs-nav-subtitle {
+    display: block !important;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #64748b;
+    margin-top: 4px !important;
+    word-break: break-word;
+    transition: color 0.2s ease;
+}
+
+/* --------------------------------------------------------------------------
+   Content Container & Fade Animation
+   -------------------------------------------------------------------------- */
+.royal-advanced-tabs-content-container {
+    position: relative;
+}
+
+.royal-advanced-tabs-content-pane {
+    display: none;
+    animation: royalTabFadeIn 0.35s ease forwards;
+}
+
+.royal-advanced-tabs-content-pane.active {
+    display: block;
+}
+
+@keyframes royalTabFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Story Card Inner Layout (Voices from the Field Layout)
+   -------------------------------------------------------------------------- */
+.royal-advanced-tabs-story-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+.royal-story-quote-icon {
+    color: #d4a373;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+.royal-story-quote-icon svg {
+    display: block;
+    width: 36px;
+    height: auto;
+    fill: currentColor;
+}
+
+.royal-story-quote-text {
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.75;
+    color: #334155;
+}
+
+.royal-story-divider {
+    border: none;
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 24px 0;
+    width: 100%;
+}
+
+.royal-story-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #0f172a;
+    margin: 0 0 6px 0;
+}
+
+.royal-story-meta {
+    font-size: 14px;
+    font-weight: 500;
+    color: #64748b;
+    margin-bottom: 22px;
+}
+
+/* --------------------------------------------------------------------------
+   Read More Button Styles (4 Gorgeous Variants)
+   -------------------------------------------------------------------------- */
+.royal-story-action {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.royal-story-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.royal-story-link-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease;
+    line-height: 1;
+}
+
+.royal-story-link-icon svg {
+    display: block;
+    width: 15px;
+    height: 15px;
+}
+
+/* Variant 1: Modern Filled Pill Button (Default) */
+.royal-story-link.royal-story-btn-button_fill {
+    background-color: #245d47;
+    color: #ffffff !important;
+    padding: 12px 24px;
+    border-radius: 50px;
+    border: 1.5px solid transparent;
+    box-shadow: 0 4px 14px rgba(36, 93, 71, 0.22);
+}
+
+.royal-story-link.royal-story-btn-button_fill:hover {
+    background-color: #174232;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(36, 93, 71, 0.32);
+}
+
+.royal-story-link.royal-story-btn-button_fill:hover .royal-story-link-icon {
+    transform: translateX(4px);
+}
+
+/* Variant 2: Clean Outline Button */
+.royal-story-link.royal-story-btn-button_outline {
+    background-color: transparent;
+    color: #245d47 !important;
+    padding: 11px 22px;
+    border-radius: 50px;
+    border: 1.5px solid #245d47;
+}
+
+.royal-story-link.royal-story-btn-button_outline:hover {
+    background-color: #245d47;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(36, 93, 71, 0.2);
+}
+
+.royal-story-link.royal-story-btn-button_outline:hover .royal-story-link-icon {
+    transform: translateX(4px);
+}
+
+/* Variant 3: Text with Circle Arrow Badge */
+.royal-story-link.royal-story-btn-link_badge {
+    color: #245d47 !important;
+    font-size: 15px;
+    gap: 12px;
+    padding: 4px 0;
+}
+
+.royal-story-link.royal-story-btn-link_badge .royal-story-link-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(36, 93, 71, 0.08);
+    color: #245d47;
+    transition: all 0.25s ease;
+}
+
+.royal-story-link.royal-story-btn-link_badge:hover {
+    color: #153e2d !important;
+}
+
+.royal-story-link.royal-story-btn-link_badge:hover .royal-story-link-icon {
+    background-color: #245d47;
+    color: #ffffff;
+    transform: translateX(4px);
+}
+
+/* Variant 4: Minimal Text Link */
+.royal-story-link.royal-story-btn-link_clean {
+    color: #245d47 !important;
+    font-size: 15px;
+    gap: 8px;
+    padding: 2px 0;
+}
+
+.royal-story-link.royal-story-btn-link_clean:hover {
+    color: #153e2d !important;
+}
+
+.royal-story-link.royal-story-btn-link_clean:hover .royal-story-link-icon {
+    transform: translateX(5px);
+}
+
+/* ==========================================================================
+   STYLE 1: Story Avatar Cards (Voices from Field / Unnayan Style)
+   ========================================================================== */
+.royal-tabs-style-story-cards .royal-advanced-tabs-nav-item {
+    background-color: #ffffff;
+    border: 1.5px solid #eef2f5;
+    border-radius: 18px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.royal-tabs-style-story-cards.layout-horizontal .royal-advanced-tabs-nav-item {
+    margin-right: 12px;
+    margin-bottom: 0;
+}
+
+.royal-tabs-style-story-cards .royal-advanced-tabs-nav-item:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.royal-tabs-style-story-cards .royal-advanced-tabs-nav-item.active {
+    border-color: #245d47 !important;
+    background-color: #ffffff;
+    box-shadow: 0 4px 16px rgba(36, 93, 71, 0.08);
+}
+
+.royal-tabs-style-story-cards .royal-advanced-tabs-nav-item.active .royal-advanced-tabs-nav-title {
+    color: #163e2e;
+}
+
+.royal-tabs-style-story-cards .royal-advanced-tabs-content-pane {
+    background-color: #ffffff;
+    border: 1.5px solid #eef2f5;
+    border-radius: 24px;
+    padding: 38px 42px;
+    box-shadow: 0 6px 24px -2px rgba(0, 0, 0, 0.04);
+}
+
+/* ==========================================================================
+   STYLE 2: Classic Minimal Underline
+   ========================================================================== */
+.royal-tabs-style-underline.layout-horizontal .royal-advanced-tabs-nav {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.royal-tabs-style-underline.layout-horizontal .royal-advanced-tabs-nav-item {
+    padding: 14px 24px;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    background: transparent;
+}
+
+.royal-tabs-style-underline.layout-horizontal .royal-advanced-tabs-nav-item:hover {
+    color: #245d47;
+}
+
+.royal-tabs-style-underline.layout-horizontal .royal-advanced-tabs-nav-item.active {
+    border-bottom-color: #245d47 !important;
+    color: #245d47;
+    font-weight: 700;
+}
+
+.royal-tabs-style-underline.layout-vertical .royal-advanced-tabs-nav {
+    border-right: 1px solid #e2e8f0;
+}
+
+.royal-tabs-style-underline.layout-vertical .royal-advanced-tabs-nav-item {
+    padding: 14px 20px;
+    border-right: 2px solid transparent;
+    margin-right: -1px;
+    background: transparent;
+}
+
+.royal-tabs-style-underline.layout-vertical .royal-advanced-tabs-nav-item:hover {
+    color: #245d47;
+}
+
+.royal-tabs-style-underline.layout-vertical .royal-advanced-tabs-nav-item.active {
+    border-right-color: #245d47 !important;
+    color: #245d47;
+    font-weight: 700;
+}
+
+.royal-tabs-style-underline .royal-advanced-tabs-content-pane {
+    padding: 24px 0;
+}
+
+/* ==========================================================================
+   STYLE 3: Rounded Pills / Capsule
+   ========================================================================== */
+.royal-tabs-style-pills .royal-advanced-tabs-nav-item {
+    border-radius: 50px;
+    padding: 10px 24px;
+    background-color: #f1f5f9;
+    border: 1px solid transparent;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.royal-tabs-style-pills .royal-advanced-tabs-nav-item:hover {
+    background-color: #e2e8f0;
+}
+
+.royal-tabs-style-pills .royal-advanced-tabs-nav-item.active {
+    background-color: #245d47 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 14px rgba(36, 93, 71, 0.28);
+}
+
+.royal-tabs-style-pills .royal-advanced-tabs-nav-item.active .royal-advanced-tabs-nav-title {
+    color: #ffffff;
+}
+
+.royal-tabs-style-pills .royal-advanced-tabs-nav-item.active .royal-advanced-tabs-nav-subtitle {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.royal-tabs-style-pills .royal-advanced-tabs-nav-item.active .royal-media-icon {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.royal-tabs-style-pills .royal-advanced-tabs-content-pane {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 32px;
+}
+
+/* ==========================================================================
+   STYLE 4: Segmented Inset Box (iOS / Dashboard Switcher)
+   ========================================================================== */
+.royal-tabs-style-segmented .royal-advanced-tabs-nav {
+    background-color: #f1f5f9;
+    border-radius: 14px;
+    padding: 6px;
+    gap: 4px;
+}
+
+.royal-tabs-style-segmented .royal-advanced-tabs-nav-item {
+    border-radius: 10px;
+    padding: 10px 20px;
+    background: transparent;
+    border: none;
+    color: #64748b;
+    margin: 0;
+}
+
+.royal-tabs-style-segmented .royal-advanced-tabs-nav-item:hover {
+    color: #1e293b;
+}
+
+.royal-tabs-style-segmented .royal-advanced-tabs-nav-item.active {
+    background-color: #ffffff;
+    color: #0f172a;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.royal-tabs-style-segmented .royal-advanced-tabs-nav-item.active .royal-advanced-tabs-nav-title {
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.royal-tabs-style-segmented .royal-advanced-tabs-content-pane {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 32px;
+}
+
+/* ==========================================================================
+   STYLE 5: Feature Elevated Cards
+   ========================================================================== */
+.royal-tabs-style-feature-box .royal-advanced-tabs-nav-item {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.royal-tabs-style-feature-box.layout-horizontal .royal-advanced-tabs-nav-item {
+    margin-right: 12px;
+    margin-bottom: 0;
+}
+
+.royal-tabs-style-feature-box .royal-advanced-tabs-nav-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: transparent;
+    transition: background-color 0.25s ease;
+}
+
+.royal-tabs-style-feature-box .royal-advanced-tabs-nav-item:hover {
+    border-color: #cbd5e1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.royal-tabs-style-feature-box .royal-advanced-tabs-nav-item.active {
+    border-color: #cbd5e1;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.08);
+}
+
+.royal-tabs-style-feature-box .royal-advanced-tabs-nav-item.active::before {
+    background-color: #245d47;
+}
+
+.royal-tabs-style-feature-box .royal-advanced-tabs-nav-item.active .royal-advanced-tabs-nav-title {
+    color: #245d47;
+}
+
+.royal-tabs-style-feature-box .royal-advanced-tabs-content-pane {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 36px;
+    box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.04);
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media (max-width: 991px) {
+    .royal-advanced-tabs-wrapper.layout-vertical .royal-advanced-tabs-nav {
+        width: 40%;
+    }
+    .royal-advanced-tabs-story-card .royal-story-quote-text {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .royal-advanced-tabs-wrapper.layout-vertical {
+        flex-direction: column;
+    }
+
+    .royal-advanced-tabs-wrapper.layout-vertical .royal-advanced-tabs-nav {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-right: 0 !important;
+        margin-bottom: 20px !important;
+    }
+
+    .royal-advanced-tabs-wrapper.royal-tabs-style-story-cards .royal-advanced-tabs-content-pane {
+        padding: 24px 20px;
+    }
+
+    .royal-story-title {
+        font-size: 16px;
+    }
+}

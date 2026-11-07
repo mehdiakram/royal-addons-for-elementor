@@ -1,0 +1,772 @@
+<?php
+namespace RoyalAddons\Widgets;
+
+use Elementor\Widget_Base;
+use Elementor\Controls_Manager;
+use Elementor\Group_Control_Typography;
+use Elementor\Group_Control_Box_Shadow;
+use Elementor\Group_Control_Image_Size;
+use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
+use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
+use RoyalAddons\Elementor\Royal_Helpers;
+
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
+class RoyalWooSliderBlur extends Widget_Base {
+
+	public function get_name() {
+		return 'royalwoosliderblur';
+	}
+
+	public function get_title() {
+		return __( 'Products Blur Slider', 'royal-addons-for-elementor' );
+	}
+
+	public function get_icon() { return 'eicon-products rtbranding'; }
+	
+	public function get_keywords() {
+		return [ 'woo', 'woocommerce', 'products', 'slider', 'tech', 'technologies', 'royal',  'mehdi',  'akram'];
+	}
+	
+	public function get_categories() {
+		return [ 'royaltech_3rdparty' ];
+	}
+
+	public function get_style_depends() {
+		$styles = [ 'royalsliderblur' ];
+		return $styles;
+	}
+
+	public function get_script_depends() {
+		$scripts = ['royalsliderblur'];
+		return $scripts;
+	}	
+	
+	
+	protected function register_controls() {
+		if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+			$this->rt_content_layout_options();
+			$this->rt_content_query_options();
+
+			$this->rt_style_introduce_options();
+			$this->rt_style_nav_options();
+			$this->rt_style_details_options();
+		} else {
+			$this->royal_tech_woocommerce_not_found();
+		}
+	}
+
+	private function royal_tech_woocommerce_not_found() {
+
+		$this->start_controls_section(
+			'section_layout',
+			[
+				'label' => esc_html__( '"Woocommerce" not found', 'royal-addons-for-elementor' ),
+			]
+		);	 
+		
+		$this->add_control(
+			'view',
+			[
+				'label' => esc_html__( 'Woocommerce plugin not active, Please install & active Woocommerce.', 'royal-addons-for-elementor' ),
+				'type' => \Elementor\Controls_Manager::HEADING,
+			]
+		);		
+		
+		$this->end_controls_section();
+	}	
+	
+	private function rt_content_layout_options() {
+
+		$this->start_controls_section(
+			'section_layout',
+			[
+				'label' => esc_html__( 'Layout', 'royal-addons-for-elementor' ),
+			]
+		);
+
+		$this->add_control(
+			'sliderstyle',
+			[
+				'label' => __( 'Slider Style', 'royal-addons-for-elementor' ),
+				'type' => Controls_Manager::SELECT,
+				'default' => 'royalwoosliderblurstyle1',
+				'options' => [
+					'royalwoosliderblurstyle1' => esc_html__( 'Blur Style 1', 'royal-addons-for-elementor' ),
+
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'slider_height',
+			[
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'label' => esc_html__( 'Slider Height', 'royal-addons-for-elementor' ),
+				'range' => [
+					'px' => [
+						'min' => 400,
+						'max' => 1200,
+					],
+				],
+				'devices' => [ 'desktop', 'tablet', 'mobile' ],
+				'desktop_default' => [
+					'size' => 700,
+					'unit' => 'px',
+				],
+				'tablet_default' => [
+					'size' => 600,
+					'unit' => 'px',
+				],
+				'mobile_default' => [
+					'size' => 500,
+					'unit' => 'px',
+				],
+				'selectors' => [
+					'{{WRAPPER}} .royalwoosliderblurstyle1' => 'height: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'previousicon',
+			[
+				'label' => esc_html__( 'Nav Previous Icon', 'royal-addons-for-elementor' ),
+				'type' => \Elementor\Controls_Manager::ICONS,
+				'skin' => 'inline',
+				'label_block' => false,
+				'default' => [
+					'value' => 'fas fa-chevron-left',
+					'library' => 'solid',
+				],
+			]
+		);
+		$this->add_control(
+			'nexticon',
+			[
+				'label' => esc_html__( 'Nav Next Icon', 'royal-addons-for-elementor' ),
+				'type' => \Elementor\Controls_Manager::ICONS,
+				'skin' => 'inline',
+				'label_block' => false,    
+				'default' => [
+					'value' => 'fas fa-chevron-right',
+					'library' => 'solid',
+				],
+			]
+		); 
+
+		$this->add_control(
+			'see_more_button',
+			[
+				'label' => esc_html__( 'Show More Button', 'royal-addons-for-elementor' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Show', 'royal-addons-for-elementor' ),
+				'label_off' => esc_html__( 'Hide', 'royal-addons-for-elementor' ),
+				'return_value' => 'yes',
+				'default' => 'yes',
+			]
+		);
+
+
+		$this->add_control(
+			'text_seemore',
+			[
+				'label' => esc_html__( 'See More Text', 'royal-addons-for-elementor' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'condition' => [
+					'see_more_button' => 'yes',
+				],
+				'default' => esc_html__( 'SEE MORE ↗', 'royal-addons-for-elementor' ),
+			]
+		);
+		
+		$this->add_control(
+			'text_seeall',
+			[
+				'label' => esc_html__( 'See All Text', 'royal-addons-for-elementor' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'condition' => [
+					'see_more_button' => 'yes',
+				],
+				'default' => esc_html__( 'SEE ALL ↗', 'royal-addons-for-elementor' ),
+			]
+		);		
+
+        $this->add_control( 'autoplay_interval', [
+            'label'     => esc_html__( 'Autoplay Interval (ms)', 'royal-addons-for-elementor' ),
+            'type'      => Controls_Manager::NUMBER,
+            'default'   => 5000,
+        ] );	
+
+		$this->end_controls_section();
+	}
+
+
+	private function rt_content_query_options() {
+		$this->start_controls_section(
+			'section_query',
+			[
+				'label' => __( 'Query', 'royal-addons-for-elementor' ),
+				'tab' => Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+
+		$this->add_control(
+			'posts_per_page',
+			[
+				'label' => __( 'Total Items', 'royal-addons-for-elementor' ),
+				'type' => Controls_Manager::NUMBER,
+				'default' => 7,
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Image_Size::get_type(),
+			[
+				'name' => 'post_thumbnail',
+				'exclude' => [ 'custom' ],
+				'default' => 'image300',
+				'prefix_class' => 'post-thumbnail-size-',
+			]
+		);
+
+		$this->add_control(
+			'show_title',
+			[
+				'label' => __( 'Title', 'royal-addons-for-elementor' ),
+				'type' => Controls_Manager::SWITCHER,
+				'label_on' => __( 'Show', 'royal-addons-for-elementor' ),
+				'label_off' => __( 'Hide', 'royal-addons-for-elementor' ),
+				'default' => 'yes',
+				'separator' => 'before',
+			]
+		);
+
+		$this->add_control(
+			'title_tag',
+			[
+				'label' => __( 'Title HTML Tag', 'royal-addons-for-elementor' ),
+				'type' => Controls_Manager::SELECT,
+				'options'   => Royal_Helpers::royal_title_tags(),
+				'default' => 'h3',
+				'condition' => [
+					'show_title' => 'yes',
+				],
+			]
+		);
+
+		$this->add_control(
+			'show_price',
+			[
+				'label' => __( 'Price', 'royal-addons-for-elementor' ),
+				'type' => Controls_Manager::SWITCHER,
+				'label_on' => __( 'Show', 'royal-addons-for-elementor' ),
+				'label_off' => __( 'Hide', 'royal-addons-for-elementor' ),
+				'default' => 'yes',
+				'separator' => 'before',
+			]
+		);
+
+		$this->add_control(
+			'product_cat',
+			[
+				'label'       => __( 'Product Categories', 'royal-addons-for-elementor' ),
+				'label_block' => true,
+				'type'        => Controls_Manager::SELECT2,
+				'multiple'    => true,
+				'options'     => \RoyalAddons\Elementor\RoyalWooClass::product_cat('product' ),
+
+			]
+		);
+
+		$this->add_control(
+			'advanced',
+			[
+				'label' => __( 'Advanced', 'royal-addons-for-elementor' ),
+				'type' => Controls_Manager::HEADING,
+			]
+		);
+
+		$this->add_control(
+			'orderby',
+			[
+				'label' => __( 'Order By', 'royal-addons-for-elementor' ),
+				'type' => Controls_Manager::SELECT,
+				'default' => 'post_date',
+				'options' => [
+					'post_date' => __( 'Date', 'royal-addons-for-elementor' ),
+					'post_title' => __( 'Title', 'royal-addons-for-elementor' ),
+					'rand' => __( 'Random', 'royal-addons-for-elementor' ),
+				],
+			]
+		);
+
+		$this->add_control(
+			'order',
+			[
+				'label' => __( 'Order', 'royal-addons-for-elementor' ),
+				'type' => Controls_Manager::SELECT,
+				'default' => 'desc',
+				'options' => [
+					'asc' => __( 'ASC', 'royal-addons-for-elementor' ),
+					'desc' => __( 'DESC', 'royal-addons-for-elementor' ),
+				],
+			]
+		);
+
+		$this->end_controls_section();
+
+	}
+
+
+	private function rt_style_introduce_options() {
+
+		$this->start_controls_section(
+			'section_introduce',
+			[
+				'label' => __( 'Introduce', 'royal-addons-for-elementor' ),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name'     => 'introduce_title_typography',
+				'label' => __( 'Title Typography', 'royal-addons-for-elementor' ),
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+				],
+				'selector' => '{{WRAPPER}} .royalwoosliderblurstyle1 .list .item .introduce .title a',
+			]
+		);
+
+		$this->add_control(
+			'introduce_title_color',
+			[
+				'type'      => Controls_Manager::COLOR,
+				'label'     => __( 'Title Color', 'royal-addons-for-elementor' ),
+				'default' 	=> '#000',
+				'separator' => 'after',
+				'selectors' => [
+					'{{WRAPPER}} .royalwoosliderblurstyle1 .list .item .introduce .title a' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name'     => 'introduce_description_typography',
+				'label' => __( 'Description Typography', 'royal-addons-for-elementor' ),
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+				],
+				'selector' => '{{WRAPPER}} .royalwoosliderblurstyle1 .list .item .introduce .des',
+			]
+		);
+
+		$this->add_control(
+			'introduce_description_color',
+			[
+				'type'      => Controls_Manager::COLOR,
+				'label'     => __( 'Description Color', 'royal-addons-for-elementor' ),
+				'default' => '#5559',
+				'separator' => 'after',
+				'selectors' => [
+					'{{WRAPPER}} .royalwoosliderblurstyle1 .list .item .introduce .des' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'image_border_radius',
+			[
+				'label'      => __( 'Image Border Radius', 'royal-addons-for-elementor' ),
+				'type'       => Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%' ],
+				'selectors' => [
+					'{{WRAPPER}} .royalwoosliderblurstyle1 .list .item img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->end_controls_section();
+
+	}
+
+	private function rt_style_nav_options() {
+		$this->start_controls_section(
+			'section_nav_style',
+			[
+				'label'     => __( 'Nav Style', 'royal-addons-for-elementor' ),
+				'tab'       => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_control(
+			'nav_color',
+			[
+				'type'      => Controls_Manager::COLOR,
+				'label'     => __( 'Nav Color', 'royal-addons-for-elementor' ),
+				'default' => '#fff',
+				'selectors' => [
+					'{{WRAPPER}} .royalsliderblur .arrows button' => 'color: {{VALUE}};',
+				],
+			]
+		);	
+
+		$this->add_control(
+			'nav_bg_color',
+			[
+				'type'      => Controls_Manager::COLOR,
+				'label'     => __( 'Nav BG Color', 'royal-addons-for-elementor' ),
+				'default' => '#232442',
+				'selectors' => [
+					'{{WRAPPER}} .royalsliderblur .arrows button' => 'background-color: {{VALUE}};',
+				],
+			]
+		);	
+
+		$this->add_control(
+			'nav_radius',
+			[
+				'label' => esc_html__( 'Border Radius', 'royal-addons-for-elementor' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
+				'default' => [
+					'top' => 50,
+					'right' => 50,
+					'bottom' => 50,
+					'left' => 50,
+					'unit' => '%',
+					'isLinked' => false,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .royalsliderblur .arrows button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+		$this->end_controls_section();
+	}
+
+	private function rt_style_details_options() {
+		$this->start_controls_section(
+			'section_detail_style',
+			[
+				'label'     => __( 'Detail Style', 'royal-addons-for-elementor' ),
+				'tab'       => Controls_Manager::TAB_STYLE,
+				'condition' => [
+					'see_more_button' => 'yes',
+				],
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name'     => 'detail_title_typography',
+				'label' => __( 'Title Typography', 'royal-addons-for-elementor' ),
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+				],
+				'selector' => '{{WRAPPER}} .royalwoosliderblurstyle1.showdetail .list .item .detail a',
+			]
+		);
+
+		$this->add_control(
+			'detail_title_color',
+			[
+				'type'      => Controls_Manager::COLOR,
+				'label'     => __( 'Title Color', 'royal-addons-for-elementor' ),
+				'default' 	=> '#000',
+				'separator' => 'after',
+				'selectors' => [
+					'{{WRAPPER}} .royalwoosliderblurstyle1.showdetail .list .item .detail .title a' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name'     => 'detail_description_typography',
+				'label' => __( 'Description Typography', 'royal-addons-for-elementor' ),
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+				],
+				'selector' => '{{WRAPPER}} .royalwoosliderblurstyle1.showdetail .list .item .detail .des',
+			]
+		);
+
+		$this->add_control(
+			'detail_description_color',
+			[
+				'type'      => Controls_Manager::COLOR,
+				'label'     => __( 'Description Color', 'royal-addons-for-elementor' ),
+				'default' => '#000',
+				'separator' => 'after',
+				'selectors' => [
+					'{{WRAPPER}} .royalwoosliderblurstyle1.showdetail .list .item .detail .des' => 'color: {{VALUE}};',
+				],
+			]
+		);		
+
+		$this->add_control(
+			'detail_price_button_color',
+			[
+				'type'      => Controls_Manager::COLOR,
+				'label'     => __( 'Price Button Color', 'royal-addons-for-elementor' ),
+				'default' => '#000',
+				'selectors' => [
+					'{{WRAPPER}} .royalwoosliderblurstyle1.showdetail .list .item .checkout button.price' => 'color: {{VALUE}};',
+				],
+			]
+		);	
+
+		$this->add_control(
+			'detail_price_button_bg_olor',
+			[
+				'type'      => Controls_Manager::COLOR,
+				'label'     => __( 'Price Button Background', 'royal-addons-for-elementor' ),
+				'default' => 'transparent',
+				'separator' => 'after',
+				'selectors' => [
+					'{{WRAPPER}} .royalwoosliderblurstyle1.showdetail .list .item .checkout button.price' => 'background-color: {{VALUE}};',
+				],
+			]
+		);	
+
+		$this->add_control(
+			'detail_cart_button_color',
+			[
+				'type'      => Controls_Manager::COLOR,
+				'label'     => __( 'Cart Button Color', 'royal-addons-for-elementor' ),
+				'default' => '#eee',
+				'selectors' => [
+					'{{WRAPPER}} .royalwoosliderblurstyle1.showdetail .list .item .checkout button.cart a' => 'color: {{VALUE}};',
+				],
+			]
+		);	
+
+		$this->add_control(
+			'detail_cart_button_bg_olor',
+			[
+				'type'      => Controls_Manager::COLOR,
+				'label'     => __( 'Cart Button Background', 'royal-addons-for-elementor' ),
+				'default' => '#693EFF',
+				'selectors' => [
+					'{{WRAPPER}} .royalwoosliderblurstyle1.showdetail .list .item .checkout button.cart' => 'background-color: {{VALUE}};',
+				],
+			]
+		);	
+
+		$this->end_controls_section();
+	}
+
+
+	protected function render( $instance = [] ) {
+		if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+			// Get settings.
+			$settings 		= $this->get_settings();
+			$sliderstyle 	= $settings['sliderstyle'];
+			$text_seeall 	= $settings['text_seeall'];
+			$id         	= $this->get_id();
+			$sliderid   	= 'royalsliderblur'.$id;
+			$prev       	= 'prev'.$id;
+			$next       	= 'next'.$id;
+			$back       	= 'back'.$id;
+			$previousicon   = $settings['previousicon']['value'];
+			$nexticon    	= $settings['nexticon']['value'];
+			$interval    	= $settings['autoplay_interval'];
+
+			$this->add_render_attribute(
+				'options',
+				[
+					'id'             	=> $sliderid,
+					'data-interval'		=> $interval,
+					'data-prev'		    => $prev,
+					'data-next'		    => $next,
+					'data-back'		    => $back,
+				]
+			);
+
+
+				?>
+				<div class="royalsliderblur <?php echo $sliderstyle ?>" <?php echo $this->get_render_attribute_string( 'options' ) ?>>
+					<div class="list">
+				<?php 				
+					$posts_per_page = ( ! empty( $settings['posts_per_page'] ) ?  $settings['posts_per_page'] : 3 );
+					$product_cat = is_array( $settings['product_cat'] ) ? implode( ',', $settings['product_cat'] ) : $settings['product_cat'];
+					
+					$query_args = array(
+									'post_type'             => 'product',
+									'posts_per_page' 		=> absint( $posts_per_page ),
+									'no_found_rows'  		=> true,
+									'post_status'         	=> 'publish',
+									'ignore_sticky_posts'   => true,
+									'product_cat' 			=> $product_cat
+								);
+
+					// Order by.
+					if ( ! empty( $settings['orderby'] ) ) {
+						$query_args['orderby'] = $settings['orderby'];
+					}
+
+					// Order .
+					if ( ! empty( $settings['order'] ) ) {
+						$query_args['order'] = $settings['order'];
+					}
+
+					$all_posts = new \WP_Query( $query_args );
+
+					if ( $all_posts->have_posts() ) :
+						if( "royalwoosliderblurstyle1" == $sliderstyle ){
+
+							/* royalwoosliderblurstyle1 */
+							while ( $all_posts->have_posts() ) :
+								$all_posts->the_post(); ?>
+									<div class="item">
+										<?php $this->render_thumbnail(); ?>
+										<div class="introduce">
+											<?php $this->render_title(); ?>
+											<div class="des">
+												<?php $this->product_price(); ?><br>
+												<?php $this->short_description(); ?>
+											</div>
+											<button class="seemore"><?php $this->see_more_button(); ?></button>
+										</div>
+										<div class="detail">
+											<?php $this->render_title(); ?>
+											<div class="des"><?php $this->description(); ?></div>
+											<div class="checkout">
+												<button class="price"><?php $this->product_price(); ?></button>
+												<button class="cart"><?php $this->add_to_cart(); ?></button>
+											</div>
+										</div>
+									</div>
+									<?php
+							endwhile; 
+							wp_reset_postdata();
+							/* layout 5 */
+							
+						
+
+						}else{
+
+							/* default */
+							while ( $all_posts->have_posts() ) :
+								$all_posts->the_post(); ?>						
+									<article>								 
+
+																   
+									</article>						
+									<?php						
+							endwhile; 						
+							wp_reset_postdata();
+							/* default */
+
+						}
+
+					endif; ?>
+				</div>
+				<div class="arrows">
+					<button id="<?php echo $prev ;?>" class="prev"><i class='<?php echo $previousicon; ?>'></i></button>
+					<button id="<?php echo $next ;?>" class="next"><i class='<?php echo $nexticon; ?>'></i></button>
+					<button id="<?php echo $back ;?>" class="back"><?php echo $text_seeall ;?></button>
+				</div>									
+			</div>
+			<?php
+
+		}
+	}
+
+
+	protected function render_thumbnail() {
+		$settings = $this->get_settings();
+		$post_thumbnail_size = $settings['post_thumbnail_size'];
+
+		if ( has_post_thumbnail() ) :
+			$post_title = get_the_title();
+			$thumbnail_id = get_post_thumbnail_id();
+			$alt_text = get_post_meta( $thumbnail_id, '_wp_attachment_image_alt', true );
+			if ( empty( $alt_text ) ) {
+				$alt_text = $post_title;
+			}
+			?>
+			<div class="productthumbnail">
+				<a href="<?php the_permalink(); ?>" aria-label="<?php echo esc_attr( $post_title ); ?>">
+					<?php the_post_thumbnail( $post_thumbnail_size, array( 'alt' => esc_attr( $alt_text ) ) ); ?>
+				</a>
+			</div>
+		<?php endif;
+	}
+
+
+
+	protected function render_title() {
+		$settings = $this->get_settings();
+		$show_title = $settings['show_title'];
+
+		if ( 'yes' !== $show_title ) {
+			return;
+		}
+
+		$title_tag = $settings['title_tag'];
+
+		?>
+		<<?php echo $title_tag; ?> class="title">
+			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+		</<?php echo $title_tag; ?>>
+		<?php
+	}
+
+
+	protected function product_price() {
+		$settings = $this->get_settings();
+		$show_price = $settings['show_price'];
+
+		if ( 'yes' !== $show_price ) {
+			return;
+		}
+
+		global $product;
+		echo 'Price:'. $product->get_price_html();
+	}
+
+	protected function add_to_cart() {
+		global $product;
+		$id = $product->get_id();
+		echo'<a href="?add-to-cart='.$id.'">Add to Cart</a>';
+	}
+
+	protected function short_description() {
+		global $product;
+		echo $product->get_short_description();
+	}
+
+	protected function description() {
+		global $product;
+		echo $product->get_description();
+	}
+
+
+	protected function see_more_button() {
+		$settings = $this->get_settings();
+		$see_more_button = $settings['see_more_button'];
+		$text_seemore 	= $settings['text_seemore'];
+
+		if ( 'yes' !== $see_more_button ) {
+			return;
+		}
+
+		echo $text_seemore;
+	}
+	
+
+
+
+
+}

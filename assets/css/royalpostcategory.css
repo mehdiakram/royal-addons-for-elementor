@@ -1,0 +1,407 @@
+/* Royal Post Category Start -------------------------- */
+.royalpostcategory {
+    overflow: hidden;
+}
+
+.royalpostcategory .title {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.royalpostcategory a {
+    text-decoration: none;
+}
+
+.royalpostcategory ul {
+    margin: 0;
+    padding: 0;
+}
+
+.royalpostcategory ul li>i {
+    color: #29C944;
+    float: left;
+}
+
+.royalpostcategory ul li {
+    list-style: none;
+}
+
+
+
+.royalpostcategory .style2 .catblock {
+    padding: 0px;
+}
+
+.royalpostcategory .style2 h2 {
+    font-size: 18px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+.royalpostcategory .style2 ul {
+    font-size: 14px;
+}
+
+.royalpostcategory .style2 ul li {
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.royalpostcategory .style2 ul li:last-child {
+    border-bottom: none;
+}
+
+.royalpostcategory .style2 ul li>i {
+    color: #29C944;
+    display: none;
+}
+
+.royalpostcategory .style2 ul li a {
+    color: #666;
+    padding-bottom: 3px;
+}
+
+.royalpostcategory .style2 .allbutton {
+    float: right;
+    background: #666;
+    border-color: #a2a2a2;
+    padding: 5px;
+    color: #000;
+    background-color: #a6a6a6;
+}
+
+.royalpostcategory .style2 .thumbnail {
+    margin-right: 10px;
+    float: left;
+}
+
+.royalpostcategory .style2 .content h3 {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.royalpostcategory .style4 ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    background: #ffffff;
+    justify-content: space-between;
+}
+
+.royalpostcategory .style4 .date {
+    margin-right: 10px;
+    text-align: center;
+    background-color: #c60021;
+    padding: 10px;
+    color: #fff;
+    border-left: 5px solid #000;
+    flex-shrink: 0;
+    width: 90px;
+}
+
+.royalpostcategory .style4 .date span {
+    display: grid;
+}
+
+.royalpostcategory .style4 .date span:first-child {
+    font-size: 20px;
+}
+
+.royalpostcategory .style4 .title {
+    flex-grow: 1;
+}
+
+.royalpostcategory .style4 .allbutton {
+    float: right;
+    background: #666;
+    border-color: #a2a2a2;
+    padding: 5px;
+    color: #000;
+    background-color: #a6a6a6;
+}
+
+
+
+.royalpostcategory .style5 ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    background: #ffffff;
+    justify-content: space-between;
+}
+
+.royalpostcategory .style5 .date {
+    margin-left: 10px;
+    text-align: center;
+    background-color: #c60021;
+    padding: 10px;
+    color: #fff;
+    border-right: 5px solid #000;
+    flex-shrink: 0;
+    width: 90px;
+}
+
+.royalpostcategory .style5 .date span {
+    display: grid;
+}
+
+.royalpostcategory .style5 .date span:first-child {
+    font-size: 20px;
+}
+
+.royalpostcategory .style5 .title {
+    flex-grow: 1;
+}
+
+.royalpostcategory .style5 .allbutton {
+    float: right;
+    background: #666;
+    border-color: #a2a2a2;
+    padding: 5px;
+    color: #000;
+    background-color: #a6a6a6;
+}
+
+
+/* ---- Cat Title Icon ---- */
+.royalpostcategory h2.cattitle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.royalpostcategory .cattitleicon {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.royalpostcategory .cattitleicon svg {
+    width: 16px;
+    height: 16px;
+}
+
+
+/* ---- Style 1: আধুনিক পত্রিকা (Left Accent Border) ---- */
+.royalpostcategory .style1 .catblock {
+    border-left: 5px solid #c60021;
+    padding-left: 12px;
+}
+
+.royalpostcategory .style1 h2.cattitle {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e8e8e8;
+}
+
+.royalpostcategory .style1 ul {
+    font-size: 14px;
+}
+
+.royalpostcategory .style1 ul li {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 6px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.royalpostcategory .style1 ul li:last-child {
+    border-bottom: none;
+}
+
+.royalpostcategory .style1 .content {
+    flex: 1;
+}
+
+.royalpostcategory .style1 .content .title {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.royalpostcategory .style1 .content .title a {
+    color: #222;
+    transition: color 0.2s ease;
+}
+
+.royalpostcategory .style1 .content .title a:hover {
+    color: #c60021;
+}
+
+.royalpostcategory .style1 .date {
+    flex-shrink: 0;
+    text-align: center;
+    min-width: 48px;
+    background-color: #c60021;
+    color: #fff;
+    padding: 4px 6px;
+    border-radius: 3px;
+    line-height: 1.2;
+}
+
+.royalpostcategory .style1 .date .day {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.royalpostcategory .style1 .date .year {
+    display: block;
+    font-size: 10px;
+    opacity: 0.85;
+}
+
+.royalpostcategory .style1 .allbutton {
+    display: block;
+    margin-left: auto;
+    margin-top: 8px;
+    width: fit-content;
+    padding: 4px 12px;
+    background-color: #c60021;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    transition: background 0.2s ease;
+}
+
+.royalpostcategory .style1 .allbutton:hover {
+    background-color: #a00018;
+}
+
+
+/* ---- Style 3: আধুনিক ম্যাগাজিন (Color Band + Card List) ---- */
+.royalpostcategory .style3 .catblock {
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+.royalpostcategory .style3 h2.cattitle {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 10px 14px;
+    background-color: #c60021;
+    color: #fff;
+    border-radius: 4px 4px 0 0;
+    gap: 8px;
+}
+
+.royalpostcategory .style3 h2.cattitle a {
+    color: #fff;
+}
+
+.royalpostcategory .style3 .cattitleicon svg {
+    fill: #fff;
+}
+
+.royalpostcategory .style3 .cattitleicon i {
+    color: #fff;
+}
+
+.royalpostcategory .style3 ul {
+    font-size: 14px;
+    padding: 4px 0;
+}
+
+.royalpostcategory .style3 ul li {
+    padding: 7px 14px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.15s ease;
+}
+
+.royalpostcategory .style3 ul li:last-child {
+    border-bottom: none;
+}
+
+.royalpostcategory .style3 ul li:hover {
+    background-color: #fdf3f3;
+}
+
+.royalpostcategory .style3 ul li .title {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 2px 0;
+    line-height: 1.4;
+}
+
+.royalpostcategory .style3 ul li .title a {
+    color: #222;
+    transition: color 0.2s ease;
+}
+
+.royalpostcategory .style3 ul li .title a:hover {
+    color: #c60021;
+}
+
+.royalpostcategory .style3 ul li .royalpostexcerpt {
+    font-size: 12px;
+    color: #777;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.royalpostcategory .style3 .date {
+    font-size: 11px;
+    color: #aaa;
+    display: inline-block;
+    margin-top: 3px;
+}
+
+.royalpostcategory .style3 .allbutton {
+    display: block;
+    text-align: center;
+    padding: 7px;
+    background-color: #f7f7f7;
+    color: #c60021;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-top: 1px solid #eee;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.royalpostcategory .style3 .allbutton:hover {
+    background-color: #c60021;
+    color: #fff;
+}
+
+/* ---- Responsive: Columns collapse on Mobile ---- */
+@media (max-width: 767px) {
+    .royalpostcategory[style*="grid-template-columns"] {
+        display: block !important;
+    }
+    .royalpostcategory.royalcat-columns-2,
+    .royalpostcategory.royalcat-columns-3,
+    .royalpostcategory.royalcat-columns-4,
+    .royalpostcategory.royalcat-columns-5 {
+        display: block !important;
+        grid-template-columns: none !important;
+    }
+    .royalpostcategory .royalcat-col {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .royalpostcategory.royalcat-columns-4,
+    .royalpostcategory.royalcat-columns-5 {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}

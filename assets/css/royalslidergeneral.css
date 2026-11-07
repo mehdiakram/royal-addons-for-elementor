@@ -1,0 +1,1751 @@
+.royaltech-prime-slider li {
+    list-style: none;
+}
+
+.royaltech-prime-slider-skin-slide {
+    position: relative;
+}
+.royaltech-prime-slider-skin-slide:after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 25px;
+    background: #fff;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+.royaltech-prime-slider-skin-slide .royaltech-slideshow-item .royaltech-ps-slide-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.royaltech-prime-slider-skin-slide .royaltech-prime-slider-content {
+    padding: 0;
+    position: relative;
+    z-index: 999;
+}
+.royaltech-prime-slider-skin-slide .royaltech-main-title {
+    display: inline-block;
+}
+.royaltech-prime-slider-skin-slide .royaltech-prime-slider-desc {
+    position: relative;
+    text-align: center;
+}
+.royaltech-prime-slider-skin-slide .royaltech-prime-slider-desc .royaltech-title-tag a {
+    color: #fff;
+}
+.royaltech-prime-slider-skin-slide .royaltech-prime-slider-desc .royaltech-title-tag {
+    font-size: 42px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    padding-bottom: 20px;
+    display: inline;
+    line-height: 1.5;
+}
+.royaltech-prime-slider-skin-slide .royaltech-prime-slider-desc h4 {
+    font-size: 20px;
+    color: #fff;
+    margin: 0;
+    font-weight: 700;
+    display: inline-block;
+}
+.royaltech-prime-slider-skin-slide .royaltech-slide-featured {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 25px;
+    width: 80%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.royaltech-prime-slider-skin-slide .royaltech-slide-featured .royaltech-slider-excerpt {
+    padding-right: 20px;
+    margin-right: 20px;
+    border-right: 1px solid rgba(254, 80, 108, 0.63);
+    color: #e5e5e5;
+    font-size: 14px;
+    list-style: 28px;
+}
+.royaltech-prime-slider-skin-slide .royaltech-slide-featured .royaltech-slider-excerpt p {
+    margin: 0;
+}
+.royaltech-prime-slider-skin-slide .royaltech-prime-slider-arrow-button .royaltech-slide-btn {
+    color: #fff;
+    display: block;
+    text-align: center;
+}
+.royaltech-prime-slider-skin-slide .royaltech-prime-slider-arrow-button .royaltech-slide-btn .royaltech-slide-btn-icon {
+    display: inline-table;
+}
+.royaltech-prime-slider-skin-slide .royaltech-prime-slider-arrow-button .royaltech-slide-btn .royaltech-slide-btn-icon svg {
+    width: 30px;
+    height: 30px;
+    margin-top: 2px;
+}
+.royaltech-prime-slider-skin-slide .royaltech-prime-slider-arrow-button .royaltech-slide-btn .royaltech-slide-btn-icon svg * {
+    stroke: #fff;
+}
+.royaltech-prime-slider-skin-slide .royaltech-prime-slider-arrow-button .royaltech-slide-btn .royaltech-prime-slider-button-text {
+    display: inline-grid;
+}
+.royaltech-prime-slider-skin-slide .royaltech-slide-shape {
+    position: absolute;
+    width: 30%;
+    height: 70%;
+    background: rgba(254, 80, 108, 0.63);
+    top: 0;
+    left: 20%;
+    display: none;
+}
+.royaltech-prime-slider-skin-slide .royaltech-dotnav {
+    display: none;
+}
+.royaltech-prime-slider-skin-slide .royaltech-dotnav.royaltech-margin-left-100 {
+    margin-left: 50px;
+}
+.royaltech-prime-slider-skin-slide .royaltech-dotnav.royaltech-margin-bottom-100 {
+    margin-bottom: 50px;
+}
+.royaltech-prime-slider-skin-slide .royaltech-dotnav li {
+    position: relative;
+    padding-top: 20px;
+}
+.royaltech-prime-slider-skin-slide .royaltech-dotnav li:after {
+    content: attr(data-label);
+    font-size: 18px;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.3s ease;
+    margin: 0;
+    transform: translateX(30px);
+    position: absolute;
+    top: 19px;
+}
+.royaltech-prime-slider-skin-slide .royaltech-dotnav li.royaltech-active:after {
+    opacity: 1;
+    transform: translateX(10px);
+}
+.royaltech-prime-slider-skin-slide .royaltech-dotnav li a {
+    width: 4px;
+    height: 4px;
+    border-radius: 20px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+.royaltech-prime-slider-skin-slide .royaltech-dotnav li.royaltech-active a {
+    height: 25px;
+    background: #fff;
+}
+.royaltech-prime-slider-skin-slide .royaltech-navigation-arrows {
+    margin-right: 30px;
+    bottom: 0;
+    left: 38%;
+    top: auto;
+    display: flex;
+}
+.royaltech-prime-slider-skin-slide .royaltech-navigation-arrows .royaltech-prime-slider-previous {
+    margin-right: 10px;
+}
+.royaltech-prime-slider-skin-slide .royaltech-prime-slider-next,
+.royaltech-prime-slider-skin-slide .royaltech-prime-slider-previous {
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    border: 1px solid #fff;
+    background: rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin: 15px 0;
+}
+.royaltech-prime-slider-skin-slide .royaltech-prime-slider-next:hover,
+.royaltech-prime-slider-skin-slide .royaltech-prime-slider-previous:hover {
+    background: rgba(254, 80, 108, 0.63);
+    border-color: rgba(254, 80, 108, 0.63);
+}
+.royaltech-prime-slider-skin-slide .royaltech-prime-slider-next svg,
+.royaltech-prime-slider-skin-slide .royaltech-prime-slider-previous svg {
+    color: #fff;
+    width: 9px;
+}
+@media (min-width: 375px) {
+    .royaltech-prime-slider-skin-slide .royaltech-prime-slider-desc .royaltech-title-tag {
+        font-size: 50px;
+    }
+}
+@media (min-width: 640px) {
+    .royaltech-prime-slider-skin-slide .royaltech-slide-shape {
+        display: inherit;
+    }
+    .royaltech-prime-slider-skin-slide .royaltech-prime-slider-desc .royaltech-title-tag {
+        font-size: 80px;
+    }
+    .royaltech-prime-slider-skin-slide .royaltech-prime-slider-desc h4 {
+        font-size: 25px;
+    }
+    .royaltech-prime-slider-skin-slide .royaltech-navigation-arrows {
+        margin-right: 30px;
+        bottom: auto;
+        left: auto;
+        top: 50%;
+        display: inherit;
+    }
+    .royaltech-prime-slider-skin-slide .royaltech-navigation-arrows .royaltech-prime-slider-previous {
+        margin-right: 0px;
+    }
+    .royaltech-prime-slider-skin-slide .royaltech-dotnav {
+        display: inherit;
+    }
+    .royaltech-prime-slider-skin-slide .royaltech-prime-slider-next,
+    .royaltech-prime-slider-skin-slide .royaltech-prime-slider-previous {
+        height: 60px;
+        width: 60px;
+    }
+    .royaltech-prime-slider-skin-slide .royaltech-prime-slider-next svg,
+    .royaltech-prime-slider-skin-slide .royaltech-prime-slider-previous svg {
+        width: 14px;
+    }
+}
+@media (min-width: 768px) {
+    .royaltech-prime-slider-skin-slide .royaltech-slide-featured {
+        display: inherit;
+    }
+}
+@media (min-width: 1024px) {
+    .royaltech-prime-slider-skin-slide:after {
+        width: 60%;
+    }
+    .royaltech-prime-slider-skin-slide .royaltech-navigation-arrows {
+        margin-right: 100px;
+    }
+    .royaltech-prime-slider-skin-slide .royaltech-slide-featured {
+        width: 60%;
+        padding: 25px;
+    }
+    .royaltech-prime-slider-skin-slide .royaltech-dotnav.royaltech-margin-left-100 {
+        margin-left: 100px;
+    }
+    .royaltech-prime-slider-skin-slide .royaltech-dotnav.royaltech-margin-bottom-100 {
+        margin-bottom: 100px;
+    }
+    .royaltech-prime-slider-skin-slide .royaltech-prime-slider-desc .royaltech-title-tag {
+        font-size: 115px;
+    }
+}
+@media (min-width: 1440px) {
+    .royaltech-prime-slider-skin-slide:after {
+        width: 40%;
+    }
+    .royaltech-prime-slider-skin-slide .royaltech-slide-featured {
+        width: 40%;
+        padding: 30px;
+    }
+}
+.royaltech-prime-slider-skin-crelly {
+    position: relative;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-slideshow-item .royaltech-ps-slide-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-overlay-default:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-prime-slider-wrapper {
+    padding-left: 40px;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-crelly-btn,
+.royaltech-prime-slider-skin-crelly .royaltech-main-title {
+    display: inline-block;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-prime-slider-desc {
+    position: relative;
+    margin-top: 20px;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-prime-slider-desc .royaltech-title-tag a {
+    color: #fff;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-prime-slider-desc .royaltech-title-tag {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    display: inline;
+    line-height: 1.5;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-prime-slider-desc h4 {
+    font-size: 14px;
+    color: #fe506c;
+    margin: 0;
+    font-weight: 700;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-slider-excerpt-content {
+    margin-top: 20px;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-slider-excerpt-content h3 {
+    font-size: 12px;
+    color: #fff;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-slider-excerpt {
+    margin-right: 20px;
+    position: relative;
+    color: #e5e5e5;
+    font-size: 13px;
+    line-height: initial;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-slider-excerpt:before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 40px;
+    background: #fe506c;
+    top: -12px;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-slider-excerpt p {
+    margin: 0;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-slide-btn {
+    font-size: 12px;
+    color: #a2dce6;
+    font-weight: 700;
+    position: relative;
+    padding: 6px 10px;
+    transition: all 0.3s ease;
+    transform: translateX(-10px);
+    display: inline-block;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-slide-btn svg {
+    width: 1em;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-slide-btn svg * {
+    stroke: #a2dce6;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-slide-btn:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #fe506c;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-slide-btn:hover {
+    color: #fff;
+    transform: translateX(0);
+}
+.royaltech-prime-slider-skin-crelly .royaltech-slide-btn:hover svg * {
+    stroke: #fff;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-slide-btn:hover:before {
+    opacity: 1;
+    transform: scale(1);
+}
+.royaltech-prime-slider-skin-crelly .royaltech-prime-social-icon {
+    z-index: 1;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-prime-slider-social-icon {
+    right: 30px;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-prime-slider-social-icon h3 {
+    display: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    padding-right: 20px;
+    margin: 0;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-prime-slider-social-icon a {
+    color: #fff;
+    font-size: 12px;
+    margin-left: 8px;
+    display: flex;
+    padding: 10px;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-prime-slider-social-icon a:hover {
+    color: #fe506c;
+    background: #fff;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-prime-slider-social-icon a:hover svg {
+    color: #fe506c;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-prime-slider-social-icon a svg {
+    color: #fff;
+    height: 1em;
+    width: 1em;
+    transition: color 0.3s ease;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-dotnav {
+    margin-left: 15px;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-dotnav li {
+    position: relative;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-dotnav li a {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-dotnav li a:before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 4px;
+    background: #e5e5e5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-dotnav li a:after {
+    content: "";
+    position: absolute;
+    border: 1px solid transparent;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    border-radius: 40px;
+    transform: scale(0);
+    transition: all 0.3s ease-out;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-dotnav li.royaltech-active a {
+    background: transparent;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-dotnav li.royaltech-active a:before {
+    background: #fff;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-dotnav li.royaltech-active a:after {
+    border-color: #e5e5e5;
+    transform: scale(1);
+}
+.royaltech-prime-slider-skin-crelly .royaltech-slidenav {
+    position: relative;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-navigation-arrows {
+    margin-left: 15px;
+    display: inline-flex;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-prime-slider-next,
+.royaltech-prime-slider-skin-crelly .royaltech-prime-slider-previous {
+    padding: 0;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-right: 6px;
+    background: rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-prime-slider-next:hover,
+.royaltech-prime-slider-skin-crelly .royaltech-prime-slider-previous:hover {
+    background: #fff;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-prime-slider-next:hover svg,
+.royaltech-prime-slider-skin-crelly .royaltech-prime-slider-previous:hover svg {
+    color: #fe506c;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-prime-slider-next svg,
+.royaltech-prime-slider-skin-crelly .royaltech-prime-slider-previous svg {
+    color: #fafafa;
+    width: 6px;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-ps-counternav {
+    bottom: 140px;
+    height: 60px;
+    width: 60px;
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-ps-counternav:before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 75px;
+    background: rgba(255, 255, 255, 0.1);
+    left: 48%;
+    top: -8px;
+    transform: rotate(45deg);
+}
+.royaltech-prime-slider-skin-crelly .royaltech-ps-counternav li {
+    position: absolute;
+    transform: rotateX(-180deg);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform-style: preserve-3d;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-ps-counternav li a {
+    font-size: 20px;
+    color: #fe506c;
+    margin-left: 0;
+    font-weight: 600;
+    line-height: 1;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-ps-counternav li.royaltech-active {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0.3s;
+}
+.royaltech-prime-slider-skin-crelly .royaltech-ps-counternav span {
+    color: rgba(255, 255, 255, 0.1);
+    font-size: 20px;
+    font-weight: 600;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    line-height: 1;
+}
+@media (min-width: 768px) {
+    .royaltech-prime-slider-skin-crelly .royaltech-slider-excerpt-content .royaltech-slider-excerpt {
+        margin: 15px 0;
+        line-height: 28px;
+        font-size: 14px;
+    }
+    .royaltech-prime-slider-skin-crelly .royaltech-slider-excerpt-content h3 {
+        font-size: 18px;
+    }
+    .royaltech-prime-slider-skin-crelly .royaltech-prime-slider-wrapper {
+        padding-left: 75px;
+    }
+    .royaltech-prime-slider-skin-crelly .royaltech-prime-slider-desc .royaltech-title-tag {
+        font-size: 60px;
+    }
+    .royaltech-prime-slider-skin-crelly .royaltech-prime-slider-desc h4 {
+        font-size: 24px;
+    }
+    .royaltech-prime-slider-skin-crelly .royaltech-slide-btn {
+        font-size: 14px;
+    }
+    .royaltech-prime-slider-skin-crelly .royaltech-prime-slider-social-icon h3 {
+        display: inherit;
+    }
+    .royaltech-prime-slider-skin-crelly .royaltech-prime-slider-social-icon a {
+        font-size: 16px;
+    }
+    .royaltech-prime-slider-skin-crelly .royaltech-navigation-arrows {
+        display: inherit;
+        margin-left: 30px;
+    }
+    .royaltech-prime-slider-skin-crelly .royaltech-prime-slider-next,
+    .royaltech-prime-slider-skin-crelly .royaltech-prime-slider-previous {
+        height: 48px;
+        width: 48px;
+        margin-right: 0;
+    }
+    .royaltech-prime-slider-skin-crelly .royaltech-prime-slider-next svg,
+    .royaltech-prime-slider-skin-crelly .royaltech-prime-slider-previous svg {
+        width: 8px;
+    }
+    .royaltech-prime-slider-skin-crelly .royaltech-dotnav {
+        margin-left: 42px;
+    }
+}
+@media (min-width: 1024px) {
+    .royaltech-prime-slider-skin-crelly .royaltech-navigation-arrows {
+        margin-left: 100px;
+    }
+    .royaltech-prime-slider-skin-crelly .royaltech-prime-slider-wrapper {
+        padding-left: 200px;
+    }
+    .royaltech-prime-slider-skin-crelly .royaltech-dotnav {
+        margin-left: 120px;
+    }
+    .royaltech-prime-slider-skin-crelly .royaltech-prime-slider-desc {
+        margin-top: 110px;
+    }
+    .royaltech-prime-slider-skin-crelly .royaltech-prime-slider-desc .royaltech-main-title {
+        margin-bottom: 25px;
+    }
+    .royaltech-prime-slider-skin-crelly .royaltech-prime-slider-desc .royaltech-title-tag {
+        font-size: 100px;
+    }
+    .royaltech-prime-slider-skin-crelly .royaltech-prime-slider-desc h4 {
+        font-size: 32px;
+    }
+    .royaltech-prime-slider-skin-crelly .royaltech-prime-slider-next,
+    .royaltech-prime-slider-skin-crelly .royaltech-prime-slider-previous {
+        height: 60px;
+        width: 60px;
+    }
+    .royaltech-prime-slider-skin-crelly .royaltech-prime-slider-next svg,
+    .royaltech-prime-slider-skin-crelly .royaltech-prime-slider-previous svg {
+        width: 10px;
+    }
+    .royaltech-prime-slider-skin-crelly .royaltech-ps-counternav {
+        display: inherit;
+    }
+    .royaltech-prime-slider-skin-crelly .royaltech-prime-slider-social-icon {
+        right: 100px;
+    }
+}
+
+.royaltech-prime-slider-skin-meteor {
+    position: relative;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-prime-slider-container {
+    padding: 0 50px;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-slideshow-item .royaltech-ps-slide-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-prime-slider-desc {
+    position: relative;
+    width: 100%;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-prime-slider-desc .royaltech-main-title {
+    margin-bottom: 30px;
+    display: inline-block;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-prime-slider-desc .royaltech-title-tag a {
+    color: #fff;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-prime-slider-desc .royaltech-title-tag {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    display: inline;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-prime-slider-desc h4 {
+    font-size: 18px;
+    color: #fff;
+    margin: 0;
+    padding-bottom: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-slider-excerpt {
+    margin-right: 20px;
+    color: #e5e5e5;
+    font-size: 13px;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-slider-excerpt p {
+    margin: 0;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-slide-btn {
+    font-size: 15px;
+    padding: 8px 70px 8px 20px;
+    position: relative;
+    border-radius: 80px;
+    color: #fff;
+    border: 2px solid #fe506c;
+    transition: all 0.3s ease;
+    outline: none;
+    display: inline-block;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-slide-btn:hover {
+    background-color: #fe506c;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-slide-btn:hover .royaltech-slide-btn-icon {
+    background: #fff;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-slide-btn:hover .royaltech-slide-btn-icon svg * {
+    stroke: #fe506c;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-slide-btn .royaltech-slide-btn-icon {
+    background: #fe506c;
+    border-radius: 40px;
+    right: -2px;
+    position: absolute;
+    height: 38px;
+    width: 38px;
+    line-height: 38px;
+    bottom: -2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-slide-btn .royaltech-slide-btn-icon svg * {
+    stroke: #fff;
+    transition: all 0.3s ease;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-prime-social-icon {
+    z-index: 1;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-prime-slider-social-icon {
+    text-align: center;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-prime-slider-social-icon a {
+    color: #fff;
+    font-size: 10px;
+    margin: 3px;
+    padding: 9px 8px;
+    border-radius: 40px;
+    display: flex;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-prime-slider-social-icon a:hover {
+    color: #8eb477;
+    background: #fff;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-scroll-down {
+    z-index: 1;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-scroll-down .royaltech-scroll-icon {
+    position: relative;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-scroll-down .royaltech-scroll-icon svg {
+    transition: all 0.4s ease-out;
+    width: 3em;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-scroll-down:hover .royaltech-scroll-icon svg {
+    transform: translateY(30px);
+}
+.royaltech-prime-slider-skin-meteor .royaltech-scroll-down .royaltech-scroll-down-text {
+    display: none;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-scroll-down-wrapper {
+    margin-left: 16px;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-scroll-down-wrapper button {
+    background: transparent;
+    padding: 0;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-scroll-down-wrapper button svg * {
+    fill: #fff;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-prime-slider-footer-content {
+    display: none;
+    width: 100%;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-prime-slider-footer-content .royaltech-social-background {
+    position: relative;
+    background: #1f3e2d;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-prime-slider-footer-content .royaltech-social-bg-color {
+    background: #8eb477;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-prime-slider-footer-content .royaltech-ps-meta li {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transition: opacity 400ms ease-out;
+    transform: translateY(-50%);
+}
+.royaltech-prime-slider-skin-meteor .royaltech-prime-slider-footer-content .royaltech-ps-meta li:not(.royaltech-active) {
+    opacity: 0;
+    display: none;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-prime-slider-footer-content .royaltech-slide-thumbnav-img {
+    position: relative;
+    overflow: hidden;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-prime-slider-footer-content .royaltech-slide-thumbnav-img li {
+    transition: opacity 400ms ease-out;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-prime-slider-footer-content .royaltech-slide-thumbnav-img li * {
+    min-height: 110%;
+    width: auto;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-prime-slider-footer-content .royaltech-slide-thumbnav-img li:not(.royaltech-active) {
+    opacity: 0;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-dotnav {
+    top: 87%;
+    left: 30px;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-dotnav.royaltech-dotnav-vertical {
+    flex-direction: inherit;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-dotnav li {
+    position: relative;
+    margin-right: 10px;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-dotnav li a {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: 2px solid transparent;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-dotnav li a:before {
+    content: "";
+    position: absolute;
+    height: 6px;
+    width: 6px;
+    background: rgba(255, 255, 255, 0.8);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+.royaltech-prime-slider-skin-meteor .royaltech-dotnav li.royaltech-active a {
+    background: transparent;
+    border-color: #fff;
+    transform: scale(1);
+}
+.royaltech-prime-slider-skin-meteor .royaltech-dotnav li.royaltech-active a:before {
+    background: #fff;
+}
+@media (min-width: 640px) {
+    .royaltech-prime-slider-skin-meteor .royaltech-prime-slider-desc .royaltech-title-tag {
+        font-size: 80px;
+    }
+    .royaltech-prime-slider-skin-meteor .royaltech-prime-slider-desc h4 {
+        font-size: 20px;
+    }
+    .royaltech-prime-slider-skin-meteor .royaltech-slide-btn {
+        font-size: 16px;
+        padding: 12px 75px 12px 30px;
+    }
+    .royaltech-prime-slider-skin-meteor .royaltech-slide-btn .royaltech-slide-btn-icon {
+        right: -2px;
+        height: 47px;
+        width: 47px;
+        line-height: 47px;
+        bottom: -2px;
+    }
+    .royaltech-prime-slider-skin-meteor .royaltech-prime-slider-footer-content {
+        display: flex;
+    }
+    .royaltech-prime-slider-skin-meteor .royaltech-height-small {
+        height: 120px;
+    }
+    .royaltech-prime-slider-skin-meteor .royaltech-dotnav {
+        top: 50%;
+        left: auto;
+    }
+    .royaltech-prime-slider-skin-meteor .royaltech-dotnav.royaltech-dotnav-vertical {
+        flex-direction: column;
+    }
+    .royaltech-prime-slider-skin-meteor .royaltech-dotnav li {
+        margin-right: 0px;
+    }
+    .royaltech-prime-slider-skin-meteor .royaltech-dotnav li a {
+        width: 30px;
+        height: 30px;
+    }
+    .royaltech-prime-slider-skin-meteor .royaltech-dotnav li a:before {
+        height: 8px;
+        width: 8px;
+    }
+}
+@media (min-width: 1024px) {
+	.royaltech-prime-slider-skin-meteor .royaltech-prime-slider-container {
+		padding: 0 100px;
+	}	
+    .royaltech-prime-slider-skin-meteor .royaltech-prime-slider-desc .royaltech-main-title {
+        margin-bottom: 50px;
+    }
+    .royaltech-prime-slider-skin-meteor .royaltech-prime-slider-desc .royaltech-title-tag {
+        font-size: 100px;
+    }
+    .royaltech-prime-slider-skin-meteor .royaltech-prime-slider-desc h4 {
+        font-size: 24px;
+    }
+    .royaltech-prime-slider-skin-meteor .royaltech-prime-slider-social-icon a {
+        display: inline-flex;
+        margin: 0;
+        font-size: 14px;
+        padding: 10px 8px;
+    }
+    .royaltech-prime-slider-skin-meteor .royaltech-scroll-down-wrapper {
+        margin-left: 88px;
+    }
+    .royaltech-prime-slider-skin-meteor .royaltech-slider-excerpt {
+        padding-right: 20px;
+        font-size: 14px;
+    }
+    .royaltech-prime-slider-skin-meteor .royaltech-prime-slider-footer-content .royaltech-ps-meta li {
+        left: 40px;
+    }
+}
+@media (min-width: 1440px) {
+    .royaltech-prime-slider-skin-meteor .royaltech-prime-slider-desc .royaltech-title-tag {
+        font-size: 140px;
+    }
+    .royaltech-prime-slider-skin-meteor .royaltech-height-small {
+        height: 150px;
+    }
+}
+
+/* General Slider */
+.royaltech-prime-slider-skin-general {
+    position: relative;
+    overflow: hidden;
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-content {
+    position: relative;
+}
+.royaltech-prime-slider-skin-general .royaltech-slideshow-item .royaltech-ps-slide-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-desc {
+    margin-top: 40px;
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-desc .royaltech-main-title {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-desc .royaltech-main-title > div {
+    display: inline-block;
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-desc .royaltech-main-title .royaltech-title-tag a {
+    color: #fff;
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-desc .royaltech-main-title .royaltech-title-tag {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+    margin: 0;
+    display: inline-block;
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-desc .royaltech-sub-title h4 {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 5px;
+    display: inline-block;
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-desc .royaltech-slider-excerpt {
+    margin: 0 0 20px;
+}
+.royaltech-prime-slider-skin-general .royaltech-slider-excerpt {
+    margin: 35px 20px 20px 0;
+    color: #ddd;
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 510px;
+}
+.royaltech-prime-slider-skin-general .royaltech-btn-wrapper {
+    display: inline-flex;
+}
+.royaltech-prime-slider-skin-general .royaltech-slide-btn {
+    display: inline-block;
+    font-size: 14px;
+    padding: 8px 55px 8px 20px;
+    position: relative;
+    border-radius: 80px;
+    color: #fff;
+    border: 2px solid #fe506c;
+    transition: all 0.3s ease;
+    outline: none;
+}
+.royaltech-prime-slider-skin-general .royaltech-slide-btn:hover {
+    background-color: #fe506c;
+}
+.royaltech-prime-slider-skin-general .royaltech-slide-btn:hover .royaltech-slide-btn-icon {
+    background: #fff;
+}
+.royaltech-prime-slider-skin-general .royaltech-slide-btn:hover .royaltech-slide-btn-icon svg * {
+    stroke: #fe506c;
+}
+.royaltech-prime-slider-skin-general .royaltech-slide-btn .royaltech-slide-btn-icon {
+    background: #fe506c;
+    border-radius: 40px;
+    right: 1px;
+    position: absolute;
+    height: 31px;
+    width: 31px;
+    bottom: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+.royaltech-prime-slider-skin-general .royaltech-slide-btn .royaltech-slide-btn-icon svg * {
+    stroke: #fff;
+    transition: stroke 0.3s ease;
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-social-icon {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-social-icon a {
+    display: flex;
+    font-size: 14px;
+    margin: 15px 0;
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-social-icon i,
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-social-icon svg {
+    width: 1em;
+    height: 1em;
+    color: #fff;
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-social-icon svg {
+    fill: #fff;
+}
+.royaltech-prime-slider-skin-general .royaltech-scroll-down {
+    position: absolute;
+    right: 18px;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.royaltech-prime-slider-skin-general .royaltech-scroll-down span {
+    color: #fff;
+    font-size: 8px;
+}
+.royaltech-prime-slider-skin-general .royaltech-scroll-down .royaltech-scroll-icon {
+    position: relative;
+}
+.royaltech-prime-slider-skin-general .royaltech-scroll-down .royaltech-scroll-icon svg {
+    transition: all 0.4s ease-out;
+    margin-bottom: 20px;
+    width: 35px;
+}
+.royaltech-prime-slider-skin-general .royaltech-scroll-down .royaltech-scroll-icon svg * {
+    fill: #fff;
+}
+.royaltech-prime-slider-skin-general .royaltech-scroll-down:hover .royaltech-scroll-icon svg {
+    transform: translateY(90px);
+}
+.royaltech-prime-slider-skin-general .royaltech-scroll-down .royaltech-scroll-down-text {
+    transform: rotate(90deg);
+    display: block;
+}
+.royaltech-prime-slider-skin-general .royaltech-scroll-down-wrapper button {
+    background: transparent;
+    padding: 0;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+.royaltech-prime-slider .royaltech-prime-slider-skin-general ul.royaltech-slideshow-items {
+    margin: 0;
+}
+.royaltech-prime-slider-skin-general .royaltech-slideshow-nav {
+    left: 42px;
+}
+.royaltech-prime-slider-skin-general .royaltech-slideshow-nav li {
+    position: relative;
+    align-items: center;
+    display: flex;
+    margin-right: 16px;
+    text-align: center;
+    padding: 0;
+}
+.royaltech-prime-slider-skin-general .royaltech-slideshow-nav li a {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-color: #4cb5ff;
+    transition: all 0.3s ease;
+}
+.royaltech-prime-slider-skin-general .royaltech-slideshow-nav li a:hover {
+    background: transparent;
+    border-color: #4cb5ff;
+}
+.royaltech-prime-slider-skin-general .royaltech-slideshow-nav li a:before {
+    box-sizing: border-box;
+    content: "";
+    border: 2px solid #fff;
+    border-radius: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5), inset 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+}
+.royaltech-prime-slider-skin-general .royaltech-slideshow-nav li.royaltech-active a {
+    background: transparent;
+}
+.royaltech-prime-slider-skin-general .royaltech-slideshow-nav li.royaltech-active a:hover {
+    background: transparent;
+    border-color: transparent;
+}
+.royaltech-prime-slider-skin-general .royaltech-slideshow-nav li.royaltech-active a:before {
+    background-color: transparent;
+    border-width: 5px;
+    width: 18px;
+    height: 18px;
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-next,
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-previous {
+    margin-bottom: 30px;
+    border-radius: 60px;
+    height: 36px;
+    width: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    transition: all 0.3s ease;
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-next svg,
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-previous svg {
+    color: #fff;
+    width: 8px;
+    transition: all 0.4s ease-out;
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-next:before,
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-previous:before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 1px;
+    background: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.4s ease;
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-next:hover,
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-previous:hover {
+    background: #fe506c;
+    border-color: #fe506c;
+    width: 60px;
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-previous {
+    right: 80px;
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-previous:before {
+    right: 0;
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-previous:hover {
+    border-radius: 60px 20px 20px 60px;
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-previous:hover svg {
+    transform: translateX(-9px);
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-previous:hover:before {
+    width: 30px;
+    right: 10px;
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-next {
+    right: 34px;
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-next:before {
+    left: 0;
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-next:hover {
+    transform: translateX(24px);
+    border-radius: 20px 60px 60px 20px;
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-next:hover svg {
+    transform: translateX(9px);
+}
+.royaltech-prime-slider-skin-general .royaltech-prime-slider-next:hover:before {
+    width: 30px;
+    left: 10px;
+}
+@media (min-width: 376px) {
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-desc .royaltech-main-title .royaltech-title-tag {
+        font-size: 35px;
+    }
+}
+@media (min-width: 640px) {
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-desc .royaltech-main-title .royaltech-title-tag {
+        font-size: 60px;
+    }
+}
+@media (min-width: 768px) {
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-social-icon {
+        left: 30px;
+        visibility: visible;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-desc .royaltech-main-title .royaltech-title-tag {
+        font-size: 65px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-desc .royaltech-slider-excerpt {
+        margin: 0 0 30px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-slide-btn {
+        font-size: 16px;
+        padding: 12px 75px 12px 30px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-slide-btn .royaltech-slide-btn-icon {
+        height: 37px;
+        width: 37px;
+        right: 4px;
+        bottom: 4px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-slider-excerpt {
+        margin-top: 20px;
+        line-height: 24px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-social-icon a {
+        font-size: 16px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-slideshow-nav li a {
+        width: 22px;
+        height: 22px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-slideshow-nav li.royaltech-active a:before {
+        border-width: 6px;
+        width: 22px;
+        height: 22px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-next,
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-previous {
+        height: 48px;
+        width: 48px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-next svg,
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-previous svg {
+        width: 9px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-previous {
+        right: 100px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-previous:hover {
+        width: 75px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-previous:hover:before {
+        width: 40px;
+        right: 12px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-previous:hover svg {
+        transform: translateX(-13px);
+    }
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-next {
+        right: 40px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-next:hover {
+        width: 75px;
+        transform: translateX(30px);
+    }
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-next:hover:before {
+        width: 40px;
+        left: 12px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-next:hover svg {
+        transform: translateX(13px);
+    }
+}
+@media (min-width: 1024px) {
+    .royaltech-prime-slider-container {
+        padding: 0 100px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-scroll-down {
+        right: 75px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-scroll-down span {
+        font-size: 10px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-scroll-down .royaltech-scroll-icon svg {
+        margin-bottom: 30px;
+        width: 48px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-scroll-down:hover .royaltech-scroll-icon svg {
+        transform: translateY(125px);
+    }
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-social-icon {
+        left: 100px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-desc .royaltech-main-title .royaltech-title-tag {
+        font-size: 80px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-desc .royaltech-slider-excerpt {
+        margin: 0 0 40px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-slider-excerpt {
+        max-width: 550px;
+        font-size: 15px;
+        line-height: 34px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-dotnav {
+        left: 113px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-previous {
+        right: 160px;
+        margin-bottom: 60px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-next {
+        right: 100px;
+        margin-bottom: 60px;
+    }
+}
+@media (min-width: 1440px) {
+    .royaltech-prime-slider-skin-general .royaltech-prime-slider-desc .royaltech-main-title .royaltech-title-tag {
+        font-size: 110px;
+    }
+    .royaltech-prime-slider-skin-general .royaltech-slider-excerpt {
+        margin-top: 80px;
+    }
+}
+
+
+/* Regal Slider */
+.royaltech-prime-slider-skin-regal {
+    position: relative;
+    overflow: hidden;
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-content {
+    position: relative;
+}
+.royaltech-prime-slider-skin-regal .royaltech-slideshow-item .royaltech-ps-slide-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* .royaltech-prime-slider-skin-regal .royaltech-prime-slider-desc {
+    margin-top: 40px;
+} */
+
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-desc .royaltech-main-title {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-desc .royaltech-main-title > div {
+    display: inline-block;
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-desc .royaltech-main-title .royaltech-title-tag a {
+    color: #fff;
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-desc .royaltech-main-title .royaltech-title-tag {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+    margin: 0;
+    display: inline-block;
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-desc .royaltech-sub-title h4 {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 5px;
+    display: inline-block;
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-desc .royaltech-slider-excerpt {
+    margin: 0 0 20px;
+}
+.royaltech-prime-slider-skin-regal .royaltech-slider-excerpt {
+    margin: 35px 20px 20px 0;
+    color: #ddd;
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 510px;
+}
+.royaltech-prime-slider-skin-regal .royaltech-btn-wrapper {
+    display: inline-flex;
+}
+.royaltech-prime-slider-skin-regal .royaltech-slide-btn {
+    display: inline-block;
+    font-size: 14px;
+    padding: 8px 55px 8px 20px;
+    position: relative;
+    border-radius: 80px;
+    color: #fff;
+    border: 2px solid #fe506c;
+    transition: all 0.3s ease;
+    outline: none;
+}
+.royaltech-prime-slider-skin-regal .royaltech-slide-btn:hover {
+    background-color: #fe506c;
+}
+.royaltech-prime-slider-skin-regal .royaltech-slide-btn:hover .royaltech-slide-btn-icon {
+    background: #fff;
+}
+.royaltech-prime-slider-skin-regal .royaltech-slide-btn:hover .royaltech-slide-btn-icon svg * {
+    stroke: #fe506c;
+}
+.royaltech-prime-slider-skin-regal .royaltech-slide-btn .royaltech-slide-btn-icon {
+    background: #fe506c;
+    border-radius: 40px;
+    right: 1px;
+    position: absolute;
+    height: 31px;
+    width: 31px;
+    bottom: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+.royaltech-prime-slider-skin-regal .royaltech-slide-btn .royaltech-slide-btn-icon svg * {
+    stroke: #fff;
+    transition: stroke 0.3s ease;
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-social-icon {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-social-icon a {
+    display: flex;
+    font-size: 14px;
+    margin: 15px 0;
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-social-icon i,
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-social-icon svg {
+    width: 1em;
+    height: 1em;
+    color: #fff;
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-social-icon svg {
+    fill: #fff;
+}
+.royaltech-prime-slider-skin-regal .royaltech-scroll-down {
+    position: absolute;
+    right: 18px;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.royaltech-prime-slider-skin-regal .royaltech-scroll-down span {
+    color: #fff;
+    font-size: 8px;
+}
+.royaltech-prime-slider-skin-regal .royaltech-scroll-down .royaltech-scroll-icon {
+    position: relative;
+}
+.royaltech-prime-slider-skin-regal .royaltech-scroll-down .royaltech-scroll-icon svg {
+    transition: all 0.4s ease-out;
+    margin-bottom: 20px;
+    width: 35px;
+}
+.royaltech-prime-slider-skin-regal .royaltech-scroll-down .royaltech-scroll-icon svg * {
+    fill: #fff;
+}
+.royaltech-prime-slider-skin-regal .royaltech-scroll-down:hover .royaltech-scroll-icon svg {
+    transform: translateY(90px);
+}
+.royaltech-prime-slider-skin-regal .royaltech-scroll-down .royaltech-scroll-down-text {
+    transform: rotate(90deg);
+    display: block;
+}
+.royaltech-prime-slider-skin-regal .royaltech-scroll-down-wrapper button {
+    background: transparent;
+    padding: 0;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+.royaltech-prime-slider .royaltech-prime-slider-skin-regal ul.royaltech-slideshow-items {
+    margin: 0;
+}
+.royaltech-prime-slider-skin-regal .royaltech-slideshow-nav {
+    left: 42px;
+}
+.royaltech-prime-slider-skin-regal .royaltech-slideshow-nav li {
+    position: relative;
+    align-items: center;
+    display: flex;
+    margin-right: 16px;
+    text-align: center;
+    padding: 0;
+}
+.royaltech-prime-slider-skin-regal .royaltech-slideshow-nav li a {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-color: #4cb5ff;
+    transition: all 0.3s ease;
+}
+.royaltech-prime-slider-skin-regal .royaltech-slideshow-nav li a:hover {
+    background: transparent;
+    border-color: #4cb5ff;
+}
+.royaltech-prime-slider-skin-regal .royaltech-slideshow-nav li a:before {
+    box-sizing: border-box;
+    content: "";
+    border: 2px solid #fff;
+    border-radius: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5), inset 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+}
+.royaltech-prime-slider-skin-regal .royaltech-slideshow-nav li.royaltech-active a {
+    background: transparent;
+}
+.royaltech-prime-slider-skin-regal .royaltech-slideshow-nav li.royaltech-active a:hover {
+    background: transparent;
+    border-color: transparent;
+}
+.royaltech-prime-slider-skin-regal .royaltech-slideshow-nav li.royaltech-active a:before {
+    background-color: transparent;
+    border-width: 5px;
+    width: 18px;
+    height: 18px;
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-next,
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-previous {
+    margin-bottom: 30px;
+    border-radius: 60px;
+    height: 36px;
+    width: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    transition: all 0.3s ease;
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-next svg,
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-previous svg {
+    color: #fff;
+    width: 8px;
+    transition: all 0.4s ease-out;
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-next:before,
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-previous:before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 1px;
+    background: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.4s ease;
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-next:hover,
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-previous:hover {
+    background: #fe506c;
+    border-color: #fe506c;
+    width: 60px;
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-previous {
+    right: 80px;
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-previous:before {
+    right: 0;
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-previous:hover {
+    border-radius: 60px 20px 20px 60px;
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-previous:hover svg {
+    transform: translateX(-9px);
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-previous:hover:before {
+    width: 30px;
+    right: 10px;
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-next {
+    right: 34px;
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-next:before {
+    left: 0;
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-next:hover {
+    transform: translateX(24px);
+    border-radius: 20px 60px 60px 20px;
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-next:hover svg {
+    transform: translateX(9px);
+}
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-next:hover:before {
+    width: 30px;
+    left: 10px;
+}
+@media (min-width: 376px) {
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-desc .royaltech-main-title .royaltech-title-tag {
+        font-size: 35px;
+    }
+}
+@media (min-width: 640px) {
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-desc .royaltech-main-title .royaltech-title-tag {
+        font-size: 60px;
+    }
+}
+@media (min-width: 768px) {
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-social-icon {
+        left: 30px;
+        visibility: visible;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-desc .royaltech-main-title .royaltech-title-tag {
+        font-size: 65px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-desc .royaltech-slider-excerpt {
+        margin: 0 0 30px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-slide-btn {
+        font-size: 16px;
+        padding: 12px 75px 12px 30px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-slide-btn .royaltech-slide-btn-icon {
+        height: 37px;
+        width: 37px;
+        right: 4px;
+        bottom: 4px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-slider-excerpt {
+        margin-top: 20px;
+        line-height: 24px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-social-icon a {
+        font-size: 16px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-slideshow-nav li a {
+        width: 22px;
+        height: 22px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-slideshow-nav li.royaltech-active a:before {
+        border-width: 6px;
+        width: 22px;
+        height: 22px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-next,
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-previous {
+        height: 48px;
+        width: 48px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-next svg,
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-previous svg {
+        width: 9px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-previous {
+        right: 100px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-previous:hover {
+        width: 75px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-previous:hover:before {
+        width: 40px;
+        right: 12px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-previous:hover svg {
+        transform: translateX(-13px);
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-next {
+        right: 40px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-next:hover {
+        width: 75px;
+        transform: translateX(30px);
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-next:hover:before {
+        width: 40px;
+        left: 12px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-next:hover svg {
+        transform: translateX(13px);
+    }
+}
+@media (min-width: 1024px) {
+    .royaltech-prime-slider-container {
+        padding: 0 100px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-scroll-down {
+        right: 75px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-scroll-down span {
+        font-size: 10px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-scroll-down .royaltech-scroll-icon svg {
+        margin-bottom: 30px;
+        width: 48px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-scroll-down:hover .royaltech-scroll-icon svg {
+        transform: translateY(125px);
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-social-icon {
+        left: 100px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-desc .royaltech-main-title .royaltech-title-tag {
+        font-size: 80px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-desc .royaltech-slider-excerpt {
+        margin: 0 0 40px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-slider-excerpt {
+        max-width: 550px;
+        font-size: 15px;
+        line-height: 34px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-dotnav {
+        left: 113px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-previous {
+        right: 160px;
+        margin-bottom: 60px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-next {
+        right: 100px;
+        margin-bottom: 60px;
+    }
+}
+@media (min-width: 1440px) {
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-desc .royaltech-main-title .royaltech-title-tag {
+        font-size: 110px;
+    }
+    .royaltech-prime-slider-skin-regal .royaltech-slider-excerpt {
+        margin-top: 80px;
+    }
+}
+
+
+
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1140px;
+    gap: 20px;
+}
+
+.royaltech-prime-slider-skin-regal .royaltech-prime-slider-wrapper > div{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .royaltech-prime-slider-skin-regal .royaltech-prime-slider-wrapper {
+        flex-direction: column;
+    }
+    
+
+    .optionalimage{
+        display: none!important;
+    }
+}

@@ -1,0 +1,176 @@
+/* ============================================
+   Royal Masonry Widget
+   ============================================ */
+
+/* === Wrapper === */
+.royal-masonry-wrapper{position:relative;width:100%}
+
+/* === Filter Nav === */
+.royal-masonry-filter{margin-bottom:25px}
+.royal-masonry-filter ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.royal-masonry-filter ul li{cursor:pointer;display:inline-block;padding:8px 20px;font-size:14px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;transition:all .3s ease;border-radius:4px;user-select:none}
+
+/* Filter Style One - Underline */
+.royal-masonry-filter-one ul li{position:relative;background:transparent;color:#555}
+.royal-masonry-filter-one ul li::before{content:'';position:absolute;bottom:0;left:50%;width:0;height:2px;background:currentColor;transition:all .3s ease;transform:translateX(-50%)}
+.royal-masonry-filter-one ul li.active::before,
+.royal-masonry-filter-one ul li:hover::before{width:100%}
+.royal-masonry-filter-one ul li.active{color:#111}
+
+/* Filter Style Two - Fill */
+.royal-masonry-filter-two ul li{background:#f5f5f5;color:#555;border:1px solid transparent}
+.royal-masonry-filter-two ul li.active,
+.royal-masonry-filter-two ul li:hover{background:#111;color:#fff}
+
+/* Filter Style Three - Border */
+.royal-masonry-filter-three ul li{background:transparent;color:#555;border:2px solid #ddd}
+.royal-masonry-filter-three ul li.active,
+.royal-masonry-filter-three ul li:hover{border-color:#111;color:#111}
+
+/* Filter Style Four - Pill */
+.royal-masonry-filter-four ul li{background:#f0f0f0;color:#555;border-radius:50px}
+.royal-masonry-filter-four ul li.active,
+.royal-masonry-filter-four ul li:hover{background:#111;color:#fff}
+
+/* Filter Style Five - Top Border */
+.royal-masonry-filter-five ul li{border-top:3px solid transparent;padding-top:10px;transition:.3s ease}
+.royal-masonry-filter-five ul li.active,
+.royal-masonry-filter-five ul li:hover{border-top-color:#111}
+
+/* === Grid === */
+.royal-masonry-grid{width:100%;transition:height .4s ease}
+.royal-masonry-sizer{width:0;height:0;visibility:hidden}
+
+/* Column Classes */
+.royal-masonry-item{float:left;position:relative;overflow:hidden;box-sizing:border-box}
+.royal-masonry-col-2 .royal-masonry-item{width:49.5%}
+.royal-masonry-col-3 .royal-masonry-item{width:33%}
+.royal-masonry-col-4 .royal-masonry-item{width:24.5%}
+.royal-masonry-col-5 .royal-masonry-item{width:19.5%}
+.royal-masonry-col-6 .royal-masonry-item{width:16.16%}
+
+/* Item Inner */
+.royal-masonry-item-inner{position:relative;overflow:hidden;border-radius:var(--rm-radius,0);box-shadow:var(--rm-shadow,none);transition:box-shadow .3s ease,transform .3s ease}
+.royal-masonry-item-inner:hover{box-shadow:var(--rm-shadow-hover,var(--rm-shadow,none))}
+.royal-masonry-item-inner img{width:100%;height:auto;display:block;transition:transform .4s ease,filter .4s ease}
+.royal-masonry-item-inner:hover img{transform:scale(1.05)}
+
+/* Category Badge */
+.royal-masonry-cat{position:absolute;top:10px;left:10px;z-index:3;padding:3px 10px;font-size:11px;font-weight:600;text-transform:uppercase;background:rgba(0,0,0,.6);color:#fff;border-radius:3px;opacity:0;transform:translateY(-5px);transition:all .3s ease}
+.royal-masonry-item-inner:hover .royal-masonry-cat{opacity:1;transform:translateY(0)}
+
+/* === Overlay === */
+.royal-masonry-overlay{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--rm-overlay-bg,rgba(0,0,0,.65));opacity:0;transition:all .4s ease;z-index:2}
+.royal-masonry-overlay-title{color:#fff;font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin:0 0 12px;padding:0 15px 12px;position:relative;text-align:center}
+.royal-masonry-overlay-title::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:40px;height:2px;background:rgba(255,255,255,.6)}
+.royal-masonry-overlay-links{display:flex;gap:10px}
+.royal-masonry-overlay-link{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.15);color:#fff;text-decoration:none;transition:all .2s ease;font-size:14px}
+.royal-masonry-overlay-link:hover{background:#fff;color:#111}
+.royal-masonry-overlay-link svg{width:1em;fill:currentColor}
+
+/* === Hover Effects === */
+
+/* Effect 1 - Scale Fade */
+.royal-masonry-eff1 .royal-masonry-overlay{transform:scale(1.1)}
+.royal-masonry-eff1 .royal-masonry-overlay-title{transform:translateY(-15px);opacity:0}
+.royal-masonry-eff1 .royal-masonry-overlay-link{transform:translateY(15px);opacity:0}
+.royal-masonry-eff1:hover .royal-masonry-overlay{opacity:1;transform:scale(1)}
+.royal-masonry-eff1:hover .royal-masonry-overlay-title{transform:translateY(0);opacity:1;transition:all .3s ease .2s}
+.royal-masonry-eff1:hover .royal-masonry-overlay-link{transform:translateY(0);opacity:1}
+.royal-masonry-eff1:hover .royal-masonry-overlay-link:nth-child(1){transition:all .2s ease .4s}
+.royal-masonry-eff1:hover .royal-masonry-overlay-link:nth-child(2){transition:all .2s ease .5s}
+
+/* Effect 2 - Slide Down */
+.royal-masonry-eff2 .royal-masonry-overlay{transform:translateY(-100%)}
+.royal-masonry-eff2 .royal-masonry-overlay-title{opacity:0;transform:translateX(-20px)}
+.royal-masonry-eff2 .royal-masonry-overlay-link{opacity:0;transform:scale(1.2)}
+.royal-masonry-eff2:hover .royal-masonry-overlay{opacity:1;transform:translateY(0);transition:all .35s cubic-bezier(.63,.01,0,1.39)}
+.royal-masonry-eff2:hover .royal-masonry-overlay-title{opacity:1;transform:translateX(0);transition:all .2s ease .3s}
+.royal-masonry-eff2:hover .royal-masonry-overlay-link{opacity:1;transform:scale(1)}
+.royal-masonry-eff2:hover .royal-masonry-overlay-link:nth-child(1){transition:all .2s ease .5s}
+.royal-masonry-eff2:hover .royal-masonry-overlay-link:nth-child(2){transition:all .2s ease .6s}
+
+/* Effect 3 - Curtain */
+.royal-masonry-eff3 .royal-masonry-overlay{transform:scaleX(0);transform-origin:right top}
+.royal-masonry-eff3 .royal-masonry-overlay-title{transform:scale(.4);opacity:0}
+.royal-masonry-eff3 .royal-masonry-overlay-link{opacity:0}
+.royal-masonry-eff3:hover .royal-masonry-overlay{opacity:1;transform:scaleX(1);transform-origin:left top;transition:transform .3s ease}
+.royal-masonry-eff3:hover .royal-masonry-overlay-title{opacity:1;transform:scale(1);transition:all .2s ease .35s}
+.royal-masonry-eff3:hover .royal-masonry-overlay-link{opacity:1;transition:all .2s ease .55s}
+
+/* Effect 4 - Zoom */
+.royal-masonry-eff4 .royal-masonry-overlay{transform:scale(.4)}
+.royal-masonry-eff4 .royal-masonry-overlay-title{transform:scale(1.3);opacity:0}
+.royal-masonry-eff4 .royal-masonry-overlay-link{transform:scale(0);opacity:0}
+.royal-masonry-eff4:hover .royal-masonry-overlay{opacity:1;transform:scale(1);transition:all .3s ease}
+.royal-masonry-eff4:hover .royal-masonry-overlay-title{opacity:1;transform:scale(1);transition:all .2s ease .3s}
+.royal-masonry-eff4:hover .royal-masonry-overlay-link{opacity:1;transform:scale(1)}
+.royal-masonry-eff4:hover .royal-masonry-overlay-link:nth-child(1){transition:all .2s ease .5s}
+.royal-masonry-eff4:hover .royal-masonry-overlay-link:nth-child(2){transition:all .2s ease .6s}
+
+/* Effect 5 - Flip */
+.royal-masonry-eff5 .royal-masonry-overlay{transform:scale(.4);transform-origin:right top}
+.royal-masonry-eff5 .royal-masonry-overlay-title{opacity:0}
+.royal-masonry-eff5 .royal-masonry-overlay-link{opacity:0}
+.royal-masonry-eff5 .royal-masonry-overlay-link:first-child{transform:translateX(30%)}
+.royal-masonry-eff5 .royal-masonry-overlay-link:nth-child(2){transform:translateX(-30%)}
+.royal-masonry-eff5:hover .royal-masonry-overlay{opacity:1;transform:scale(1);transition:all .3s ease}
+.royal-masonry-eff5:hover .royal-masonry-overlay-title{opacity:1;transition:all .2s ease .3s}
+.royal-masonry-eff5:hover .royal-masonry-overlay-link{opacity:1;transform:translateX(0);transition:all .2s ease .5s}
+
+/* === Entrance Animation === */
+.royal-masonry-animate .royal-masonry-item{opacity:0;transform:translateY(30px);transition:opacity .5s ease,transform .5s ease}
+.royal-masonry-animate .royal-masonry-item.royal-masonry-visible{opacity:1;transform:translateY(0)}
+
+/* === Read More === */
+.royal-masonry-readmore{margin-top:30px;text-align:center}
+.royal-masonry-readmore a{display:inline-block;padding:10px 30px;font-size:15px;font-weight:600;border:2px solid #111;color:#111;text-decoration:none;transition:all .3s ease;border-radius:4px}
+.royal-masonry-readmore a:hover{background:#111;color:#fff}
+
+/* === Load More === */
+.royal-masonry-loadmore{margin-top:30px;text-align:center}
+.royal-masonry-loadmore button{padding:12px 35px;font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:1px;border:2px solid #111;background:transparent;color:#111;cursor:pointer;transition:all .3s ease;border-radius:4px}
+.royal-masonry-loadmore button:hover{background:#111;color:#fff}
+.royal-masonry-loadmore button.loading{opacity:.6;pointer-events:none}
+
+/* === WooCommerce === */
+.royal-masonry-price{position:absolute;bottom:10px;right:10px;z-index:3;padding:4px 12px;font-size:14px;font-weight:700;background:rgba(0,0,0,.7);color:#fff;border-radius:3px}
+.royal-masonry-sale{position:absolute;top:10px;right:10px;z-index:3;padding:3px 10px;font-size:11px;font-weight:700;text-transform:uppercase;background:#e74c3c;color:#fff;border-radius:3px}
+.royal-masonry-addtocart{display:inline-flex;align-items:center;gap:6px;padding:6px 16px;font-size:13px;font-weight:600;background:#111;color:#fff;border:none;border-radius:3px;cursor:pointer;text-decoration:none;transition:all .3s ease;margin-top:8px}
+.royal-masonry-addtocart:hover{background:#333;color:#fff}
+
+/* === Card Style === */
+.royal-masonry-card{background:#fff;border-radius:var(--rm-radius,8px);overflow:hidden;box-shadow:0 2px 15px rgba(0,0,0,.08);transition:all .3s ease}
+.royal-masonry-card:hover{box-shadow:0 8px 30px rgba(0,0,0,.15);transform:translateY(-3px)}
+.royal-masonry-card-body{padding:15px}
+.royal-masonry-card-title{font-size:16px;font-weight:700;margin:0 0 8px;color:#111}
+.royal-masonry-card-title a{color:inherit;text-decoration:none}
+.royal-masonry-card-excerpt{font-size:13px;color:#666;line-height:1.5;margin:0 0 10px}
+.royal-masonry-card-meta{display:flex;align-items:center;gap:12px;font-size:12px;color:#999}
+
+/* === Responsive === */
+@media(max-width:1024px){
+.royal-masonry-col-5 .royal-masonry-item,
+.royal-masonry-col-6 .royal-masonry-item{width:33%}
+.royal-masonry-col-4 .royal-masonry-item{width:49.5%}
+}
+@media(max-width:768px){
+.royal-masonry-col-2 .royal-masonry-item,
+.royal-masonry-col-3 .royal-masonry-item,
+.royal-masonry-col-4 .royal-masonry-item,
+.royal-masonry-col-5 .royal-masonry-item,
+.royal-masonry-col-6 .royal-masonry-item{width:49.5%}
+.royal-masonry-filter ul{justify-content:center}
+}
+@media(max-width:480px){
+.royal-masonry-col-2 .royal-masonry-item,
+.royal-masonry-col-3 .royal-masonry-item,
+.royal-masonry-col-4 .royal-masonry-item,
+.royal-masonry-col-5 .royal-masonry-item,
+.royal-masonry-col-6 .royal-masonry-item{width:100%}
+.royal-masonry-filter ul li{padding:6px 14px;font-size:12px}
+}
+
+/* Mobile filter stack */
+.royal-masonry-filter-mobile ul{flex-direction:column;align-items:center}
+.royal-masonry-filter-mobile ul li{width:80%;text-align:center}

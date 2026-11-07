@@ -1,0 +1,16 @@
+/*********** Royal Magic Scroll ***********/
+/********************************************/
+.pa-invisible {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .royal-mscroll-svg,
+  .royal-mscroll-svg svg {
+    width: 100% !important;
+  }
+  
+  .royal-mscroll-yes .royal-video-box-container > div,
+  .royal-mscroll-yes .royal-video-box-video-container {
+    overflow: visible !important;
+  }

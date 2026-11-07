@@ -1,0 +1,543 @@
+/* =========================================================
+   Royal Animated Dividers Collection (10 Styles)
+   1. Two-Tone Accent Bar (UP Style - .hp-bar inspired)
+   2. Sliding Pill / Runner
+   3. Traveling Dot / Orb
+   4. Pulse / Breathing Bar
+   5. Gradient Liquid Flow
+   6. Barber Pole Moving Stripes
+   7. Meteor / Shooting Comet
+   8. Center Expand Line
+   9. Bouncing Wave Dots
+   10. Dual Line with Center Pulse
+   ========================================================= */
+
+/* Container & Wrapper */
+.royal-animated-divider-wrap {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.royal-animated-divider {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  line-height: 1;
+}
+
+/* Integration with Royal Divider widget containers */
+.royal-separator-container.royal-separator-is-animated .royal-separator-content-wrapper,
+.royal-separator-container[class*="royal-separator-animated-"] .royal-separator-content-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.royal-separator-container.royal-separator-is-animated .royal-separator-divider-left,
+.royal-separator-container.royal-separator-is-animated .royal-separator-divider-right,
+.royal-separator-container[class*="royal-separator-animated-"] .royal-separator-divider-left,
+.royal-separator-container[class*="royal-separator-animated-"] .royal-separator-divider-right {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  line-height: normal;
+}
+
+.royal-separator-container.royal-separator-is-animated .royal-separator-icon-container,
+.royal-separator-container[class*="royal-separator-animated-"] .royal-separator-icon-container {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 15px;
+}
+
+/* =========================================================
+   1. Two-Tone Accent Bar (UP Style: .hp-bar inspired)
+   ========================================================= */
+.royal-animated-divider.royal-anim-dual-bar {
+  --dual-primary: #0b4d26;
+  --dual-accent: #c9a24a;
+  --dual-split: 70%;
+  width: 130px;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--dual-primary) var(--dual-split), var(--dual-accent) var(--dual-split));
+  overflow: hidden;
+  position: relative;
+  transform-origin: left center;
+}
+
+/* Expand & Contract (Continuous Loop) */
+.royal-animated-divider.royal-anim-dual-bar.royal-anim-effect-expand {
+  animation: royalDualBarGrow 2.5s cubic-bezier(.2, .7, .2, 1) infinite alternate;
+}
+
+/* Expand Once on Load (Matches unnayanprochesta transition behavior) */
+.royal-animated-divider.royal-anim-dual-bar.royal-anim-effect-once {
+  animation: royalDualBarGrowOnce 1.2s cubic-bezier(.2, .7, .2, 1) forwards;
+}
+
+/* Shimmer / Light Sweep */
+.royal-animated-divider.royal-anim-dual-bar.royal-anim-effect-shimmer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.65), transparent);
+  transform: skewX(-20deg);
+  animation: royalDualBarShimmer 2.2s ease-in-out infinite;
+}
+
+/* Gentle Breathing Pulse */
+.royal-animated-divider.royal-anim-dual-bar.royal-anim-effect-pulse {
+  animation: royalDualBarPulse 2s ease-in-out infinite;
+}
+
+/* Static Two-Tone Bar */
+.royal-animated-divider.royal-anim-dual-bar.royal-anim-effect-static {
+  animation: none;
+}
+
+@keyframes royalDualBarGrow {
+  0% {
+    transform: scaleX(0.15);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes royalDualBarGrowOnce {
+  0% {
+    transform: scaleX(0);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes royalDualBarShimmer {
+  0% {
+    left: -80%;
+  }
+  100% {
+    left: 140%;
+  }
+}
+
+@keyframes royalDualBarPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.92, 0.85);
+    opacity: 0.75;
+  }
+}
+
+
+/* =========================================================
+   2. Sliding Pill / Runner Divider
+   ========================================================= */
+.royal-animated-divider.royal-anim-sliding-pill,
+.royal-animated-divider:not([class*="royal-anim-"]) {
+  width: 70px;
+  height: 4px;
+  border-radius: 99px;
+  background-color: rgba(11, 77, 38, 0.15);
+  overflow: hidden;
+}
+
+.royal-animated-divider.royal-anim-sliding-pill span,
+.royal-animated-divider:not([class*="royal-anim-"]) span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 40%;
+  height: 100%;
+  border-radius: 99px;
+  background: #0b4d26;
+  animation: royalAnimSlide 2.2s ease-in-out infinite;
+  box-sizing: border-box;
+}
+
+/* Loop Animation (Left to Right) */
+.royal-animated-divider.royal-anim-loop span,
+.royal-animated-divider.royal-anim-sliding-pill.royal-anim-loop span {
+  animation-name: royalAnimSlide;
+  animation-direction: normal;
+}
+
+/* Alternate / Bounce Animation */
+.royal-animated-divider.royal-anim-alternate span,
+.royal-animated-divider.royal-anim-sliding-pill.royal-anim-alternate span {
+  animation-name: royalAnimBounce;
+  animation-direction: alternate;
+}
+
+/* Reverse Animation (Right to Left) */
+.royal-animated-divider.royal-anim-reverse span,
+.royal-animated-divider.royal-anim-sliding-pill.royal-anim-reverse span {
+  animation-name: royalAnimSlideReverse;
+  animation-direction: normal;
+}
+
+@keyframes royalAnimSlide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(280%);
+  }
+}
+
+@keyframes royalAnimBounce {
+  0% {
+    left: 0;
+    transform: translateX(0);
+  }
+  100% {
+    left: 100%;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes royalAnimSlideReverse {
+  0% {
+    transform: translateX(280%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+/* =========================================================
+   3. Traveling Dot / Orb
+   ========================================================= */
+.royal-animated-divider.royal-anim-travel-dot {
+  width: 140px;
+  height: 14px;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  overflow: visible;
+}
+
+.royal-animated-divider.royal-anim-travel-dot .royal-dot-track {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(11, 77, 38, 0.2);
+  border-radius: 2px;
+  display: block;
+}
+
+.royal-animated-divider.royal-anim-travel-dot .royal-dot-orb {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #0b4d26;
+  box-shadow: 0 0 8px rgba(11, 77, 38, 0.6);
+  transform: translateY(-50%);
+  animation: royalAnimTravelBounce 2.4s ease-in-out infinite alternate;
+}
+
+.royal-animated-divider.royal-anim-travel-dot.royal-anim-loop .royal-dot-orb {
+  animation-name: royalAnimTravelLoop;
+  animation-direction: normal;
+}
+
+@keyframes royalAnimTravelBounce {
+  0% {
+    left: 0;
+    transform: translate(0, -50%);
+  }
+  100% {
+    left: 100%;
+    transform: translate(-100%, -50%);
+  }
+}
+
+@keyframes royalAnimTravelLoop {
+  0% {
+    left: 0;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    transform: translate(0, -50%);
+    opacity: 0;
+  }
+}
+
+
+/* =========================================================
+   4. Pulse / Breathing Bar
+   ========================================================= */
+.royal-animated-divider.royal-anim-pulse-bar {
+  --pulse-glow: rgba(11, 77, 38, 0.5);
+  width: 100px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #0b4d26;
+  display: inline-block;
+  animation: royalAnimPulseBar 2.2s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+@keyframes royalAnimPulseBar {
+  0%, 100% {
+    transform: scaleX(0.4);
+    opacity: 0.5;
+    box-shadow: 0 0 2px var(--pulse-glow);
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 1;
+    box-shadow: 0 0 14px var(--pulse-glow);
+  }
+}
+
+
+/* =========================================================
+   5. Gradient Liquid Flow
+   ========================================================= */
+.royal-animated-divider.royal-anim-liquid-flow {
+  --flow-c1: #0b4d26;
+  --flow-c2: #c9a24a;
+  --flow-c3: #27ae60;
+  width: 120px;
+  height: 5px;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--flow-c1), var(--flow-c2), var(--flow-c3), var(--flow-c1));
+  background-size: 300% 100%;
+  animation: royalAnimLiquidFlow 3s linear infinite;
+  display: inline-block;
+}
+
+@keyframes royalAnimLiquidFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+/* =========================================================
+   6. Barber Pole Moving Stripes
+   ========================================================= */
+.royal-animated-divider.royal-anim-stripes {
+  --stripe-c1: #0b4d26;
+  --stripe-c2: #c9a24a;
+  --stripe-size: 10px;
+  width: 120px;
+  height: 6px;
+  border-radius: 99px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--stripe-c1),
+    var(--stripe-c1) var(--stripe-size),
+    var(--stripe-c2) var(--stripe-size),
+    var(--stripe-c2) calc(var(--stripe-size) * 2)
+  );
+  background-size: calc(var(--stripe-size) * 2.828) 100%;
+  animation: royalAnimStripes 1.6s linear infinite;
+  display: inline-block;
+}
+
+@keyframes royalAnimStripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: calc(var(--stripe-size) * 2.828) 0;
+  }
+}
+
+
+/* =========================================================
+   7. Meteor / Shooting Comet
+   ========================================================= */
+.royal-animated-divider.royal-anim-meteor {
+  width: 150px;
+  height: 4px;
+  border-radius: 99px;
+  background-color: rgba(11, 77, 38, 0.15);
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.royal-animated-divider.royal-anim-meteor .royal-meteor-head {
+  --meteor-color: #c9a24a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45%;
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, transparent, var(--meteor-color), #ffffff);
+  box-shadow: 0 0 10px var(--meteor-color);
+  animation: royalAnimMeteor 2s cubic-bezier(.4, 0, .2, 1) infinite;
+}
+
+@keyframes royalAnimMeteor {
+  0% {
+    transform: translateX(-120%);
+  }
+  60%, 100% {
+    transform: translateX(260%);
+  }
+}
+
+
+/* =========================================================
+   8. Center Expand Line
+   ========================================================= */
+.royal-animated-divider.royal-anim-expand {
+  width: 120px;
+  height: 4px;
+  border-radius: 99px;
+  background-color: #0b4d26;
+  display: inline-block;
+  transform-origin: center center;
+  animation: royalAnimCenterExpand 2.4s ease-in-out infinite;
+}
+
+@keyframes royalAnimCenterExpand {
+  0% {
+    transform: scaleX(0);
+    opacity: 0.15;
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(0);
+    opacity: 0.15;
+  }
+}
+
+
+/* =========================================================
+   9. Bouncing Wave Dots
+   ========================================================= */
+.royal-animated-divider.royal-anim-bounce-dots {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 22px;
+  box-sizing: border-box;
+}
+
+.royal-animated-divider.royal-anim-bounce-dots .royal-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #0b4d26;
+  display: inline-block;
+  animation: royalAnimDotWave 1.4s ease-in-out infinite;
+}
+
+.royal-animated-divider.royal-anim-bounce-dots .royal-dot-1 {
+  animation-delay: 0s;
+}
+
+.royal-animated-divider.royal-anim-bounce-dots .royal-dot-2 {
+  background-color: #c9a24a;
+  animation-delay: 0.2s;
+}
+
+.royal-animated-divider.royal-anim-bounce-dots .royal-dot-3 {
+  animation-delay: 0.4s;
+}
+
+@keyframes royalAnimDotWave {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translateY(-8px) scale(1.15);
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   10. Dual Line with Center Pulse
+   ========================================================= */
+.royal-animated-divider.royal-anim-dual-pulse {
+  --pulse-ring-color: rgba(201, 162, 74, 0.7);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 18px;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.royal-animated-divider.royal-anim-dual-pulse .royal-side-line {
+  flex: 1;
+  height: 2px;
+  background-color: #0b4d26;
+  border-radius: 2px;
+  display: block;
+}
+
+.royal-animated-divider.royal-anim-dual-pulse .royal-pulse-center {
+  width: 9px;
+  height: 9px;
+  background-color: #c9a24a;
+  display: block;
+  flex-shrink: 0;
+  animation: royalAnimRingPulse 1.8s ease-in-out infinite;
+}
+
+.royal-animated-divider.royal-anim-dual-pulse.royal-shape-diamond .royal-pulse-center {
+  transform: rotate(45deg);
+  border-radius: 1px;
+}
+
+.royal-animated-divider.royal-anim-dual-pulse.royal-shape-circle .royal-pulse-center {
+  border-radius: 50%;
+}
+
+.royal-animated-divider.royal-anim-dual-pulse.royal-shape-square .royal-pulse-center {
+  border-radius: 2px;
+}
+
+@keyframes royalAnimRingPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 var(--pulse-ring-color);
+    opacity: 0.75;
+  }
+  50% {
+    box-shadow: 0 0 0 7px rgba(201, 162, 74, 0);
+    opacity: 1;
+  }
+}

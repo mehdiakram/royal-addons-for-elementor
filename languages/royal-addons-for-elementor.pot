@@ -1,0 +1,1055 @@
+# Copyright (C) 2024 Royal Technologies
+# This file is distributed under the same license as the Royal Addons for Elementor package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Royal Addons for Elementor 26.01.20\n"
+"Report-Msgid-Bugs-To: https://www.royaltechbd.com\n"
+"POT-Creation-Date: 2026-01-21 17:30+0600\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2026-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Royal Technologies\n"
+"Language-Team: Royal Technologies\n"
+"X-Generator: Gemini AI\n"
+"X-Domain: royal-addons-for-elementor\n"
+
+#. Plugin Name of the plugin
+msgid "Royal Addons for Elementor"
+msgstr ""
+
+#: admin/admin.php
+msgid "Royal Addons"
+msgstr ""
+
+#: admin/admin.php
+msgid "License"
+msgstr ""
+
+#: admin/admin.php
+msgid "Widgets"
+msgstr ""
+
+#: admin/admin.php
+msgid "Extensions"
+msgstr ""
+
+#: admin/admin.php
+msgid "Tweak"
+msgstr ""
+
+#: admin/admin.php
+msgid "About Us"
+msgstr ""
+
+#: admin/admin.php
+msgid "Settings saved successfully!"
+msgstr ""
+
+#: admin/admin.php
+msgid "Error saving settings!"
+msgstr ""
+
+#: admin/admin.php
+msgid "Save Settings"
+msgstr ""
+
+#: admin/admin.php
+msgid "Free Widgets"
+msgstr ""
+
+#: admin/admin.php
+msgid "Pro Widgets"
+msgstr ""
+
+#: admin/admin.php
+msgid "Free Extensions"
+msgstr ""
+
+#: admin/admin.php
+msgid "Pro Extensions"
+msgstr ""
+
+#: admin/admin.php
+msgid "Enable All"
+msgstr ""
+
+#: admin/admin.php
+msgid "Disable All"
+msgstr ""
+
+#: class/royalclone.php
+msgid "Sorry, you are not allowed to clone this item."
+msgstr ""
+
+#: class/royalclone.php
+msgid "Clone - %s"
+msgstr ""
+
+#: class/royalclone.php
+msgid "Royal Clone"
+msgstr ""
+
+#: class/royalclone.php
+msgid "%s - [Cloned #%d]"
+msgstr ""
+
+#: includes/class-main-plugin.php
+msgid "Elementor not installed"
+msgstr ""
+
+#: includes/class-main-plugin.php
+msgid "Royal Addons for Elementor requires Elementor plugin to be installed and activated."
+msgstr ""
+
+#: includes/royal-templates/views/modal.php
+msgid "Royal Templates"
+msgstr ""
+
+#: includes/royal-templates/views/modal.php
+msgid "Pages"
+msgstr ""
+
+#: includes/royal-templates/views/modal.php
+msgid "Sections"
+msgstr ""
+
+#: includes/royal-templates/views/modal.php
+msgid "Headers"
+msgstr ""
+
+#: includes/royal-templates/views/modal.php
+msgid "Footers"
+msgstr ""
+
+#: includes/royal-templates/views/modal.php
+msgid "Close"
+msgstr ""
+
+#: includes/royal-templates/views/modal.php
+msgid "All"
+msgstr ""
+
+#: includes/royal-templates/views/modal.php
+msgid "Free"
+msgstr ""
+
+#: includes/royal-templates/views/modal.php
+msgid "Pro"
+msgstr ""
+
+#: includes/royal-templates/views/modal.php
+msgid "All Categories"
+msgstr ""
+
+#: includes/royal-templates/views/modal.php
+msgid "Business"
+msgstr ""
+
+#: includes/royal-templates/views/modal.php
+msgid "Portfolio"
+msgstr ""
+
+#: includes/royal-templates/views/modal.php
+msgid "Blog"
+msgstr ""
+
+#: includes/royal-templates/views/modal.php
+msgid "Landing Page"
+msgstr ""
+
+#: includes/royal-templates/views/modal.php
+msgid "eCommerce"
+msgstr ""
+
+#: includes/royal-templates/views/modal.php
+msgid "Agency"
+msgstr ""
+
+#: includes/royal-templates/views/modal.php
+msgid "Starter"
+msgstr ""
+
+#: includes/royal-templates/views/modal.php
+msgid "Search templates..."
+msgstr ""
+
+#: includes/royal-templates/views/modal.php
+msgid "Loading templates..."
+msgstr ""
+
+#: includes/royal-templates/views/modal.php
+msgid "No templates found."
+msgstr ""
+
+#: includes/royal-templates/views/modal.php
+msgid "Import Template"
+msgstr ""
+
+#: includes/royal-snippet/class-cpt-manager.php
+msgid "Manage and create all of your custom code here."
+msgstr ""
+
+#: includes/royal-snippet/class-cpt-manager.php
+msgid "Supports HTML, JavaScript, and CSS code"
+msgstr ""
+
+#: includes/royal-snippet/class-cpt-manager.php
+msgid "Learn more"
+msgstr ""
+
+#: includes/royal-snippet/class-cpt-manager.php
+msgid "Location:"
+msgstr ""
+
+#: includes/royal-snippet/class-cpt-manager.php
+msgid "<head>"
+msgstr ""
+
+#: includes/royal-snippet/class-cpt-manager.php
+msgid "<body> - Start"
+msgstr ""
+
+#: includes/royal-snippet/class-cpt-manager.php
+msgid "</body> - End"
+msgstr ""
+
+#: includes/royal-snippet/class-cpt-manager.php
+msgid "Priority:"
+msgstr ""
+
+#: includes/royal-snippet/class-cpt-manager.php
+msgid "Status:"
+msgstr ""
+
+#. Common translations
+msgid "Title"
+msgstr ""
+
+msgid "Content"
+msgstr ""
+
+msgid "Style"
+msgstr ""
+
+msgid "Layout"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "General"
+msgstr ""
+
+msgid "Advanced"
+msgstr ""
+
+msgid "Image"
+msgstr ""
+
+msgid "Icon"
+msgstr ""
+
+msgid "Link"
+msgstr ""
+
+msgid "Color"
+msgstr ""
+
+msgid "Background"
+msgstr ""
+
+msgid "Typography"
+msgstr ""
+
+msgid "Border"
+msgstr ""
+
+msgid "Padding"
+msgstr ""
+
+msgid "Margin"
+msgstr ""
+
+msgid "Normal"
+msgstr ""
+
+msgid "Hover"
+msgstr ""
+
+msgid "Active"
+msgstr ""
+
+msgid "Default"
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+msgid "Left"
+msgstr ""
+
+msgid "Center"
+msgstr ""
+
+msgid "Right"
+msgstr ""
+
+msgid "Top"
+msgstr ""
+
+msgid "Bottom"
+msgstr ""
+
+msgid "Small"
+msgstr ""
+
+msgid "Medium"
+msgstr ""
+
+msgid "Large"
+msgstr ""
+
+msgid "Show"
+msgstr ""
+
+msgid "Hide"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "On"
+msgstr ""
+
+msgid "Off"
+msgstr ""
+
+msgid "Auto"
+msgstr ""
+
+msgid "Manual"
+msgstr ""
+
+msgid "Horizontal"
+msgstr ""
+
+msgid "Vertical"
+msgstr ""
+
+msgid "Width"
+msgstr ""
+
+msgid "Height"
+msgstr ""
+
+msgid "Size"
+msgstr ""
+
+msgid "Alignment"
+msgstr ""
+
+msgid "Position"
+msgstr ""
+
+msgid "Spacing"
+msgstr ""
+
+msgid "Border Radius"
+msgstr ""
+
+msgid "Box Shadow"
+msgstr ""
+
+msgid "Text Color"
+msgstr ""
+
+msgid "Background Color"
+msgstr ""
+
+msgid "Border Color"
+msgstr ""
+
+msgid "Read More"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Author"
+msgstr ""
+
+msgid "Categories"
+msgstr ""
+
+msgid "Tags"
+msgstr ""
+
+msgid "Excerpt"
+msgstr ""
+
+msgid "Autoplay"
+msgstr ""
+
+msgid "Pause on Hover"
+msgstr ""
+
+msgid "Dots"
+msgstr ""
+
+msgid "Navigation"
+msgstr ""
+
+msgid "Previous"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Slides"
+msgstr ""
+
+#. Royal Date Widget
+msgid "Royal Date & Clock"
+msgstr ""
+
+msgid "Show English Calendar"
+msgstr ""
+
+msgid "Show Bengali Calendar"
+msgstr ""
+
+msgid "Show Hijri Calendar"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "City"
+msgstr ""
+
+msgid "Country"
+msgstr ""
+
+msgid "Hijri Date Adjustment"
+msgstr ""
+
+msgid "Change Hijri Date After Maghrib"
+msgstr ""
+
+msgid "Separator"
+msgstr ""
+
+msgid "Gregorian Style"
+msgstr ""
+
+msgid "Bengali Style"
+msgstr ""
+
+msgid "Hijri Style"
+msgstr ""
+
+msgid "Clock Style"
+msgstr ""
+
+msgid "Show Location Clock"
+msgstr ""
+
+msgid "Clock Language"
+msgstr ""
+
+msgid "General Settings"
+msgstr ""
+
+msgid "Location Settings"
+msgstr ""
+
+msgid "Calendar Settings"
+msgstr ""
+
+msgid "Layout & Alignment"
+msgstr ""
+
+msgid "Vertical Spacing"
+msgstr ""
+
+msgid "Location Detection"
+msgstr ""
+
+msgid "Prayer Time Calculation Method"
+msgstr ""
+
+#. Royal Country Flag Widget
+msgid "Country Flag"
+msgstr ""
+
+msgid "Flag Settings"
+msgstr ""
+
+msgid "Select Country Flag"
+msgstr ""
+
+msgid "Editor Preview Flag"
+msgstr ""
+
+msgid "Aspect Ratio"
+msgstr ""
+
+msgid "Rectangle (4x3)"
+msgstr ""
+
+msgid "Square (1x1)"
+msgstr ""
+
+msgid "Flag Style"
+msgstr ""
+
+#. Royal Zakat Calculator Widget
+msgid "Royal Zakat Calculator"
+msgstr ""
+
+msgid "Default Values"
+msgstr ""
+
+msgid "Currency Symbol"
+msgstr ""
+
+msgid "Default Nisab Value"
+msgstr ""
+
+msgid "Default Gold Price (per gram)"
+msgstr ""
+
+msgid "Default Silver Price (per gram)"
+msgstr ""
+
+msgid "Calculator Labels"
+msgstr ""
+
+msgid "Main Labels"
+msgstr ""
+
+msgid "Nisab Value Label"
+msgstr ""
+
+msgid "Nisab Value"
+msgstr ""
+
+msgid "Assets Title Label"
+msgstr ""
+
+msgid "Zakatable Assets"
+msgstr ""
+
+msgid "Liabilities Title Label"
+msgstr ""
+
+msgid "Deductible Liabilities"
+msgstr ""
+
+msgid "Asset Field Labels"
+msgstr ""
+
+msgid "Gold (grams) Label"
+msgstr ""
+
+msgid "Gold (in grams)"
+msgstr ""
+
+msgid "Gold Price Label"
+msgstr ""
+
+msgid "Gold Price (per gram)"
+msgstr ""
+
+msgid "Value of Gold Label"
+msgstr ""
+
+msgid "Value of Gold"
+msgstr ""
+
+msgid "Silver (grams) Label"
+msgstr ""
+
+msgid "Silver (in grams)"
+msgstr ""
+
+msgid "Silver Price Label"
+msgstr ""
+
+msgid "Silver Price (per gram)"
+msgstr ""
+
+msgid "Value of Silver Label"
+msgstr ""
+
+msgid "Value of Silver"
+msgstr ""
+
+msgid "Cash Label"
+msgstr ""
+
+msgid "In hand and in bank accounts"
+msgstr ""
+
+msgid "Hajj Deposit Label"
+msgstr ""
+
+msgid "Deposited for ( e.g. Hajj )"
+msgstr ""
+
+msgid "Loans Given Out Label"
+msgstr ""
+
+msgid "Given out in loans"
+msgstr ""
+
+msgid "Investments Label"
+msgstr ""
+
+msgid "Business investments, shares, saving certificates, pensions"
+msgstr ""
+
+msgid "Stock Value Label"
+msgstr ""
+
+msgid "Value of stock (Trade Goods)"
+msgstr ""
+
+msgid "Liability Field Labels"
+msgstr ""
+
+msgid "Borrowed Money Label"
+msgstr ""
+
+msgid "Borrowed money, goods bought on credit"
+msgstr ""
+
+msgid "Wages Due Label"
+msgstr ""
+
+msgid "Wages due to employees"
+msgstr ""
+
+msgid "Bills Due Label"
+msgstr ""
+
+msgid "Taxes, rent, utility bills due immediately"
+msgstr ""
+
+msgid "Result Labels"
+msgstr ""
+
+msgid "Total Assets Label"
+msgstr ""
+
+msgid "Total Assets:"
+msgstr ""
+
+msgid "Total Liabilities Label"
+msgstr ""
+
+msgid "Total Liabilities:"
+msgstr ""
+
+msgid "Net Worth Label"
+msgstr ""
+
+msgid "Net Zakatable Wealth:"
+msgstr ""
+
+msgid "Zakat Due Label"
+msgstr ""
+
+msgid "Zakat Due:"
+msgstr ""
+
+msgid "Message (Below Nisab)"
+msgstr ""
+
+msgid "Your wealth is below the Nisab threshold. No Zakat is due."
+msgstr ""
+
+msgid "Message (Above Nisab)"
+msgstr ""
+
+msgid "Zakat is due based on your calculations."
+msgstr ""
+
+msgid "Print"
+msgstr ""
+
+msgid "Clear Calculator"
+msgstr ""
+
+msgid "Section Titles"
+msgstr ""
+
+msgid "Field Labels"
+msgstr ""
+
+msgid "Input Fields"
+msgstr ""
+
+msgid "Results Area"
+msgstr ""
+
+msgid "Final Zakat Amount Color"
+msgstr ""
+
+#. Royal Float Social Buttons Widget
+msgid "Social Icons"
+msgstr ""
+
+msgid "Icons List"
+msgstr ""
+
+msgid "Widget Position"
+msgstr ""
+
+msgid "Top Left"
+msgstr ""
+
+msgid "Top Center"
+msgstr ""
+
+msgid "Top Right"
+msgstr ""
+
+msgid "Center Left"
+msgstr ""
+
+msgid "Center Right"
+msgstr ""
+
+msgid "Bottom Left"
+msgstr ""
+
+msgid "Bottom Center"
+msgstr ""
+
+msgid "Bottom Right"
+msgstr ""
+
+msgid "Icon Direction"
+msgstr ""
+
+msgid "Behavior"
+msgstr ""
+
+msgid "Open & Close on Click"
+msgstr ""
+
+msgid "Always Open"
+msgstr ""
+
+msgid "Toggle Button"
+msgstr ""
+
+msgid "Open Icon"
+msgstr ""
+
+msgid "Close Icon"
+msgstr ""
+
+msgid "Pulse Animation"
+msgstr ""
+
+msgid "Button Style"
+msgstr ""
+
+msgid "Button Size"
+msgstr ""
+
+msgid "Icon Size"
+msgstr ""
+
+msgid "Icon Padding"
+msgstr ""
+
+msgid "Toggle Button Colors"
+msgstr ""
+
+msgid "Icon Color"
+msgstr ""
+
+msgid "Position & Spacing"
+msgstr ""
+
+msgid "Offset X"
+msgstr ""
+
+msgid "Offset Y"
+msgstr ""
+
+msgid "Spacing Between Icons"
+msgstr ""
+
+#. Royal Job Widget
+msgid "Sorry, no job matched your criteria."
+msgstr ""
+
+msgid "\"royaljob\" post type not found or actived, Please contact Developer."
+msgstr ""
+
+#. Common Widget Labels
+msgid "Number of Posts"
+msgstr ""
+
+msgid "Order by"
+msgstr ""
+
+msgid "Sort"
+msgstr ""
+
+msgid "ASC"
+msgstr ""
+
+msgid "DESC"
+msgstr ""
+
+#. WooCommerce Widgets
+msgid "\"Woocommerce\" not found"
+msgstr ""
+
+msgid "Woocommerce plugin not active, Please install & active Woocommerce."
+msgstr ""
+
+#. Chart Widgets
+msgid "Pie Donut Chart"
+msgstr ""
+
+msgid "Basic"
+msgstr ""
+
+msgid "Data Label"
+msgstr ""
+
+msgid "Data Value"
+msgstr ""
+
+msgid "Background Image"
+msgstr ""
+
+msgid "Background Hover Color"
+msgstr ""
+
+msgid "Border Hover Color"
+msgstr ""
+
+msgid "Data Sets"
+msgstr ""
+
+msgid "Label 1"
+msgstr ""
+
+msgid "Label 2"
+msgstr ""
+
+msgid "Label 3"
+msgstr ""
+
+msgid "Chart Type"
+msgstr ""
+
+msgid "Pie"
+msgstr ""
+
+msgid "Donut"
+msgstr ""
+
+msgid "Chart Alignment"
+msgstr ""
+
+msgid "Start"
+msgstr ""
+
+msgid "End"
+msgstr ""
+
+msgid "Chart Width"
+msgstr ""
+
+msgid "Chart Aspect Ratio"
+msgstr ""
+
+msgid "Border Width"
+msgstr ""
+
+msgid "Hover Border Width"
+msgstr ""
+
+msgid "Text Alignment"
+msgstr ""
+
+msgid "Title HTML Tag"
+msgstr ""
+
+msgid "Title Color"
+msgstr ""
+
+msgid "Title Typography"
+msgstr ""
+
+msgid "Description Color"
+msgstr ""
+
+msgid "Description Typography"
+msgstr ""
+
+msgid "Space Between Chart & Content"
+msgstr ""
+
+msgid "Space Between Title & Description"
+msgstr ""
+
+msgid "Legend"
+msgstr ""
+
+msgid "Chart Legend"
+msgstr ""
+
+msgid "Bar Width"
+msgstr ""
+
+msgid "Bar Height"
+msgstr ""
+
+msgid "Space Between Legends"
+msgstr ""
+
+msgid "Label Color"
+msgstr ""
+
+msgid "Label Font"
+msgstr ""
+
+msgid "Font Size"
+msgstr ""
+
+msgid "Font weight"
+msgstr ""
+
+#. Slider Circle Widget
+msgid "Slider Circle [Pro]"
+msgstr ""
+
+msgid "Circle Size"
+msgstr ""
+
+msgid "Round Size"
+msgstr ""
+
+msgid "Auto Rotate"
+msgstr ""
+
+msgid "Rotate Speed (ms)"
+msgstr ""
+
+msgid "Radius (px)"
+msgstr ""
+
+msgid "Rotation Direction"
+msgstr ""
+
+msgid "Clockwise"
+msgstr ""
+
+msgid "Counter Clockwise"
+msgstr ""
+
+msgid "Dot Before Color"
+msgstr ""
+
+msgid "Dot After Color"
+msgstr ""
+
+msgid "Round Border"
+msgstr ""
+
+msgid "Itemdot Background"
+msgstr ""
+
+msgid "Itemdot Active Background"
+msgstr ""
+
+msgid "Content Size"
+msgstr ""
+
+#. Prayer Times Widget
+msgid "Loading Prayer Times..."
+msgstr ""
+
+msgid "Could not auto-detect location. Please enter manually."
+msgstr ""
+
+msgid "Get Times"
+msgstr ""
+
+msgid "Style 1 (List)"
+msgstr ""
+
+msgid "Style 2 (Horizontal)"
+msgstr ""
+
+#. Popup Widget
+msgid "Close Popup"
+msgstr ""
+
+msgid "Auto Close Delay (sec)"
+msgstr ""
+
+msgid "Button Visible After (sec)"
+msgstr ""
+
+msgid "Entrance Duration (ms)"
+msgstr ""
+
+msgid "Exit Duration (ms)"
+msgstr ""
+
+#. Map Widget
+msgid "Search locations..."
+msgstr ""
+
+msgid "Toggle Location List"
+msgstr ""
+
+msgid "Find My Location"
+msgstr ""
+
+msgid "Export as PDF"
+msgstr ""
+
+msgid "Filter by radius:"
+msgstr ""
+
+msgid "Default Search Radius (km)"
+msgstr ""
+
+#. Feed Viewer Widget
+msgid "This is a Sample Feed Title"
+msgstr ""
+
+msgid "This is a sample excerpt text. You can style the color, font, and spacing of this content. The actual content will be loaded from the live feed on your website."
+msgstr ""
+
+msgid "Excerpt Length (Words)"
+msgstr ""
+
+#. Card Maker Widget
+msgid "Upload Your Photo"
+msgstr ""
+
+msgid "Download Image"
+msgstr ""
+
+#. Share Widget
+msgid "Share Us"
+msgstr ""

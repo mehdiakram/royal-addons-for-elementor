@@ -1,0 +1,31 @@
+/* Royal Source Code Start *******************************/
+  .royal-source-code pre {
+    position: relative;
+    max-height: 480px;
+  }
+  .royal-copy-code-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    overflow: visible;
+    padding: 0.65em 0.8em;
+    outline: 0;
+    border: 0;
+    border-radius: 0;
+    background-color: #e2498a;
+    color: #fff;
+    font-size: 1em;
+    opacity: 0;
+  }
+  .royal-source-code > pre:hover .royal-copy-code-button {
+    opacity: 1;
+  }
+  .royal-source-code,
+  .royal-source-code code,
+  .royal-source-code pre,
+  .royal-source-code span {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  /* Royal Source Code End *******************************/

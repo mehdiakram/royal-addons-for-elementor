@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Addons — Extension Target List</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #0f1117;
+    color: #e2e8f0;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  header .badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+  header h1 {
+    font-size: 30px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #a5b4fc, #f0abfc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+  }
+  header p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ── Alert box ── */
+  .alert {
+    background: rgba(239,68,68,.1);
+    border: 1px solid rgba(239,68,68,.3);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 30px;
+    font-size: 13px;
+    color: #fca5a5;
+    line-height: 1.7;
+  }
+  .alert strong { color: #f87171; }
+
+  /* ── Table wrapper ── */
+  .table-wrap {
+    background: #161b27;
+    border: 1px solid #1e2535;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  thead tr {
+    background: linear-gradient(135deg, #1e1b4b 0%, #1e2035 100%);
+  }
+  thead th {
+    padding: 14px 16px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #818cf8;
+    text-align: center;
+    border-bottom: 1px solid #252d40;
+    white-space: nowrap;
+  }
+  thead th:first-child { text-align: left; min-width: 200px; }
+
+  tbody tr {
+    border-bottom: 1px solid #1a2133;
+    transition: background .15s;
+  }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: rgba(99,102,241,.05); }
+
+  td {
+    padding: 12px 16px;
+    font-size: 13px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  td:first-child { text-align: left; }
+
+  .ext-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .ext-icon { font-size: 18px; }
+  .ext-title {
+    font-weight: 600;
+    color: #e2e8f0;
+    font-size: 13px;
+  }
+  .ext-file {
+    font-size: 10px;
+    color: #475569;
+    font-family: monospace;
+    margin-top: 1px;
+  }
+
+  .yes {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px; height: 26px;
+    background: rgba(34,197,94,.15);
+    border: 1px solid rgba(34,197,94,.3);
+    border-radius: 50%;
+    color: #4ade80;
+    font-size: 13px;
+  }
+  .no {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px; height: 26px;
+    background: rgba(239,68,68,.07);
+    border: 1px solid rgba(239,68,68,.15);
+    border-radius: 50%;
+    color: #ef4444;
+    font-size: 11px;
+    opacity: .5;
+  }
+  .partial {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px; height: 26px;
+    background: rgba(234,179,8,.1);
+    border: 1px solid rgba(234,179,8,.3);
+    border-radius: 50%;
+    color: #fbbf24;
+    font-size: 11px;
+  }
+
+  /* ── Legend ── */
+  .legend {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    padding: 14px 18px;
+    background: #161b27;
+    border: 1px solid #1e2535;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+  .legend-item { display: flex; align-items: center; gap: 8px; color: #94a3b8; }
+
+  /* ── Bug section ── */
+  .bugs {
+    background: #161b27;
+    border: 1px solid #1e2535;
+    border-radius: 14px;
+    padding: 20px 24px;
+  }
+  .bugs h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #a5b4fc;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .bug-list { list-style: none; }
+  .bug-list li {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #1a2133;
+    font-size: 12.5px;
+    color: #94a3b8;
+    line-height: 1.5;
+    align-items: flex-start;
+  }
+  .bug-list li:last-child { border-bottom: none; }
+  .bug-list li code {
+    background: #1e2535;
+    color: #f472b6;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .bug-num {
+    min-width: 22px;
+    height: 22px;
+    background: rgba(239,68,68,.15);
+    border: 1px solid rgba(239,68,68,.3);
+    color: #f87171;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #334155;
+    font-size: 11px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="badge">Royal Addons for Elementor</div>
+    <h1>Extension Target List</h1>
+    <p>কোন Extension কোন Element-এ দেখাবে — সম্পূর্ণ রেফারেন্স</p>
+  </header>
+
+  <div class="alert">
+    <strong>⚠️ Known Bug (Not Fixed Yet):</strong>
+    Atomic Div Block (<code>e-div-block</code>) এ কোনো Extension দেখায় না।
+    কারণ: (1) সব extensions ভুল name <code>'div-block'</code> check করে, actual name হলো <code>'e-div-block'</code>।
+    (2) Atomic Div Block <code>Controls_Stack</code> extend করে না — তাই <code>elementor/element/after_section_end</code> hook fire হয় না।
+    সঠিক fix-এর জন্য আলাদা hook strategy দরকার।
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><span class="yes">✓</span> দেখাবে</div>
+    <div class="legend-item"><span class="no">✕</span> দেখাবে না</div>
+    <div class="legend-item"><span class="partial">~</span> শুধুমাত্র নির্দিষ্ট শর্তে</div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Extension</th>
+          <th>Section</th>
+          <th>Column</th>
+          <th>Container</th>
+          <th>Widget</th>
+          <th>Div Block<br><small style="color:#475569;font-size:9px">e-div-block</small></th>
+          <th>Atomic Widget</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">🎈</span><div><div class="ext-title">Floating Effects</div><div class="ext-file">royalfloatingeffects.php</div></div></div></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">🖱️</span><div><div class="ext-title">Hover Animator</div><div class="ext-file">royalhoveranimator.php</div></div></div></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">🎨</span><div><div class="ext-title">Overlay Underlay</div><div class="ext-file">royaloverlayunderlay.php</div></div></div></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">🔗</span><div><div class="ext-title">Wrapper Link</div><div class="ext-file">royalwrapperlink.php</div></div></div></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">🔷</span><div><div class="ext-title">Pseudo Elements</div><div class="ext-file">royalpseudo.php</div></div></div></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">📌</span><div><div class="ext-title">Sticky Header</div><div class="ext-file">royalstickyheader.php</div></div></div></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">✨</span><div><div class="ext-title">Magic Scroll</div><div class="ext-file">royalmagicscroll.php</div></div></div></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">📏</span><div><div class="ext-title">Equal Height</div><div class="ext-file">royalequalheight.php</div></div></div></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">🌀</span><div><div class="ext-title">AOS Animations</div><div class="ext-file">royalaos.php</div></div></div></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">💬</span><div><div class="ext-title">Tooltip</div><div class="ext-file">royaltooltip.php</div></div></div></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">🖼️</span><div><div class="ext-title">Royal Background</div><div class="ext-file">royalbackground.php</div></div></div></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">🎨</span><div><div class="ext-title">Custom CSS</div><div class="ext-file">royalcustomcss.php</div></div></div></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">📋</span><div><div class="ext-title">Live Copy</div><div class="ext-file">royallivecopy.php</div></div></div></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">🔢</span><div><div class="ext-title">CounterZ</div><div class="ext-file">royalcounterz.php</div></div></div></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="partial">~</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">🖼️</span><div><div class="ext-title">Grid Layer</div><div class="ext-file">royalgridlayer.php</div></div></div></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">📜</span><div><div class="ext-title">GSAP Scroll Trigger</div><div class="ext-file">royalgsapscrolltrigger.php</div></div></div></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">📐</span><div><div class="ext-title">Shape Divider Update</div><div class="ext-file">royalshapedivider.php</div></div></div></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">🎬</span><div><div class="ext-title">Video Mask</div><div class="ext-file">royalvideomask.php</div></div></div></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">📖</span><div><div class="ext-title">Reading Progress Bar</div><div class="ext-file">royalreadingprogressbar.php</div></div></div></td>
+          <td><span class="partial">~</span><br><small style="color:#475569;font-size:9px">Page Settings Only</small></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">⬆️</span><div><div class="ext-title">Scroll To Top</div><div class="ext-file">royalscrolltotop.php</div></div></div></td>
+          <td><span class="partial">~</span><br><small style="color:#475569;font-size:9px">Page/Site Settings Only</small></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">🔤</span><div><div class="ext-title">TextZ</div><div class="ext-file">royaltextz.php</div></div></div></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="partial">~</span><br><small style="color:#475569;font-size:9px">Text Editor / Post Content Only</small></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">✍️</span><div><div class="ext-title">Text Upset</div><div class="ext-file">royaltextupset.php</div></div></div></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="partial">~</span><br><small style="color:#475569;font-size:9px">Heading / Text Editor Only</small></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">🔢</span><div><div class="ext-title">CounterZ</div><div class="ext-file">royalcounterz.php</div></div></div></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="partial">~</span><br><small style="color:#475569;font-size:9px">Counter Widget Only</small></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="ext-name"><span class="ext-icon">🔲</span><div><div class="ext-title">Overlay Z</div><div class="ext-file">royaloverlayz.php</div></div></div></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="yes">✓</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+          <td><span class="no">✕</span></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Known Issues -->
+  <div class="bugs">
+    <h2>🐛 Known Issues — Atomic Div Block সমস্যার কারণ</h2>
+    <ul class="bug-list">
+      <li>
+        <span class="bug-num">1</span>
+        <div>
+          <strong style="color:#e2e8f0;">ভুল element name check:</strong>
+          সব extensions-এ <code>'div-block'</code> check করা হচ্ছে, কিন্তু Elementor 4-এর Atomic Div Block-এর actual <code>get_name()</code> returns <code>'e-div-block'</code>।
+          ফলে <code>$is_atomic</code> সবসময় <code>false</code> থাকে।
+        </div>
+      </li>
+      <li>
+        <span class="bug-num">2</span>
+        <div>
+          <strong style="color:#e2e8f0;">ভুল hook architecture:</strong>
+          Atomic Div Block (<code>Atomic_Element_Base</code>) <code>Controls_Stack</code> extend করে না।
+          তাই <code>elementor/element/after_section_end</code> hook কখনোই fire হয় না এই element-এর জন্য।
+          Atomic elements-এর জন্য সম্পূর্ণ আলাদা hook/integration strategy দরকার।
+        </div>
+      </li>
+      <li>
+        <span class="bug-num">3</span>
+        <div>
+          <strong style="color:#e2e8f0;"><code>section_advanced</code> check too strict:</strong>
+          সব atomic callbacks <code>$section_id !== 'section_advanced'</code> check করে return করে।
+          নিয়মিত elements-এ এই section থাকলেও Atomic-এ নেই, তাই registration কখনো হয় না।
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>Last updated: 22 Apr 2026 &nbsp;|&nbsp; Royal Addons for Elementor &nbsp;|&nbsp; Internal Reference Only</p>
+  </footer>
+
+</div>
+</body>
+</html>

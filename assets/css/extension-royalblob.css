@@ -1,0 +1,24 @@
+.royal-blob-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+.royal-blob-item {
+    position: absolute;
+    will-change: transform;
+}
+.royal-blob-item.anim-drift {
+    animation: royalBlobDrift var(--drift-speed, 18s) ease-in-out infinite alternate;
+}
+@keyframes royalBlobDrift {
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+    to {
+        transform: translate(50px, 35px) scale(1.15);
+    }
+}

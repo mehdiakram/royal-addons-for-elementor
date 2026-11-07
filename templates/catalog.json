@@ -1,0 +1,134 @@
+{
+    "free": [
+        {
+            "id": "404-1",
+            "title": "404",
+            "type": "pages",
+            "category": [
+                "business",
+                "starter"
+            ],
+            "thumbnail": "assets/thumbs/404-1.jpg",
+            "preview_url": "https://demo.royaltechbd.com/404-1/",
+            "is_pro": false,
+            "tags": [
+                "business",
+                "corporate",
+                "modern"
+            ]
+        },
+        {
+            "id": "best-talent-recruitment",
+            "title": "Talent Recruitment",
+            "type": "sections",
+            "category": [
+                "portfolio",
+                "starter"
+            ],
+            "thumbnail": "assets/thumbs/best-talent-recruitment.jpg",
+            "preview_url": "https://demo.royaltechbd.com/talent-recruitment/",
+            "is_pro": false,
+            "tags": [
+                "portfolio",
+                "minimal",
+                "creative"
+            ]
+        },
+        {
+            "id": "hero-section-1",
+            "title": "Modern Hero Section",
+            "type": "sections",
+            "category": [
+                "starter"
+            ],
+            "thumbnail": "assets/thumbs/hero-section-1.jpg",
+            "preview_url": "https://demo.royaltechbd.com/modern-hero-section/",
+            "is_pro": false,
+            "tags": [
+                "hero",
+                "section",
+                "banner"
+            ]
+        },
+        {
+            "id": "royal-animated-headline",
+            "title": "Animated Headline",
+            "type": "sections",
+            "category": [
+                "starter"
+            ],
+            "thumbnail": "assets/thumbs/royal-animated-headline.jpg",
+            "preview_url": "",
+            "is_pro": false,
+            "tags": [
+                "features",
+                "services",
+                "headline"
+            ]
+        },
+        {
+            "id": "footer-1",
+            "title": "Footer 1",
+            "type": "footers",
+            "category": [
+                "starter"
+            ],
+            "thumbnail": "assets/thumbs/footer-1.jpg",
+            "preview_url": "https://demo.royaltechbd.com/footer-1",
+            "is_pro": false,
+            "tags": [
+                "footer",
+                "contact",
+                "links"
+            ]
+        },
+		{
+            "id": "footer-2",
+            "title": "Footer 2",
+            "type": "footers",
+            "category": [
+                "starter"
+            ],
+            "thumbnail": "assets/thumbs/footer-2.jpg",
+            "preview_url": "https://demo.royaltechbd.com/footer-2",
+            "is_pro": false,
+            "tags": [
+                "footer",
+                "contact",
+                "links"
+            ]
+        },
+		{
+            "id": "footer-3",
+            "title": "Footer 3",
+            "type": "footers",
+            "category": [
+                "starter"
+            ],
+            "thumbnail": "assets/thumbs/footer-3.jpg",
+            "preview_url": "https://demo.royaltechbd.com/footer-3",
+            "is_pro": false,
+            "tags": [
+                "footer",
+                "contact",
+                "links"
+            ]
+        },
+		{
+            "id": "footer-4",
+            "title": "Footer 4",
+            "type": "footers",
+            "category": [
+                "starter"
+            ],
+            "thumbnail": "assets/thumbs/footer-4.jpg",
+            "preview_url": "https://demo.royaltechbd.com/footer-4",
+            "is_pro": false,
+            "tags": [
+                "footer",
+                "contact",
+                "links"
+            ]
+        }
+    ]
+}

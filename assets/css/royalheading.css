@@ -1,0 +1,168 @@
+
+
+
+/* Royal Heading  ====================================== */
+.royalheadingtitle1 {
+    text-align: center;
+  }
+  
+.royalheadingtitle1 h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #777;
+  margin-bottom: -10px;
+}
+.royalheadingtitle1 h2 {
+  font-size: 32px;
+  text-transform: capitalize;
+  margin: 15px 0;
+  display: inline-block;
+  position: relative;
+  font-weight: 700;
+  padding-bottom: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.royalheadingtitle1 p {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+
+
+.black-bg .royalheadingtitle1 h2,
+.black-bg .royalheadingtitle1 h4,
+.black-bg .royalheadingtitle1 p {
+  color: #fff;
+}
+.royalheadingtitle1 h2:before {
+  position: absolute;
+  content: "";
+  width: 150px;
+  height: 1px;
+  background-color: #777;
+  bottom: 0;
+  left: 50%;
+  margin-left: -75px;
+}
+.royalheadingtitle1 h2:after {
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 3px;
+  background-color: #e16038;
+  border: darkblue;
+  bottom: -1px;
+  left: 50%;
+  margin-left: -40px;
+}
+
+
+
+.royalheadingtitle2 h2{
+    font-size: 32px;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    font-weight: 700;
+    padding: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+
+.royalheadingtitle2 h2:after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background-color: #e16038;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+
+
+.royalheadingtitle3 h2{
+    font-size: 32px;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    font-weight: 700;
+    padding: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.royalheadingtitle3 h2:before {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background-color: #e16038;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+
+.royalheadingtitle4 h2{
+    font-size: 32px;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    font-weight: 700;
+    padding: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.royalheadingtitle4 h2:before {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background-color: #e16038;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+.royalheadingtitle4 h2:after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background-color: #e16038;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+
+.royalheadingtitle5 h2{
+  font-size: 32px;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  font-weight: 700;
+  padding: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  border-bottom-width: 2px;
+  border-bottom-style: solid!important;
+  border-bottom-color: #fff;
+}
+
+.royalheadingtitle5 h2:after {
+  background: #333;
+  bottom: -5px;
+  content: "";
+  height: 8px;
+  left: 0;
+  position: absolute;
+  width: 50px;
+}

@@ -1,0 +1,63 @@
+/* Royal 360 Degree View Widget Styles */
+
+.royal-360-view-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.royal-360-view-wrapper:active {
+    cursor: grabbing;
+}
+
+.royal-360-view-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.royal-360-view-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: none; /* Let the wrapper handle drag events */
+}
+
+/* Preloader */
+.royal-360-preloader {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    transition: opacity 0.3s;
+}
+
+.royal-360-preloader.loaded {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.royal-360-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #ff0000;
+    border-radius: 50%;
+    animation: royal360spin 1s linear infinite;
+}
+
+@keyframes royal360spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,2738 @@
+
+
+/* Royal Profile Card Start */
+.royalprofilecard{
+	overflow: hidden;
+}
+
+.profilepic {
+    display: flex;
+}
+
+/* socialstyle */
+.socialstyle{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.socialstyle i {
+  padding: 10px 5px;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+/* horizontalsocial */
+.horizontalsocial {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.horizontalsocial li a {
+    display: block;
+    color: #fff;
+    border-radius: 0;
+    margin-right: 5px;
+    transition: all 0.5s ease 0s;
+    position: relative;
+}
+.horizontalsocial li a:hover {
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.horizontalsocial li a i{
+	font-size: 24px;
+	-webkit-transition: all 0.35s ease;
+	transition: all 0.35s ease;	
+}
+ 
+
+.verticalsocial{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: opacity 1s;
+}
+
+.verticalsocial li a {
+    color: #fff;
+    border-radius: 0;
+    margin-right: 5px;
+    transition: all 0.5s ease 0s;
+}
+
+
+
+
+/* figure.profilecardstyle1 */
+figure.profilecardstyle1 {
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+	background: #000000;
+	text-align: center;
+}
+
+
+figure.profilecardstyle1 img {
+	opacity: 1;
+	width: 100%;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+}
+
+figure.profilecardstyle1 figcaption {
+    display: flex;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;	
+}
+
+figure.profilecardstyle1 figcaption > div {
+	height: 100%;
+	flex: 1;
+	position: relative;
+	opacity: 0;
+	-webkit-transition: opacity 0.45s, -webkit-transform 0.45s;
+	transition: opacity 0.45s,-webkit-transform 0.45s,-moz-transform 0.45s,-o-transform 0.45s,transform 0.45s;	
+}
+
+figure.profilecardstyle1 figcaption::before {
+	position: absolute;
+	top: 50%;
+	bottom: 50%;
+	left: 50%;
+	width: 2px;
+	content: '';
+	opacity: 0;
+	background-color: rgba(255, 255, 255, 0);
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+	-webkit-transition-delay: 0.6s;
+	transition-delay: 0.6s;
+}
+figure.profilecardstyle1:hover figcaption::before {
+	background: #ffffff;
+	top: 0px;
+	bottom: 0px;
+	opacity: 1;
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+figure.profilecardstyle1 h2,
+figure.profilecardstyle1 h3,
+figure.profilecardstyle1 p {
+	margin: 0;
+	padding: 20px;
+}
+
+figure.profilecardstyle1 .name {
+	background: rgba(0, 0, 0, 0.5);
+	text-align: right;
+	display: inline-block;
+	word-spacing: -0.1em;
+	font-weight: 300;
+	-webkit-transform: translate3d(50%, 0%, 0);
+	transform: translate3d(50%, 0%, 0);
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+figure.profilecardstyle1 .info {
+	background: #ffffff;
+	display: block;
+	text-align: left;
+	font-weight: 300;
+	color: #000;
+	-webkit-transform: translate3d(-50%, 0%, 0);
+	transform: translate3d(-50%, 0%, 0);
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+figure.profilecardstyle1:hover figcaption .name,
+figure.profilecardstyle1:hover figcaption .info {
+	-webkit-transform: translate3d(0%, 0%, 0);
+	transform: translate3d(0%, 0%, 0);
+	-webkit-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+	opacity: 1;
+}
+
+figure.profilecardstyle1:hover img {
+	opacity: 0.7;
+}
+
+
+/*profilecardstyle2*/
+.profilecardstyle2 {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  background-color: #000000;
+}
+.profilecardstyle2 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s 0.5s ease;
+  transition: all 0.35s 0.5s ease;
+}
+.profilecardstyle2 img {
+  max-width: 100%;
+  vertical-align: top;
+}
+.profilecardstyle2 figcaption {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.profilecardstyle2 .name {
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  -webkit-transform: translate(25%, -50%);
+  transform: translate(25%, -50%);
+  left: 0;
+  top: 50%;
+  opacity: 0;
+  padding: 0 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.profilecardstyle2 .socialstyle {
+  opacity: 0;
+}
+
+.profilecardstyle2:hover .socialstyle{
+  opacity: 1;
+}
+
+.profilecardstyle2:before {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  top: 0;
+  right: 0;
+  content: '';
+  background-color: #166337;
+  z-index: 1;
+  opacity: 0.4;
+  -webkit-transition: all 0.35s 0.3s ease-in;
+  transition: all 0.35s 0.3s ease-in;
+}
+.profilecardstyle2:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 200px 0 200px 200px;
+  border-color: transparent transparent transparent #166337;
+  opacity: 0.9;
+  -webkit-transition: all 0.35s 0s ease-out;
+  transition: all 0.35s 0s ease-out;
+}
+.profilecardstyle2:hover img {
+  opacity: 0.4;
+}
+.profilecardstyle2:hover .name,
+.profilecardstyle2:hover .icons {
+  opacity: 1;
+}
+.profilecardstyle2:hover .name {
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.profilecardstyle2:hover:before{
+  left: 0;
+  -webkit-transition: all 0.35s 0s ease-out;
+  transition: all 0.35s 0s ease-out;
+}
+.profilecardstyle2:hover:after {
+  left: 0;
+  -webkit-transition: all 0.35s 0.2s ease-in;
+  transition: all 0.35s 0.2s ease-in;
+}
+
+
+
+
+/*profilecardstyle3*/
+figure.profilecardstyle3 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  color: #ffffff;
+  background-color: #07090c;
+  -webkit-perspective: 50em;
+  perspective: 50em;
+}
+figure.profilecardstyle3 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+figure.profilecardstyle3 img {
+  opacity: 1;
+  width: 100%;
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
+figure.profilecardstyle3 figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -webkit-transform-origin: 50% -50%;
+  -ms-transform-origin: 50% -50%;
+  transform-origin: 50% -50%;
+  z-index: 1;
+  opacity: 0;
+  padding: 20px 30px;
+}
+figure.profilecardstyle3 h3,
+figure.profilecardstyle3 p {
+  line-height: 1.5em;
+}
+figure.profilecardstyle3 h3 {
+  margin: 0;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+figure.profilecardstyle3 p {
+  font-size: 0.8em;
+  font-weight: 500;
+  margin: 0 0 15px;
+}
+
+figure.profilecardstyle3:hover img,
+figure.profilecardstyle3.hover img {
+  -webkit-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  opacity: 0;
+}
+figure.profilecardstyle3:hover figcaption,
+figure.profilecardstyle3.hover figcaption {
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+
+/*profilecardstyle4 */
+figure.profilecardstyle4 {
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	background: #ff0000;
+	text-align: center;
+  }
+  figure.profilecardstyle4 * {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+  }
+  figure.profilecardstyle4 img {
+	opacity: 1;
+	width: 100%;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+  }
+  figure.profilecardstyle4 figcaption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 3em 3em;
+	width: 100%;
+	height: 100%;
+  }
+  figure.profilecardstyle4 figcaption::before {
+	position: absolute;
+	top: 50%;
+	right: 30px;
+	bottom: 50%;
+	left: 30px;
+	border-top: 1px solid rgba(255, 255, 255, 0.8);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+	content: '';
+	opacity: 0;
+	background-color: #ffffff;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+	-webkit-transition-delay: 0.6s;
+	transition-delay: 0.6s;
+  }
+  figure.profilecardstyle4 .title,
+  figure.profilecardstyle4 .designation,
+  figure.profilecardstyle4 .content,
+  figure.profilecardstyle4 .socialstyle {
+	margin: 0 0 5px;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s,-webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s;
+  }
+  figure.profilecardstyle4 .title,
+  figure.profilecardstyle4 .designation {
+	word-spacing: -0.15em;
+	font-weight: 300;
+	text-transform: uppercase;
+	-webkit-transform: translate3d(0%, 50%, 0);
+	transform: translate3d(0%, 50%, 0);
+	-webkit-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+  }
+
+  figure.profilecardstyle4 .content {
+	font-weight: 200	;
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+  }
+
+  figure.profilecardstyle4:hover img {
+	opacity: 0.5;
+  }
+  figure.profilecardstyle4:hover figcaption .title,
+  figure.profilecardstyle4:hover figcaption .designation {
+	opacity: 1;
+	-webkit-transform: translate3d(0%, 0%, 0);
+	transform: translate3d(0%, 0%, 0);
+	-webkit-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+  }
+  figure.profilecardstyle4:hover figcaption .content {
+	opacity: 1;
+	-webkit-transform: translate3d(0%, 0%, 0);
+	transform: translate3d(0%, 0%, 0);
+	-webkit-transition-delay: 0.6s;
+	transition-delay: 0.6s;
+  }
+  figure.profilecardstyle4:hover figcaption .socialstyle {
+	opacity: 1;
+	-webkit-transform: translate3d(0%, 0%, 0);
+	transform: translate3d(0%, 0%, 0);
+	-webkit-transition-delay: 1s;
+	transition-delay: 1s;
+  }  
+figure.profilecardstyle4:hover figcaption::before {
+	background: rgba(132, 238, 167, 0.3);
+	top: 30px;
+	bottom: 30px;
+	opacity: 1;
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+
+
+
+
+/*profilecardstyle 5*/
+figure.profilecardstyle5 {
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  width: 100%;
+  color: #000000;
+  text-align: center;
+}
+
+figure.profilecardstyle5 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+figure.profilecardstyle5 img {
+  opacity: 1;
+  width: 100%;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+
+figure.profilecardstyle5:after {
+  background: #d6222245;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: '';
+  -webkit-transform: skew(-45deg) scaleX(0);
+  transform: skew(-45deg) scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+figure.profilecardstyle5 figcaption {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+figure.profilecardstyle5 .name,
+figure.profilecardstyle5 .socialstyle{
+  margin: 0;
+  width: 100%;
+  opacity: 0;
+}
+
+figure.profilecardstyle5 .title,
+figure.profilecardstyle5 .designation {
+  padding: 5px 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+figure.profilecardstyle5 .content {
+  padding: 0 50px;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+
+figure.profilecardstyle5:hover:after,
+figure.profilecardstyle5.hover:after {
+  -webkit-transform: skew(-45deg) scaleX(1);
+  transform: skew(-45deg) scaleX(1);
+  transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+figure.profilecardstyle5:hover figcaption .name,
+figure.profilecardstyle5:hover figcaption .socialstyle {
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  opacity: 1;
+}
+
+/* Profile Card Style 6*/
+figure.profilecardstyle6 {
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  width: 100%;
+  background: #000000;
+}
+figure.profilecardstyle6 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.profilecardstyle6 img {
+  max-width: 100%;
+  opacity: 1;
+  width: 100%;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+figure.profilecardstyle6 figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 30px 3em;
+  width: 100%;
+  height: 100%;
+}
+figure.profilecardstyle6 figcaption::before {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 100%;
+  border-left: 4px solid rgba(255, 255, 255, 0.8);
+  content: '';
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+figure.profilecardstyle6 .name,
+figure.profilecardstyle6 .content,
+figure.profilecardstyle6 .socialstyle {
+  margin: 0 0 5px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s,-webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s;
+}
+figure.profilecardstyle6 .name {
+  word-spacing: -0.15em;
+  font-weight: 300;
+  text-transform: uppercase;
+  -webkit-transform: translate3d(30%, 0%, 0);
+  transform: translate3d(30%, 0%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+figure.profilecardstyle6 .content {
+  font-weight: 200;
+  -webkit-transform: translate3d(0%, 30%, 0);
+  transform: translate3d(0%, 30%, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+figure.profilecardstyle6 .socialstyle {
+	-webkit-transform: translate3d(0%, 30%, 0);
+	transform: translate3d(0%, 30%, 0);
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+  }
+figure.profilecardstyle6:hover img {
+  opacity: 0.3;
+}
+figure.profilecardstyle6:hover figcaption .name {
+  opacity: 1;
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+figure.profilecardstyle6:hover figcaption .content {
+  opacity: 1;
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+
+figure.profilecardstyle6:hover figcaption .socialstyle {
+	opacity: 1;
+	-webkit-transform: translate3d(0%, 0%, 0);
+	transform: translate3d(0%, 0%, 0);
+	-webkit-transition-delay: 0.6s;
+	transition-delay: 0.6s;
+  }
+
+figure.profilecardstyle6:hover figcaption::before {
+  background: rgba(255, 255, 255, 0);
+  left: 30px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+/*Profile Card Style 7*/
+figure.profilecardstyle7 {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    background-color: #000000;
+  }
+  figure.profilecardstyle7 *,
+  figure.profilecardstyle7 *:before,
+  figure.profilecardstyle7 *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.55s ease;
+    transition: all 0.55s ease;
+  }
+  figure.profilecardstyle7 img {
+    max-width: 100%;
+    backface-visibility: hidden;
+    vertical-align: top;
+    opacity: 0.9;
+  }
+  figure.profilecardstyle7 .tblock {
+    position: absolute;
+    top: 58%;
+    left: 25px;
+    padding: 5px 10px 10px;
+  }
+  figure.profilecardstyle7 .tblock:before,
+  figure.profilecardstyle7 .tblock:after {
+    height: 2px;
+    width: 400px;
+    position: absolute;
+    content: '';
+    background-color: #ffffff;
+  }
+  figure.profilecardstyle7 .tblock:before {
+    top: 0;
+    left: 10px;
+    -webkit-transform: translateX(300%);
+    transform: translateX(300%);
+  }
+  figure.profilecardstyle7 .tblock:after {
+    bottom: 0;
+    right: 10px;
+    -webkit-transform: translateX(-300%);
+    transform: translateX(-300%);
+  }
+  figure.profilecardstyle7 .tblock div:before,
+  figure.profilecardstyle7 .tblock div:after {
+    width: 2px;
+    height: 300px;
+    position: absolute;
+    content: '';
+    background-color: #ffffff;
+  }
+  figure.profilecardstyle7 .tblock div:before {
+    top: 10px;
+    right: 0;
+    -webkit-transform: translateY(300%);
+    transform: translateY(300%);
+  }
+  figure.profilecardstyle7 .tblock div:after {
+    bottom: 10px;
+    left: 0;
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+  }
+  figure.profilecardstyle7 h2,
+  figure.profilecardstyle7 h4 {
+    margin: 0;
+    text-transform: uppercase;
+  }
+  figure.profilecardstyle7 h2 {
+    font-weight: 400;
+  }
+  figure.profilecardstyle7 h4 {
+    display: block;
+    font-weight: 700;
+    background-color: #ffffff;
+    padding: 5px 10px;
+    color: #000000;
+  }
+  figure.profilecardstyle7 figcaption {
+    position: absolute;
+    bottom: 42%;
+    left: 0;
+    text-align: left;
+    opacity: 0;
+    width: 100%;
+	padding: 10px 0;
+    font-size: 0.8em;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+  }
+
+figure.profilecardstyle7:hover img,
+figure.profilecardstyle7.hover img {
+    zoom: 1;
+    filter: alpha(opacity=35);
+    -webkit-opacity: 0.35;
+    opacity: 0.35;
+  }
+  figure.profilecardstyle7:hover .tblock:before,
+  figure.profilecardstyle7:hover .tblock:after,
+  figure.profilecardstyle7:hover .tblock div:before,
+  figure.profilecardstyle7:hover .tblock div:after {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  figure.profilecardstyle7:hover .tblock:before,
+  figure.profilecardstyle7:hover .tblock:after{
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+  }
+  figure.profilecardstyle7:hover figcaption {
+    opacity: 1;
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+  }
+  
+
+/* Profile Card Style 8 */
+.profilecardstyle8 {
+  position: relative;
+  margin: 10px;
+  min-width: 100% -60px;
+  max-width: 100%;
+  width: 100%;
+  color: #ffffff;
+  background-color: #000000;
+}
+.profilecardstyle8 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+.profilecardstyle8 img {
+  position: relative;
+  max-width: 100%;
+  vertical-align: top;
+}
+.profilecardstyle8 figcaption {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  padding: 20px 30px;
+}
+.profilecardstyle8 figcaption:before,
+.profilecardstyle8 figcaption:after {
+  width: 5px;
+  height: 0;
+}
+.profilecardstyle8 figcaption:before {
+  right: 0;
+  top: 0;
+}
+.profilecardstyle8 figcaption:after {
+  left: 0;
+  bottom: 0;
+}
+
+.profilecardstyle8 .title,
+.profilecardstyle8 .designation {
+  margin: 0 0 5px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.profilecardstyle8 .content {
+  font-size: 0.8em;
+  font-weight: 500;
+  margin: 0 0 15px;
+}
+
+.profilecardstyle8:before,
+.profilecardstyle8:after,
+.profilecardstyle8 figcaption:before,
+.profilecardstyle8 figcaption:after {
+  position: absolute;
+  content: '';
+  background-color: #ffffff;
+  z-index: 1;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  opacity: 1;
+}
+.profilecardstyle8:before,
+.profilecardstyle8:after {
+  height: 5px;
+  width: 0%;
+}
+.profilecardstyle8:before {
+  top: 0;
+  left: 0;
+}
+.profilecardstyle8:after {
+  bottom: 0;
+  right: 0;
+}
+.profilecardstyle8:hover img,
+.profilecardstyle8.hover img {
+  opacity: 0.4;
+}
+.profilecardstyle8:hover figcaption,
+.profilecardstyle8.hover figcaption {
+  opacity: 1;
+}
+.profilecardstyle8:hover figcaption:before,
+.profilecardstyle8.hover figcaption:before,
+.profilecardstyle8:hover figcaption:after,
+.profilecardstyle8.hover figcaption:after {
+  height: 100%;
+}
+.profilecardstyle8:hover:before,
+.profilecardstyle8.hover:before,
+.profilecardstyle8:hover:after,
+.profilecardstyle8.hover:after {
+  width: 100%;
+}
+.profilecardstyle8:hover:before,
+.profilecardstyle8.hover:before,
+.profilecardstyle8:hover:after,
+.profilecardstyle8.hover:after,
+.profilecardstyle8:hover figcaption:before,
+.profilecardstyle8.hover figcaption:before,
+.profilecardstyle8:hover figcaption:after,
+.profilecardstyle8.hover figcaption:after {
+  opacity: 0.1;
+}
+
+
+/* Profile Card Style 9 */
+figure.profilecardstyle9 {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  width: 100%;
+  color: #000000;
+  text-align: center;
+  -webkit-perspective: 50em;
+  perspective: 50em;
+}
+figure.profilecardstyle9 * {
+  -webkit-box-sizing: padding-box;
+  box-sizing: padding-box;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+figure.profilecardstyle9 img {
+  max-width: 100%;
+  vertical-align: top;
+}
+figure.profilecardstyle9 figcaption {
+  top: 50%;
+  left: 20px;
+  right: 20px;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+}
+figure.profilecardstyle9 h2,
+figure.profilecardstyle9 h4 {
+  margin: 0;
+}
+figure.profilecardstyle9 h2 {
+  font-weight: 600;
+}
+figure.profilecardstyle9 h4 {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+figure.profilecardstyle9:after {
+  background-color: #ffffff;
+  position: absolute;
+  content: "";
+  display: block;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  opacity: 0;
+}
+
+figure.profilecardstyle9:hover figcaption,
+figure.profilecardstyle9.hover figcaption {
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+figure.profilecardstyle9:hover:after,
+figure.profilecardstyle9.hover:after {
+  -webkit-transform: rotateX(0);
+  transform: rotateX(0);
+  opacity: 0.9;
+}
+
+
+/* Profile Card Style 10 */
+.profilecardstyle10 {
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.profilecardstyle10 *,
+.profilecardstyle10 *:before,
+.profilecardstyle10 *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+
+.profilecardstyle10 img {
+  backface-visibility: hidden;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.profilecardstyle10:before,
+.profilecardstyle10:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  background-color: #0650f0;
+  opacity: 0.5;
+  -webkit-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+
+.profilecardstyle10:before {
+  -webkit-transform: skew(30deg) translateX(-80%);
+  transform: skew(30deg) translateX(-80%);
+}
+
+.profilecardstyle10:after {
+  -webkit-transform: skew(-30deg) translateX(-70%);
+  transform: skew(-30deg) translateX(-70%);
+}
+
+.profilecardstyle10 figcaption {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  bottom: 0;
+  padding: 25px 40% 25px 20px;
+}
+.profilecardstyle10 h2,
+.profilecardstyle10 h3,
+.profilecardstyle10 p,
+.profilecardstyle10 .socialstyle{
+	opacity: 0;
+}
+
+.profilecardstyle10 figcaption:before,
+.profilecardstyle10 figcaption:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #0509fd;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  content: '';
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.profilecardstyle10 figcaption:before {
+  -webkit-transform: skew(30deg) translateX(-100%);
+  transform: skew(30deg) translateX(-100%);
+}
+
+.profilecardstyle10 figcaption:after {
+  -webkit-transform: skew(-30deg) translateX(-90%);
+  transform: skew(-30deg) translateX(-90%);
+}
+
+
+.profilecardstyle10:hover h2,
+.profilecardstyle10:hover h3{
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.profilecardstyle10:hover p{
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+	opacity: 1;
+	-webkit-transition-delay: 0.6s;
+	transition-delay: 0.6s;
+  }
+.profilecardstyle10:hover .socialstyle{
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+	opacity: 1;
+	-webkit-transition-delay: 1s;
+	transition-delay: 1s;
+  }
+.profilecardstyle10:hover:before {
+  -webkit-transform: skew(30deg) translateX(-20%);
+  transform: skew(30deg) translateX(-20%);
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+}
+
+.profilecardstyle10:hover:after {
+  -webkit-transform: skew(-30deg) translateX(-10%);
+  transform: skew(-30deg) translateX(-10%);
+}
+
+.profilecardstyle10:hover figcaption:before{
+  -webkit-transform: skew(30deg) translateX(-40%);
+  transform: skew(30deg) translateX(-40%);
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+
+.profilecardstyle10:hover figcaption:after {
+  -webkit-transform: skew(-30deg) translateX(-30%);
+  transform: skew(-30deg) translateX(-30%);
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+  
+
+
+/* Profile Card Style 11 */
+figure.profilecardstyle11 {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+}
+
+figure.profilecardstyle11 img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+	-webkit-transition: opacity 1s, -webkit-transform 1s;
+	transition: opacity 1s, transform 1s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;	
+}
+
+figure.profilecardstyle11 figcaption {
+	padding: 20px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+figure.profilecardstyle11 figcaption::before,
+figure.profilecardstyle11 figcaption::after {
+	pointer-events: none;
+}
+
+figure.profilecardstyle11 figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+figure.profilecardstyle11 {
+	background: #2f3238;
+}
+
+figure.profilecardstyle11 .title {
+	position: relative;
+	padding: 0.5em 0;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 16px;	
+}
+
+figure.profilecardstyle11 .title,
+figure.profilecardstyle11 .designation,
+figure.profilecardstyle11 .content,
+figure.profilecardstyle11 .socialstyle {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-300%,0,0);
+	transform: translate3d(-300%,0,0);
+}	
+
+figure.profilecardstyle11 .title {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+figure.profilecardstyle11 .designation {
+	-webkit-transition-delay: 0.30s;
+	transition-delay: 0.30s;
+}
+
+figure.profilecardstyle11 .content {
+	-webkit-transition-delay: 0.45s;
+	transition-delay: 0.45s;
+	padding: 10px 0;
+}
+
+figure.profilecardstyle11 .socialstyle {
+	-webkit-transition-delay: 0.6s;
+	transition-delay: 0.6s;
+}
+
+figure.profilecardstyle11:hover img {
+	opacity: 0.4;
+	-webkit-transform: scale3d(1.1,1.1,1);
+	transform: scale3d(1.1,1.1,1);
+}
+
+figure.profilecardstyle11:hover .title,
+figure.profilecardstyle11:hover .designation,
+figure.profilecardstyle11:hover .content,
+figure.profilecardstyle11:hover .socialstyle  {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+
+
+/* Profile Card Style 12 */
+.profilecardstyle12 {
+	position: relative;
+	width: 100%;
+	color: #000000;
+	text-align: center;
+	line-height: 1.4em;
+	font-size: 14px;
+	box-shadow: none !important;
+  }
+  
+  .profilecardstyle12 * {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+  }
+  
+.profilecardstyle12 .profile-image {
+	display: inline-block;
+	width: 80%;
+	z-index: 1;
+	position: relative;
+	padding: 10px;
+	border: 2px solid #e8b563;
+  }
+  
+.profilecardstyle12 .profile-image img {
+	max-width: 100%;
+	vertical-align: top;
+  }
+  
+  .profilecardstyle12 figcaption {
+	width: 100%;
+	background-color: #a18585;
+	color: #000;
+	padding: 125px 25px 25px;
+	margin-top: -100px;
+	display: inline-block;
+  }
+  
+  .profilecardstyle12 .title,
+  .profilecardstyle12 .designation,
+  .profilecardstyle12 .content {
+	margin: 0 0 5px;
+	color: #000000;
+  }
+  
+  
+  
+
+/* Profile Card Style 13 */
+.profilecardstyle13 {
+	padding: 30px 0;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+  }
+  
+  .profilecardstyle13 .picture {
+	display: inline-block;
+	height: 130px;
+	width: 130px;
+	margin-bottom: 50px;
+	z-index: 1;
+	position: relative;
+  }
+  
+  .profilecardstyle13 .picture::before {
+	content: "";
+	width: 100%;
+	height: 0;
+	border-radius: 50%;
+	background-color: #ce3f13;
+	position: absolute;
+	bottom: 135%;
+	right: 0;
+	left: 0;
+	opacity: 0.9;
+	transform: scale(3);
+	transition: all 0.3s linear 0s;
+  }
+  
+  .profilecardstyle13:hover .picture::before {
+	height: 100%;
+  }
+  
+  .profilecardstyle13 .picture::after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #ce3f13;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+  }
+  
+  .profilecardstyle13 .picture img {
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	transform: scale(1);
+	transition: all 0.9s ease 0s;
+  }
+  
+  .profilecardstyle13:hover .picture img {
+	box-shadow: 0 0 0 14px #f7f5ec;
+	transform: scale(0.7);
+  }
+  
+  .profilecardstyle13 .name {
+	padding: 10px;
+  }
+
+  .profilecardstyle13 .title {
+	display: block;
+	font-size: 15px;
+	color: #4e5052;
+	text-transform: capitalize;
+  }
+  
+  
+  
+  
+/* Profile Card Style 14 */
+figure.profilecardstyle14 {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	background: #ffffff;
+  }
+
+  figure.profilecardstyle14 * {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+  }
+
+  figure.profilecardstyle14 img.profilepic {
+	width: 100%;
+	border-radius: 50%;
+	border: 4px solid #522929;
+	-webkit-transition: all 0.35s ease-in-out;
+	transition: all 0.35s ease-in-out;
+	float: right;
+	right: -20%;
+	z-index: 1;
+	position: absolute;
+	transform: translate(40%, -50%);
+    top: 50%;
+  }
+
+  figure.profilecardstyle14 figcaption {
+	padding: 20px;
+	left: 0;
+	width: 50%;
+  }
+  
+  figure.profilecardstyle14 figcaption .title,
+  figure.profilecardstyle14 figcaption .designation,
+  figure.profilecardstyle14 figcaption .content {
+	margin: 0;
+	text-align: left;
+	padding: 10px 0;
+	width: 100%;
+  }
+  figure.profilecardstyle14 figcaption .title {
+	font-size: 1.3em;
+	font-weight: 300;
+	text-transform: uppercase;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  figure.profilecardstyle14 figcaption .content {
+	font-size: 0.9em;
+	opacity:1;
+  }
+
+
+  figure.profilecardstyle14 .designation {
+	width: 100%;
+	text-align: left;
+	padding: 15px 30px;
+	font-size: 0.9em;
+	opacity: 1;
+	font-style: italic;
+	color: #ffffff;
+	background: #20638f;
+	clear: both;
+	margin: 0;
+  }
+
+  figure.profilecardstyle14:hover img.profilepic{
+	right: -8%;
+  }
+  
+
+/* Profile Card Style 15 */
+.profilecardstyle15 {
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+.profilecardstyle15 img {
+    width: 100%;
+    height: 100%;
+}
+.profilecardstyle15 .contentwraper {
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    padding-top: 15%;
+    transform: perspective(400px) rotateX(-90deg);
+    transform-origin: center top 0;
+    transition: all 0.5s ease 0s;
+    opacity: 0;
+}
+.profilecardstyle15:hover .contentwraper {
+    opacity: 1;
+    transform: perspective(400px) rotateX(0deg);
+}
+.profilecardstyle15 .contentwraper .title {
+    margin: 0 0 10px;
+    display: block;
+    font-size: 25px;
+    font-weight: 600;
+}
+.profilecardstyle15 .contentwraper .designation {
+    margin: 0 0 25px;
+    display: block;
+    font-size: 15px;
+}
+.profilecardstyle15 .contentwraper .content {
+    margin: 0 0 25px;
+    display: block;
+    font-size: 15px;
+}
+
+.profilecardstyle15 .verticalsocial {
+  opacity: 0;
+}
+.profilecardstyle15:hover .verticalsocial {
+  opacity: 1;
+}
+
+
+
+/* Profile Card Style 16 */
+.profilecardstyle16 .pill-top,
+.profilecardstyle16 .pill-right,
+.profilecardstyle16 .pill-bottom,
+.profilecardstyle16 .pill-left {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+  width: 100%;
+  border-radius: 95.2380952381px;
+  box-shadow: 0px 3px 9px 1px rgba(0, 10, 20, 0.2);
+}
+
+.profilecardstyle16 .pill-top {
+  flex-direction: column;
+  grid-column: auto/span 1;
+  grid-row: auto/span 2;
+}
+
+.profilecardstyle16 .pill-right {
+  flex-direction: row-reverse;
+  grid-column: auto/span 2;
+  grid-row: auto/span 1;
+}
+
+.profilecardstyle16 .pill-bottom {
+  flex-direction: column-reverse;
+  grid-column: auto/span 1;
+  grid-row: auto/span 2;
+}
+
+.profilecardstyle16 .pill-left {
+  flex-direction: row;
+  grid-column: auto/span 2;
+  grid-row: auto/span 1;
+}
+
+.profilecardstyle16 .profilepic {
+  display: flex;
+}
+
+.profilecardstyle16 .pill-top .profilepic,
+.profilecardstyle16 .pill-bottom .profilepic {
+  height: 50%;
+  width: 100%;
+}
+
+.profilecardstyle16 .pill-left .profilepic,
+.profilecardstyle16 .pill-right .profilepic {
+  width: 50%;
+}
+
+.profilecardstyle16 .profilepic img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.profilecardstyle16 .pill-top img {
+  border-radius: 95.2380952381px 95.2380952381px 0 0;
+}
+
+.profilecardstyle16 .pill-right img {
+  border-radius: 0 95.2380952381px 95.2380952381px 0;
+}
+
+.profilecardstyle16 .pill-bottom img {
+  border-radius: 0 0 95.2380952381px 95.2380952381px;
+}
+
+.profilecardstyle16 .pill-left img {
+  border-radius: 95.2380952381px 0 0 95.2380952381px;
+}
+
+.profilecardstyle16 .name {
+  align-self: center;
+  padding: 10px;
+}
+
+.profilecardstyle16 .pill-top .name {
+  height: auto;
+  width: auto;
+  padding-bottom: 36.8px;
+}
+
+.profilecardstyle16 .pill-right .name {
+  height: auto;
+  width: 50%;
+  padding-left: 36.8px;
+}
+
+.profilecardstyle16 .pill-bottom .name {
+  height: auto;
+  width: auto;
+  padding-top: 36.8px;
+}
+
+.profilecardstyle16 .pill-left .name {
+  height: auto;
+  width: 50%;
+  padding-right: 36.8px;
+}
+
+
+
+/* Profile Card Style 17 */
+.profilecardstyle17 {
+  --card-first-position: 20px;
+  --border-radius: 3rem;
+  --perspective: 500px;
+  --rotateX: 0deg;
+  --rotateY: 0deg;
+  --angle: 5deg;  
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: var(--card-first-position);
+}
+
+.profilecardstyle17 .region {
+  position: absolute;
+  width: calc((100% - 2*var(--card-first-position)) / 3);
+  height: calc((100% - 2*var(--card-first-position)) / 3);
+  z-index: 10;
+}
+
+.profilecardstyle17 .region.region1 {
+  top: calc(var(--card-first-position) + 0*calc((100% - 2*var(--card-first-position)) / 3));
+  left: calc(var(--card-first-position) + 0*calc((100% - 2*var(--card-first-position)) / 3));
+  border-top-left-radius: var(--border-radius);
+}
+
+.profilecardstyle17 .region.region2 {
+  top: calc(var(--card-first-position) + 0 * calc((100% - 2*var(--card-first-position)) / 3));
+  left: calc(var(--card-first-position) + 1 * calc((100% - 2*var(--card-first-position)) / 3));
+}
+
+.profilecardstyle17 .region.region3 {
+  top: calc(var(--card-first-position) + 0 * calc((100% - 2*var(--card-first-position)) / 3));
+  left: calc(var(--card-first-position) + 2 * calc((100% - 2*var(--card-first-position)) / 3));
+  border-top-right-radius: var(--border-radius);
+}
+
+.profilecardstyle17 .region.region4 {
+  top: calc(var(--card-first-position) + 1*calc((100% - 2*var(--card-first-position)) / 3));
+  left: calc(var(--card-first-position) + 0*calc((100% - 2*var(--card-first-position)) / 3));
+}
+
+.profilecardstyle17 .region.region5 {
+  top: calc(var(--card-first-position) + 1*calc((100% - 2*var(--card-first-position)) / 3));
+  left: calc(var(--card-first-position) + 1*calc((100% - 2*var(--card-first-position)) / 3));
+}
+
+.profilecardstyle17 .region.region6 {
+  top: calc(var(--card-first-position) + 1*calc((100% - 2*var(--card-first-position)) / 3));
+  left: calc(var(--card-first-position) + 2*calc((100% - 2*var(--card-first-position)) / 3));
+}
+
+.profilecardstyle17 .region.region7 {
+  top: calc(var(--card-first-position) + 2*calc((100% - 2*var(--card-first-position)) / 3));
+  left: calc(var(--card-first-position) + 0*calc((100% - 2*var(--card-first-position)) / 3));
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.profilecardstyle17 .region.region8 {
+  top: calc(var(--card-first-position) + 2*calc((100% - 2*var(--card-first-position)) / 3));
+  left: calc(var(--card-first-position) + 1*calc((100% - 2*var(--card-first-position)) / 3));
+}
+
+.profilecardstyle17 .region.region9 {
+  top: calc(var(--card-first-position) + 2*calc((100% - 2*var(--card-first-position)) / 3));
+  left: calc(var(--card-first-position) + 2*calc((100% - 2*var(--card-first-position)) / 3));
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.profilecardstyle17 .name {
+  position: relative;
+  transform: perspective(var(--perspective)) rotateX(var(--rotateX)) rotateY(var(--rotateY));
+  transition: .5s;
+}
+
+.profilecardstyle17 .region1:hover ~ .name {
+  --rotateX: var(--angle);
+  --rotateY: calc(-1*(var(--angle)));
+}
+
+.profilecardstyle17 .region2:hover ~ .name {
+  --rotateX: var(--angle);
+}
+
+.profilecardstyle17 .region3:hover ~ .name {
+  --rotateX: var(--angle);
+  --rotateY: var(--angle);
+}
+
+.profilecardstyle17 .region4:hover ~ .name {
+  --rotateY: calc(-1*(var(--angle)));
+}
+
+.profilecardstyle17 .region6:hover ~ .name {
+  --rotateY: var(--angle);
+}
+
+.profilecardstyle17 .region7:hover ~ .name {
+  --rotateX: calc(-1*(var(--angle)));
+  --rotateY: calc(-1*(var(--angle)));
+}
+
+.profilecardstyle17 .region8:hover ~ .name {
+  --rotateX: calc(-1*(var(--angle)));
+}
+
+.profilecardstyle17 .region9:hover ~ .name {
+  --rotateX: calc(-1*(var(--angle)));
+  --rotateY: var(--angle);
+}
+
+.profilecardstyle17 .name img {
+  width: 100%;
+  border-radius: var(--border-radius);
+}
+
+.profilecardstyle17 .name div {
+  position: absolute;
+  padding: 20px;
+  left: 0;
+  color: white;
+  bottom: 0;
+}
+
+
+
+
+/* Profile Card Style 18 */
+.profilecardstyle18{
+  min-width: 300px;
+  min-height: 400px;
+  background-size: cover;
+  border-radius: 20px;
+  position: relative;
+  background-position: top center;
+}
+
+.profilecardstyle18 .name{
+  position: absolute;
+  top: 350px;
+  color: white;
+  }
+
+.profilecardstyle18 .line1{
+  height: 3px;
+  width: 0px;
+  background: linear-gradient(to right, #D51662, #6A1662 );
+}
+
+.profilecardstyle18 .contentwraper{
+  opacity: 0;
+}
+
+.profilecardstyle18:hover .line1{
+  width: 100%;
+  transition: 0.5s ease-in;
+}
+
+.profilecardstyle18:hover .contentwraper{
+  opacity: 1;
+  transition: 0.4s ease-in;
+  transition-delay: 0.9s;
+}
+
+.profilecardstyle18:hover .name{
+  position: absolute;
+  top: 190px;
+  transition: 0.6s ease-in;
+  transition-delay: 0.6s;
+}
+
+
+
+/* Profile Card Style 19 */
+.profilecardstyle19 {
+	position: relative;
+	min-width: 300px; 
+	min-height: 300px;
+	background: #262626;
+	overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+.profilecardstyle19 .profilepic
+{
+  position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  object-fit: cover;
+}
+.profilecardstyle19 input,
+.profilecardstyle19 .toggle
+{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	bottom: 20px;
+	right: 20px;
+	outline: none;
+	z-index: 10;
+}
+.profilecardstyle19 input{
+	opacity: 0;
+  cursor: pointer;
+}
+
+.profilecardstyle19 .toggle{
+	pointer-events: none;
+	border-radius: 50%;
+	background: #fff;
+	transition: 0.5s;
+	text-align: center;
+	line-height: 50px;
+	font-size: 36px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.profilecardstyle19 input:checked ~ .toggle{
+	box-shadow: 0 0 0 500px #00887a; 
+	transform: rotate(225deg);
+}
+.profilecardstyle19 .profilepic,
+.profilecardstyle19 .name{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.profilecardstyle19 .name{
+	padding: 20px;
+	box-sizing: border-box;
+	z-index: 11;
+	pointer-events: none;
+	transition: 0.5s;
+	opacity: 0;
+  margin: auto;
+}
+.profilecardstyle19 input:checked ~ .name{
+	opacity: 1;
+	transition-delay: 0.5s;
+}
+
+
+/* Profile Card Style 20 */
+.profilecardstyle20 * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+.profilecardstyle20 {
+  border-radius: 0.5rem;
+  box-shadow: 8px 8px 18px #00000033;
+  scale: 1;
+  transition: scale 0.4s;
+}
+
+.profilecardstyle20 .name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: #ffffffcc;
+  backdrop-filter: blur(6px);
+  padding: 0 2rem;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.8s ease-in-out;
+}
+.profilecardstyle20 .name * {
+  opacity: 0;
+  transition: all 1s linear 0.5s;
+}
+.profilecardstyle20:hover {
+  scale: 1.1;
+}
+.profilecardstyle20:hover .name {
+  height: 50%;
+  padding: 2rem;
+}
+.profilecardstyle20:hover .name * {
+  opacity: 1;
+}
+
+
+/* Profile Card Style 21 */
+.profilecardstyle21{
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  perspective: 300px;
+}
+
+.profilecardstyle21:before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  z-index: 1;
+  transition: all 700ms ease;
+  -moz-transition: all 700ms ease;
+  -webkit-transition: all 700ms ease;
+  -ms-transition: all 700ms ease;
+  -o-transition: all 700ms ease;
+}
+
+.profilecardstyle21:hover:before{ 
+  transition: all 700ms ease;
+  -moz-transition: all 700ms ease;
+  -webkit-transition: all 700ms ease;
+  -ms-transition: all 700ms ease;
+  -o-transition: all 700ms ease;
+}
+
+.profilecardstyle21.top:before{
+  top: -100%;
+  left: 0;
+}
+
+.profilecardstyle21.top:hover:before{ 
+  top: 0; 
+}
+
+.profilecardstyle21.bottom:before{
+  bottom: -100%;
+  left: 0;
+}
+
+.profilecardstyle21.bottom:hover:before{ 
+  bottom: 0; 
+}
+
+.profilecardstyle21.left:before{
+  left: -100%;
+  top: 0;
+}
+
+.profilecardstyle21.left:hover:before{ 
+  left: 0; 
+}
+
+.profilecardstyle21.right:before{
+  right: -100%;
+}
+
+.profilecardstyle21.right:hover:before{ 
+  right: 0; 
+}
+
+.profilecardstyle21 img{
+  width: 100%;
+  height: auto;
+  transform: scale(1.1);
+  transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+
+.profilecardstyle21:hover img{ 
+  transform: scale(1); 
+}
+
+.profilecardstyle21 .content{
+  width: 100%;
+  background: #fff;
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  opacity: 0;
+  z-index: 1;
+  transform: translateX(-50%) rotateX(90deg);
+  transform-origin: bottom;
+  transition: all 400ms ease;
+  -moz-transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+}
+
+.profilecardstyle21:hover .content{
+  opacity: 1;
+  transform: translateX(-50%) rotateX(0deg);
+}
+
+
+
+
+/* Profile Card Style 22 */
+.profilecardstyle22 {
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.profilecardstyle22 .team-hover {
+  padding: 15px 0 0px;
+  text-align: center;
+  transition: all 0.4s ease 0s;
+}
+
+.profilecardstyle22 .team-img {
+  display: block;
+  position: relative;
+}
+
+.profilecardstyle22 .contentwraper {
+  position: absolute;
+  top: 50%;
+  content: "";
+  left: 0;
+  right: 0;
+  transition: 0.5s;
+  background: #131313bf;
+  padding: 30px 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profilecardstyle22:hover .contentwraper {
+  opacity: 1;
+  top: 25%;
+  transition: 0.5s;
+  background: transparent!important;
+}
+
+.profilecardstyle22 .contentwraper .title {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  font-size: 16px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.profilecardstyle22 .contentwraper .title::after {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
+  left: -30px;
+  top: -15px;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+.profilecardstyle22:hover .contentwraper .title::after {
+  left: -15px;
+  top: -10px;
+  transition: 0.5s;
+}
+
+.profilecardstyle22 .contentwraper p {
+  margin-bottom: 0;
+  color: #b1b1b1;
+}
+
+.profilecardstyle22 .team-img::after{
+  background: #131313e6;
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  content: "";
+  left: 0;
+  top:0;
+  transition: 0.5s;
+  box-shadow: 2px 2px 20px #ddd;
+}
+
+.profilecardstyle22:hover .team-img::after{
+  height: 100%;
+}
+
+.profilecardstyle22 .contentwraper .socialstyle{
+  opacity: 0;
+}
+
+.profilecardstyle22:hover .contentwraper .socialstyle{
+  opacity: 1;
+}
+
+
+
+/* 100 +*/
+/* Profile Card Style 101fadein */
+.profilecardstylefadein .contentwraper {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+.profilecardstylefadein .contentwraper .contentwraper-overlay {
+  background: red;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.profilecardstylefadein .contentwraper:hover .contentwraper-overlay{
+  opacity: 1;
+}
+
+.profilecardstylefadein .profilepic img{
+  width: 100%;
+  height:auto;
+}
+
+.profilecardstylefadein .contentwraper-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.profilecardstylefadein .contentwraper:hover .contentwraper-details{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.profilecardstylefadein .fadeinbottom{
+  top: 80%;
+}
+
+.profilecardstylefadein .fadeintop{
+  top: 20%;
+}
+
+.profilecardstylefadein .fadeinleft{
+  left: 20%;
+}
+
+.profilecardstylefadein .fadeinright{
+  left: 80%;
+}
+
+.profilecardstylefadein .fadeintopleft{
+  top: 20%;
+  left: 20%;
+}
+
+.profilecardstylefadein .fadeintopright{
+  top: 20%;
+  left: 80%;
+}
+
+.profilecardstylefadein .fadeinbottomleft{
+  top: 80%;
+  left: 20%;
+}
+
+.profilecardstylefadein .fadeinbottomright{
+  top: 80%;
+  left: 80%;
+}
+
+
+
+
+/* Profile Card Style 102overlay */
+.profilecardoverlaystyle .profilecardoverlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: red;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+}
+
+.profilecardoverlaystyle .contentwraper {
+    position: relative;
+    overflow: hidden;
+}
+
+.profilecardoverlaystyle .contentwraper:hover .profilecardoverlay {
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.profilecardoverlaystyle .topoverlay {
+    bottom: 100%;    
+    height: 0;
+}
+
+.profilecardoverlaystyle .contentwraper:hover .topoverlay {
+	bottom: 0;
+}
+
+.profilecardoverlaystyle .bottomoverlay {
+    top: 100%;
+}
+
+.profilecardoverlaystyle .contentwraper:hover .bottomoverlay {
+	top: 0;
+}
+
+.profilecardoverlaystyle .rightoverlay {
+    left: 100%;
+    height: 100%;
+}
+
+.profilecardoverlaystyle .contentwraper:hover .rightoverlay {
+	left : 0;
+}
+
+.profilecardoverlaystyle .leftoverlay {
+    right: 100%;
+    height: 100%;
+    left:auto;
+}
+
+.profilecardoverlaystyle .contentwraper:hover .leftoverlay {
+	right : 0;
+}
+
+.profilecardoverlaystyle .fadeoverlay {
+    height: 100%;
+    opacity: 0;
+}
+
+.profilecardoverlaystyle .contentwraper:hover .fadeoverlay {
+	opacity: 1;
+}
+
+
+
+/* Profile Card Style 103 */
+.profilecardstyle103 {
+  background: #808080;
+  transition: background 0.8s;
+  overflow: hidden;
+  box-shadow: 0 70px 63px -60px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.profilecardstyle103 img{
+	visibility:hidden;
+}
+
+.profilecardstyle103 .contentwraper {
+	background: transparent;
+	transition: border 1s;
+	position: absolute;
+	left: 10px;
+	right: 10px;
+	top: 10px;
+	bottom: 10px;
+}
+
+.profilecardstyle103 .contentwraper:hover {
+  border: 1px solid #fff;
+}
+
+.profilecardstyle103{
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.profilecardstyle103:hover{
+  background-position: left center;
+  background-size: 200%;
+}
+
+.profilecardstyle103 .contentwraper{
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.profilecardstyle103:hover .contentwraper {
+  opacity: 1;
+}
+/* =========================================================
+   Profile Card Style 23 (Rotating Circle - Unnayan Prochesta Style)
+   ========================================================= */
+.royalprofilecard .profilecardstyle23 {
+  position: relative;
+  text-align: center;
+  padding: 30px 24px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.royalprofilecard .profilecardstyle23.has-left-accent {
+  border-left: 5px solid #c9a24a;
+}
+
+.royalprofilecard .profilecardstyle23 * {
+  box-sizing: border-box;
+}
+
+.royalprofilecard .profilecardstyle23:hover {
+  box-shadow: 0 18px 40px -12px rgba(0, 0, 0, 0.14);
+}
+
+.royalprofilecard .profilecardstyle23 .royal-ring-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto 26px;
+}
+
+.royalprofilecard .profilecardstyle23 .royal-ring {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+
+/* Rotating dashed border ring */
+.royalprofilecard .profilecardstyle23 .royal-ring::before {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  border: 2px dashed #c9a24a;
+  border-radius: 50%;
+  animation: royalCircleSpin 24s linear infinite;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+/* Circular profile photo */
+.royalprofilecard .profilecardstyle23 .royal-ring img.profilepic {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #ffffff;
+  box-shadow: 0 16px 32px -12px rgba(11, 77, 38, 0.35);
+  background: #eef3f0;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.royalprofilecard .profilecardstyle23:hover .royal-ring img.profilepic {
+  transform: scale(1.03);
+}
+
+/* Content */
+.royalprofilecard .profilecardstyle23 .contentwraper {
+  position: relative;
+  z-index: 2;
+}
+
+.royalprofilecard .profilecardstyle23 .royal-quote-mark {
+  display: block;
+  color: #c9a24a;
+  opacity: 0.65;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.royalprofilecard .profilecardstyle23 .royal-quote-mark svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.royalprofilecard .profilecardstyle23 .title {
+  margin: 0 0 6px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #14261b;
+}
+
+.royalprofilecard .profilecardstyle23 .designation {
+  margin: 0 0 12px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #0b4d26;
+}
+
+.royalprofilecard .profilecardstyle23 .content {
+  margin: 0 0 16px;
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: #5c6e63;
+}
+
+.royalprofilecard .profilecardstyle23 .content p {
+  margin-bottom: 12px;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.royalprofilecard .profilecardstyle23 .royal-sign-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.royalprofilecard .profilecardstyle23 .royal-sign-dash {
+  color: #0b4d26;
+  font-weight: 700;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.royalprofilecard .profilecardstyle23 .royal-sign-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0b4d26;
+}
+
+.royalprofilecard .profilecardstyle23 .royal-sign-desig {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #5c6e63;
+}
+
+.royalprofilecard .profilecardstyle23 .socialstyle {
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.royalprofilecard .profilecardstyle23 .socialstyle li {
+  display: inline-block;
+  margin: 0 4px;
+}
+
+/* Horizontal Layout */
+.royalprofilecard.royal-layout-horizontal .profilecardstyle23 {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 40px;
+  padding: 40px;
+}
+
+.royalprofilecard.royal-layout-horizontal .profilecardstyle23 .royal-ring-container {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.royalprofilecard.royal-layout-horizontal .profilecardstyle23 .contentwraper {
+  flex: 1 1 auto;
+}
+
+.royalprofilecard.royal-layout-horizontal .profilecardstyle23 .royal-quote-mark {
+  text-align: right;
+  margin-top: -8px;
+  margin-bottom: 6px;
+}
+
+.royalprofilecard.royal-layout-horizontal .profilecardstyle23 .royal-sign-wrap {
+  justify-content: flex-start;
+}
+
+.royalprofilecard.royal-layout-horizontal .profilecardstyle23 .socialstyle {
+  justify-content: flex-start;
+}
+
+@media (max-width: 767.98px) {
+  .royalprofilecard.royal-layout-horizontal .profilecardstyle23 {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+    padding: 26px 18px;
+  }
+  .royalprofilecard.royal-layout-horizontal .profilecardstyle23 .royal-quote-mark {
+    text-align: center;
+  }
+  .royalprofilecard.royal-layout-horizontal .profilecardstyle23 .royal-sign-wrap {
+    justify-content: center;
+  }
+  .royalprofilecard.royal-layout-horizontal .profilecardstyle23 .socialstyle {
+    justify-content: center;
+  }
+}
+
+@keyframes royalCircleSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* =========================================================
+   Profile Card Style 24 - Organization Management Card
+   ========================================================= */
+.royalprofilecard .profilecardstyle24 {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 24px;
+  border-radius: 22px;
+  background: #ffffff;
+  border: 1px solid rgba(11, 77, 38, 0.08);
+  box-shadow: 0 6px 22px rgba(15, 40, 30, 0.07);
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.45s ease;
+  box-sizing: border-box;
+}
+
+.royalprofilecard .profilecardstyle24 * {
+  box-sizing: border-box;
+}
+
+/* Left accent vertical gradient bar */
+.royalprofilecard .profilecardstyle24::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: linear-gradient(180deg, #0b4d26, #1fa35a);
+  transition: width 0.3s ease;
+}
+
+/* Bottom right ambient radial glow */
+.royalprofilecard .profilecardstyle24::after {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  right: -70px;
+  bottom: -70px;
+  border-radius: 50%;
+  background: #157a3e;
+  opacity: 0.07;
+  pointer-events: none;
+  transition: transform 0.6s ease;
+}
+
+.royalprofilecard .profilecardstyle24:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 45px rgba(15, 40, 30, 0.14);
+}
+
+.royalprofilecard .profilecardstyle24:hover::after {
+  transform: scale(1.8);
+}
+
+.royalprofilecard .profilecardstyle24:hover::before {
+  width: 7px;
+}
+
+/* Shine effect on hover */
+.royalprofilecard .profilecardstyle24 .royal-mg-shine {
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.65), transparent);
+  transform: skewX(-20deg);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.royalprofilecard .profilecardstyle24:hover .royal-mg-shine {
+  animation: royalMgShine 0.9s ease;
+}
+
+@keyframes royalMgShine {
+  to {
+    left: 140%;
+  }
+}
+
+/* Card Number Badge */
+.royalprofilecard .profilecardstyle24 .royal-mg-card-no {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: #157a3e;
+  opacity: 0.35;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.royalprofilecard .profilecardstyle24:hover .royal-mg-card-no {
+  opacity: 0.85;
+  transform: scale(1.12);
+}
+
+/* Photo and Glowing Gradient Ring */
+.royalprofilecard .profilecardstyle24 .royal-mg-photo {
+  position: relative;
+  flex: 0 0 auto;
+  width: 110px;
+  aspect-ratio: 4 / 5;
+}
+
+.royalprofilecard .profilecardstyle24 .royal-mg-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #0b4d26, #1fa35a);
+  animation: royalMgGlow 3.6s ease-in-out infinite;
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.royalprofilecard .profilecardstyle24:hover .royal-mg-ring {
+  transform: scale(1.04);
+}
+
+.royalprofilecard .profilecardstyle24 .royal-mg-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 17px;
+  overflow: hidden;
+  border: 3px solid #ffffff;
+  background: #ffffff;
+}
+
+.royalprofilecard .profilecardstyle24 .royal-mg-frame img.profilepic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.royalprofilecard .profilecardstyle24:hover .royal-mg-frame img.profilepic {
+  transform: scale(1.08);
+}
+
+@keyframes royalMgGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(31, 163, 90, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(31, 163, 90, 0.16), 0 8px 22px rgba(31, 163, 90, 0.28);
+  }
+}
+
+/* Info Section */
+.royalprofilecard .profilecardstyle24 .royal-mg-info {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+  flex: 1 1 auto;
+  padding-right: 20px;
+}
+
+.royalprofilecard .profilecardstyle24 .royal-mg-name {
+  font-weight: 700;
+  color: #14232b;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  margin: 0 0 8px;
+  overflow-wrap: anywhere;
+}
+
+.royalprofilecard .profilecardstyle24 .royal-mg-role {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: #0b6b3a;
+  background: rgba(25, 135, 84, 0.12);
+  border: 1px solid rgba(25, 135, 84, 0.25);
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.royalprofilecard .profilecardstyle24 .royal-mg-content {
+  margin: 8px 0 0;
+  font-size: 0.92rem;
+  color: #5c6e63;
+  line-height: 1.6;
+}
+
+.royalprofilecard .profilecardstyle24 .socialstyle {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 8px;
+}
+
+/* Vertical layout when style24_layout == 'vertical' */
+.royalprofilecard.royal-mg-layout-vertical .profilecardstyle24 {
+  flex-direction: column;
+  text-align: center;
+  padding-top: 32px;
+  gap: 18px;
+}
+
+.royalprofilecard.royal-mg-layout-vertical .profilecardstyle24::before {
+  width: 100%;
+  height: 5px;
+  bottom: auto;
+}
+
+.royalprofilecard.royal-mg-layout-vertical .profilecardstyle24 .royal-mg-photo {
+  width: 140px;
+}
+
+.royalprofilecard.royal-mg-layout-vertical .profilecardstyle24 .royal-mg-info {
+  padding-right: 0;
+}
+
+.royalprofilecard.royal-mg-layout-vertical .profilecardstyle24 .socialstyle {
+  justify-content: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+  .royalprofilecard .profilecardstyle24 {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 28px;
+    gap: 16px;
+  }
+  .royalprofilecard .profilecardstyle24::before {
+    width: 100%;
+    height: 5px;
+    bottom: auto;
+  }
+  .royalprofilecard .profilecardstyle24 .royal-mg-photo {
+    width: 120px;
+  }
+  .royalprofilecard .profilecardstyle24 .royal-mg-info {
+    padding-right: 0;
+  }
+  .royalprofilecard .profilecardstyle24 .socialstyle {
+    justify-content: center;
+  }
+}

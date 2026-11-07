@@ -1,0 +1,36 @@
+.elementor-section-wrap > .elementor-section {
+	position: relative;
+}
+
+.elementor-section-wrap .royallivecopy-wrap {
+	position: absolute;
+	top: 50%;
+	right: -4px;
+	z-index: 99999;
+	display: none;
+	text-decoration: none;
+	font-size: 15px;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+
+.royallivecopy-wrap .royallivecopy-btn {
+	display: block;
+	padding: 10px 20px 10px 25px;
+	border-radius: 30px 0 0 30px;
+	background: #6b4ff4;
+	color: #fff;
+	line-height: 1;
+	-webkit-transition: all .2s;
+	        transition: all .2s;
+}
+
+.royallivecopy-wrap .royallivecopy-btn:hover {
+	background: #e2498a;
+}
+
+.elementor-section-wrap > .elementor-section.live-copy-preview .royallivecopy-wrap,
+.elementor-section-wrap > .elementor-section:not(.elementor-element-edit-mode):hover .royallivecopy-wrap {
+	display: block;
+}

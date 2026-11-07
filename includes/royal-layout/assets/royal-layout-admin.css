@@ -1,0 +1,338 @@
+/* Royal Layout Builder — Admin CSS (WoodMart-style) */
+
+/* ── Top Bar ──────────────────────────────────────────── */
+.edit-php.post-type-royal_layout .wrap>.wp-heading-inline,
+.edit-php.post-type-royal_layout .wrap>h1 {
+    display: inline-block;
+    margin-right: 0;
+}
+
+.rl-top-bar {
+    display: inline;
+}
+
+#rl-add-layout-btn {
+    font-size: 13px !important;
+    height: 32px !important;
+    line-height: 30px !important;
+    padding: 0 14px !important;
+    margin-left: 8px;
+    vertical-align: middle;
+    position: relative;
+    top: -3px;
+}
+
+/* ── Tabs ─────────────────────────────────────────────── */
+.rl-tabs-wrap {
+    margin: 12px 0 10px;
+    border-bottom: 1px solid #c3c4c7;
+    padding-bottom: 0;
+}
+
+.rl-tabs-wrap a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 14px;
+    margin: 0 2px -1px 4px;
+    border: 1px solid transparent;
+    border-bottom: none;
+    color: #50575e;
+    background: #dcdcde;
+    font-size: 13px;
+    border-radius: 3px 3px 0 0;
+    transition: all .15s;
+    font-weight: 600;
+}
+
+.rl-tabs-wrap a:hover {
+    color: #50575e;
+    background: #f6f7f7;
+}
+
+.rl-tabs-wrap a.current {
+    border-color: #c3c4c7;
+    background: #f0f0f1;
+    color: #1d2327;
+    font-weight: 600;
+}
+
+/* ── List Table ───────────────────────────────────────── */
+.rl-type-link {
+    font-weight: 600;
+    color: #2271b1;
+    text-decoration: none;
+}
+
+.rl-cond-text {
+    display: block;
+    font-size: 12px;
+    color: #646970;
+    margin-bottom: 5px;
+}
+
+.rl-cond-na {
+    color: #a7aaad;
+}
+
+.rl-edit-cond-btn .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+    vertical-align: text-bottom;
+}
+
+/* ── Toggle Switch ────────────────────────────────────── */
+.rl-toggle {
+    position: relative;
+    display: inline-block;
+    width: 66px;
+    height: 30px;
+}
+
+.rl-toggle-input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.rl-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    transition: .3s;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
+.rl-toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background: #d4d4d4;
+    transition: .3s;
+    border-radius: 50%;
+}
+
+.rl-toggle-input:checked+.rl-toggle-slider {
+    background: #2271b1;
+    border-color: #2271b1;
+}
+
+.rl-toggle-input:checked+.rl-toggle-slider:before {
+    transform: translateX(36px);
+    background: #fff;
+}
+
+.rl-toggle-label {
+    position: absolute;
+    color: #777;
+    font-size: 11px;
+    font-weight: 700;
+    top: 8px;
+    right: 10px;
+    transition: .3s;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.rl-toggle-input:checked+.rl-toggle-slider .rl-toggle-label {
+    color: #fff;
+    left: 10px;
+    right: auto;
+}
+
+/* ── Modal ────────────────────────────────────────────── */
+.rl-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .55);
+    z-index: 99998;
+}
+
+.rl-modal-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 8px;
+    width: 560px;
+    max-width: 95vw;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+    z-index: 99999;
+    overflow: hidden;
+}
+
+.rl-modal-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.rl-modal-head h2 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.rl-modal-close {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #94a3b8;
+    line-height: 1;
+    padding: 0;
+}
+
+.rl-modal-close:hover {
+    color: #ef4444;
+}
+
+.rl-modal-body {
+    padding: 24px;
+}
+
+.rl-modal-body label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+.rl-modal-body select,
+.rl-modal-body input[type="text"] {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.rl-modal-foot {
+    padding: 16px 24px;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.rl-modal-msg {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    display: none;
+}
+
+.rl-modal-msg.success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.rl-modal-msg.error {
+    background: #fef2f2;
+    color: #991b1b;
+}
+
+/* ── Condition Rows ───────────────────────────────────── */
+.rl-condition-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.rl-cond-comparison {
+    width: 100px;
+    min-width: 100px;
+}
+
+.rl-cond-type {
+    flex: 1;
+    min-width: 180px;
+}
+
+.rl-cond-query {
+    flex: 1;
+    min-width: 160px;
+}
+
+.rl-cond-remove {
+    width: 30px;
+    height: 30px;
+    line-height: 28px;
+    text-align: center;
+    padding: 0 !important;
+    color: #ef4444 !important;
+    border-color: #fca5a5 !important;
+    flex-shrink: 0;
+}
+
+.rl-cond-remove:hover {
+    background: #fef2f2 !important;
+}
+
+.rl-conditions-section {
+    margin-top: 16px;
+}
+
+.rl-conditions-section>label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.rl-add-condition-btn {
+    background: none !important;
+    border: none !important;
+    color: #2271b1 !important;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 4px 0 !important;
+    font-size: 13px;
+}
+
+.rl-add-condition-btn:hover {
+    color: #135e96 !important;
+}
+
+/* ── Create form fields ──────────────────────────────── */
+.rl-form-field {
+    margin-bottom: 16px;
+}
+
+.rl-form-field:last-child {
+    margin-bottom: 0;
+}
+
+/* ── Metabox ──────────────────────────────────────────── */
+.rl-metabox-conditions .rl-condition-row {
+    margin-bottom: 8px;
+}
+
+.rl-metabox-conditions .rl-add-condition-btn,
+.rl-metabox-conditions .button {
+    margin-top: 8px;
+}
+
+/* ── Select2 fixes ────────────────────────────────────── */
+.select2-container {
+    width: 100% !important;
+}
+
+.rl-condition-row .select2-container {
+    flex: 1;
+    min-width: 160px;
+}

@@ -1,0 +1,1109 @@
+/**
+ * Royal Addons for Elementor - Filterable Post Styles
+ * Modern UI/UX Design System for Posts & Portfolio Showcases
+ */
+
+/* ==========================================================================
+   Base & Isotope Grid Resets
+   ========================================================================== */
+.royal-filterable-items,
+.royal-filterable-items .royalisotope,
+.royal-filterable-items .royalisotopegrid,
+.royal-filterable-items .royalgridcontainer {
+  overflow: visible !important;
+}
+
+.royal-filterable-items {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.royal-filterable-items *,
+.royal-filterable-items *::before,
+.royal-filterable-items *::after {
+  box-sizing: border-box;
+}
+
+.royal-filterable-items .royalisotopegrid {
+  position: relative;
+  margin-left: -12px;
+  margin-right: -12px;
+  padding-top: 10px;
+  margin-top: -10px;
+  transition: height 0.35s ease;
+  overflow: visible !important;
+}
+
+.royal-filterable-items .royalisotopeitem,
+.royal-filterable-items .royalisotopeitem.royalpost,
+.royal-filterable-items .royalgridcontainer .royalisotopeitem,
+.royal-filterable-items .royalgridcontainer .royalpost {
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-bottom: 24px;
+  float: left;
+  border: none !important;
+  outline: none !important;
+  background: transparent !important;
+  overflow: visible !important;
+  position: relative;
+}
+
+.royal-filterable-items .royalisotopeitem:hover {
+  z-index: 10;
+}
+
+/* ==========================================================================
+   Filterable Menu (Modern Navigation)
+   ========================================================================== */
+.royal-filterable-items .royalisotope .royalgallery-filter {
+  margin: 0 0 35px 0;
+  padding: 0;
+  border: none;
+}
+
+.royal-filterable-items .royalgallery-filter .filter-button-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+}
+
+.royal-filterable-items .royalgallery-filter .filter-button-group li {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  padding: 9px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.royal-filterable-items .royalgallery-filter .filter-button-group li:hover {
+  background: #ffffff;
+  color: #1e293b;
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.royal-filterable-items .royalgallery-filter .filter-button-group li.active {
+  background: #4f46e5;
+  color: #ffffff !important;
+  border-color: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.32);
+}
+
+/* Filter Post Count */
+.royal-filter-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+  font-size: 0.84em;
+  font-weight: 600;
+  opacity: 0.85;
+  transition: all 0.25s ease;
+  vertical-align: middle;
+}
+
+.royal-filter-count.count-bracket {
+  opacity: 0.78;
+}
+
+.royal-filter-count.count-badge {
+  background: rgba(15, 23, 42, 0.08);
+  color: inherit;
+  padding: 2px 7px;
+  border-radius: 999px;
+  min-width: 20px;
+  line-height: 1.25;
+  font-size: 0.76em;
+}
+
+.royal-filterable-items .royalgallery-filter .filter-button-group li:hover .royal-filter-count.count-badge {
+  background: rgba(15, 23, 42, 0.14);
+}
+
+.royal-filterable-items .royalgallery-filter .filter-button-group li.active .royal-filter-count.count-badge {
+  background: rgba(255, 255, 255, 0.28);
+  color: #ffffff !important;
+}
+
+/* Alignments */
+.royal-filterable-menu-container-align-left .royalisotope {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.royal-filterable-menu-container-align-left .royalisotope .royalgallery-filter {
+  width: 20%;
+  flex-shrink: 0;
+}
+
+.royal-filterable-menu-container-align-left .royalisotope .royalgallery-filter .filter-button-group {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.royal-filterable-menu-container-align-left .royalisotope .royalgallery-filter .filter-button-group li {
+  width: 100%;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.royal-filterable-menu-container-align-right .royalisotope {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.royal-filterable-menu-container-align-right .royalisotope .royalgallery-filter {
+  width: 20%;
+  flex-shrink: 0;
+}
+
+.royal-filterable-menu-container-align-right .royalisotope .royalgallery-filter .filter-button-group {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.royal-filterable-menu-container-align-right .royalisotope .royalgallery-filter .filter-button-group li {
+  width: 100%;
+  text-align: right;
+  justify-content: flex-end;
+}
+
+/* ==========================================================================
+   Common Card Components (Cards, Thumbnails, Titles, Meta, Badges, Buttons)
+   ========================================================================== */
+.royalpost-inner {
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.royalisotopeitem.royalpost:hover .royalpost-inner {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.1);
+  border-color: #e2e8f0;
+}
+
+/* Thumb Holder & Thumbnail */
+.royalpost-thumb-holder {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.royalpost-inner .post-grid-thumbnail {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+  width: 100%;
+  line-height: 0;
+}
+
+.royalpost-inner .post-grid-thumbnail a {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  line-height: 0;
+}
+
+.royalpost-inner .post-grid-thumbnail img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.royalisotopeitem.royalpost:hover .post-grid-thumbnail img {
+  transform: scale(1.06);
+}
+
+/* Category Badge (Floating Tag) */
+.royal-category-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 4;
+  background: rgba(15, 23, 42, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.royalisotopeitem.royalpost:hover .royal-category-badge {
+  background: #4f46e5;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Content Wrap */
+.post-grid-text-wrap {
+  padding: 22px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-grid-header-wrap {
+  padding: 20px 22px 14px;
+}
+
+.post-grid-footer-meta {
+  padding: 14px 22px;
+  border-top: 1px solid #f1f5f9;
+  margin-top: auto;
+}
+
+/* Post Titles */
+.royalpost .title {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.2px;
+  transition: color 0.25s ease;
+}
+
+.royalpost .title a {
+  color: #1e293b;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.royalpost .title a:hover {
+  color: #4f46e5;
+}
+
+/* Post Meta */
+.post-grid-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.post-grid-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.post-grid-meta svg {
+  color: #94a3b8;
+  flex-shrink: 0;
+}
+
+.post-grid-meta a {
+  color: #64748b;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.post-grid-meta a:hover {
+  color: #4f46e5;
+}
+
+/* Excerpt */
+.post-grid-excerpt {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+}
+
+.post-grid-excerpt p {
+  margin: 0;
+}
+
+/* Read More Button */
+.read-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 8px 18px;
+  background: #f1f5f9;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.read-more-btn svg.read-more-arrow {
+  transition: transform 0.25s ease;
+}
+
+.read-more-btn:hover {
+  background: #4f46e5;
+  color: #ffffff;
+  border-color: #4f46e5;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.28);
+}
+
+.read-more-btn:hover svg.read-more-arrow {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   PORTFOLIO STYLES (Web Showcase & Mockup Frame)
+   ========================================================================== */
+.royal-portfolio-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px -2px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  transform: translateY(0);
+  will-change: transform;
+  isolation: isolate;
+}
+
+.royalisotopeitem:hover .royal-portfolio-card {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 42px -4px rgba(0, 0, 0, 0.16);
+}
+
+/* Mockup Header Bar (macOS Window Chrome) */
+.royal-portfolio-mockup-header {
+  height: 38px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e2e8f0;
+  border-radius: 13px 13px 0 0;
+  background: #f8fafc;
+  user-select: none;
+  position: relative;
+  z-index: 5;
+}
+
+.royal-portfolio-card.mockup-dark .royal-portfolio-mockup-header {
+  background: #0f172a;
+  border-bottom-color: #1e293b;
+}
+
+.mockup-dots {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.mockup-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12);
+}
+
+.mockup-dot.dot-red {
+  background: #ff5f56;
+}
+
+.mockup-dot.dot-yellow {
+  background: #ffbd2e;
+}
+
+.mockup-dot.dot-green {
+  background: #27c93f;
+}
+
+.mockup-url-bar {
+  font-size: 11px;
+  font-weight: 500;
+  color: #64748b;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2px 14px;
+  max-width: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.royal-portfolio-card.mockup-dark .mockup-url-bar {
+  background: #1e293b;
+  border-color: #334155;
+  color: #94a3b8;
+}
+
+/* Portfolio Background Image Container */
+.royalisotopeitem .portfolio {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-position: top center !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% auto !important;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Hover Screenshot Scroll Effect */
+.royal-portfolio-card.hover-scroll .portfolio {
+  transition: background-position 5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.royalisotopeitem:hover .royal-portfolio-card.hover-scroll .portfolio {
+  background-position: bottom center !important;
+}
+
+/* Hover Zoom Effect */
+.royal-portfolio-card.hover-zoom .portfolio {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), background-size 0.5s ease;
+}
+
+.royalisotopeitem:hover .royal-portfolio-card.hover-zoom .portfolio {
+  background-size: 108% auto !important;
+}
+
+/* Backdrop Direct Link */
+.portfolio-direct-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  text-decoration: none;
+}
+
+/* Modern Portfolio Overlay & Title Typography */
+.royal-portfolio-card .title,
+.royal-portfolio-card .portfolio-overlay .title,
+.royal-card-portfolio-creative .title,
+.royal-card-overlay .title {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.royalisotopeitem .portfolio .portfolio-overlay {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding: 30px 18px 18px;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 0.65) 45%, rgba(15, 23, 42, 0.94) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.portfolio-content-wrap {
+  flex: 1;
+  min-width: 0;
+}
+
+.royalisotopeitem .portfolio .title {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: #ffffff !important;
+}
+
+.royalisotopeitem .portfolio .title a {
+  color: #ffffff !important;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.2s ease, transform 0.2s ease;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.royalisotopeitem .portfolio .title a:hover {
+  color: #93c5fd !important;
+  transform: translateX(2px);
+}
+
+.portfolio-excerpt {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 12px;
+  line-height: 1.45;
+  margin-top: 5px;
+}
+
+/* Action Buttons (Live Preview & Details) */
+.portfolio-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 4;
+}
+
+.portfolio-action-icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.portfolio-action-icon-btn:hover {
+  background: #ffffff;
+  color: #0f172a;
+  border-color: #ffffff;
+  transform: scale(1.12);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================================================
+   PORTFOLIO MODERN CARD (portfolio_card)
+   ========================================================================== */
+.royal-card-portfolio-creative {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f1f5f9;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.royal-portfolio-creative-thumb {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: #0f172a;
+}
+
+.royal-portfolio-creative-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.royalisotopeitem:hover .royal-portfolio-creative-thumb img {
+  transform: scale(1.08);
+}
+
+.royal-portfolio-creative-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 3;
+}
+
+.royalisotopeitem:hover .royal-portfolio-creative-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.royal-portfolio-creative-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transform: translateY(12px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.royalisotopeitem:hover .royal-portfolio-creative-actions {
+  transform: translateY(0);
+}
+
+.royal-portfolio-creative-content {
+  padding: 20px;
+}
+
+/* ==========================================================================
+   LAYOUT 7: Modern Overlay Card (Card Overlay)
+   ========================================================================== */
+.royal-card-overlay {
+  position: relative;
+  min-height: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.royalisotopeitem:hover .royal-card-overlay {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.royal-overlay-click {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  text-decoration: none;
+}
+
+.royal-overlay-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.1) 0%, rgba(15, 23, 42, 0.5) 45%, rgba(15, 23, 42, 0.95) 100%);
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.royalisotopeitem:hover .royal-overlay-gradient {
+  opacity: 0.95;
+}
+
+.royal-overlay-content {
+  position: relative;
+  z-index: 3;
+  padding: 24px;
+  color: #ffffff;
+  transform: translateY(0);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.royalisotopeitem:hover .royal-overlay-content {
+  transform: translateY(-4px);
+}
+
+.royal-card-overlay .title {
+  color: #ffffff !important;
+  margin-bottom: 8px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.royal-card-overlay .title a {
+  color: #ffffff !important;
+}
+
+.royal-card-overlay .post-grid-meta {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 8px;
+}
+
+.royal-card-overlay .post-grid-meta a,
+.royal-card-overlay .post-grid-meta svg {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.royal-card-overlay .post-grid-excerpt {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.royal-card-overlay .read-more-btn {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.royal-card-overlay .read-more-btn:hover {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+/* ==========================================================================
+   LAYOUT 8: Minimalist Editorial
+   ========================================================================== */
+.royal-card-minimal {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.royal-card-minimal .royal-minimal-thumb-wrap {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.royal-card-minimal .post-grid-thumbnail {
+  border-radius: 10px;
+}
+
+.royal-card-minimal .post-grid-thumbnail img {
+  border-radius: 10px;
+}
+
+.royal-card-minimal .royal-minimal-content {
+  padding: 16px 0 0 0;
+}
+
+.royal-editorial-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+.royal-editorial-dot {
+  color: #cbd5e1;
+}
+
+.royal-card-minimal .title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.royal-card-minimal .title a {
+  background-image: linear-gradient(#4f46e5, #4f46e5);
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.3s ease;
+  padding-bottom: 2px;
+}
+
+.royalisotopeitem:hover .royal-card-minimal .title a {
+  background-size: 100% 2px;
+}
+
+.royal-card-minimal .post-grid-excerpt {
+  line-height: 1.65;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.royal-card-minimal .read-more-btn {
+  background: transparent;
+  padding: 0;
+  color: #4f46e5;
+  box-shadow: none;
+}
+
+.royal-card-minimal .read-more-btn:hover {
+  background: transparent;
+  color: #3730a3;
+  box-shadow: none;
+}
+
+/* ==========================================================================
+   LAYOUT 9: Side-by-Side (Split Horizontal)
+   ========================================================================== */
+.royal-card-split {
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.royal-split-media {
+  flex: 0 0 42%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px 0 0 14px;
+}
+
+.royal-split-media .post-grid-thumbnail,
+.royal-split-media .post-grid-thumbnail a,
+.royal-split-media .post-grid-thumbnail img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.royal-split-content {
+  flex: 1;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   LAYOUT 10: Modern Bento Grid Card
+   ========================================================================== */
+.royal-card-bento {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.royal-bento-media {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+}
+
+.royal-bento-media .post-grid-thumbnail,
+.royal-bento-media .post-grid-thumbnail a,
+.royal-bento-media .post-grid-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bento Floating Date Badge */
+.royal-bento-date {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 5px 12px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  z-index: 4;
+}
+
+.bento-day {
+  font-size: 15px;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.bento-month {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.royal-bento-content {
+  padding: 16px 4px 4px 4px;
+}
+
+.royal-bento-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.royal-bento-author {
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.royal-bento-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #1e293b;
+  text-decoration: none;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.royalisotopeitem:hover .royal-bento-btn {
+  background: #4f46e5;
+  color: #ffffff;
+  border-color: #4f46e5;
+  transform: rotate(-45deg);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media only screen and (max-width: 1024px) {
+  .royal-filterable-items .royalisotopegrid.royalrow > [class*="col-"] {
+    width: 50% !important;
+    max-width: 50% !important;
+  }
+
+  .royal-filterable-menu-container-align-left .royalisotope,
+  .royal-filterable-menu-container-align-right .royalisotope {
+    flex-direction: column;
+  }
+
+  .royal-filterable-menu-container-align-left .royalisotope .royalgallery-filter,
+  .royal-filterable-menu-container-align-right .royalisotope .royalgallery-filter {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .royal-filterable-menu-container-align-left .royalisotope .royalgallery-filter .filter-button-group,
+  .royal-filterable-menu-container-align-right .royalisotope .royalgallery-filter .filter-button-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .royal-filterable-menu-container-align-left .royalisotope .royalgallery-filter .filter-button-group li,
+  .royal-filterable-menu-container-align-right .royalisotope .royalgallery-filter .filter-button-group li {
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .royal-filterable-items .royalisotopegrid.royalrow > [class*="col-"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .royal-card-split {
+    flex-direction: column;
+  }
+
+  .royal-split-media {
+    flex: 0 0 auto;
+    border-radius: 14px 14px 0 0;
+    aspect-ratio: 16 / 10;
+  }
+
+  .royal-filterable-items .royalgallery-filter .filter-button-group {
+    gap: 6px;
+    padding: 0;
+  }
+
+  .royal-filterable-items .royalgallery-filter .filter-button-group li {
+    font-size: 13px;
+    padding: 7px 16px;
+  }
+
+  .royalisotopeitem .portfolio {
+    height: 380px;
+    min-height: 360px;
+  }
+
+  .royal-portfolio-mockup-header {
+    height: 34px;
+    padding: 0 10px;
+  }
+
+  .mockup-url-bar {
+    max-width: 140px;
+    font-size: 10px;
+    padding: 2px 8px;
+  }
+
+  .royalisotopeitem .portfolio .portfolio-overlay {
+    padding: 20px 14px 14px;
+    gap: 10px;
+  }
+
+  .royalisotopeitem .portfolio .title {
+    font-size: 15px;
+  }
+
+  .portfolio-action-icon-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .portfolio-action-icon-btn svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .royal-card-overlay {
+    min-height: 320px;
+  }
+}

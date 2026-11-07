@@ -1,0 +1,237 @@
+/*------------------------------------------------------------------
+Royal Sticky Header - Modern Smooth Sticky Effects
+-------------------------------------------------------------------*/
+
+/* ===== BASE HEADER STYLES ===== */
+.header,
+.royalstickyheader-header-yes,
+.royalstickyheader-header-yes.e-con {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    border-bottom 0.3s ease !important;
+  width: 100%;
+  max-width: 100%;
+  z-index: 9999;
+  will-change: transform, background-color, box-shadow;
+}
+
+/* ===== STICKY HEADER STATE ===== */
+.royalstickyheader-header {
+  margin-bottom: 0;
+  margin-top: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    top 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.royalstickyheader-header:not(.elementor-sticky) {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Smooth slide-in animation (only for scroll distance mode) */
+.royalstickyheader-is-sticky {
+  animation: royalSlideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes royalSlideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* No animation - for "Sticky When Reaches Top" mode */
+/* Header just becomes fixed without any slide animation */
+.royalstickyheader-no-slide {
+  animation: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+/* ===== GLASSMORPHISM / BLUR EFFECT ===== */
+.royalstickyheader-header.royalstickyheader-blur-yes,
+.royalstickyheader-header-yes[data-settings*='"blur_bg":"yes"'].royalstickyheader-header {
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Dark mode glassmorphism */
+.royalstickyheader-header.royalstickyheader-blur-dark {
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* ===== HIDE HEADER ON SCROLL ===== */
+.headerup {
+  transform: translateY(-110vh) !important;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* ===== HEADER LOGO TRANSITIONS ===== */
+.royalstickyheader-header-yes .elementor-widget-theme-site-logo,
+.royalstickyheader-header-yes .elementor-widget-image,
+.royalstickyheader-header-yes .logo,
+.royalstickyheader-header-yes .elementor-widget-theme-site-logo img,
+.royalstickyheader-header-yes .elementor-widget-image img,
+.royalstickyheader-header-yes .logo img {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* ===== TRANSPARENT HEADER STATE ===== */
+.royalstickyheader-header-transparent-yes,
+.elementor-editor-active .royalstickyheader-header-transparent-yes {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1), top 0s;
+  width: 100%;
+  position: absolute !important;
+  z-index: 99;
+}
+
+/* ===== CUSTOM HAMBURGER MENU TRANSITIONS ===== */
+.royalstickyheader-header-yes .elementor-menu-toggle:before,
+.royalstickyheader-header-yes .elementor-menu-toggle:after,
+.royalstickyheader-header-yes .elementor-menu-toggle i:after {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.royalstickyheader-header-yes .elementor-menu-toggle {
+  position: relative;
+  transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.royalstickyheader-header-yes .elementor-menu-toggle.elementor-active:before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.royalstickyheader-header-yes .elementor-menu-toggle:after {
+  transform: translate(-50%, calc(-50% - 0.25em));
+}
+
+.royalstickyheader-header-yes .elementor-menu-toggle.elementor-active:after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.royalstickyheader-header-yes .elementor-menu-toggle i:after {
+  transform: translate(-50%, -50%);
+}
+
+/* ===== ADMIN BAR OFFSET ===== */
+@media screen and (min-width: 783px) {
+  .admin-bar .royalstickyheader-header:not(.elementor-sticky) {
+    top: 32px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 782px) {
+  .admin-bar .royalstickyheader-header:not(.elementor-sticky) {
+    top: 46px;
+  }
+}
+
+/* ===== CONTAINER INNER PADDING RESET ===== */
+.elementor-element.royalstickyheader-header-yes.royalstickyheader-header .e-con-inner {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== PLACEHOLDER ELEMENT ===== */
+#royalstickyheader-placeholder {
+  transition: height 0.1s ease;
+}
+
+/* ===== MODERN SHADOW EFFECTS ===== */
+.royalstickyheader-header.royalstickyheader-shadow-soft {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.royalstickyheader-header.royalstickyheader-shadow-medium {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
+}
+
+.royalstickyheader-header.royalstickyheader-shadow-strong {
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* ===== MENU ITEM TRANSITIONS ===== */
+.royalstickyheader-header-yes .menu-item a,
+.royalstickyheader-header-yes .elementor-nav-menu--main .elementor-item {
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* ===== STICKY HEADER INNER ELEMENTS ===== */
+.royalstickyheader-header .elementor-container,
+.royalstickyheader-header.e-con {
+  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    min-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    padding 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* ===== LOGO COLOR CHANGE EFFECT ===== */
+.royalstickyheader-header-yes img.change-logo-color {
+  filter: brightness(0) invert(1);
+  transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media screen and (max-width: 767px) {
+
+  .royalstickyheader-header-yes,
+  .royalstickyheader-header {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+
+  @keyframes royalSlideDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+/* ===== REDUCED MOTION PREFERENCE ===== */
+@media (prefers-reduced-motion: reduce) {
+
+  .royalstickyheader-header-yes,
+  .royalstickyheader-header,
+  .royalstickyheader-is-sticky,
+  .headerup {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+
+  .royalstickyheader-header-yes,
+  .royalstickyheader-header {
+    position: relative !important;
+    top: 0 !important;
+  }
+
+  #royalstickyheader-placeholder {
+    display: none !important;
+  }
+}

@@ -1,0 +1,326 @@
+.elementor-editor-active .royalagegate-wrapper {
+    display: block;
+}
+.royalagegate-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999!important;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    display: none;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4117647059);
+}
+.royalagegate-wrapper:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    content: "";
+}
+.royalagegate-wrapper .royalagegate-boxes,
+.royalagegate-wrapper .royalagegate-inner-wrapper {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.royalagegate-wrapper .royalagegate-inner-wrapper {
+    top: 50%;
+    z-index: 10001;
+    overflow: hidden;
+    margin: 0 auto;
+    min-height: 300px;
+    max-width: 576px;
+    border-radius: 5px;
+    background: #fff;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.royalagegate-wrapper .royalagegate-boxes {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    padding: 50px;
+    width: 100%;
+}
+.royalagegate-wrapper .royalagegate-boxes.royalagegate-equ-width-50 {
+    width: 50%;
+}
+.royalagegate-wrapper .royalagegate-header {
+    width: 100%;
+    text-align: center;
+}
+.royalagegate-wrapper .royalagegate-header .royalagegate-warning-msg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+    overflow: hidden;
+    padding: 10px 15px;
+    width: 100%;
+    height: auto;
+    background-color: rgba(17, 17, 17, 0.9019607843);
+    color: #f1f7f1;
+    text-align: center;
+    font-size: 16px;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+.royalagegate-wrapper .royalagegate-header .royalagegate-image {
+    position: relative;
+    display: block;
+}
+.royalagegate-wrapper .royalagegate-header .royalagegate-image img {
+    position: relative;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    max-width: 80px;
+}
+.royalagegate-wrapper .royalagegate-header .royalagegate-title {
+    margin-top: 15px;
+    color: #000;
+    font-size: 22px;
+}
+.royalagegate-wrapper .royalagegate-header .royalagegate-description {
+    margin-top: 15px;
+    width: 100%;
+    color: #000;
+    letter-spacing: 0.8px;
+    font-size: 14px;
+    line-height: 1.2;
+}
+.royalagegate-wrapper .royalagegate-footer-text {
+    margin-top: 15px;
+    width: 100%;
+    color: #818181;
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+}
+.royalagegate-wrapper .royalagegate-footer-text p {
+    margin: 0;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+.royalagegate-wrapper .royalagegate-form-body {
+    position: relative;
+    display: block;
+    margin: 15px 0;
+    width: 100%;
+}
+.royalagegate-wrapper.royalagegate-confirm-age .royalagegate-form-body {
+    position: relative;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    margin-top: 30px;
+}
+.royalagegate-wrapper.royalagegate-confirm-age .royalagegate-form-body .royalagegate-checkbox.remove-checkbox,
+.royalagegate-wrapper.royalagegate-confirm-age .royalagegate-form-body .royalagegate-checkbox.remove-checkbox label {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+}
+.royalagegate-wrapper.royalagegate-confirm-age .royalagegate-form-body .royalagegate-checkbox.remove-checkbox .royalagegate-checkbox-input {
+    display: none;
+}
+.royalagegate-wrapper.royalagegate-confirm-age .royalagegate-form-body .royalagegate-checkbox.remove-checkbox .royalagegate-checkmark {
+    position: relative;
+    z-index: 111;
+    display: inline-table;
+    margin-right: 10px;
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: #eee;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+.royalagegate-wrapper.royalagegate-confirm-age .royalagegate-form-body .royalagegate-checkbox.remove-checkbox:hover input ~ .royalagegate-checkmark {
+    background-color: #c5c2c2;
+}
+.royalagegate-wrapper.royalagegate-confirm-age .royalagegate-form-body .royalagegate-checkbox.remove-checkbox input:checked ~ .royalagegate-checkmark {
+    background-color: #c5c2c2;
+}
+.royalagegate-wrapper.royalagegate-confirm-age .royalagegate-form-body .royalagegate-checkbox.remove-checkbox .royalagegate-checkmark:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    content: "";
+    -webkit-transform: translateY(-50%) translateX(-50%) rotate(45deg);
+    -ms-transform: translateY(-50%) translateX(-50%) rotate(45deg);
+    transform: translateY(-50%) translateX(-50%) rotate(45deg);
+}
+.royalagegate-wrapper.royalagegate-confirm-age .royalagegate-form-body .royalagegate-checkbox.remove-checkbox input:checked ~ .royalagegate-checkmark:after {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.royalagegate-wrapper.royalagegate-confirm-age .royalagegate-form-body .royalagegate-confirm-age-btn {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 15px 25px;
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(356.31deg, #6830c8 -31.79%, #e2498a 121.43%), -webkit-linear-gradient(bottom, #d9d9d9, #d9d9d9);
+    background: linear-gradient(93.69deg, #6830c8 -31.79%, #e2498a 121.43%), linear-gradient(0deg, #d9d9d9, #d9d9d9);
+    color: #fff;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.royalagegate-wrapper.royalagegate-confirm-age .royalagegate-form-body .royalagegate-confirm-age-btn i,
+.royalagegate-wrapper.royalagegate-confirm-dob .royalagegate-form-body .royalagegate-confirm-dob-btn i {
+    margin: 0 0 0 10px;
+}
+.royalagegate-wrapper.royalagegate-confirm-dob .royalagegate-form-body {
+    margin-top: 15px;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+}
+.royalagegate-wrapper.royalagegate-confirm-dob .royalagegate-form-body .royalagegate-date-input {
+    position: relative;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    overflow: hidden;
+    padding: 12px;
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 4px;
+    color: #000;
+    font-size: 14px;
+}
+.royalagegate-wrapper.royalagegate-confirm-by-boolean .royalagegate-form-body .royalagegate-confirm-no-btn,
+.royalagegate-wrapper.royalagegate-confirm-by-boolean .royalagegate-form-body .royalagegate-confirm-yes-btn,
+.royalagegate-wrapper.royalagegate-confirm-dob .royalagegate-form-body .royalagegate-confirm-dob-btn {
+    position: relative;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 100%;
+    outline: 0;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.royalagegate-wrapper.royalagegate-confirm-dob .royalagegate-form-body .royalagegate-confirm-dob-btn {
+    top: 15px;
+    overflow: hidden;
+    padding: 15px;
+    border: 0;
+    background: -webkit-linear-gradient(356.31deg, #6830c8 -31.79%, #e2498a 121.43%), -webkit-linear-gradient(bottom, #d9d9d9, #d9d9d9);
+    background: linear-gradient(93.69deg, #6830c8 -31.79%, #e2498a 121.43%), linear-gradient(0deg, #d9d9d9, #d9d9d9);
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1;
+}
+.royalagegate-wrapper.royalagegate-confirm-by-boolean .royalagegate-form-body {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.royalagegate-wrapper.royalagegate-confirm-by-boolean .royalagegate-form-body .royalagegate-confirm-no-btn,
+.royalagegate-wrapper.royalagegate-confirm-by-boolean .royalagegate-form-body .royalagegate-confirm-yes-btn {
+    padding: 10px 15px;
+    font-size: 12px;
+}
+.royalagegate-wrapper.royalagegate-confirm-by-boolean .royalagegate-form-body .royalagegate-confirm-no-btn i,
+.royalagegate-wrapper.royalagegate-confirm-by-boolean .royalagegate-form-body .royalagegate-confirm-yes-btn i {
+    margin: 0 10px;
+}
+.royalagegate-wrapper.royalagegate-confirm-by-boolean .royalagegate-form-body .royalagegate-confirm-yes-btn {
+    margin-right: 5px;
+    border: 0;
+    background: -webkit-linear-gradient(356.31deg, #6830c8 -31.79%, #e2498a 121.43%), -webkit-linear-gradient(bottom, #d9d9d9, #d9d9d9);
+    background: linear-gradient(93.69deg, #6830c8 -31.79%, #e2498a 121.43%), linear-gradient(0deg, #d9d9d9, #d9d9d9);
+    color: #fff;
+}
+.royalagegate-wrapper.royalagegate-confirm-by-boolean .royalagegate-form-body .royalagegate-confirm-no-btn {
+    margin-left: 5px;
+    border: 1px solid #d7d7d7;
+    background: 0 0;
+    color: #5c5c5c;
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+    .royalagegate-wrapper .royalagegate-boxes.royalagegate-equ-width-50 {
+        width: 100%;
+    }
+}
+@media (max-width: 767px) and (min-width: 375px) {
+    .royalagegate-wrapper .royalagegate-boxes.royalagegate-equ-width-50 {
+        min-width: 100%;
+        width: 100%;
+    }
+}
+.royalagegate-wrapper .royalagegate-boxes .royalagegate-form-body .royalagegate-confirm-no-btn svg,
+.royalagegate-wrapper .royalagegate-boxes .royalagegate-form-body .royalagegate-confirm-yes-btn svg {
+    width: 12px;
+    height: 12px;
+}

@@ -1,0 +1,145 @@
+/*-----------------------------
+  Royal Ticker Styles
+------------------------------*/
+
+.royalnewsticker {
+  background: #fff;
+  position: relative;
+  height: 45px;
+  border: 1px solid #1974d2;
+  margin-top: 0;
+  overflow: hidden; /* Safety fallback */
+}
+
+.royalnewsticker-label {
+  background: #1974d2;
+  padding: 10px;
+  float: left;
+  margin-right: 15px;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  line-height: normal;
+  width: auto;
+}
+
+.royalnewsticker-box {
+  height: 100%;
+  overflow: hidden;
+}
+
+.royalticker-wrap {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.royalnewstickerhandler {
+  position: absolute;
+  display: flex;
+  flex-wrap: nowrap;
+  top: 0;
+  left: 0;
+  height: 100%;
+  white-space: nowrap;
+  align-items: center;
+}
+
+.royalnewstickerhandler li {
+  display: inline-block;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.royalnewsticker-box ul {
+  padding: 0;
+  margin: 0;
+  list-style: none !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.royalnewsticker-box ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.royalnewsticker-controls {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.royalnewsticker-controls button {
+  height: 100%;
+  width: 40px;
+  padding: 0;
+  background: #f6f6f6;
+  border: solid #eeeeee;
+  border-width: 0 0 0 1px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.royalnewsticker-controls button:hover {
+  background: #eeeeee;
+}
+
+.royalnewsticker-controls button.royalnewsticker-arrow {
+  position: relative;
+  margin: 0;
+}
+
+.royalnewsticker-controls button.royalnewsticker-arrow:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid #999;
+  border-right: 2px solid #999;
+  transform: translate(-50%, -50%);
+}
+
+.royalnewsticker-controls button.royalnewsticker-pause {
+  position: relative;
+  display: inline-block;
+}
+
+.royalnewsticker-controls button.royalnewsticker-pause:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-style: solid;
+  border-width: 0 2px 0 0;
+  border-color: #999;
+  transform: translate(-50%, -50%);
+}
+
+/* Horizontal Controls Arrow Rotation */
+.royalnewsticker-controls.royalnewsticker-horizontal-controls button.royalnewsticker-prev:after {
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.royalnewsticker-controls.royalnewsticker-horizontal-controls button.royalnewsticker-next:after {
+  transform: translate(-50%, -50%) rotate(315deg);
+}
+
+/* Vertical Controls Arrow Rotation */
+.royalnewsticker-controls.royalnewsticker-vertical-controls button.royalnewsticker-prev:after {
+  transform: translate(-50%, -50%) rotate(225deg);
+}
+
+.royalnewsticker-controls.royalnewsticker-vertical-controls button.royalnewsticker-next:after {
+  transform: translate(-50%, -50%) rotate(405deg);
+}

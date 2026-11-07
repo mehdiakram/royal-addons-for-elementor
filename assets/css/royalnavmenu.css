@@ -1,0 +1,600 @@
+/* Basic Styles for Submenu Hide */
+.royalnavmenuwarper .submenuhide ul.sub-menu,
+.royalnavmenuwarper .submenuhide .royalverticalmenu .menu-item-has-children > a::after {
+    display: none;
+}
+
+/* Royal Horizontal Menu Base Styles */
+.royalhorizontalmenu {
+    vertical-align: middle;
+    padding: 0;
+}
+
+.royalhorizontalmenu li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.royalhorizontalmenu > li {
+    display: inline-block;
+}
+
+.royalhorizontalmenu li:last-child {
+    border-right: 0px;
+}
+
+.royalhorizontalmenu li a {
+    display: block;
+    font-size: 16px;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 15px;
+}
+
+.royalhorizontalmenu li a:hover {
+    -webkit-text-decoration-skip: objects;
+    -webkit-transition: all .6s ease-in-out;
+    transition: all .6s ease-in-out;
+    color: #fff;
+}
+
+.royalhorizontalmenu > ul {
+    position: relative;
+}
+
+.royalhorizontalmenu li .sub-menu a {
+    color: #000;
+}
+
+.royalhorizontalmenu li .sub-menu a:hover {
+    background: #333333;
+}
+
+.royalhorizontalmenu li ul {
+    position: absolute;
+    z-index: 99999;
+    left: -99999px; /* Hide off-screen initially */
+    height: auto;
+    min-width: 220px;
+    background: #FFF;
+    padding: 0;
+}
+
+.royalhorizontalmenu li ul a {
+    color: #000;
+}
+
+.royalhorizontalmenu li ul ul {
+    margin: -33px 0 0 100%; /* Position nested submenus */
+}
+
+.royalhorizontalmenu li li {
+    padding: 0;
+    margin: 0;
+    float: none;
+}
+
+.royalhorizontalmenu ul a {
+    min-width: 125px;
+}
+
+/* Submenu Hover Animation (CSS based on --submenuanimation variable from Elementor) */
+.royalhorizontalmenu li:hover ul.sub-menu ul.sub-menu,
+.royalhorizontalmenu li:hover ul.sub-menu ul.sub-menu ul.sub-menu,
+.royalhorizontalmenu li:hover ul.sub-menu ul.sub-menu ul.sub-menu ul.sub-menu,
+.royalhorizontalmenu li:hover ul.sub-menu ul.sub-menu ul.sub-menu ul.sub-menu ul.sub-menu,
+.royalhorizontalmenu li:hover ul.sub-menu ul.sub-menu ul.sub-menu ul.sub-menu ul.sub-menu ul.sub-menu {
+    left: -99999px; /* Keep nested submenus hidden until their parent is hovered */
+    animation: var(--submenuanimation) 1s 1;
+}
+
+.royalhorizontalmenu li:hover ul.sub-menu,
+.royalhorizontalmenu li li:hover ul.sub-menu,
+.royalhorizontalmenu li li li:hover ul.sub-menu,
+.royalhorizontalmenu li li li li:hover ul.sub-menu,
+.royalhorizontalmenu li li li li li:hover ul.sub-menu,
+.royalhorizontalmenu li li li li li li:hover ul.sub-menu {
+    animation: var(--submenuanimation) 1s 1;
+    left: auto; /* Display submenus on hover */
+}
+
+/* WordPress Specific Menu Classes for Active/Current States */
+.royalhorizontalmenu li:hover,
+.royalhorizontalmenu li.current-menu-item,
+.royalhorizontalmenu li.current_page_item,
+.royalhorizontalmenu li.current-menu-parent,
+.royalhorizontalmenu li.current-menu-ancestor {
+    color: #FFF;
+}
+
+/* Submenu Dropdown Arrows (::after for styling) */
+.royalhorizontalmenu .sub-menu li.menu-item-has-children > a:after {
+    position: absolute;
+    right: 10px;
+}
+
+.royalhorizontalmenu li ul li {
+    border-right: none;
+}
+
+.royalhorizontalmenu li ul li:last-child {
+    border-bottom: 0px;
+}
+
+.royalhorizontalmenu li ul a {
+    border-right: none;
+    margin: 0;
+    padding: 7px 10px;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.royalhorizontalmenu .sub-menu a {
+    text-align: left;
+}
+
+/* Dropdown Arrow Positioning for Top-Level Items */
+.menudropdownarrow .royalhorizontalmenu > li.menu-item-has-children > a,
+.menudropdownplusminus .royalhorizontalmenu > li.menu-item-has-children > a {
+    position: relative;
+    padding-right: 20px;
+}
+
+.royalhorizontalmenu > li.menu-item-has-children > a:first-child:before {
+    font-family: "royalicon"; /* Assumes custom font for icons */
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menudropdownarrow .royalhorizontalmenu > li.menu-item-has-children > a:first-child:before {
+    content: '\f107'; /* Down arrow icon */
+}
+
+.menudropdownarrow .royalhorizontalmenu > li.menu-item-has-children:hover > a:first-child:before {
+    content: '\f106'; /* Up arrow icon on hover */
+}
+
+.menudropdownplusminus .royalhorizontalmenu > li.menu-item-has-children > a:first-child:before {
+    content: '\e807'; /* Plus icon */
+}
+
+.menudropdownplusminus .royalhorizontalmenu > li.menu-item-has-children:hover > a:first-child:before {
+    content: '\e809'; /* Minus icon on hover */
+}
+
+/* Dropdown Arrow Positioning for Submenu Items */
+.royalhorizontalmenu ul.sub-menu li.menu-item-has-children > a {
+    position: relative;
+}
+
+.royalhorizontalmenu ul.sub-menu li.menu-item-has-children > a:first-child:before {
+    font-family: "royalicon";
+    display: inline-block;
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menudropdownarrow .royalhorizontalmenu ul.sub-menu li.menu-item-has-children > a:first-child:before {
+    content: '\f105'; /* Right arrow icon */
+}
+
+.menudropdownarrow .royalhorizontalmenu ul.sub-menu li.menu-item-has-children:hover > a:first-child:before {
+    content: '\f104'; /* Left arrow icon on hover */
+}
+
+.menudropdownplusminus .royalhorizontalmenu ul.sub-menu li.menu-item-has-children > a:first-child:before {
+    content: '\e807';
+}
+
+.menudropdownplusminus .royalhorizontalmenu ul.sub-menu li.menu-item-has-children:hover > a:first-child:before {
+    content: '\e809';
+}
+
+/* Submenu Top Arrow Styling */
+.royalnavmenuwarper.submenutoparrow .royalhorizontalmenu > li.menu-item-has-children > .sub-menu:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    z-index: 1;
+    border-bottom: 12px #00b3dc solid; /* Arrow color set by Elementor control */
+}
+
+/* Royal Vertical Menu */
+.royalverticalmenu,
+.royalverticalmenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 9;
+}
+
+.royalverticalmenu li {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    transition: background 0.5s;
+}
+
+.royalverticalmenu a {
+    font-size: 16px;
+    display: block;
+    text-decoration: none;
+    line-height: 30px;
+    padding: 0 5px;
+    position: relative;
+}
+
+.royalverticalmenu li:first-child a {
+    border-top: 0;
+}
+
+.royalnavmenuwarper .royalverticalmenu .menu-item-has-children > a::after {
+    content: '';
+    position: absolute;
+    display: inline;
+    top: 50%;
+    margin-top: -4px;
+    right: 8px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+    transition: border-color 0.5s;
+}
+
+.royalverticalmenu li ul {
+    min-width: 180px;
+    position: absolute;
+    display: none;
+    left: 100%;
+    top: 0%;
+}
+
+.royalverticalmenu li:hover > ul {
+    display: block;
+}
+
+/* Menu Hover Effects (Stroke, Shift, Circle, Fill) */
+/* Stroke */
+.royalnavmenuwarper .menuhoverstroke ul li a {
+    position: relative;
+}
+
+.royalnavmenuwarper .menuhoverstroke ul li a:after {
+    transition: all var(--mainmenutransitionduration, 0.3s); /* Use Elementor slider variable */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: ''; /* Changed from '.' to '' to avoid dot in text */
+    color: transparent;
+    background: #fff000; /* Default, overridden by Elementor control */
+    height: 3px;
+}
+
+.royalnavmenuwarper .menuhoverstroke ul li a:hover:after {
+    width: 100%;
+}
+
+/* Shift */
+.royalnavmenuwarper .menuhovershift ul li a {
+    position: relative;
+    z-index: 1;
+}
+
+.royalnavmenuwarper .menuhovershift ul li a:after {
+    transition: all var(--mainmenutransitionduration, 0.3s); /* Use Elementor slider variable */
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 3px;
+    content: ''; /* Changed from '.' to '' */
+    color: transparent;
+    background: #fff000; /* Default, overridden by Elementor control */
+    visibility: hidden; /* Changed from 'none' to 'hidden' for transition */
+    opacity: 0;
+    z-index: -1;
+}
+
+.royalnavmenuwarper .menuhovershift ul li a:hover:after {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+
+/* Circle */
+.royalnavmenuwarper .menuhovercircle ul li a {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.royalnavmenuwarper .menuhovercircle ul li a:after {
+    display: block;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: ''; /* Changed from '.' to '' */
+    color: transparent;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.royalnavmenuwarper .menuhovercircle ul li a:hover:after {
+    animation: menuhovercircle 1.5s ease-in forwards;
+    -webkit-animation: menuhovercircle 1.5s ease-in forwards;
+}
+
+@keyframes menuhovercircle {
+    0% {
+        width: 1px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        height: 1px;
+        z-index: -1;
+        background: #333333;
+        border-radius: 100%;
+    }
+    100% {
+        background: #fff000;
+        height: 5000%;
+        width: 5000%;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 0;
+    }
+}
+
+@-webkit-keyframes menuhovercircle {
+    0% {
+        width: 1px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        height: 1px;
+        z-index: -1;
+        background: #333333;
+        border-radius: 100%;
+    }
+    100% {
+        background: #fff000;
+        height: 5000%;
+        width: 5000%;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 0;
+    }
+}
+
+/* Fill */
+.royalnavmenuwarper .menuhoverfill ul li a {
+    position: relative;
+    transition: all var(--mainmenutransitionduration, 0.3s); /* Use Elementor slider variable */
+}
+
+.royalnavmenuwarper .menuhoverfill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: ''; /* Changed from '.' to '' */
+    color: transparent;
+    background: #fff000; /* Default, overridden by Elementor control */
+    height: 3px;
+    text-align: left;
+    opacity: 0;
+}
+
+.royalnavmenuwarper .menuhoverfill ul li a:hover {
+    color: #fff;
+    z-index: 1;
+}
+
+.royalnavmenuwarper .menuhoverfill ul li a:hover:after {
+    z-index: -10;
+    animation: menuhoverfill 1s forwards;
+    -webkit-animation: menuhoverfill 1s forwards;
+    -moz-animation: menuhoverfill 1s forwards;
+    opacity: 1;
+}
+
+@keyframes menuhoverfill {
+    0% {
+        width: 0%;
+        height: 1px;
+    }
+    50% {
+        width: 100%;
+        height: 1px;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        background: #fff000; /* Default, overridden by Elementor control */
+    }
+}
+
+@-webkit-keyframes menuhoverfill {
+    0% {
+        width: 0%;
+        height: 1px;
+    }
+    50% {
+        width: 100%;
+        height: 1px;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        background: #fff000; /* Default, overridden by Elementor control */
+    }
+}
+
+
+/* Multiple Colors Style Options */
+.multiplecolorsborder .royalhorizontalmenu > li > a {
+    border-bottom-style: solid;
+    border-bottom-width: 5px; /* Default border width, color comes from repeater */
+}
+
+/* Data Hover Styles */
+.royalnavmenuwarper.data-hover-enabled .royalhorizontalmenu > li {
+    position: relative;
+}
+
+/* Original <a> tag fades out, stays in place */
+.royalnavmenuwarper.data-hover-enabled .royalhorizontalmenu > li a {
+    transition: opacity var(--datahoverspeed, 0.3s) ease; /* Uses Elementor slider variable */
+    position: relative;
+    z-index: 2; /* Keep it above the pseudo-element */
+    transform: translateY(0); /* IMPORTANT: Ensure it stays in place */
+}
+.royalnavmenuwarper.data-hover-enabled .royalhorizontalmenu > li:hover > a {
+    opacity: 0; /* Make it invisible on hover */
+}
+
+/* data-hover ::after pseudo-element fades in, stays in place */
+.royalnavmenuwarper.data-hover-enabled .royalhorizontalmenu > li[data-hover]::after {
+    content: attr(data-hover); /* Always pull content from data-hover attribute */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Uses Elementor variable, with fallback */
+    background-color: #000000; /* Uses Elementor variable, with fallback */
+    font-weight: bold;
+    pointer-events: none !important; /* CRITICAL: Allows clicks to pass through to the <a> */
+    z-index: 1; /* Below the <a> tag */
+
+    /* Default initial state for base: */
+    opacity: 0;
+    transform: translateY(0); /* Default position, will be overridden by specific styles */
+
+    /* Use data hover speed variable for generic transition, can be overridden by specific styles */
+    transition: opacity var(--datahoverspeed, 0.3s) ease, transform var(--datahoverspeed, 0.3s) ease, background-color var(--datahoverspeed, 0.3s) ease;
+}
+.royalnavmenuwarper.data-hover-enabled .royalhorizontalmenu > li:hover::after {
+    opacity: 1; /* Make data-hover text visible */
+}
+
+
+/* Style 2: Text Shift Up (data-hover text slides up from below, original <a> fades out in place) */
+.royalnavmenuwarper .data-hover-style-style2 .royalhorizontalmenu > li[data-hover]::after {
+    top: 0; /* Element appears aligned with the li */
+    transform: translateY(100%); /* Start below the visible area (slides from bottom) */
+    opacity: 0; /* Hidden initially */
+    pointer-events: none !important; /* Pass clicks through */
+    z-index: 1; /* Below the <a> */
+    transition: transform var(--datahoverspeed, 0.3s) ease, opacity var(--datahoverspeed, 0.3s) ease; /* Consistent transition */
+}
+.royalnavmenuwarper .data-hover-style-style2 .royalhorizontalmenu > li:hover::after {
+    transform: translateY(0); /* Slide up into view */
+    opacity: 1;
+}
+
+/* Style 3: Background Reveal (Original text fades out, background slides, data-hover text fades in) */
+.royalnavmenuwarper .data-hover-style-style3 .royalhorizontalmenu > li > a {
+    position: relative;
+    z-index: 3; /* Keep original link text on top initially */
+    transition: color var(--datahoverspeed, 0.3s) ease; /* Text color transition */
+}
+.royalnavmenuwarper .data-hover-style-style3 .royalhorizontalmenu > li[data-hover]::before { /* Use ::before for the background */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#000000; /* Use variable for consistency */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--datahoverspeed, 0.3s) ease; /* Background transform transition */
+    z-index: 1; /* Below text */
+}
+.royalnavmenuwarper .data-hover-style-style3 .royalhorizontalmenu > li[data-hover]::after {
+    content: attr(data-hover);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    opacity: 0; /* Hidden by default */
+    transition: opacity var(--datahoverspeed, 0.3s) ease; /* Text fade in transition */
+    z-index: 2; /* Above background, below original text */
+    pointer-events: none !important; /* No interaction */
+    background: transparent; /* No background here, handled by ::before */
+}
+.royalnavmenuwarper .data-hover-style-style3 .royalhorizontalmenu > li:hover > a {
+    color: transparent; /* Make original text invisible */
+}
+.royalnavmenuwarper .data-hover-style-style3 .royalhorizontalmenu > li:hover::before {
+    transform: scaleX(1); /* Expand background */
+}
+.royalnavmenuwarper .data-hover-style-style3 .royalhorizontalmenu > li:hover::after {
+    opacity: 1;
+}
+
+/* Style 4: Custom Effect (e.g., Scale) */
+.royalnavmenuwarper .data-hover-style-style4 .royalhorizontalmenu > li[data-hover]::after {
+    transform: scale(0); /* Starts scaled down */
+    opacity: 0;
+    pointer-events: none !important;
+    z-index: 1;
+    transition: transform var(--datahoverspeed, 0.4s) cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity var(--datahoverspeed, 0.4s) ease; /* Uses variable */
+}
+.royalnavmenuwarper .data-hover-style-style4 .royalhorizontalmenu > li:hover > a {
+    opacity: 0;
+    transition: opacity var(--datahoverspeed, 0.3s) ease;
+}
+.royalnavmenuwarper .data-hover-style-style4 .royalhorizontalmenu > li:hover::after {
+    transform: scale(1);
+    opacity: 1;
+}

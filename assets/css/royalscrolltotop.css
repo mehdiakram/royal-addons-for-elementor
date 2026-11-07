@@ -1,0 +1,491 @@
+/* ==========================================================================
+   Royal Scroll To Top Widget - Modern & Smart Animations
+   ========================================================================== */
+
+.royal-scroll-to-top-wrap {
+    position: fixed;
+    z-index: 99999;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    transition: opacity 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+                transform 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+                visibility 0.35s;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Base Hidden & Visible States */
+.royal-scroll-to-top-wrap.royal-stt-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.royal-scroll-to-top-wrap.royal-stt-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Position Presets */
+.royal-scroll-to-top-wrap.position-bottom-right {
+    bottom: var(--r-stt-offset-y, 30px);
+    right: var(--r-stt-offset-x, 30px);
+}
+.royal-scroll-to-top-wrap.position-bottom-left {
+    bottom: var(--r-stt-offset-y, 30px);
+    left: var(--r-stt-offset-x, 30px);
+}
+.royal-scroll-to-top-wrap.position-bottom-center {
+    bottom: var(--r-stt-offset-y, 30px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.royal-scroll-to-top-wrap.position-bottom-center.royal-stt-hidden {
+    transform: translateX(-50%) translateY(20px) scale(0.85);
+}
+.royal-scroll-to-top-wrap.position-top-right {
+    top: var(--r-stt-offset-y, 30px);
+    right: var(--r-stt-offset-x, 30px);
+}
+.royal-scroll-to-top-wrap.position-top-left {
+    top: var(--r-stt-offset-y, 30px);
+    left: var(--r-stt-offset-x, 30px);
+}
+
+/* Button Core */
+.royal-scroll-to-top-wrap .royal-scroll-to-top-btn,
+.royal-scroll-to-top-wrap #royalscrolltotop {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    width: var(--r-stt-btn-width, 50px);
+    height: var(--r-stt-btn-height, 50px);
+    border-radius: var(--r-stt-btn-radius, 50%);
+    overflow: visible;
+}
+
+/* Glassmorphism Effect */
+.royal-scroll-to-top-btn.glassmorphism {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Content Container */
+.royal-stt-content {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    height: 100%;
+    line-height: 1;
+}
+
+.royal-stt-content.layout-icon-top {
+    flex-direction: column;
+}
+.royal-stt-content.layout-icon-bottom {
+    flex-direction: column-reverse;
+}
+.royal-stt-content.layout-icon-right {
+    flex-direction: row-reverse;
+}
+
+/* Icon */
+.royal-stt-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--r-stt-icon-size, 20px);
+    line-height: 1;
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+    overflow: hidden;
+}
+
+.royal-stt-icon i {
+    font-size: inherit;
+    line-height: inherit;
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.royal-stt-icon svg {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Text & Percentage */
+.royal-stt-text {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 1;
+}
+
+.royal-stt-percentage {
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Circular Progress Ring */
+.royal-stt-progress-ring {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    transform: rotate(-90deg);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.royal-stt-ring-track {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0.08);
+    stroke-width: var(--r-stt-stroke-width, 3px);
+}
+
+.royal-stt-ring-fill {
+    fill: none;
+    stroke: var(--r-stt-progress-color, #32B67A);
+    stroke-width: var(--r-stt-stroke-width, 3px);
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.12s linear;
+}
+
+.royal-stt-ring-glow .royal-stt-ring-fill {
+    filter: drop-shadow(0 0 4px var(--r-stt-progress-color, #32B67A));
+}
+
+/* ==========================================================================
+   SMART ENTRANCE / EXIT ANIMATIONS
+   ========================================================================== */
+
+/* 1. Fade */
+.royal-scroll-to-top-wrap.entrance-fade.royal-stt-hidden {
+    opacity: 0;
+}
+.royal-scroll-to-top-wrap.entrance-fade.royal-stt-visible {
+    opacity: 1;
+}
+
+/* 2. Slide Up */
+.royal-scroll-to-top-wrap.entrance-slide-up.royal-stt-hidden {
+    opacity: 0;
+    transform: translateY(60px);
+}
+.royal-scroll-to-top-wrap.entrance-slide-up.royal-stt-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 3. Zoom / Spring */
+.royal-scroll-to-top-wrap.entrance-zoom.royal-stt-hidden {
+    opacity: 0;
+    transform: scale(0.2);
+}
+.royal-scroll-to-top-wrap.entrance-zoom.royal-stt-visible {
+    opacity: 1;
+    transform: scale(1);
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* 4. 3D Flip */
+.royal-scroll-to-top-wrap.entrance-flip {
+    perspective: 600px;
+}
+.royal-scroll-to-top-wrap.entrance-flip.royal-stt-hidden {
+    opacity: 0;
+    transform: perspective(600px) rotateX(90deg);
+}
+.royal-scroll-to-top-wrap.entrance-flip.royal-stt-visible {
+    opacity: 1;
+    transform: perspective(600px) rotateX(0deg);
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* 5. Rotate Zoom */
+.royal-scroll-to-top-wrap.entrance-rotate.royal-stt-hidden {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0.3);
+}
+.royal-scroll-to-top-wrap.entrance-rotate.royal-stt-visible {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+    transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* 6. Bounce */
+.royal-scroll-to-top-wrap.entrance-bounce.royal-stt-visible {
+    animation: royalSttBounceIn 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+.royal-scroll-to-top-wrap.entrance-bounce.royal-stt-hidden {
+    opacity: 0;
+    transform: scale(0.4);
+}
+@keyframes royalSttBounceIn {
+    0% { opacity: 0; transform: scale3d(0.3, 0.3, 0.3); }
+    20% { transform: scale3d(1.1, 1.1, 1.1); }
+    40% { transform: scale3d(0.9, 0.9, 0.9); }
+    60% { opacity: 1; transform: scale3d(1.03, 1.03, 1.03); }
+    80% { transform: scale3d(0.97, 0.97, 0.97); }
+    100% { opacity: 1; transform: scale3d(1, 1, 1); }
+}
+
+/* ==========================================================================
+   SMART IDLE / ATTENTION ANIMATIONS
+   ========================================================================== */
+
+/* 1. Floating Animation */
+.royal-stt-idle-floating .royal-scroll-to-top-wrap .royal-scroll-to-top-btn,
+.royal-scroll-to-top-wrap #royalscrolltotop {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    animation: royalSttFloating 2.8s ease-in-out infinite;
+}
+@keyframes royalSttFloating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* 2. Heartbeat Pulse Animation */
+.royal-stt-idle-pulse .royal-scroll-to-top-wrap .royal-scroll-to-top-btn,
+.royal-scroll-to-top-wrap #royalscrolltotop {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    animation: royalSttPulse 2s ease-in-out infinite;
+}
+@keyframes royalSttPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+/* 3. Neon Glow Pulse */
+.royal-stt-idle-glow .royal-scroll-to-top-wrap .royal-scroll-to-top-btn,
+.royal-scroll-to-top-wrap #royalscrolltotop {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    animation: royalSttNeonGlow 2.4s ease-in-out infinite;
+}
+@keyframes royalSttNeonGlow {
+    0%, 100% {
+        box-shadow: 0 0 6px var(--r-stt-glow-color, rgba(50, 182, 122, 0.4));
+    }
+    50% {
+        box-shadow: 0 0 22px var(--r-stt-glow-color, rgba(50, 182, 122, 0.85)),
+                    0 0 35px var(--r-stt-glow-color, rgba(50, 182, 122, 0.4));
+    }
+}
+
+/* 4. Radar / Water Ripple Waves */
+.royal-stt-idle-ripple .royal-scroll-to-top-btn::before,
+.royal-stt-idle-ripple .royal-scroll-to-top-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    border: 2px solid var(--r-stt-progress-color, #32B67A);
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 0;
+    animation: royalSttRipple 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.royal-stt-idle-ripple .royal-scroll-to-top-btn::after {
+    animation-delay: 1.2s;
+}
+@keyframes royalSttRipple {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.65);
+        opacity: 0;
+    }
+}
+
+/* ==========================================================================
+   SMART HOVER MICRO-INTERACTIONS
+   ========================================================================== */
+
+/* 1. Icon Fly Up & Return (Modern signature micro-interaction) */
+.royal-stt-hover-icon-fly-up:hover .royal-stt-icon {
+    animation: royalSttFlyUp 0.45s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+@keyframes royalSttFlyUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    45% {
+        transform: translateY(-130%);
+        opacity: 0;
+    }
+    46% {
+        transform: translateY(130%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 2. Hover Grow */
+.royal-stt-hover-grow .royal-scroll-to-top-btn:hover {
+    transform: translateY(-4px) scale(1.08);
+}
+
+/* 3. Hover Rotate */
+.royal-stt-hover-rotate .royal-scroll-to-top-btn:hover .royal-stt-icon {
+    transform: rotate(360deg);
+}
+
+/* 4. Hover Bounce */
+.royal-stt-hover-bounce .royal-scroll-to-top-btn:hover {
+    animation: royalSttHoverBounce 0.5s ease;
+}
+@keyframes royalSttHoverBounce {
+    0%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-8px); }
+    60% { transform: translateY(-4px); }
+}
+
+/* 5. Hover Glow */
+.royal-stt-hover-glow .royal-scroll-to-top-btn:hover {
+    box-shadow: 0 8px 30px var(--r-stt-glow-color, rgba(50, 182, 122, 0.65)) !important;
+}
+
+/* ==========================================================================
+   SMART CLICK ANIMATIONS
+   ========================================================================== */
+
+/* 1. Rocket Launch Effect (Super cool & interactive) */
+.royal-scroll-to-top-wrap.royal-stt-launching {
+    animation: royalSttRocketLaunch 0.8s cubic-bezier(0.45, 0, 0.55, 1) forwards !important;
+    pointer-events: none;
+}
+@keyframes royalSttRocketLaunch {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    20% {
+        transform: translateY(15px) scale(0.9, 1.15);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) scale(0.6);
+        opacity: 0;
+    }
+}
+
+/* 2. Tactile Click Shrink */
+.royal-stt-click-shrink .royal-scroll-to-top-btn:active {
+    transform: scale(0.88);
+}
+
+/* 3. Click Ripple Wave */
+.royal-stt-click-ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(0);
+    animation: royalSttClickRipple 0.6s linear;
+    pointer-events: none;
+}
+@keyframes royalSttClickRipple {
+    to {
+        transform: scale(3.5);
+        opacity: 0;
+    }
+}
+
+/* ==========================================================================
+   TOOLTIP STYLING
+   ========================================================================== */
+.royal-stt-tooltip {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    background: #1e1e1e;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.25s, transform 0.25s, visibility 0.25s;
+    z-index: 10;
+}
+.royal-stt-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #1e1e1e transparent transparent transparent;
+}
+.royal-scroll-to-top-btn:hover .royal-stt-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Elementor Editor Mode Helper */
+.elementor-editor-active .royal-scroll-to-top-wrap.is-edit-mode {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: none !important;
+}

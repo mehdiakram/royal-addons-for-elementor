@@ -1,0 +1,113 @@
+
+/*Royal Search Start ---------------*/
+.royalsearchicon{
+	display: inline-block;
+    cursor: pointer;
+}
+
+.royalsearchicon i {
+    background: transparent;
+    font-size: 17px;
+    display: block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    border-radius: 50%;
+    overflow: hidden;
+    -webkit-transition: all 0.6s, color 0.6s, box-shadow 0.6s;
+    -moz-transition: all 0.6s, color 0.6s, box-shadow 0.6s;
+    transition: all 0.6s, color 0.6s, box-shadow 0.6s;
+}
+
+
+
+/* Full Screen Search*/
+.royalsearchoverly {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 999999999;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.7);
+  animation: fadeInUp 1s 1;  
+}
+
+.royalsearchoverly .searchoverlycontent {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.royalsearchoverly .closebtn{
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  cursor: pointer;
+  z-index: 9999999999;
+}
+
+.royalsearchoverly .royalsearchform{
+    width: initial;
+    display: flex;
+}
+
+.royalsearchoverly .royalsearchform select#product_cat{
+    margin: 0;
+    height: 54px;
+    border: 0;
+    line-height: 100%;
+}
+
+.royalsearchoverly .royalsearchform select option{
+    padding: 10px;
+}
+
+.royalsearchoverly .royalsearchform input.searchbox {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  margin: 0;
+  background: #fff;
+  height: 54px;
+  border-radius: 0;
+}
+
+.royalsearchoverly .royalsearchform input[type=text]:hover {
+  background: #f1f1f1;
+}
+
+.royalsearchoverly .royalsearchform button {
+  padding: 15px;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  height: 54px;
+  display: flex;
+  align-items: center;
+}
+
+.royalsearchoverly .royalsearchform button:hover {
+  background: #ddd;
+}
+
+.royalsearchoverly.displayblock {
+  display: block;
+  animation: fadeInUp 1s 1;  
+}
+
+@media only screen and (max-width: 767px) {
+    .royalsearchoverly .royalsearchform select#product_cat{
+        display: block;
+        width: 100%;
+        margin: 0 0 1px 0;
+    }
+    
+
+
+
+  }
+/*Royal Search End ---------------*/
+

@@ -1,0 +1,1079 @@
+/* Preview Card Style */
+.image-card {
+    width: 100%;
+    height: auto;
+    background-color: #FFF9F9;
+    transition: all 0.6s cubic-bezier(.25,.8,.25,1);
+    box-shadow: 0 0.2rem 2.8rem rgba(36,36,36,.1);
+    overflow: hidden;
+}
+.image-card:hover {
+    box-shadow: 0 0.1rem .8rem rgba(36,36,36,.1);
+    transition: all 0.6s cubic-bezier(.25,.8,.25,1);
+}
+.image-card .image {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    z-index: 0;
+}
+.image-card .image a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 10;
+}
+.image-card .content p:last-child {
+    margin-bottom: 0px;
+}
+.image-card .title h2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 30px;
+    margin: 0;
+}
+.image-card .divider {
+    position: relative;
+    width: 100px;
+    height: 2px;
+    background-color: rgba( 0,0,0,0.05 );
+    margin-bottom: 15px;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    z-index: 0;
+}
+.image-card .excerpt {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #707070;
+    line-height: 27px;
+    margin-bottom: 30px;
+}
+.image-card .readmore {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.image-card .readmore a.button-readmore {
+    display: inline-block;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .5px;
+    text-decoration: none;
+    background-color: #562dd4;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+.image-card .readmore a.button-readmore:hover {
+    background-color: #707070;
+    color: #fff;
+}
+.image-card .image .top-price-badge {
+    position: absolute;
+    padding: 4px 12px;
+    border-radius: 30px;
+    top: 15px;
+    right: 30px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+.image-card .image .middle-price-badge {
+    position: absolute;
+    padding: 4px 12px;
+    border-radius: 30px;
+    bottom: -15px;
+    right: 30px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+.image-card .readmore .bottom-price-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 30px;
+    bottom: -15px;
+    right: 30px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.image-card .image .top-price-badge del,
+.image-card .image .middle-price-badge del,
+.image-card .readmore .bottom-price-badge del {
+    opacity: 0.5;
+}
+.badge-blue {
+    background-color: #562dd4;
+    color: #fff;
+}
+.badge-white {
+    background-color: #fff;
+    color: #111;
+}
+.badge-gray {
+    background-color: #707070;
+    color: #fff;
+}
+
+/* ==========================================================================
+   Royal Preview Card - 10 New Advanced Styles (CreedBD & Unnayan Prochesta)
+   ========================================================================== */
+
+:root {
+    --rpc-accent: #0b4d26;
+}
+
+.royal-preview-card {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.royal-preview-card *,
+.royal-preview-card *::before,
+.royal-preview-card *::after {
+    box-sizing: border-box;
+}
+
+@keyframes rpcSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes rpcShine {
+    to { left: 140%; }
+}
+
+.rpc-card {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.rpc-shine {
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 50%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+    transform: skewX(-20deg);
+    background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transition: left 0.8s ease;
+}
+
+.rpc-card:hover .rpc-shine {
+    left: 140%;
+}
+
+/* --------------------------------------------------------------------------
+   STYLE 2: Program Card with Checklist & Arrow Link (CreedBD)
+   -------------------------------------------------------------------------- */
+.rpc-style-2 {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.rpc-style-2:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.09);
+    border-color: #cbd5e1;
+}
+.rpc-style-2 .rpc-image-wrap {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    background-color: #f1f5f9;
+}
+.rpc-style-2 .rpc-image-wrap img,
+.rpc-style-2 .rpc-image-wrap .rpc-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+.rpc-style-2:hover .rpc-image-wrap img,
+.rpc-style-2:hover .rpc-image-wrap .rpc-bg-img {
+    transform: scale(1.06);
+}
+.rpc-style-2 .rpc-image-wrap a.rpc-img-overlay-link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+.rpc-style-2 .rpc-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: var(--rpc-accent, #d97706);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+    letter-spacing: 0.3px;
+}
+.rpc-style-2 .rpc-body {
+    padding: 24px;
+}
+.rpc-style-2 .rpc-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 10px;
+    line-height: 1.35;
+}
+.rpc-style-2 .rpc-desc {
+    font-size: 0.85rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+.rpc-style-2 .rpc-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.rpc-style-2 .rpc-checklist li {
+    font-size: 0.82rem;
+    color: #334155;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.rpc-style-2 .rpc-check-icon {
+    color: #059669;
+    font-weight: 800;
+    font-size: 14px;
+    flex-shrink: 0;
+    display: inline-flex;
+}
+.rpc-style-2 .rpc-footer {
+    padding: 14px 24px 22px;
+    border-top: 1px solid #f1f5f9;
+}
+.rpc-style-2 .rpc-link-btn {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--rpc-accent, #0b4d26);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.25s ease;
+}
+.rpc-style-2 .rpc-link-btn:hover {
+    gap: 10px;
+    opacity: 0.85;
+}
+.rpc-style-2 .rpc-link-arrow {
+    display: inline-block;
+    transition: transform 0.25s ease;
+}
+.rpc-style-2 .rpc-link-btn:hover .rpc-link-arrow {
+    transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   STYLE 3: Minimal Feature Icon Card (CreedBD)
+   -------------------------------------------------------------------------- */
+.rpc-style-3 {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+.rpc-style-3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.07);
+    border-color: #cbd5e1;
+}
+.rpc-style-3 .rpc-icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 11px;
+    background: #ecfdf5;
+    color: var(--rpc-accent, #0b4d26);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 14px;
+    transition: transform 0.3s ease;
+}
+.rpc-style-3:hover .rpc-icon-box {
+    transform: scale(1.08);
+}
+.rpc-style-3 .rpc-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 6px;
+    line-height: 1.35;
+}
+.rpc-style-3 .rpc-desc {
+    font-size: 0.82rem;
+    color: #475569;
+    line-height: 1.55;
+    margin: 0;
+}
+.rpc-style-3 a.rpc-card-cover-link {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+/* --------------------------------------------------------------------------
+   STYLE 4: Process Step Card - Dark Forest Mode (CreedBD)
+   -------------------------------------------------------------------------- */
+.rpc-style-4 {
+    background-color: #04230f;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    padding: 24px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+.rpc-style-4:hover {
+    border-color: var(--rpc-accent, #f59e0b);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(4, 35, 15, 0.6);
+}
+.rpc-style-4 .rpc-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.rpc-style-4 .rpc-step-num {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+    font-weight: 800;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+}
+.rpc-style-4 .rpc-corner-icon {
+    color: #94a3b8;
+    font-size: 20px;
+    opacity: 0.85;
+}
+.rpc-style-4 .rpc-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 10px;
+    line-height: 1.35;
+}
+.rpc-style-4 .rpc-desc {
+    color: #cbd5e1;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+.rpc-style-4 .rpc-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 12px 0;
+}
+.rpc-style-4 .rpc-footer-note {
+    font-size: 12px;
+    font-weight: 700;
+    color: #fbbf24;
+    letter-spacing: 0.3px;
+}
+
+/* --------------------------------------------------------------------------
+   STYLE 5: Process Step Card - Light Mode (CreedBD)
+   -------------------------------------------------------------------------- */
+.rpc-style-5 {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 24px;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+.rpc-style-5:hover {
+    border-color: var(--rpc-accent, #0b4d26);
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px rgba(11, 77, 38, 0.12);
+}
+.rpc-style-5 .rpc-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.rpc-style-5 .rpc-step-num {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(11, 77, 38, 0.1);
+    color: var(--rpc-accent, #0b4d26);
+    font-weight: 800;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(11, 77, 38, 0.25);
+}
+.rpc-style-5 .rpc-corner-icon {
+    color: var(--rpc-accent, #0b4d26);
+    font-size: 20px;
+    opacity: 0.85;
+}
+.rpc-style-5 .rpc-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 10px;
+    line-height: 1.35;
+}
+.rpc-style-5 .rpc-desc {
+    color: #475569;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+.rpc-style-5 .rpc-divider {
+    height: 1px;
+    background: #f1f5f9;
+    margin: 12px 0;
+}
+.rpc-style-5 .rpc-footer-note {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--rpc-accent, #0b4d26);
+    letter-spacing: 0.3px;
+}
+
+/* --------------------------------------------------------------------------
+   STYLE 6: Branch & HQ Card - Dark Mode (CreedBD)
+   -------------------------------------------------------------------------- */
+.rpc-style-6 {
+    background-color: #04230f;
+    border: 1px solid #064e22;
+    border-radius: 18px;
+    padding: 24px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 8px 24px rgba(4, 35, 15, 0.3);
+}
+.rpc-style-6:hover {
+    box-shadow: 0 20px 42px rgba(4, 35, 15, 0.6);
+    transform: translateY(-5px);
+}
+.rpc-style-6 .rpc-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+.rpc-style-6 .rpc-badge-gold {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    background: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.35);
+}
+.rpc-style-6 .rpc-corner-icon {
+    color: #cbd5e1;
+    font-size: 20px;
+}
+.rpc-style-6 .rpc-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 8px;
+    line-height: 1.35;
+}
+.rpc-style-6 .rpc-address {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    line-height: 1.55;
+    margin-bottom: 16px;
+}
+.rpc-style-6 .rpc-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.rpc-style-6 .rpc-info-list li {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.rpc-style-6 .rpc-info-list a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.rpc-style-6 .rpc-info-list a:hover {
+    color: #fbbf24;
+}
+.rpc-style-6 .rpc-info-icon {
+    color: #fbbf24;
+    font-size: 14px;
+    flex-shrink: 0;
+    display: inline-flex;
+}
+.rpc-style-6 .rpc-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 12px 0;
+}
+.rpc-style-6 .rpc-footer-note {
+    font-size: 11px;
+    font-weight: 700;
+    color: #fbbf24;
+}
+
+/* --------------------------------------------------------------------------
+   STYLE 7: Branch & Hub Card - Light Mode (CreedBD)
+   -------------------------------------------------------------------------- */
+.rpc-style-7 {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 24px;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+.rpc-style-7:hover {
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+    transform: translateY(-5px);
+    border-color: #cbd5e1;
+}
+.rpc-style-7 .rpc-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+.rpc-style-7 .rpc-badge-emerald {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    background: #d1fae5;
+    color: #065f46;
+}
+.rpc-style-7 .rpc-corner-icon {
+    color: var(--rpc-accent, #0b4d26);
+    font-size: 20px;
+}
+.rpc-style-7 .rpc-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 8px;
+    line-height: 1.35;
+}
+.rpc-style-7 .rpc-address {
+    font-size: 0.82rem;
+    color: #64748b;
+    line-height: 1.55;
+    margin-bottom: 16px;
+}
+.rpc-style-7 .rpc-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.rpc-style-7 .rpc-info-list li {
+    font-size: 0.85rem;
+    color: #334155;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.rpc-style-7 .rpc-info-list a {
+    color: #334155;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.rpc-style-7 .rpc-info-list a:hover {
+    color: var(--rpc-accent, #0b4d26);
+}
+.rpc-style-7 .rpc-info-icon {
+    color: var(--rpc-accent, #0b4d26);
+    font-size: 14px;
+    flex-shrink: 0;
+    display: inline-flex;
+}
+.rpc-style-7 .rpc-divider {
+    height: 1px;
+    background: #f1f5f9;
+    margin: 12px 0;
+}
+.rpc-style-7 .rpc-footer-note {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--rpc-accent, #0b4d26);
+}
+
+/* --------------------------------------------------------------------------
+   STYLE 8: Registration & Legal Info Card (Unnayan Prochesta `ab-reg`)
+   -------------------------------------------------------------------------- */
+.rpc-style-8 {
+    position: relative;
+    overflow: hidden;
+    background: #f3fcf5;
+    border: 1px solid #d1fae5;
+    border-left: 4px solid var(--rpc-accent, #0b4d26);
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(11, 77, 38, 0.04);
+}
+.rpc-style-8:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 22px 38px -18px rgba(7, 59, 28, 0.45);
+}
+.rpc-style-8 .rpc-reg-inner {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+.rpc-style-8 .rpc-reg-icon {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    border-radius: 13px;
+    display: grid;
+    place-items: center;
+    background: var(--rpc-accent, #0b4d26);
+    color: #ffffff;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+.rpc-style-8:hover .rpc-reg-icon {
+    transform: scale(1.08);
+}
+.rpc-style-8 .rpc-reg-content {
+    min-width: 0;
+    flex: 1;
+}
+.rpc-style-8 .rpc-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--rpc-accent, #0b4d26);
+    margin: 0 0 8px;
+    line-height: 1.3;
+}
+.rpc-style-8 .rpc-dl-list {
+    margin: 0;
+    display: grid;
+    gap: 4px;
+    font-size: 0.86rem;
+}
+.rpc-style-8 .rpc-dl-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+}
+.rpc-style-8 .rpc-dl-row dt {
+    color: #64748b;
+    font-weight: 400;
+}
+.rpc-style-8 .rpc-dl-row dd {
+    margin: 0;
+    font-weight: 700;
+    color: #0f172a;
+    word-break: break-word;
+}
+
+/* --------------------------------------------------------------------------
+   STYLE 9: Modern Contact Card with Floating Icon & Glow Dash Ring (Unnayan Prochesta `ct-card`)
+   -------------------------------------------------------------------------- */
+.rpc-style-9 {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid #ffffff;
+    border-radius: 24px;
+    padding: clamp(22px, 3vw, 32px) clamp(16px, 2vw, 22px);
+    box-shadow: 0 14px 36px rgba(15, 40, 30, 0.1);
+}
+.rpc-style-9 .rpc-accent-bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 5px;
+    background: var(--rpc-accent, #f59e0b);
+}
+.rpc-style-9 .rpc-glow-circle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    right: -60px;
+    bottom: -60px;
+    border-radius: 50%;
+    background: var(--rpc-accent, #f59e0b);
+    opacity: 0.08;
+    transition: transform 0.6s ease;
+    pointer-events: none;
+}
+.rpc-style-9:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 26px 50px rgba(15, 40, 30, 0.17);
+}
+.rpc-style-9:hover .rpc-glow-circle {
+    transform: scale(1.9);
+}
+.rpc-style-9 .rpc-float-ico {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 66px;
+    height: 66px;
+    margin: 0 auto 16px;
+    border-radius: 22px;
+    font-size: 26px;
+    color: #ffffff;
+    background: var(--rpc-accent, #f59e0b);
+    box-shadow: 0 12px 24px rgba(245, 158, 11, 0.35);
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.rpc-style-9 .rpc-dashed-ring {
+    position: absolute;
+    inset: -7px;
+    border-radius: 26px;
+    border: 2px dashed rgba(245, 158, 11, 0.45);
+    animation: rpcSpin 14s linear infinite;
+    pointer-events: none;
+}
+.rpc-style-9:hover .rpc-float-ico {
+    transform: translateY(-4px) rotate(-8deg) scale(1.08);
+}
+.rpc-style-9 .rpc-title {
+    position: relative;
+    z-index: 1;
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: #0f1d24;
+    margin: 0 0 12px;
+}
+.rpc-style-9 .rpc-contact-pills {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.rpc-style-9 .rpc-pill-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    text-decoration: none;
+    color: #4b5b66;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: #f4f7f9;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    line-height: 1.35;
+    transition: all 0.3s ease;
+}
+.rpc-style-9 .rpc-pill-link i {
+    color: var(--rpc-accent, #f59e0b);
+    flex-shrink: 0;
+    display: inline-flex;
+}
+.rpc-style-9 .rpc-pill-link:hover {
+    color: #ffffff;
+    background: var(--rpc-accent, #f59e0b);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(245, 158, 11, 0.4);
+}
+.rpc-style-9 .rpc-pill-link:hover i {
+    color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   STYLE 10: Social Media & Follow Card with Glow Dash Ring (Unnayan Prochesta `ct-card`)
+   -------------------------------------------------------------------------- */
+.rpc-style-10 {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid #ffffff;
+    border-radius: 24px;
+    padding: clamp(22px, 3vw, 32px) clamp(16px, 2vw, 22px);
+    box-shadow: 0 14px 36px rgba(15, 40, 30, 0.1);
+}
+.rpc-style-10 .rpc-accent-bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 5px;
+    background: var(--rpc-accent, #9333ea);
+}
+.rpc-style-10 .rpc-glow-circle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    right: -60px;
+    bottom: -60px;
+    border-radius: 50%;
+    background: var(--rpc-accent, #9333ea);
+    opacity: 0.08;
+    transition: transform 0.6s ease;
+    pointer-events: none;
+}
+.rpc-style-10:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 26px 50px rgba(15, 40, 30, 0.17);
+}
+.rpc-style-10:hover .rpc-glow-circle {
+    transform: scale(1.9);
+}
+.rpc-style-10 .rpc-float-ico {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 66px;
+    height: 66px;
+    margin: 0 auto 16px;
+    border-radius: 22px;
+    font-size: 26px;
+    color: #ffffff;
+    background: var(--rpc-accent, #9333ea);
+    box-shadow: 0 12px 24px rgba(147, 51, 234, 0.35);
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.rpc-style-10 .rpc-dashed-ring {
+    position: absolute;
+    inset: -7px;
+    border-radius: 26px;
+    border: 2px dashed rgba(147, 51, 234, 0.45);
+    animation: rpcSpin 14s linear infinite;
+    pointer-events: none;
+}
+.rpc-style-10:hover .rpc-float-ico {
+    transform: translateY(-4px) rotate(-8deg) scale(1.08);
+}
+.rpc-style-10 .rpc-title {
+    position: relative;
+    z-index: 1;
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: #0f1d24;
+    margin: 0 0 14px;
+}
+.rpc-style-10 .rpc-social-buttons {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+.rpc-style-10 .rpc-soc-btn {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 18px;
+    font-size: 22px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
+}
+.rpc-style-10 .rpc-soc-btn:hover {
+    color: #ffffff;
+    transform: translateY(-6px) rotate(-8deg) scale(1.1);
+}
+.rpc-style-10 .rpc-soc-fb {
+    background: linear-gradient(135deg, #1877f2, #4a9bff);
+    box-shadow: 0 10px 20px rgba(24, 119, 242, 0.35);
+}
+.rpc-style-10 .rpc-soc-yt {
+    background: linear-gradient(135deg, #e11d48, #ff4d6d);
+    box-shadow: 0 10px 20px rgba(225, 29, 72, 0.35);
+}
+.rpc-style-10 .rpc-soc-in {
+    background: linear-gradient(135deg, #0a66c2, #378fe9);
+    box-shadow: 0 10px 20px rgba(10, 102, 194, 0.35);
+}
+.rpc-style-10 .rpc-soc-tw {
+    background: linear-gradient(135deg, #111827, #374151);
+    box-shadow: 0 10px 20px rgba(17, 24, 39, 0.35);
+}
+.rpc-style-10 .rpc-soc-wa {
+    background: linear-gradient(135deg, #25d366, #4ade80);
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   STYLE 11: Impact & Stat Metric Card (CreedBD)
+   -------------------------------------------------------------------------- */
+.rpc-style-11 {
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    border-radius: 20px;
+    padding: 30px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+.rpc-style-11:hover {
+    background: #ecfdf5;
+    border-color: rgba(11, 77, 38, 0.25);
+    transform: translateY(-5px);
+    box-shadow: 0 16px 36px rgba(11, 77, 38, 0.12);
+}
+.rpc-style-11 .rpc-stat-icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+    display: grid;
+    place-items: center;
+    color: var(--rpc-accent, #0b4d26);
+    font-size: 22px;
+    margin-bottom: 14px;
+    transition: all 0.3s ease;
+}
+.rpc-style-11:hover .rpc-stat-icon-box {
+    transform: scale(1.1);
+    background: var(--rpc-accent, #0b4d26);
+    color: #ffffff;
+}
+.rpc-style-11 .rpc-stat-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--rpc-accent, #0b4d26);
+    line-height: 1.1;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+.rpc-style-11 .rpc-stat-title {
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #334155;
+    margin: 0 0 6px;
+}
+.rpc-style-11 .rpc-stat-desc {
+    font-size: 0.82rem;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.45;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Rules
+   -------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+    .rpc-style-2 .rpc-image-wrap {
+        height: 180px;
+    }
+    .rpc-style-2 .rpc-body,
+    .rpc-style-4,
+    .rpc-style-5,
+    .rpc-style-6,
+    .rpc-style-7 {
+        padding: 20px 18px;
+    }
+    .rpc-style-8 {
+        padding: 16px;
+        gap: 12px;
+    }
+    .rpc-style-8 .rpc-reg-icon {
+        width: 40px;
+        height: 40px;
+        flex-basis: 40px;
+        font-size: 1.05rem;
+    }
+    .rpc-style-9,
+    .rpc-style-10 {
+        padding: 24px 18px;
+    }
+    .rpc-style-9 .rpc-float-ico,
+    .rpc-style-10 .rpc-float-ico {
+        width: 58px;
+        height: 58px;
+        font-size: 22px;
+    }
+    .rpc-style-11 {
+        padding: 24px 18px;
+    }
+    .rpc-style-11 .rpc-stat-value {
+        font-size: 2.1rem;
+    }
+}

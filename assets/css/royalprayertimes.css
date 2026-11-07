@@ -1,0 +1,155 @@
+/* Royal Prayer Times Widget - General Styles */
+.royal-prayer-times-wrapper {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #fff;
+    font-family: sans-serif;
+}
+
+.royal-prayer-times-header {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.royal-prayer-times-header .location {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #333;
+}
+
+.royal-prayer-times-header .date,
+.royal-prayer-times-header .current-time {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+    opacity: 0.9;
+}
+
+/* Style 1: List View */
+.royal-prayer-times-wrapper.style1 .royal-prayer-time-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 10px;
+    border-bottom: 1px solid #f2f2f2;
+    transition: background-color 0.3s;
+}
+
+.royal-prayer-times-wrapper.style1 .royal-prayer-time-row:last-child {
+    border-bottom: none;
+}
+
+.royal-prayer-times-wrapper.style1 .royal-prayer-time-name {
+    font-weight: 500;
+    color: #444;
+}
+
+.royal-prayer-times-wrapper.style1 .royal-prayer-time-value {
+    font-weight: bold;
+    color: #2772c4;
+}
+
+.royal-prayer-times-wrapper.style1 .royal-prayer-time-row.current-prayer-time {
+    background-color: #eaf2fa;
+}
+
+.royal-prayer-times-wrapper.style1 .royal-prayer-time-row.current-prayer-time .royal-prayer-time-name,
+.royal-prayer-times-wrapper.style1 .royal-prayer-time-row.current-prayer-time .royal-prayer-time-value {
+    color: #1e5a9b;
+    font-weight: bold;
+}
+
+/* Style 2: Horizontal View */
+.royal-prayer-times-wrapper.style2 .royal-prayer-times-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.royal-prayer-times-wrapper.style2 .royal-prayer-time-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px;
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 95px;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.royal-prayer-times-wrapper.style2 .royal-prayer-time-name {
+    font-size: 0.9em;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #495057;
+}
+
+.royal-prayer-times-wrapper.style2 .royal-prayer-time-value {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.royal-prayer-times-wrapper.style2 .royal-prayer-time-row.current-prayer-time {
+    background-color: #2772c4;
+    border-color: #1e5a9b;
+}
+
+.royal-prayer-times-wrapper.style2 .royal-prayer-time-row.current-prayer-time .royal-prayer-time-name,
+.royal-prayer-times-wrapper.style2 .royal-prayer-time-row.current-prayer-time .royal-prayer-time-value {
+    color: #ffffff;
+}
+
+/* Common Utility Styles */
+.royal-prayer-times-loader {
+    padding: 25px;
+    color: #666;
+}
+
+.royal-prayer-times-error {
+    color: #d9534f;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #d9534f;
+    border-radius: 4px;
+    background-color: #f2dede;
+}
+
+.royal-prayer-manual-location p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.royal-prayer-manual-location input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.manual-submit-btn {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    background-color: #5cb85c;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.manual-submit-btn:hover {
+    background-color: #4cae4c;
+}

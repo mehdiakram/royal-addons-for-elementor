@@ -1,0 +1,2391 @@
+
+/* Letter / Number Icon avatar */
+.royal-letter-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.25em;
+    line-height: 1;
+    color: currentColor;
+    font-family: inherit;
+    text-transform: uppercase;
+}
+/* Royal Services */
+.royalelementservices{
+    padding: 0; 
+    height: 100%;
+}
+
+.royalelementservices .serviceimg {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  background-color: #EFF1F5;
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.royalelementservices .serviceimg .imageoricon{
+  width: 150px;
+  height: 150px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+}
+
+.royalelementservices .serviceimg .imageoricon img{
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.royalelementservices .imageoricon svg {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+}
+
+.royalelementservices .serviceimg .imageoricon i,
+.royalelementservices .serviceimg .imageoricon svg {
+  font-size: 80px;
+  width: 80px;
+  height: 80px;
+}
+
+.royalelementservices a {
+    color: #0E5AF2;
+    text-decoration: none;
+    outline: 0;
+    transition: all ease 0.4s;
+}
+
+.royalelementservices .linkbtn {
+  font-weight: 500;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 0.8;
+  position: relative;
+  padding-bottom: 2px;
+  margin-bottom: -2px;
+}
+
+.royalelementservices .linkbtn i {
+  margin-left: 7px;
+  font-size: 0.9rem;
+}
+
+.royalelementservices .linkbtn:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #0E5AF2;
+  transition: all ease 0.4s;
+}
+
+.royalelementservices:hover .servicestyle1 .linkbtn,
+.royalelementservices:hover .servicestyle2 .linkbtn,
+.royalelementservices:hover .servicestyle3 .linkbtn {
+  color: #fff;
+}
+
+.royalelementservices .linkbtn:hover::before {
+  width: 100%;
+}
+
+
+/* servicestyle1 */
+.royalelementservices .servicestyle1 {
+  display: block;
+  text-align: center;
+  margin: 0;
+}
+
+.royalelementservices .servicestyle1 .serviceimg {
+  border-radius: 50%;
+}
+
+.royalelementservices .servicestyle1 .servicenumber {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #0E5AF2;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 0 0 50% 50%;
+  position: absolute;
+  left: 50%;
+top: 0;
+transform: translateX(-50%);
+}
+
+.royalelementservices .servicestyle1 .servicetitle {
+  margin: 10px 0 0 0;
+}
+
+.royalelementservices .servicestyle1 .servicetitle a {
+  color: #1A1A1A;
+  transition: all ease 0.4s;
+}
+
+.royalelementservices .servicestyle1 .servicedescription {
+  margin: 0 0 12px 0;
+}
+
+.royalelementservices .servicestyle1 .servicecontent {
+  flex: 1;
+  position: relative;
+  border-radius: 5px;
+  padding: 99px 30px 30px 30px;
+  margin: -69px 0 0 0;
+  transition: all ease 0.4s;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.royalelementservices .servicestyle1 .servicecontent > * {
+  position: relative;
+  z-index: 1;
+  transition: all ease 0.4s;
+}
+
+.royalelementservices .servicestyle1 .serviceshape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+  transition: all ease 0.4s;
+  transform: scale(1.1);
+  background-color: #0E5AF2;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.royalelementservices:hover .servicestyle1 .servicedescription,
+.royalelementservices:hover .servicestyle1 .servicetitle a,
+.royalelementservices:hover .servicestyle1 .linkbtn {
+  color: #ffffff;
+}
+
+.royalelementservices:hover .servicestyle1 .servicecontent {
+  border-color: transparent;
+}
+
+.royalelementservices:hover .servicestyle1 .serviceshape {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+
+/* servicestyle2 */
+.royalelementservices .servicestyle2 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.royalelementservices .servicestyle2 .serviceimg img {
+  border-radius: 5px;
+}
+
+.royalelementservices .servicestyle2 .servicenumber {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #0E5AF2;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 0 0 5px 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.royalelementservices .servicestyle2 .servicetitle a {
+  color: #1A1A1A;
+  transition: all ease 0.4s;
+}
+
+.royalelementservices .servicestyle2 .servicecontent {
+  flex: 1;
+  position: relative;
+  border-radius: 5px;
+  padding: 30px 30px 30px 130px;
+  margin: 0 0 0 -105px;
+  transition: all ease 0.4s;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.royalelementservices .servicestyle2 .servicecontent > * {
+  position: relative;
+  z-index: 1;
+  transition: all ease 0.4s;
+}
+
+.royalelementservices .servicestyle2 .serviceshape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+  transition: all ease 0.4s;
+  transform: scale(1.1);
+  background-color: #0E5AF2;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+}
+
+.royalelementservices:hover .servicestyle2 .servicedescription,
+.royalelementservices:hover .servicestyle2 .servicetitle a,
+.royalelementservices:hover .servicestyle2 .linkbtn {
+  color: #ffffff;
+}
+.royalelementservices:hover .servicestyle2 .servicecontent {
+  border-color: transparent;
+}
+
+.royalelementservices:hover .servicestyle2 .serviceshape {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+
+/* servicestyle3 */
+.royalelementservices .servicestyle3 {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  flex-direction: row-reverse;
+}
+
+.royalelementservices .servicestyle3 .serviceimg img {
+  border-radius: 5px;
+}
+
+.royalelementservices .servicestyle3 .servicenumber {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #0E5AF2;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 0 0 0 5px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.royalelementservices .servicestyle3 .servicetitle a {
+  color: #1A1A1A;
+  transition: all ease 0.4s;
+}
+
+.royalelementservices .servicestyle3 .servicecontent {
+  flex: 1;
+  position: relative;
+  border-radius: 5px;
+  padding: 30px 130px 30px 30px;
+  margin: 0 -105px 0 0;
+  transition: all ease 0.4s;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.royalelementservices .servicestyle3 .servicecontent > * {
+  position: relative;
+  z-index: 1;
+  transition: all ease 0.4s;
+}
+
+.royalelementservices .servicestyle3 .serviceshape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+  transition: all ease 0.4s;
+  transform: scale(1.1);
+  background-color: #0E5AF2;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+}
+
+.royalelementservices:hover .servicestyle3 .servicedescription,
+.royalelementservices:hover .servicestyle3 .servicetitle a,
+.royalelementservices:hover .servicestyle3 .linkbtn {
+  color: #ffffff;
+}
+.royalelementservices:hover .servicestyle3 .servicecontent {
+  border-color: transparent;
+}
+
+.royalelementservices:hover .servicestyle3 .serviceshape {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+
+/*4*/
+.royalelementservices .servicestyle4 {
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 20px;
+  z-index: 10;
+  padding: 10px;
+  margin-top: 75px;
+  transition: transform 0.8s;
+}
+
+.royalelementservices .servicestyle4 .imageoricon {
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 80px;
+  border-radius: 50%;
+  color: #007bff;
+  border: 20px solid #007bff;
+  margin: -75px auto 0;
+  transition: transform 1s;
+  overflow: hidden;
+}
+
+.royalelementservices .servicestyle4 .imageoricon i,
+.royalelementservices .servicestyle4 .imageoricon svg {
+  font-size: 80px;
+  width: 80px;
+  height: 80px;
+}
+
+.royalelementservices .servicestyle4 .imageoricon img{
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.royalelementservices .servicestyle4 .servicetitle {
+  height: 35px;
+  width: 70%;
+  text-align: center;
+  font-size: 25px;
+  text-transform: uppercase;
+  margin: 25px auto;
+  position: relative;
+  background: #fff;
+  line-height: 35px;
+}
+.royalelementservices .servicestyle4 .servicetitle:after {
+  content: '';
+  width: 40px;
+  height: 30px;
+  background: linear-gradient(to right, #fff, #007bff);
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  z-index: -1;
+}
+.royalelementservices .servicestyle4 .servicetitle:before {
+  content: '';
+  width: 40px;
+  height: 30px;
+  background: linear-gradient(to right, #007bff, #fff);
+  position: absolute;
+  left: -5px;
+  bottom: -5px;
+  z-index: -1;
+}
+.royalelementservices .servicestyle4 p {
+  font-size: 16px;
+  margin: 35px 20px;
+}
+.royalelementservices:hover .servicestyle4 {
+  transform: translateY(-20px);
+}
+.royalelementservices:hover .servicestyle4 .imageoricon {
+  transform: rotate(360deg);
+}
+
+
+
+.servicestyle5 .servicestitlebox {
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.servicestyle5 .servicetitle {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 0px;
+  position: relative;
+  z-index: 1;
+  padding-left: 15px;
+  font-weight: 400;
+}
+.servicestyle5 .servicetitle::after {
+  position: absolute;
+  content: "";
+  background: #D7B474;
+  width: 40px;
+  height: 40px;
+  left: -6px;
+  top: -12px;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.6;
+  transition: 0.5s;
+}
+.servicestyle5:hover .servicetitle::after{
+  transition: 0.5s;
+  top: -4px;
+  left: 0;
+}
+
+.servicestyle5 .imageoricon{
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.servicestyle5 .imageoricon i,
+.servicestyle5 .imageoricon svg {
+  font-size: 80px;
+  width: 80px;
+  height: 80px;
+}
+
+.servicestyle5 .imageoricon img{
+  position: relative;
+  transform: scale(1);
+  display: block;
+  transition: 0.5s;
+}
+.servicestyle5:hover .imageoricon img{
+  position: relative;
+  transform: scale(1.1);
+  display: block;
+  transition: 0.5s;
+}
+
+
+
+
+
+
+/* ===== Service Style 6 — Hover Card ===== */
+/* overflow:hidden scoped to only style 6 & 7 wrappers */
+.royalelementservices .servicestyle6,
+.royalelementservices .servicestyle7 {
+    overflow: hidden;
+}
+
+.servicestyle6 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Back layer — always visible, centered (icon + title) */
+.servicestyle6 .back {
+    position: relative;
+    z-index: 1;
+    min-height: 250px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.servicestyle6 .back .imageoricon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.servicestyle6 .back .imageoricon img {
+    max-width: 80px;
+}
+
+.servicestyle6 .back .imageoricon i,
+.servicestyle6 .back .imageoricon svg {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+}
+
+.servicestyle6 .back .servicestitlebox {
+    margin-bottom: 0;
+}
+
+.servicestyle6 .back .servicedescription,
+.servicestyle6 .back .linkbtn {
+    display: none;
+}
+
+/* Top overlay — slides up from bottom on hover */
+.servicestyle6 .top {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+    transition: bottom 0.5s ease;
+}
+
+.servicestyle6 .top .imageoricon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.servicestyle6 .top .imageoricon img {
+    max-width: 60px;
+    filter: brightness(0) invert(1);
+}
+
+.servicestyle6 .top .imageoricon i,
+.servicestyle6 .top .imageoricon svg {
+    font-size: 36px;
+    width: 36px;
+    height: 36px;
+    color: #fff;
+    fill: #fff;
+}
+
+.servicestyle6 .top .servicestitlebox .servicetitle,
+.servicestyle6 .top .servicetitle {
+    color: #fff;
+    margin-bottom: 10px;
+    transition: none;
+}
+
+/* Hover: slide the overlay up */
+.royalelementservices:hover .servicestyle6 .top {
+    bottom: 0;
+}
+
+/* Normal state: top overlay icon size */
+.royalelementservices .servicestyle6 .top .servicetitle {
+    font-size: inherit;
+}
+
+
+
+/* ===== Service Style 6 — description & button color inside overlay ===== */
+.servicestyle6 .top .servicedescription {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+.servicestyle6 .top .linkbtn {
+    display: inline-block;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 8px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+.servicestyle6 .top .linkbtn:hover {
+    background: #fff;
+    color: inherit;
+}
+
+
+/* ===== Service Style 7 — Hover Card (tools.royaltechbd.com) ===== */
+.servicestyle7 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* Front — always visible: icon + title */
+.servicestyle7 .s7-front {
+    position: relative;
+    z-index: 1;
+    min-height: 250px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 45px 30px;
+    text-align: center;
+    transition: opacity 0.4s ease;
+}
+
+.servicestyle7 .s7-front .imageoricon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.servicestyle7 .s7-front .imageoricon img {
+    max-width: 80px;
+}
+
+.servicestyle7 .s7-front .imageoricon i,
+.servicestyle7 .s7-front .imageoricon svg {
+    font-size: 50px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.4s ease;
+}
+
+.royalelementservices:hover .servicestyle7 .s7-front .imageoricon i,
+.royalelementservices:hover .servicestyle7 .s7-front .imageoricon svg {
+    transform: scale(1.1);
+}
+
+.servicestyle7 .s7-front .servicestitlebox {
+    margin-bottom: 0;
+}
+
+/* Overlay — slides up from bottom on hover */
+.servicestyle7 .s7-overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 25px;
+    text-align: center;
+    transition: bottom 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #0E5AF2;
+}
+
+.royalelementservices:hover .servicestyle7 .s7-overlay {
+    bottom: 0;
+}
+
+/* Overlay content styles */
+.servicestyle7 .s7-overlay .imageoricon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.servicestyle7 .s7-overlay .imageoricon img {
+    max-width: 55px;
+    filter: brightness(0) invert(1);
+}
+
+.servicestyle7 .s7-overlay .imageoricon i,
+.servicestyle7 .s7-overlay .imageoricon svg {
+    font-size: 38px;
+    width: 38px;
+    height: 38px;
+    color: rgba(255,255,255,0.9);
+    fill: rgba(255,255,255,0.9);
+}
+
+.servicestyle7 .s7-overlay .servicestitlebox {
+    margin-bottom: 8px;
+}
+
+.servicestyle7 .s7-overlay .servicetitle,
+.servicestyle7 .s7-overlay .servicestitlebox .servicetitle,
+.servicestyle7 .s7-overlay .servicestitlebox .servicetitle a {
+    color: #fff !important;
+    margin: 0 0 10px 0;
+}
+
+.servicestyle7 .s7-overlay .servicedescription {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.servicestyle7 .s7-overlay .linkbtn {
+    display: inline-block;
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.8);
+    padding: 8px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.servicestyle7 .s7-overlay .linkbtn:hover {
+    background: #fff;
+    border-color: #fff;
+    color: #0E5AF2;
+}
+
+
+/* ===== Service Style 8 – 3D Modern Tilt Card ===== */
+.servicestyle8 {
+    width: 100%;
+    perspective: 1000px;
+    margin: 0 auto;
+}
+.servicestyle8 .s8-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 280px;
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #1e293b;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+    transform-style: preserve-3d;
+    transform: rotateX(8deg) translateY(0);
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s ease;
+}
+.servicestyle8:hover .s8-card,
+.royalelementservices:hover .servicestyle8 .s8-card {
+    transform: rotateX(0deg) translateY(-8px);
+    box-shadow: 0 25px 45px -10px rgba(0, 0, 0, 0.3);
+}
+.servicestyle8 .s8-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.25) 0%, rgba(15, 23, 42, 0.85) 65%, rgba(15, 23, 42, 0.98) 100%);
+    z-index: 1;
+    transition: opacity 0.4s ease;
+}
+.servicestyle8:hover .s8-overlay,
+.royalelementservices:hover .servicestyle8 .s8-overlay {
+    opacity: 0.95;
+}
+.servicestyle8 .s8-inner {
+    position: relative;
+    z-index: 2;
+    padding: 24px 20px;
+    transform: translateZ(30px);
+    transition: transform 0.4s ease;
+}
+.servicestyle8 .s8-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 14px;
+    transition: transform 0.4s ease, background 0.4s ease;
+}
+.servicestyle8 .s8-icon-wrap i,
+.servicestyle8 .s8-icon-wrap svg {
+    color: #ffffff;
+    fill: #ffffff;
+    width: 22px;
+    height: 22px;
+}
+.servicestyle8:hover .s8-icon-wrap,
+.royalelementservices:hover .servicestyle8 .s8-icon-wrap {
+    transform: scale(1.08) translateY(-2px);
+    background: #3b82f6;
+}
+.servicestyle8 .s8-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff !important;
+    margin: 0 0 8px 0;
+    display: block;
+    transition: color 0.3s ease;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+.servicestyle8 .s8-desc {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.5;
+    margin: 0 0 12px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.servicestyle8 .s8-readmore {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #60a5fa !important;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.servicestyle8:hover .s8-readmore,
+.royalelementservices:hover .servicestyle8 .s8-readmore {
+    color: #93c5fd !important;
+    transform: translateX(4px);
+}
+
+/* ===== Service Style 9 — Icon Left Card ===== */
+.royalelementservices .servicestyle9 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 22px 24px;
+    box-shadow: 0 4px 24px rgba(30, 60, 180, 0.07);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.royalelementservices:hover .servicestyle9 {
+    box-shadow: 0 8px 32px rgba(30, 60, 180, 0.14);
+    transform: translateY(-3px);
+}
+
+/* Icon wrapper — rounded square with light blue bg */
+.royalelementservices .servicestyle9 .s9-icon-wrap {
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    background-color: #e8eeff;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.royalelementservices:hover .servicestyle9 .s9-icon-wrap {
+    background-color: #d0dcff;
+}
+
+.royalelementservices .servicestyle9 .s9-icon-wrap .imageoricon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.royalelementservices .servicestyle9 .s9-icon-wrap .imageoricon i,
+.royalelementservices .servicestyle9 .s9-icon-wrap .imageoricon svg {
+    font-size: 32px;
+    width: 32px;
+    height: 32px;
+    color: #2563eb;
+    fill: #2563eb;
+}
+
+.royalelementservices .servicestyle9 .s9-icon-wrap .imageoricon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Content area */
+.royalelementservices .servicestyle9 .s9-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.royalelementservices .servicestyle9 .s9-content .servicestitlebox {
+    margin-bottom: 4px;
+}
+
+.royalelementservices .servicestyle9 .s9-content .servicetitle {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0 0 4px 0;
+    line-height: 1.3;
+}
+
+.royalelementservices .servicestyle9 .s9-content .servicetitle a {
+    color: #1a1a2e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.royalelementservices:hover .servicestyle9 .s9-content .servicetitle a {
+    color: #2563eb;
+}
+
+.royalelementservices .servicestyle9 .s9-content .servicedescription {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0 0 10px 0;
+}
+
+/* "View Plans →" style link */
+.royalelementservices .servicestyle9 .s9-readmore {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.royalelementservices:hover .servicestyle9 .s9-readmore {
+    color: #1d4ed8;
+    letter-spacing: 0.3px;
+}
+
+
+/* ==========================================================================
+   Service Style 10 — Objective Checklist Card
+   ========================================================================== */
+.royalelementservices .servicestyle10 {
+    --c: #0d6efd;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 24px;
+    padding: 28px 26px 26px;
+    box-shadow: 0 6px 24px rgba(15, 40, 30, 0.07);
+    transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.45s ease;
+    box-sizing: border-box;
+}
+
+/* Top Accent Stripe */
+.royalelementservices .servicestyle10::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 5px;
+    background: var(--c, #0d6efd);
+    background: linear-gradient(90deg, var(--c, #0d6efd), rgba(255, 255, 255, 0.6));
+    background: linear-gradient(90deg, var(--c, #0d6efd), color-mix(in srgb, var(--c, #0d6efd) 40%, #ffffff));
+    z-index: 3;
+}
+
+/* Bottom-Right Soft Circle Blob */
+.royalelementservices .servicestyle10::after {
+    content: "";
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    right: -70px;
+    bottom: -70px;
+    border-radius: 50%;
+    background: var(--c, #0d6efd);
+    opacity: 0.08;
+    transition: transform 0.6s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Card Hover Elevation */
+.royalelementservices .servicestyle10:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(15, 40, 30, 0.14);
+}
+.royalelementservices .servicestyle10:hover::after {
+    transform: scale(1.9);
+}
+
+/* Shine Light Sweep across Card */
+.royalelementservices .servicestyle10 .s10-shine {
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 50%;
+    height: 100%;
+    z-index: 4;
+    pointer-events: none;
+    transform: skewX(-20deg);
+    background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.65), transparent);
+}
+.royalelementservices .servicestyle10:hover .s10-shine {
+    animation: s10Shine 0.9s ease;
+}
+
+/* Card Number */
+.royalelementservices .servicestyle10 .s10-num {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 1;
+    color: var(--c, #0d6efd);
+    opacity: 0.35;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 2;
+    margin: 0;
+}
+.royalelementservices .servicestyle10:hover .s10-num {
+    opacity: 0.9;
+    transform: scale(1.15);
+}
+
+/* Icon Box */
+.royalelementservices .servicestyle10 .s10-ico {
+    position: relative;
+    z-index: 2;
+    display: inline-grid;
+    place-items: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 18px;
+    border-radius: 18px;
+    font-size: 24px;
+    color: #ffffff;
+    background: var(--c, #0d6efd);
+    box-shadow: 0 10px 22px rgba(13, 110, 253, 0.3);
+    box-shadow: 0 10px 22px color-mix(in srgb, var(--c, #0d6efd) 40%, transparent);
+    transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.royalelementservices .servicestyle10 .s10-ico i,
+.royalelementservices .servicestyle10 .s10-ico svg {
+    color: #ffffff;
+    fill: #ffffff;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+}
+.royalelementservices .servicestyle10 .s10-ico img {
+    max-width: 32px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Icon Rotating Dashed Ring */
+.royalelementservices .servicestyle10.has-spin .s10-ico::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: inherit;
+    border: 2px dashed rgba(13, 110, 253, 0.45);
+    border: 2px dashed color-mix(in srgb, var(--c, #0d6efd) 50%, transparent);
+    animation: s10Spin 14s linear infinite;
+    pointer-events: none;
+}
+.royalelementservices .servicestyle10:hover .s10-ico {
+    transform: translateY(-4px) rotate(-8deg) scale(1.08);
+}
+
+/* Content Container */
+.royalelementservices .servicestyle10 .s10-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Title */
+.royalelementservices .servicestyle10 .servicestitlebox {
+    margin-bottom: 14px;
+    position: relative;
+    z-index: 2;
+}
+.royalelementservices .servicestyle10 .servicestitlebox .servicetitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #14232b;
+    margin: 0;
+    line-height: 1.35;
+    transition: color 0.3s ease;
+}
+.royalelementservices .servicestyle10 .servicestitlebox .servicetitle a {
+    color: #14232b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.royalelementservices .servicestyle10:hover .servicestitlebox .servicetitle a {
+    color: var(--c, #0d6efd);
+}
+
+/* Checklist Items */
+.royalelementservices .servicestyle10 .s10-list {
+    position: relative;
+    z-index: 2;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+}
+.royalelementservices .servicestyle10 .s10-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #5a6a75;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.royalelementservices .servicestyle10 .s10-list-ico {
+    flex: 0 0 auto;
+    margin-top: 0.22em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.royalelementservices .servicestyle10 .s10-list-ico i,
+.royalelementservices .servicestyle10 .s10-list-ico svg {
+    color: var(--c, #0d6efd);
+    fill: var(--c, #0d6efd);
+    font-size: 15px;
+    width: 15px;
+    height: 15px;
+    transition: transform 0.35s ease;
+}
+.royalelementservices .servicestyle10:hover .s10-list-ico i,
+.royalelementservices .servicestyle10:hover .s10-list-ico svg {
+    transform: scale(1.2);
+}
+.royalelementservices .servicestyle10 .s10-list-text {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/* Keyframes */
+@keyframes s10Spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes s10Shine {
+    to {
+        left: 140%;
+    }
+}
+
+
+/* ========================================================
+   Service Style 11 — Pillar Animated Card (Unnayan Style)
+   ======================================================== */
+.royalelementservices .servicestyle11 {
+    --s11-accent: #0b4d26;
+    --s11-sec: #c9a24a;
+    --s11-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    padding: 26px 24px;
+    background: #ffffff;
+    border: 1px solid rgba(11, 77, 38, 0.14);
+    border-radius: 20px;
+    transition: transform 0.45s var(--s11-ease), box-shadow 0.45s ease, border-color 0.3s ease;
+}
+.royalelementservices .servicestyle11:hover {
+    transform: translateY(-8px);
+    border-color: rgba(11, 77, 38, 0.4);
+    box-shadow: 0 30px 50px -26px rgba(7, 59, 28, 0.45);
+}
+.royalelementservices .servicestyle11 .s11-top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--s11-accent, #0b4d26), var(--s11-sec, #c9a24a));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s var(--s11-ease);
+    z-index: 2;
+}
+.royalelementservices .servicestyle11:hover .s11-top-bar {
+    transform: scaleX(1);
+}
+.royalelementservices .servicestyle11 .s11-num {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--s11-accent, #0b4d26);
+    background: rgba(11, 77, 38, 0.08);
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+.royalelementservices .servicestyle11:hover .s11-num {
+    background: var(--s11-accent, #0b4d26);
+    color: #ffffff;
+}
+.royalelementservices .servicestyle11 .s11-ico {
+    width: 52px;
+    height: 52px;
+    border-radius: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    background: rgba(11, 77, 38, 0.08);
+    color: var(--s11-accent, #0b4d26);
+    font-size: 24px;
+    transition: background 0.35s ease, color 0.35s ease, transform 0.5s var(--s11-ease), box-shadow 0.35s ease;
+}
+.royalelementservices .servicestyle11 .s11-ico i,
+.royalelementservices .servicestyle11 .s11-ico svg {
+    color: currentColor;
+    fill: currentColor;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    transition: color 0.3s ease, fill 0.3s ease;
+}
+.royalelementservices .servicestyle11 .s11-ico img {
+    max-width: 32px;
+    max-height: 32px;
+    object-fit: contain;
+}
+.royalelementservices .servicestyle11:hover .s11-ico {
+    background: var(--s11-accent, #0b4d26);
+    color: #ffffff;
+    transform: rotate(-8deg) scale(1.08);
+    box-shadow: 0 10px 20px -6px rgba(11, 77, 38, 0.4);
+}
+.royalelementservices .servicestyle11:hover .s11-ico i,
+.royalelementservices .servicestyle11:hover .s11-ico svg {
+    color: #ffffff;
+    fill: #ffffff;
+}
+.royalelementservices .servicestyle11 .s11-content {
+    position: relative;
+    z-index: 2;
+}
+.royalelementservices .servicestyle11 .servicestitlebox {
+    margin: 0 0 10px 0;
+}
+.royalelementservices .servicestyle11 .servicetitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--s11-accent, #0b4d26);
+    margin: 0;
+    line-height: 1.35;
+    transition: color 0.3s ease;
+}
+.royalelementservices .servicestyle11 .servicetitle a {
+    color: inherit;
+    text-decoration: none;
+}
+.royalelementservices .servicestyle11 .servicedescription {
+    font-size: 14.5px;
+    color: #5c6e63;
+    line-height: 1.6;
+    margin: 0 0 16px 0;
+}
+.royalelementservices .servicestyle11 .s11-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.royalelementservices .servicestyle11 .s11-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-size: 14px;
+    color: #3d4f44;
+    transition: transform 0.35s var(--s11-ease), color 0.3s ease;
+    transition-delay: calc(var(--j, 0) * 40ms);
+}
+.royalelementservices .servicestyle11:hover .s11-list li {
+    transform: translateX(6px);
+    color: #14261b;
+}
+.royalelementservices .servicestyle11 .s11-list-ico {
+    flex: 0 0 auto;
+    margin-top: 2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.royalelementservices .servicestyle11 .s11-list-ico i,
+.royalelementservices .servicestyle11 .s11-list-ico svg {
+    color: var(--s11-sec, #c9a24a);
+    fill: var(--s11-sec, #c9a24a);
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+.royalelementservices .servicestyle11 .s11-list-text {
+    flex: 1;
+    min-width: 0;
+    line-height: 1.45;
+}
+.royalelementservices .servicestyle11 .linkbtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--s11-accent, #0b4d26);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 14px;
+    position: relative;
+    z-index: 5;
+}
+.royalelementservices .servicestyle11 .linkbtn::before {
+    display: none !important;
+}
+.royalelementservices .servicestyle11 .linkbtn::after {
+    content:  ?;
+    font-size: 15px;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+.royalelementservices:hover .servicestyle11 .linkbtn,
+.royalelementservices .servicestyle11:hover .linkbtn,
+.royalelementservices .servicestyle11 .linkbtn:hover {
+    color: var(--s11-sec, #c9a24a) !important;
+    letter-spacing: 0.3px;
+}
+.royalelementservices:hover .servicestyle11 .linkbtn::after,
+.royalelementservices .servicestyle11:hover .linkbtn::after,
+.royalelementservices .servicestyle11 .linkbtn:hover::after {
+    transform: translateX(4px);
+}
+
+/* ========================================================
+   Service Style 12 — Glowing Neon Border Card
+   ======================================================== */
+.royalelementservices .servicestyle12 {
+    --m-color: #2563eb;
+    --m-sec: #06b6d4;
+    position: relative;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.25), rgba(6, 182, 212, 0.1), rgba(37, 99, 235, 0.05));
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+    overflow: hidden;
+}
+.royalelementservices .servicestyle12::before {
+    content: "";
+    position: absolute;
+    inset: -100%;
+    background: conic-gradient(from 0deg, transparent 0deg, var(--m-color, #2563eb) 60deg, var(--m-sec, #06b6d4) 120deg, transparent 180deg);
+    animation: s12Rotate 6s linear infinite;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.royalelementservices .servicestyle12:hover::before {
+    opacity: 1;
+}
+.royalelementservices .servicestyle12:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.35);
+}
+.royalelementservices .servicestyle12 .s12-inner {
+    position: relative;
+    z-index: 2;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 28px 24px;
+    height: 100%;
+}
+.royalelementservices .servicestyle12 .s12-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.royalelementservices .servicestyle12 .s12-ico {
+    position: relative;
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--m-color, #2563eb), var(--m-sec, #06b6d4));
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.royalelementservices .servicestyle12 .s12-ico i,
+.royalelementservices .servicestyle12 .s12-ico svg {
+    color: #ffffff;
+    fill: #ffffff;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+}
+.royalelementservices .servicestyle12 .s12-ico img {
+    max-width: 32px;
+    max-height: 32px;
+}
+.royalelementservices .servicestyle12:hover .s12-ico {
+    transform: scale(1.08) rotate(6deg);
+    box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.6);
+}
+.royalelementservices .servicestyle12 .s12-ico-pulse {
+    position: absolute;
+    inset: -6px;
+    border-radius: 20px;
+    border: 2px solid var(--m-color, #2563eb);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+.royalelementservices .servicestyle12:hover .s12-ico-pulse {
+    animation: s12Pulse 1.8s ease-out infinite;
+}
+.royalelementservices .servicestyle12 .s12-badge {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 5px 12px;
+    border-radius: 50px;
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--m-color, #2563eb);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    transition: all 0.3s ease;
+}
+.royalelementservices .servicestyle12:hover .s12-badge {
+    background: var(--m-color, #2563eb);
+    color: #ffffff;
+}
+.royalelementservices .servicestyle12 .servicestitlebox {
+    margin: 0 0 10px 0;
+}
+.royalelementservices .servicestyle12 .servicetitle {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    color: #111827;
+}
+.royalelementservices .servicestyle12 .servicetitle a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.royalelementservices .servicestyle12:hover .servicetitle a {
+    color: var(--m-color, #2563eb);
+}
+.royalelementservices .servicestyle12 .servicedescription {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0 0 16px 0;
+}
+.royalelementservices .servicestyle12 .s12-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.royalelementservices .servicestyle12 .s12-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+    color: #4b5563;
+}
+.royalelementservices .servicestyle12 .s12-list-ico i,
+.royalelementservices .servicestyle12 .s12-list-ico svg {
+    color: var(--m-color, #2563eb);
+    fill: var(--m-color, #2563eb);
+    font-size: 13px;
+    width: 13px;
+    height: 13px;
+}
+.royalelementservices .servicestyle12 .linkbtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: 50px;
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--m-color, #2563eb);
+    font-size: 13.5px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.royalelementservices:hover .servicestyle12 .linkbtn,
+.royalelementservices .servicestyle12:hover .linkbtn,
+.royalelementservices .servicestyle12 .linkbtn:hover {
+    color: var(--m-sec, #06b6d4) !important;
+    transform: translateX(4px);
+}
+
+/* ========================================================
+   Service Style 13 — Minimalist Watermark Card
+   ======================================================== */
+.royalelementservices .servicestyle13 {
+    --m-color: #0f172a;
+    --m-accent: #3b82f6;
+    position: relative;
+    overflow: hidden;
+    padding: 32px 28px;
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.3s ease;
+}
+.royalelementservices .servicestyle13:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 40px -20px rgba(15, 23, 42, 0.15);
+    border-color: #cbd5e1;
+}
+.royalelementservices .servicestyle13 .s13-watermark {
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    font-size: 88px;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--m-color, #0f172a);
+    opacity: 0.06;
+    user-select: none;
+    pointer-events: none;
+    transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1), opacity 0.4s ease;
+}
+.royalelementservices .servicestyle13:hover .s13-watermark {
+    opacity: 0.12;
+    transform: scale(1.1) translate(4px, -6px);
+}
+.royalelementservices .servicestyle13 .s13-ico {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--m-accent, #3b82f6);
+    font-size: 24px;
+    margin-bottom: 22px;
+    transition: all 0.4s ease;
+}
+.royalelementservices .servicestyle13 .s13-ico i,
+.royalelementservices .servicestyle13 .s13-ico svg {
+    color: currentColor;
+    fill: currentColor;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+}
+.royalelementservices .servicestyle13 .s13-ico img {
+    max-width: 34px;
+    max-height: 34px;
+}
+.royalelementservices .servicestyle13:hover .s13-ico {
+    background: var(--m-accent, #3b82f6);
+    color: #ffffff;
+    border-color: var(--m-accent, #3b82f6);
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.4);
+}
+.royalelementservices .servicestyle13:hover .s13-ico i,
+.royalelementservices .servicestyle13:hover .s13-ico svg {
+    color: #ffffff;
+    fill: #ffffff;
+}
+.royalelementservices .servicestyle13 .servicestitlebox {
+    margin: 0;
+}
+.royalelementservices .servicestyle13 .servicetitle {
+    font-size: 21px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+.royalelementservices .servicestyle13 .servicetitle a {
+    color: inherit;
+    text-decoration: none;
+}
+.royalelementservices .servicestyle13 .s13-line {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--m-accent, #3b82f6);
+    border-radius: 2px;
+    margin: 10px 0 14px 0;
+    transition: width 0.4s ease;
+}
+.royalelementservices .servicestyle13:hover .s13-line {
+    width: 70px;
+}
+.royalelementservices .servicestyle13 .servicedescription {
+    font-size: 14.5px;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0 0 16px 0;
+}
+.royalelementservices .servicestyle13 .s13-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.royalelementservices .servicestyle13 .s13-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #334155;
+    transition: transform 0.3s ease;
+}
+.royalelementservices .servicestyle13:hover .s13-list li {
+    transform: translateX(4px);
+}
+.royalelementservices .servicestyle13 .s13-list-ico i,
+.royalelementservices .servicestyle13 .s13-list-ico svg {
+    color: var(--m-accent, #3b82f6);
+    fill: var(--m-accent, #3b82f6);
+    font-size: 13px;
+    width: 13px;
+    height: 13px;
+}
+.royalelementservices .servicestyle13 .linkbtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0f172a;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.royalelementservices:hover .servicestyle13 .linkbtn,
+.royalelementservices .servicestyle13:hover .linkbtn,
+.royalelementservices .servicestyle13 .linkbtn:hover {
+    color: var(--m-accent, #3b82f6) !important;
+    transform: translateX(4px);
+}
+
+/* ========================================================
+   Service Style 14 — Isometric Corner Ribbon Card
+   ======================================================== */
+.royalelementservices .servicestyle14 {
+    --m-color: #8b5cf6;
+    --m-sec: #ec4899;
+    position: relative;
+    overflow: hidden;
+    padding: 30px 26px;
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.45s ease, box-shadow 0.45s ease, border-color 0.3s ease;
+}
+.royalelementservices .servicestyle14:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 25px 45px -15px rgba(139, 92, 246, 0.25);
+    border-color: rgba(139, 92, 246, 0.3);
+}
+.royalelementservices .servicestyle14 .s14-ribbon {
+    position: absolute;
+    top: 18px;
+    right: -32px;
+    transform: rotate(45deg);
+    background: linear-gradient(135deg, var(--m-color, #8b5cf6), var(--m-sec, #ec4899));
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 4px 38px;
+    box-shadow: 0 4px 10px rgba(139, 92, 246, 0.3);
+    z-index: 3;
+}
+.royalelementservices .servicestyle14 .s14-ico-wrap {
+    margin-bottom: 20px;
+}
+.royalelementservices .servicestyle14 .s14-ico {
+    width: 56px;
+    height: 56px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(236, 72, 153, 0.12));
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--m-color, #8b5cf6);
+    font-size: 26px;
+    transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+.royalelementservices .servicestyle14 .s14-ico i,
+.royalelementservices .servicestyle14 .s14-ico svg {
+    color: currentColor;
+    fill: currentColor;
+    font-size: 26px;
+    width: 26px;
+    height: 26px;
+}
+.royalelementservices .servicestyle14 .s14-ico img {
+    max-width: 32px;
+    max-height: 32px;
+}
+.royalelementservices .servicestyle14:hover .s14-ico {
+    transform: translateY(-6px) rotate(6deg) scale(1.08);
+    background: linear-gradient(135deg, var(--m-color, #8b5cf6), var(--m-sec, #ec4899));
+    color: #ffffff;
+    box-shadow: 0 12px 25px -6px rgba(139, 92, 246, 0.5);
+}
+.royalelementservices .servicestyle14:hover .s14-ico i,
+.royalelementservices .servicestyle14:hover .s14-ico svg {
+    color: #ffffff;
+    fill: #ffffff;
+}
+.royalelementservices .servicestyle14 .servicestitlebox {
+    margin: 0 0 10px 0;
+}
+.royalelementservices .servicestyle14 .servicetitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e1b4b;
+    margin: 0;
+}
+.royalelementservices .servicestyle14 .servicetitle a {
+    color: inherit;
+    text-decoration: none;
+}
+.royalelementservices .servicestyle14:hover .servicetitle a {
+    color: var(--m-color, #8b5cf6);
+}
+.royalelementservices .servicestyle14 .servicedescription {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0 0 16px 0;
+}
+.royalelementservices .servicestyle14 .s14-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.royalelementservices .servicestyle14 .s14-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+    color: #475569;
+}
+.royalelementservices .servicestyle14 .s14-list-ico i,
+.royalelementservices .servicestyle14 .s14-list-ico svg {
+    color: var(--m-sec, #ec4899);
+    fill: var(--m-sec, #ec4899);
+    font-size: 13px;
+    width: 13px;
+    height: 13px;
+}
+.royalelementservices .servicestyle14 .linkbtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    border-radius: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #1e1b4b;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.royalelementservices:hover .servicestyle14 .linkbtn,
+.royalelementservices .servicestyle14:hover .linkbtn,
+.royalelementservices .servicestyle14 .linkbtn:hover {
+    background: linear-gradient(135deg, var(--m-color, #8b5cf6), var(--m-sec, #ec4899)) !important;
+    color: #ffffff !important;
+    border-color: transparent !important;
+    box-shadow: 0 8px 18px -4px rgba(139, 92, 246, 0.4);
+}
+
+/* ========================================================
+   Service Style 15 — Two-Tone Split Header Card
+   ======================================================== */
+.royalelementservices .servicestyle15 {
+    --m-color: #0284c7;
+    --m-sec: #06b6d4;
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #e0f2fe;
+    box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.07);
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+.royalelementservices .servicestyle15:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 45px -15px rgba(2, 132, 199, 0.22);
+}
+.royalelementservices .servicestyle15 .s15-header {
+    position: relative;
+    padding: 28px 24px 34px 24px;
+    background: linear-gradient(135deg, var(--m-color, #0284c7), var(--m-sec, #06b6d4));
+    color: #ffffff;
+    border-radius: 19px 19px 50% 50% / 19px 19px 20px 20px;
+    margin-bottom: 28px;
+}
+.royalelementservices .servicestyle15 .s15-badge {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+.royalelementservices .servicestyle15 .s15-ico {
+    position: absolute;
+    bottom: -25px;
+    left: 24px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: var(--m-color, #0284c7);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    border: 3px solid #ffffff;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.royalelementservices .servicestyle15 .s15-ico i,
+.royalelementservices .servicestyle15 .s15-ico svg {
+    color: currentColor;
+    fill: currentColor;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+}
+.royalelementservices .servicestyle15 .s15-ico img {
+    max-width: 30px;
+    max-height: 30px;
+}
+.royalelementservices .servicestyle15:hover .s15-ico {
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+.royalelementservices .servicestyle15 .s15-body {
+    padding: 0 24px 26px 24px;
+}
+.royalelementservices .servicestyle15 .servicestitlebox {
+    margin: 0 0 10px 0;
+}
+.royalelementservices .servicestyle15 .servicetitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+.royalelementservices .servicestyle15 .servicetitle a {
+    color: inherit;
+    text-decoration: none;
+}
+.royalelementservices .servicestyle15:hover .servicetitle a {
+    color: var(--m-color, #0284c7);
+}
+.royalelementservices .servicestyle15 .servicedescription {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0 0 16px 0;
+}
+.royalelementservices .servicestyle15 .s15-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.royalelementservices .servicestyle15 .s15-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+    color: #334155;
+}
+.royalelementservices .servicestyle15 .s15-list-ico i,
+.royalelementservices .servicestyle15 .s15-list-ico svg {
+    color: var(--m-color, #0284c7);
+    fill: var(--m-color, #0284c7);
+    font-size: 13px;
+    width: 13px;
+    height: 13px;
+}
+.royalelementservices .servicestyle15 .linkbtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--m-color, #0284c7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.royalelementservices:hover .servicestyle15 .linkbtn,
+.royalelementservices .servicestyle15:hover .linkbtn,
+.royalelementservices .servicestyle15 .linkbtn:hover {
+    color: var(--m-sec, #06b6d4) !important;
+    transform: translateX(4px);
+}
+
+/* ========================================================
+   Service Style 16 — Cyberpunk Tech Bracket Futuristic Card
+   ======================================================== */
+.royalelementservices .servicestyle16 {
+    --m-color: #10b981;
+    --m-sec: #06b6d4;
+    position: relative;
+    padding: 28px 24px;
+    background: #0f172a;
+    border-radius: 12px;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    color: #f1f5f9;
+    transition: transform 0.4s ease, border-color 0.3s ease, box-shadow 0.4s ease;
+}
+.royalelementservices .servicestyle16:hover {
+    transform: translateY(-8px);
+    border-color: var(--m-color, #10b981);
+    box-shadow: 0 20px 40px -10px rgba(16, 185, 129, 0.25);
+}
+.royalelementservices .servicestyle16 .s16-bracket {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--m-color, #10b981);
+    transition: all 0.3s ease;
+}
+.royalelementservices .servicestyle16 .s16-tl { top: 6px; left: 6px; border-right: none; border-bottom: none; }
+.royalelementservices .servicestyle16 .s16-tr { top: 6px; right: 6px; border-left: none; border-bottom: none; }
+.royalelementservices .servicestyle16 .s16-bl { bottom: 6px; left: 6px; border-right: none; border-top: none; }
+.royalelementservices .servicestyle16 .s16-br { bottom: 6px; right: 6px; border-left: none; border-top: none; }
+.royalelementservices .servicestyle16:hover .s16-bracket {
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 10px var(--m-color, #10b981);
+}
+.royalelementservices .servicestyle16 .s16-header-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+    font-family: monospace;
+    font-size: 11px;
+}
+.royalelementservices .servicestyle16 .s16-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--m-color, #10b981);
+    box-shadow: 0 0 8px var(--m-color, #10b981);
+    animation: s16Blink 1.5s infinite alternate;
+}
+.royalelementservices .servicestyle16 .s16-tag {
+    color: var(--m-color, #10b981);
+    letter-spacing: 1px;
+}
+.royalelementservices .servicestyle16 .s16-num {
+    margin-left: auto;
+    color: #64748b;
+}
+.royalelementservices .servicestyle16 .s16-ico {
+    position: relative;
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--m-color, #10b981);
+    font-size: 22px;
+    margin-bottom: 18px;
+    transition: all 0.4s ease;
+}
+.royalelementservices .servicestyle16 .s16-ico i,
+.royalelementservices .servicestyle16 .s16-ico svg {
+    color: currentColor;
+    fill: currentColor;
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+    transition: transform 0.4s ease;
+}
+.royalelementservices .servicestyle16 .s16-ico img {
+    max-width: 30px;
+    max-height: 30px;
+}
+.royalelementservices .servicestyle16:hover .s16-ico {
+    background: var(--m-color, #10b981);
+    color: #0f172a;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.6);
+    transform: rotate(45deg);
+}
+.royalelementservices .servicestyle16:hover .s16-ico i,
+.royalelementservices .servicestyle16:hover .s16-ico svg {
+    transform: rotate(-45deg);
+    color: #0f172a;
+    fill: #0f172a;
+}
+.royalelementservices .servicestyle16 .servicestitlebox {
+    margin: 0 0 10px 0;
+}
+.royalelementservices .servicestyle16 .servicetitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+.royalelementservices .servicestyle16 .servicetitle a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.royalelementservices .servicestyle16:hover .servicetitle a {
+    color: var(--m-color, #10b981);
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+.royalelementservices .servicestyle16 .servicedescription {
+    font-size: 13.5px;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 0 0 16px 0;
+}
+.royalelementservices .servicestyle16 .s16-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.royalelementservices .servicestyle16 .s16-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #cbd5e1;
+}
+.royalelementservices .servicestyle16 .s16-list-ico i,
+.royalelementservices .servicestyle16 .s16-list-ico svg {
+    color: var(--m-color, #10b981);
+    fill: var(--m-color, #10b981);
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+}
+.royalelementservices .servicestyle16 .linkbtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: monospace;
+    font-size: 13px;
+    color: var(--m-color, #10b981);
+    text-decoration: none;
+    padding: 6px 14px;
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+.royalelementservices:hover .servicestyle16 .linkbtn,
+.royalelementservices .servicestyle16:hover .linkbtn,
+.royalelementservices .servicestyle16 .linkbtn:hover {
+    background: var(--m-color, #10b981) !important;
+    color: #0f172a !important;
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+}
+
+/* ========================================================
+   Service Style 17 — Aurora Mesh Floating Card
+   ======================================================== */
+.royalelementservices .servicestyle17 {
+    --m-color: #f43f5e;
+    --m-sec: #8b5cf6;
+    position: relative;
+    overflow: hidden;
+    padding: 30px 26px;
+    background: #ffffff;
+    border-radius: 24px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.45s ease, box-shadow 0.45s ease, border-color 0.3s ease;
+}
+.royalelementservices .servicestyle17 .s17-aurora {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--m-color, #f43f5e) 0%, var(--m-sec, #8b5cf6) 70%, transparent 100%);
+    filter: blur(45px);
+    opacity: 0.18;
+    pointer-events: none;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.royalelementservices .servicestyle17:hover .s17-aurora {
+    opacity: 0.35;
+    transform: scale(1.4) translate(-10px, 10px);
+}
+.royalelementservices .servicestyle17:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -15px rgba(244, 63, 94, 0.2);
+    border-color: rgba(244, 63, 94, 0.3);
+}
+.royalelementservices .servicestyle17 .s17-card-inner {
+    position: relative;
+    z-index: 2;
+}
+.royalelementservices .servicestyle17 .s17-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.royalelementservices .servicestyle17 .s17-ico {
+    width: 54px;
+    height: 54px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(244, 63, 94, 0.1), rgba(139, 92, 246, 0.1));
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--m-color, #f43f5e);
+    font-size: 24px;
+    transition: all 0.4s ease;
+}
+.royalelementservices .servicestyle17 .s17-ico i,
+.royalelementservices .servicestyle17 .s17-ico svg {
+    color: currentColor;
+    fill: currentColor;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+}
+.royalelementservices .servicestyle17 .s17-ico img {
+    max-width: 32px;
+    max-height: 32px;
+}
+.royalelementservices .servicestyle17:hover .s17-ico {
+    background: linear-gradient(135deg, var(--m-color, #f43f5e), var(--m-sec, #8b5cf6));
+    color: #ffffff;
+    transform: scale(1.08) rotate(-6deg);
+    box-shadow: 0 10px 25px -5px rgba(244, 63, 94, 0.4);
+}
+.royalelementservices .servicestyle17:hover .s17-ico i,
+.royalelementservices .servicestyle17:hover .s17-ico svg {
+    color: #ffffff;
+    fill: #ffffff;
+}
+.royalelementservices .servicestyle17 .s17-badge {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: rgba(244, 63, 94, 0.08);
+    color: var(--m-color, #f43f5e);
+}
+.royalelementservices .servicestyle17 .servicestitlebox {
+    margin: 0 0 10px 0;
+}
+.royalelementservices .servicestyle17 .servicetitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+.royalelementservices .servicestyle17 .servicetitle a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.royalelementservices .servicestyle17:hover .servicetitle a {
+    color: var(--m-color, #f43f5e);
+}
+.royalelementservices .servicestyle17 .servicedescription {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0 0 16px 0;
+}
+.royalelementservices .servicestyle17 .s17-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 18px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.royalelementservices .servicestyle17 .s17-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+    color: #334155;
+    padding: 3px 6px;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+}
+.royalelementservices .servicestyle17 .s17-list li:hover {
+    background: rgba(244, 63, 94, 0.06);
+    transform: translateX(4px);
+}
+.royalelementservices .servicestyle17 .s17-list-ico i,
+.royalelementservices .servicestyle17 .s17-list-ico svg {
+    color: var(--m-color, #f43f5e);
+    fill: var(--m-color, #f43f5e);
+    font-size: 13px;
+    width: 13px;
+    height: 13px;
+}
+.royalelementservices .servicestyle17 .linkbtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: 50px;
+    background: #0f172a;
+    color: #ffffff;
+    font-size: 13.5px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.royalelementservices:hover .servicestyle17 .linkbtn,
+.royalelementservices .servicestyle17:hover .linkbtn,
+.royalelementservices .servicestyle17 .linkbtn:hover {
+    background: linear-gradient(135deg, var(--m-color, #f43f5e), var(--m-sec, #8b5cf6)) !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 20px -4px rgba(244, 63, 94, 0.5);
+    transform: translateX(4px);
+}
+
+/* Animations */
+@keyframes s12Rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes s12Pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.35); opacity: 0; }
+    100% { transform: scale(1.35); opacity: 0; }
+}
+@keyframes s16Blink {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+
+@media screen and (max-width: 767px) {
+  .royalelementservices .mobileadapt{
+	  display: grid;
+  } 
+  
+.royalelementservices .mobileadapt .servicecontent {
+    flex: 1;
+    position: relative;
+    border-radius: 5px;
+    padding: 99px 30px 30px 30px;
+    margin: -69px 0 0 0;
+    transition: all ease 0.4s;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+  
+.royalelementservices .mobileadapt .servicenumber {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #0E5AF2;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 0 0 50% 50%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}  
+  
+}
+

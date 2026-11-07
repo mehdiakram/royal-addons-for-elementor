@@ -1,0 +1,596 @@
+.royalimage-hotspots {
+    position: relative;
+}
+
+.royalhotspot-item-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.royalhotspot-image img {
+    width: 100%;
+}
+
+.royalhotspot-item {
+    position: absolute;
+}
+
+.royalhotspot-text {
+    font-size: 15px;
+}
+
+.royalhotspot-content {
+    position: relative;
+    z-index: 15;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.royalhotspot-icon-position-left .royalhotspot-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+.royalhotspot-item,
+.royalhotspot-item:before {
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+.royalhotspot-trigger-hover .royalhotspot-item,
+.royalhotspot-trigger-click .royalhotspot-item {
+    cursor: pointer;
+}
+
+
+/* Tooltip */
+.royalhotspot-tooltip {
+    position: absolute;
+    border-radius: 4px;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    -webkit-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    z-index: 20;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba( 0, 0, 0, 0.5);
+    box-shadow: 0px 0px 4px 0px rgba( 0, 0, 0, 0.5);
+    font-size: 13px;
+}
+
+.royalhotspot-tooltip:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.royalhotspot-tooltip-position-bottom .royalhotspot-tooltip,
+.royalhotspot-tooltip-position-left .royalhotspot-tooltip {
+    top: 0%;
+    left: 0%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.royalhotspot-tooltip-position-right .royalhotspot-tooltip {
+    right: 0%;
+    top: 0%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+
+.royalhotspot-tooltip-position-top .royalhotspot-tooltip:before,
+.royalhotspot-tooltip-position-bottom .royalhotspot-tooltip:before {
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+}
+
+.royalhotspot-tooltip-position-left .royalhotspot-tooltip:before,
+.royalhotspot-tooltip-position-right .royalhotspot-tooltip:before {
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-top-style: solid;
+}
+
+.royalhotspot-tooltip p {
+    margin: 0;
+}
+
+.royaltooltip-active .royalhotspot-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Triangle Position */
+.royalhotspot-tooltip-position-top .royalhotspot-tooltip:before {
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+.royalhotspot-tooltip-position-bottom .royalhotspot-tooltip:before {
+    left: 50%;
+    -webkit-transform: translateX(-50%) rotate(180deg);
+    -ms-transform: translateX(-50%) rotate(180deg);
+    transform: translateX(-50%) rotate(180deg);
+}
+
+.royalhotspot-tooltip-position-left .royalhotspot-tooltip:before {
+    top: 50%;
+    -webkit-transform: translateY(-50%) rotate(180deg);
+    -ms-transform: translateY(-50%) rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.royalhotspot-tooltip-position-right .royalhotspot-tooltip:before {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.royalhotspot-tooltip-position-top .royalhotspot-tooltip,
+.royalhotspot-tooltip-position-bottom .royalhotspot-tooltip {
+    left: 50%;
+}
+
+.royalhotspot-tooltip-position-left .royalhotspot-tooltip,
+.royalhotspot-tooltip-position-right .royalhotspot-tooltip {
+    top: 50%;
+}
+
+
+/* Tooltip Effects */
+
+.royalhotspot-tooltip-position-top.royaltooltip-effect-shift-toward .royalhotspot-tooltip {
+    -webkit-transform: translate(-50%, -120%);
+    -ms-transform: translate(-50%, -120%);
+    transform: translate(-50%, -120%);
+}
+
+.royalhotspot-tooltip-position-top.royaltooltip-effect-shift-toward .royaltooltip-active .royalhotspot-tooltip {
+    -webkit-transform: translate(-50%, -100%);
+    -ms-transform: translate(-50%, -100%);
+    transform: translate(-50%, -100%);
+}
+
+.royalhotspot-tooltip-position-bottom.royaltooltip-effect-shift-toward .royalhotspot-tooltip {
+    -webkit-transform: translate(-50%, 120%);
+    -ms-transform: translate(-50%, 120%);
+    transform: translate(-50%, 120%);
+}
+
+.royalhotspot-tooltip-position-bottom.royaltooltip-effect-shift-toward .royaltooltip-active .royalhotspot-tooltip {
+    -webkit-transform: translate(-50%, 100%);
+    -ms-transform: translate(-50%, 100%);
+    transform: translate(-50%, 100%);
+}
+
+.royalhotspot-tooltip-position-left.royaltooltip-effect-shift-toward .royalhotspot-tooltip {
+    -webkit-transform: translate(-120%, -50%);
+    -ms-transform: translate(-120%, -50%);
+    transform: translate(-120%, -50%);
+}
+
+.royalhotspot-tooltip-position-left.royaltooltip-effect-shift-toward .royaltooltip-active .royalhotspot-tooltip {
+    -webkit-transform: translate(-100%, -50%);
+    -ms-transform: translate(-100%, -50%);
+    transform: translate(-100%, -50%);
+}
+
+.royalhotspot-tooltip-position-right.royaltooltip-effect-shift-toward .royalhotspot-tooltip {
+    -webkit-transform: translate(120%, -50%);
+    -ms-transform: translate(120%, -50%);
+    transform: translate(120%, -50%);
+}
+
+.royalhotspot-tooltip-position-right.royaltooltip-effect-shift-toward .royaltooltip-active .royalhotspot-tooltip {
+    -webkit-transform: translate(100%, -50%);
+    -ms-transform: translate(100%, -50%);
+    transform: translate(100%, -50%);
+}
+
+
+/* Fade */
+
+.royalhotspot-tooltip-position-top.royaltooltip-effect-fade .royalhotspot-tooltip {
+    -webkit-transform: translate(-50%, -100%);
+    -ms-transform: translate(-50%, -100%);
+    transform: translate(-50%, -100%);
+}
+
+.royalhotspot-tooltip-position-bottom.royaltooltip-effect-fade .royalhotspot-tooltip {
+    -webkit-transform: translate(-50%, 100%);
+    -ms-transform: translate(-50%, 100%);
+    transform: translate(-50%, 100%);
+}
+
+.royalhotspot-tooltip-position-left.royaltooltip-effect-fade .royalhotspot-tooltip {
+    -webkit-transform: translate(-100%, -50%);
+    -ms-transform: translate(-100%, -50%);
+    transform: translate(-100%, -50%);
+}
+
+.royalhotspot-tooltip-position-right.royaltooltip-effect-fade .royalhotspot-tooltip {
+    -webkit-transform: translate(100%, -50%);
+    -ms-transform: translate(100%, -50%);
+    transform: translate(100%, -50%);
+}
+
+
+/* Scale */
+
+.royalhotspot-tooltip-position-top.royaltooltip-effect-scale .royalhotspot-tooltip {
+    -webkit-transform: translate(-50%, -100%) scale(0.7);
+    -ms-transform: translate(-50%, -100%) scale(0.7);
+    transform: translate(-50%, -100%) scale(0.7);
+}
+
+.royalhotspot-tooltip-position-bottom.royaltooltip-effect-scale .royalhotspot-tooltip {
+    -webkit-transform: translate(-50%, 100%) scale(0.7);
+    -ms-transform: translate(-50%, 100%) scale(0.7);
+    transform: translate(-50%, 100%) scale(0.7);
+}
+
+.royalhotspot-tooltip-position-left.royaltooltip-effect-scale .royalhotspot-tooltip {
+    -webkit-transform: translate(-100%, -50%) scale(0.7);
+    -ms-transform: translate(-100%, -50%) scale(0.7);
+    transform: translate(-100%, -50%) scale(0.7);
+}
+
+.royalhotspot-tooltip-position-right.royaltooltip-effect-scale .royalhotspot-tooltip {
+    -webkit-transform: translate(100%, -50%) scale(0.7);
+    -ms-transform: translate(100%, -50%) scale(0.7);
+    transform: translate(100%, -50%) scale(0.7);
+}
+
+.royalhotspot-tooltip-position-top.royaltooltip-effect-scale .royaltooltip-active .royalhotspot-tooltip {
+    -webkit-transform: translate(-50%, -100%) scale(1);
+    -ms-transform: translate(-50%, -100%) scale(1);
+    transform: translate(-50%, -100%) scale(1);
+}
+
+.royalhotspot-tooltip-position-bottom.royaltooltip-effect-scale .royaltooltip-active .royalhotspot-tooltip {
+    -webkit-transform: translate(-50%, 100%) scale(1);
+    -ms-transform: translate(-50%, 100%) scale(1);
+    transform: translate(-50%, 100%) scale(1);
+}
+
+.royalhotspot-tooltip-position-left.royaltooltip-effect-scale .royaltooltip-active .royalhotspot-tooltip {
+    -webkit-transform: translate(-100%, -50%) scale(1);
+    -ms-transform: translate(-100%, -50%) scale(1);
+    transform: translate(-100%, -50%) scale(1);
+}
+
+.royalhotspot-tooltip-position-right.royaltooltip-effect-scale .royaltooltip-active .royalhotspot-tooltip {
+    -webkit-transform: translate(100%, -50%) scale(1);
+    -ms-transform: translate(100%, -50%) scale(1);
+    transform: translate(100%, -50%) scale(1);
+}
+
+
+/* Hotspot Animation */
+
+@keyframes royalhotspot-anim-pulse {
+    0%,
+    100%,
+    87% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    88%,
+    92%,
+    96% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    90%,
+    94% {
+        -webkit-transform: scale3d(0.9, 0.9, 0.9);
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+}
+
+@-webkit-keyframes royalhotspot-anim-pulse {
+    0%,
+    100%,
+    87% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    88%,
+    92%,
+    96% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    90%,
+    94% {
+        -webkit-transform: scale3d(0.9, 0.9, 0.9);
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+}
+
+.royalhotspot-anim-pulse {
+    -webkit-animation-name: royalhotspot-anim-pulse;
+    animation-name: royalhotspot-anim-pulse;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+}
+
+@keyframes royalhotspot-anim-shake {
+    0%,
+    100%,
+    87% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    88%,
+    92%,
+    96% {
+        -webkit-transform: translate3d(-5px, 0, 0);
+        transform: translate3d(-5px, 0, 0);
+    }
+    90%,
+    94% {
+        -webkit-transform: translate3d(5px, 0, 0);
+        transform: translate3d(5px, 0, 0);
+    }
+}
+
+@-webkit-keyframes royalhotspot-anim-shake {
+    0%,
+    100%,
+    87% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    88%,
+    92%,
+    96% {
+        -webkit-transform: translate3d(-5px, 0, 0);
+        transform: translate3d(-5px, 0, 0);
+    }
+    90%,
+    94% {
+        -webkit-transform: translate3d(5px, 0, 0);
+        transform: translate3d(5px, 0, 0);
+    }
+}
+
+.royalhotspot-anim-shake {
+    -webkit-animation-name: royalhotspot-anim-shake;
+    animation-name: royalhotspot-anim-shake;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+}
+
+@keyframes royalhotspot-anim-swing {
+    0%,
+    100%,
+    70% {
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+    75% {
+        -webkit-transform: rotate3d(0, 0, 1, 15deg);
+        transform: rotate3d(0, 0, 1, 15deg);
+    }
+    80% {
+        -webkit-transform: rotate3d(0, 0, 1, -10deg);
+        transform: rotate3d(0, 0, 1, -10deg);
+    }
+    85% {
+        -webkit-transform: rotate3d(0, 0, 1, 5deg);
+        transform: rotate3d(0, 0, 1, 5deg);
+    }
+    90% {
+        -webkit-transform: rotate3d(0, 0, 1, -5deg);
+        transform: rotate3d(0, 0, 1, -5deg);
+    }
+}
+
+@-webkit-keyframes royalhotspot-anim-swing {
+    0%,
+    100%,
+    70% {
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+    75% {
+        -webkit-transform: rotate3d(0, 0, 1, 15deg);
+        transform: rotate3d(0, 0, 1, 15deg);
+    }
+    80% {
+        -webkit-transform: rotate3d(0, 0, 1, -10deg);
+        transform: rotate3d(0, 0, 1, -10deg);
+    }
+    85% {
+        -webkit-transform: rotate3d(0, 0, 1, 5deg);
+        transform: rotate3d(0, 0, 1, 5deg);
+    }
+    90% {
+        -webkit-transform: rotate3d(0, 0, 1, -5deg);
+        transform: rotate3d(0, 0, 1, -5deg);
+    }
+}
+
+.royalhotspot-anim-swing {
+    -webkit-animation-name: royalhotspot-anim-swing;
+    animation-name: royalhotspot-anim-swing;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+}
+
+@keyframes royalhotspot-anim-tada {
+    0%,
+    100%,
+    84% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    85% {
+        -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    }
+    88%,
+    92%,
+    96% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    90%,
+    94% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+}
+
+@-webkit-keyframes royalhotspot-anim-tada {
+    0%,
+    100%,
+    84% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    85% {
+        -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    }
+    88%,
+    92%,
+    96% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    90%,
+    94% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+}
+
+.royalhotspot-anim-tada {
+    -webkit-animation-name: royalhotspot-anim-tada;
+    animation-name: royalhotspot-anim-tada;
+    -webkit-animation-duration: 6s;
+    animation-duration: 6s;
+}
+
+@keyframes royalhotspot-anim-glow {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes royalhotspot-anim-glow {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.royalhotspot-anim-glow:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    -webkit-animation-name: royalhotspot-anim-glow;
+    animation-name: royalhotspot-anim-glow;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+@keyframes royalhotspot-anim-glow2 {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(2);
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes royalhotspot-anim-glow2 {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(2);
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.royalhotspot-anim-glow2:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    -webkit-animation-name: royalhotspot-anim-glow2;
+    animation-name: royalhotspot-anim-glow2;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}

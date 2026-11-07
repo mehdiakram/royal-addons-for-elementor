@@ -1,0 +1,10 @@
+.royalglobalpost .royalpostgrid {
+    display: grid;
+}
+
+
+.royalglobalpost img.thumbnail{
+    transition: all 1s;
+    display: block;
+    margin: 0 auto;
+}

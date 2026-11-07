@@ -1,0 +1,382 @@
+/**
+ * Royal Animated Shape Divider v3.1
+ * Modern CSS: Universal Shape Animation, Infinite Flow (RTL / LTR / Alternate),
+ * Multi-layer 3D Parallax Drift, Wave Sway, Breathing Pulse, Scroll Reveal, Parallax.
+ */
+
+/* ══ BASE WRAPPER ════════════════════════════════════════════════ */
+.royal-section-divider-wrap {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    display: block;
+    --rsd-parallax-shift: 0px;
+}
+
+.royal-section-divider-wrap.rsd-allow-pointer {
+    pointer-events: auto;
+}
+
+/* ══ DYNAMIC WAVE LAYERS ════════════════════════════════════════ */
+.rsd-layers-container {
+    position: relative;
+    width: 100%;
+    line-height: 0;
+    display: block;
+    overflow: hidden;
+}
+
+.rsd-single-layer {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: block; line-height: 0;
+}
+.rsd-single-layer:first-child { position: relative; }
+.rsd-single-layer svg { display: block; width: 100%; height: 100%; }
+
+/* ══ STATIC & FLOW SHAPE CONTAINER ══════════════════════════════ */
+.rsd-static-container,
+.rsd-flow-container {
+    position: relative;
+    width: 100%;
+    line-height: 0;
+    display: block;
+    overflow: hidden;
+}
+.rsd-static-container > svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* ══ MULTI-LAYER TRACK (3D Parallax Flow) ══════════════════════ */
+.rsd-layer-track {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    line-height: 0 !important;
+    display: block !important;
+    overflow: hidden !important;
+}
+.rsd-layer-track:first-child {
+    position: relative !important;
+}
+
+/* ══ INFINITE FLOW TRACKS (GPU ACCELERATED) ════════════════════ */
+.rsd-flow-track {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    height: 100% !important;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+}
+
+/* 1-Tile Track (Pulse / Static) */
+.rsd-flow-track-1x {
+    width: 100% !important;
+}
+.rsd-flow-track-1x > svg {
+    display: block !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+}
+
+/* 2-Tile Track (Tileable Shapes - Flow & Sway) */
+.rsd-flow-track-2x {
+    width: 200% !important;
+}
+.rsd-flow-track-2x > svg {
+    display: block !important;
+    width: 50% !important;
+    min-width: 50% !important;
+    max-width: 50% !important;
+    height: 100% !important;
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+}
+
+/* 4-Tile Track (Seamless Mirrored Loop for Asymmetrical Shapes) */
+.rsd-flow-track-4x {
+    width: 400% !important;
+}
+.rsd-flow-track-4x > svg {
+    display: block !important;
+    width: 25% !important;
+    min-width: 25% !important;
+    max-width: 25% !important;
+    height: 100% !important;
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+}
+
+/* ══ KEYFRAMES: INFINITE LOOPS ══════════════════════════════════ */
+
+/* Right to Left (RTL) - 2 Tiles */
+@keyframes rsd-flow-rtl-2x {
+    0%   { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
+}
+
+/* Right to Left (RTL) - 4 Tiles Mirrored */
+@keyframes rsd-flow-rtl-4x {
+    0%   { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
+}
+
+/* Left to Right (LTR) - 2 Tiles */
+@keyframes rsd-flow-ltr-2x {
+    0%   { transform: translate3d(-50%, 0, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+}
+
+/* Left to Right (LTR) - 4 Tiles Mirrored */
+@keyframes rsd-flow-ltr-4x {
+    0%   { transform: translate3d(-50%, 0, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+}
+
+/* Ping-Pong / Alternate Sway */
+@keyframes rsd-flow-alt {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50%      { transform: translate3d(-25%, 0, 0); }
+}
+
+/* Organic Wave Sway & Bobbing */
+@keyframes rsd-flow-sway {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    25%      { transform: translate3d(-6%, -3px, 0); }
+    50%      { transform: translate3d(-12%, 3px, 0); }
+    75%      { transform: translate3d(-6%, 5px, 0); }
+}
+
+/* Breathing Pulse */
+@keyframes rsd-flow-pulse {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.03) translateY(-4px); }
+}
+
+/* ══ ANIMATION ASSIGNMENTS ══════════════════════════════════════ */
+.rsd-anim-rtl-2x {
+    animation: rsd-flow-rtl-2x var(--rsd-flow-duration, 10s) linear infinite !important;
+}
+.rsd-anim-rtl-4x {
+    animation: rsd-flow-rtl-4x var(--rsd-flow-duration, 10s) linear infinite !important;
+}
+.rsd-anim-ltr-2x {
+    animation: rsd-flow-ltr-2x var(--rsd-flow-duration, 10s) linear infinite !important;
+}
+.rsd-anim-ltr-4x {
+    animation: rsd-flow-ltr-4x var(--rsd-flow-duration, 10s) linear infinite !important;
+}
+.rsd-anim-alt {
+    animation: rsd-flow-alt var(--rsd-flow-duration, 10s) ease-in-out infinite !important;
+}
+.rsd-anim-sway {
+    animation: rsd-flow-sway var(--rsd-flow-duration, 10s) ease-in-out infinite !important;
+}
+.rsd-anim-pulse {
+    animation: rsd-flow-pulse var(--rsd-flow-duration, 6s) ease-in-out infinite !important;
+}
+
+/* ══ HOVER INTERACTIONS ═════════════════════════════════════════ */
+.rsd-pause-on-hover:hover .rsd-flow-track {
+    animation-play-state: paused !important;
+}
+
+.rsd-hover-boost:hover .rsd-flow-track {
+    animation-duration: calc(var(--rsd-flow-duration, 10s) * 0.4) !important;
+}
+
+/* ══ BACKWARD COMPATIBLE CSS WAVE FLOW ═════════════════════════ */
+.rsd-wave-wrap {
+    overflow: hidden;
+}
+.rsd-wave-inner {
+    display: flex;
+    width: 200%;
+    height: 100%;
+    will-change: transform;
+}
+.rsd-wave-inner > svg {
+    display: block;
+    width: 50%;
+    height: 100%;
+    flex-shrink: 0;
+}
+.rsd-wave-flowing {
+    animation: rsd-wave-flow linear infinite;
+}
+@keyframes rsd-wave-flow {
+    from { transform: translate3d(0, 0, 0); }
+    to   { transform: translate3d(-50%, 0, 0); }
+}
+
+/* ══ CUSTOM SVG ═════════════════════════════════════════════════ */
+.rsd-custom-svg-container {
+    position: relative;
+    width: 100%;
+    line-height: 0;
+    display: block;
+    overflow: hidden;
+}
+.rsd-custom-svg-container svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* ══ POSITION: TOP (default — shape faces down) ════════════════ */
+.rsd-position-top  .rsd-layers-container,
+.rsd-divider-top   .rsd-layers-container,
+.rsd-position-top  .rsd-static-container,
+.rsd-divider-top   .rsd-static-container,
+.rsd-position-top  .rsd-flow-container,
+.rsd-divider-top   .rsd-flow-container,
+.rsd-position-top  .rsd-custom-svg-container,
+.rsd-divider-top   .rsd-custom-svg-container {
+    transform: scaleY(1) translateY(var(--rsd-parallax-shift, 0px));
+}
+
+/* ══ POSITION: BOTTOM (flip — shape faces up) ══════════════════ */
+.rsd-position-bottom .rsd-layers-container,
+.rsd-divider-bottom  .rsd-layers-container,
+.rsd-position-bottom .rsd-static-container,
+.rsd-divider-bottom  .rsd-static-container,
+.rsd-position-bottom .rsd-flow-container,
+.rsd-divider-bottom  .rsd-flow-container,
+.rsd-position-bottom .rsd-custom-svg-container,
+.rsd-divider-bottom  .rsd-custom-svg-container {
+    transform: scaleY(-1) translateY(calc(-1 * var(--rsd-parallax-shift, 0px)));
+}
+
+/* ══ FLIP HORIZONTAL ════════════════════════════════════════════ */
+.rsd-flip-h .rsd-layers-container,
+.rsd-flip-h .rsd-static-container,
+.rsd-flip-h .rsd-flow-container,
+.rsd-flip-h .rsd-custom-svg-container {
+    transform: scaleX(-1) translateY(var(--rsd-parallax-shift, 0px));
+}
+
+.rsd-position-bottom.rsd-flip-h .rsd-layers-container,
+.rsd-divider-bottom.rsd-flip-h  .rsd-layers-container,
+.rsd-position-bottom.rsd-flip-h .rsd-static-container,
+.rsd-divider-bottom.rsd-flip-h  .rsd-static-container,
+.rsd-position-bottom.rsd-flip-h .rsd-flow-container,
+.rsd-divider-bottom.rsd-flip-h  .rsd-flow-container,
+.rsd-position-bottom.rsd-flip-h .rsd-custom-svg-container,
+.rsd-divider-bottom.rsd-flip-h  .rsd-custom-svg-container {
+    transform: scaleX(-1) scaleY(-1) translateY(calc(-1 * var(--rsd-parallax-shift, 0px)));
+}
+
+/* ══ BLUR EFFECT ════════════════════════════════════════════════ */
+.rsd-blur-enabled .rsd-single-layer svg,
+.rsd-blur-enabled .rsd-static-container > svg,
+.rsd-blur-enabled .rsd-flow-track svg,
+.rsd-blur-enabled .rsd-wave-inner svg,
+.rsd-blur-enabled .rsd-custom-svg-container svg {
+    filter: blur(4px);
+}
+
+/* ══ GLOW EFFECT ════════════════════════════════════════════════ */
+.rsd-glow-enabled .rsd-single-layer:last-child svg,
+.rsd-glow-enabled .rsd-static-container > svg,
+.rsd-glow-enabled .rsd-layer-track:last-child .rsd-flow-track svg,
+.rsd-glow-enabled .rsd-wave-inner svg,
+.rsd-glow-enabled .rsd-custom-svg-container svg {
+    filter: var(--rsd-glow-filter, drop-shadow(0 0 8px rgba(0,0,0,0.3)));
+}
+
+/* ══ HOVER MORPH CURSOR ═════════════════════════════════════════ */
+.rsd-hover-morph { cursor: default; }
+
+
+
+/* ══ FULL WIDTH BREAKOUT (EDGE-TO-EDGE) ═════════════════════════ */
+.royal-section-divider-wrap.rsd-full-width {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    box-sizing: border-box !important;
+}
+
+/* Elementor container & widget reset for seamless edge fit */
+.elementor-widget-royalanimatedshapedivider {
+    margin-bottom: 0 !important;
+    line-height: 0 !important;
+}
+.elementor-widget-royalanimatedshapedivider .elementor-widget-container {
+    line-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* ══ PIN TO SECTION EDGE (FLUSH SNAP WITH ZERO GAP) ═════════════ */
+.royal-section-divider-wrap.rsd-pin-edge {
+    position: absolute !important;
+    z-index: 10 !important;
+    margin: 0 !important;
+}
+.royal-section-divider-wrap.rsd-pin-bottom {
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+}
+.royal-section-divider-wrap.rsd-pin-top {
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+}
+
+/* ══ VERTICAL SHAPE DIVIDERS (LEFT & RIGHT) ══════════════════════ */
+.royal-section-divider-wrap.rsd-is-vertical {
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    height: 100% !important;
+    width: var(--rsd-v-width, 120px) !important;
+    overflow: hidden !important;
+    z-index: 10 !important;
+    margin: 0 !important;
+}
+.royal-section-divider-wrap.rsd-position-left,
+.royal-section-divider-wrap.rsd-vertical-left {
+    left: 0 !important;
+    right: auto !important;
+}
+.royal-section-divider-wrap.rsd-position-right,
+.royal-section-divider-wrap.rsd-vertical-right {
+    right: 0 !important;
+    left: auto !important;
+}
+
+.rsd-is-vertical .rsd-flow-container,
+.rsd-is-vertical .rsd-static-container {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 100vh !important;
+    height: var(--rsd-v-width, 120px) !important;
+}
+.rsd-vertical-left .rsd-flow-container,
+.rsd-vertical-left .rsd-static-container {
+    transform: translate(-50%, -50%) rotate(90deg) !important;
+}
+.rsd-vertical-right .rsd-flow-container,
+.rsd-vertical-right .rsd-static-container {
+    transform: translate(-50%, -50%) rotate(-90deg) !important;
+}

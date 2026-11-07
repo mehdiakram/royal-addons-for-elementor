@@ -1,0 +1,85 @@
+/* Main Wrapper */
+.rt-card-maker-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Canvas and Preview Container */
+.rt-card-maker-wrapper .rt-card-maker-container {
+    border: 2px dashed #ccc;
+    position: relative;
+    background-color: #f8f8f8;
+    width: 100%;
+    overflow: hidden;
+}
+
+.rt-card-maker-wrapper .rt-card-maker-canvas {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Controls Section */
+.rt-card-maker-wrapper .rt-card-maker-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.rt-card-maker-wrapper .rt-control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.rt-card-maker-wrapper .rt-control-group label {
+    font-weight: 500;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Input Fields Styling */
+.rt-card-maker-wrapper .rt-control-group input[type="file"],
+.rt-card-maker-wrapper .rt-control-group input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.rt-card-maker-wrapper .rt-control-group input[type="file"] {
+    padding: 5px;
+}
+
+/* Download Button Styling */
+.rt-card-maker-wrapper .rt-card-maker-download-btn {
+    padding: 12px 20px;
+    background-color: #0073aa;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.rt-card-maker-wrapper .rt-card-maker-download-btn:hover {
+    background-color: #005a87;
+}
+
+.rt-card-maker-wrapper .rt-card-maker-download-btn:disabled {
+    background-color: #a0a5aa;
+    cursor: not-allowed;
+}

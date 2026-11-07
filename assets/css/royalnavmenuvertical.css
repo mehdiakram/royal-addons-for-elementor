@@ -1,0 +1,128 @@
+.elementor-widget-container .royal-nav-menu-vertical-container {
+    position: relative;
+}
+
+.royal-content-dir-ltr .royal-nav-menu-vertical-container .royal-nav-menu-vertical {
+    float: left;
+    direction: ltr;
+}
+
+.royal-content-dir-rtl .royal-nav-menu-vertical-container .royal-nav-menu-vertical {
+    float: right;
+    direction: rtl;
+}
+
+.royal-scrollbar-yes .royal-nav-menu-vertical-container {
+    overflow-y: auto!important;
+}
+
+.elementor-widget-container .royal-nav-menu-vertical {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.elementor-widget-container .royal-nav-menu-vertical-item {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.elementor-widget-container .royal-nav-menu-vertical-item a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: normal;
+}
+
+.elementor-widget-container .royal-nav-menu-vertical-item a .menu-item-icon {
+    display: inline-flex;
+    align-items: center;
+}
+
+.elementor-widget-container .royal-nav-menu-vertical-item a .menu-item-text {
+    flex-grow: 1;
+}
+
+
+.elementor-widget-container .royal-nav-menu-vertical-item a:hover {
+    text-decoration: none;
+}
+
+.elementor-widget-container .royal-nav-menu-vertical-item.has-submenu > a {
+    cursor: pointer;
+}
+
+.elementor-widget-container .royal-nav-menu-vertical-item .royal-nav-menu-vertical-indicator {
+    font-size: 0.8em;
+    display: inline-flex; /* Changed to flex for better alignment */
+    align-items: center;
+    justify-content: center;
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+    margin-left: auto;
+}
+
+.elementor-widget-container .royal-nav-menu-vertical-submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99;
+}
+
+/* Submenu visibility on hover (Desktop) */
+.elementor-widget-container .royal-nav-menu-vertical[data-submenu-visibility="hover"] .royal-nav-menu-vertical-item:hover > .royal-nav-menu-vertical-submenu {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Submenu visibility on click (Desktop) */
+.elementor-widget-container .royal-nav-menu-vertical[data-submenu-visibility="click"] .royal-nav-menu-vertical-item.open > .royal-nav-menu-vertical-submenu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.elementor-widget-container .royal-nav-menu-vertical-submenu .royal-nav-menu-vertical-item {
+    border-left: none;
+}
+
+.elementor-widget-container .royal-nav-menu-vertical-submenu-title {
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+@media only screen and (max-width: 768px) {
+   .elementor-widget-container .royal-nav-menu-vertical-submenu {
+    position: inherit;
+    visibility: hidden;
+    overflow: hidden;
+    height: 0;
+    left: 10px;
+    }
+
+.elementor-widget-container .royal-nav-menu-vertical[data-submenu-visibility="hover"] .royal-nav-menu-vertical-item:hover > .royal-nav-menu-vertical-submenu {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+}
+
+/* Submenu visibility on click (Desktop) */
+.elementor-widget-container .royal-nav-menu-vertical[data-submenu-visibility="click"] .royal-nav-menu-vertical-item.open > .royal-nav-menu-vertical-submenu {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+}
+
+}

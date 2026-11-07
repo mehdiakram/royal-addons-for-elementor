@@ -1,0 +1,339 @@
+.royalpricingtable{
+    position: relative;
+    overflow: hidden;
+    padding: 18px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 3px 40px rgba(36, 36, 36, 0.1);
+    transform: scale(1) translateY(-5px); 
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;    
+}
+
+.royalpricingtable:hover {
+    z-index: 3;
+    box-shadow: 0px 0px 5px 5px #ddd;
+    border-radius:5px;
+    transform: scale(1.06) translateY(-5px); 
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+
+.rptstyle1 .royal-pricing-table-badge {
+    position: absolute;
+    top: -1px;
+    padding: 0.8rem 1rem;
+    background-color: #e2498a;
+    color: #fff;
+    line-height: 1;
+}
+
+.rptstyle1 .royal-pricing-table-badge--left {
+    left: 0;
+    -webkit-transform: rotate(-90deg) translateX(-100%);
+    -ms-transform: rotate(-90deg) translateX(-100%);
+    transform: rotate(-90deg) translateX(-100%);
+    -webkit-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+}
+
+.rptstyle1 .royal-pricing-table-badge--right {
+    right: 0;
+    -webkit-transform: rotate(-90deg) translateY(-100%);
+    -ms-transform: rotate(-90deg) translateY(-100%);
+    transform: rotate(-90deg) translateY(-100%);
+    -webkit-transform-origin: right top;
+    -ms-transform-origin: right top;
+    transform-origin: right top;
+}
+
+.rptstyle1 .royal-pricing-table-title {
+    margin: 0 35px 35px 35px;
+    color: #242424;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.rptstyle1 .royal-pricing-table-price {
+    margin-bottom: 3rem;
+}
+
+.rptstyle1 .royal-pricing-table-price-tag {
+    margin: 0 35px 0px 35px;
+    color: #242424;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: normal;
+}
+
+.rptstyle1 .royal-pricing-table-currency {
+    font-size: 24px;
+}
+
+.rptstyle1 .royal-pricing-table-period {
+    margin: 0 35px 0px 35px;
+    font-size: 16px;
+}
+
+.rptstyle1 .royal-pricing-table-body {
+    margin-bottom: 3rem;
+}
+
+.rptstyle1 .royal-pricing-table-features-title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.rptstyle1 .royal-pricing-table-features-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.rptstyle1 .royal-pricing-table-features-list li {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+    align-items: baseline;
+    -ms-flex-align: baseline;
+    margin-bottom: 1rem;
+    font-size: 16px;
+}
+
+.rptstyle1 .royal-pricing-table-features-list li > i,
+.rptstyle1 .royal-pricing-table-features-list li > svg {
+    margin-right: 0.5rem;
+    min-width: 15px;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.rptstyle1 .royal-pricing-table-features-list li > svg {
+    width: auto;
+    height: 1em;
+    fill: currentColor;
+}
+
+.rptstyle1 .royal-pricing-table-feature-text {
+    display: inline-block;
+}
+
+.rptstyle1 .royal-pricing-table-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+
+
+
+.rptstyle2{
+    position: relative;
+}
+
+.rptstyle2 .royal-pricing-table-badge {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  position: absolute;
+}
+.rptstyle2 .royal-pricing-table-badge::before,
+.rptstyle2 .royal-pricing-table-badge::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  display: block;
+  border: 5px solid #2980b9;
+}
+.rptstyle2 .royal-pricing-table-badge span {
+  position: absolute;
+  display: block;
+  width: 170px;
+  padding: 10px 0;
+  background-color: #3498db;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  color: #fff;
+  font: 700 18px/1 'Lato', sans-serif;
+  text-shadow: 0 1px 1px rgba(0,0,0,.2);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+
+
+/* top left*/
+.rptstyle2 .royal-pricing-table-badge--left {
+  top: -10px;
+  left: -10px;
+}
+.rptstyle2 .royal-pricing-table-badge--left::before,
+.rptstyle2 .royal-pricing-table-badge--left::after {
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+.rptstyle2 .royal-pricing-table-badge--left::before {
+  top: 0;
+  right: 0;
+}
+.rptstyle2 .royal-pricing-table-badge--left::after {
+  bottom: 0;
+  left: 0;
+}
+.rptstyle2 .royal-pricing-table-badge--left span {
+  right: -13px;
+  top: 27px;
+  transform: rotate(-45deg);
+}
+
+/* top right*/
+.rptstyle2 .royal-pricing-table-badge--right {
+  top: -10px;
+  right: -10px;
+}
+.rptstyle2 .royal-pricing-table-badge--right::before,
+.rptstyle2 .royal-pricing-table-badge--right::after {
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+.rptstyle2 .royal-pricing-table-badge--right::before {
+  top: 0;
+  left: 0;
+}
+.rptstyle2 .royal-pricing-table-badge--right::after {
+  bottom: 0;
+  right: 0;
+}
+.rptstyle2 .royal-pricing-table-badge--right span {
+  left: -13px;
+  top: 27px;
+  transform: rotate(45deg);
+}
+
+
+
+.rptstyle2 .royal-pricing-table-badge--left {
+  overflow: hidden;
+  position: absolute;
+}
+
+
+
+
+.rptstyle2 .royal-pricing-table-title {
+    text-align: center;
+    padding: 14px 18px;
+    font-size: 26px;
+    color: white;
+    line-height: 48px;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+    -moz-border-radius-topleft: 8px;
+    -moz-border-radius-topright: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.rptstyle2 .royal-pricing-table-price {
+    margin-bottom: 3rem;
+}
+
+.rptstyle2 .royal-pricing-table-price-tag {
+    margin: 0 ;
+    color: #242424;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: normal;
+    text-align: center;
+}
+
+.rptstyle2 .royal-pricing-table-currency {
+    font-size: 24px;
+}
+
+.rptstyle2 .royal-pricing-table-period {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+.rptstyle2 .royal-pricing-table-body {
+    margin-bottom: 3rem;
+}
+
+.rptstyle2 .royal-pricing-table-features-title {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.rptstyle2 .royal-pricing-table-features-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.rptstyle2 .royal-pricing-table-features-list li {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+    align-items: baseline;
+    -ms-flex-align: baseline;
+    padding: 6px 0;
+    font-size: 16px;
+}
+
+
+.rptstyle2 .royal-pricing-table-features-list li > i,
+.rptstyle2 .royal-pricing-table-features-list li > svg {
+    margin-right: 0.5rem;
+    min-width: 15px;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.rptstyle2 .royal-pricing-table-features-list li > svg {
+    width: auto;
+    height: 1em;
+    fill: currentColor;
+}
+
+.rptstyle2 .royal-pricing-table-feature-text {
+    display: inline-block;
+}
+
+.rptstyle2 .royal-pricing-table-btn {
+    display: block;
+    padding: 10px 30px;
+    -webkit-border-bottom-left-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-bottomleft: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    text-align: center;
+    color: #fff !important;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: 300;
+    transition: All 500ms ease;
+    -webkit-transition: All 500ms ease;
+    -moz-transition: All 500ms ease;
+    -o-transition: All 500ms ease;
+}

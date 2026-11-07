@@ -1,0 +1,82 @@
+.royal-hf-options-row {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 0;
+}
+
+.royal-hf-options-row:last-child {
+    border-bottom: none;
+}
+
+.royal-hf-options-row th {
+    width: 200px;
+    padding: 5px 20px 5px 0;
+    text-align: left;
+    font-weight: 600;
+}
+
+.royal-hf-options-row th label {
+    display: block;
+}
+
+.royal-hf-options-row th .dashicons {
+    color: #a0a5aa;
+    font-size: 16px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.royal-hf-options-row td {
+    flex-grow: 1;
+    padding: 0;
+}
+
+.royal-hf-options-row .rules-wrapper {
+    margin-bottom: 15px;
+}
+
+.royal-hf-target-rule-condition {
+    margin-bottom: 10px;
+}
+
+.royal-hf-rule-row {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ensure it takes full width */
+}
+
+.royal-hf-rule-row select {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.royal-hf-target-rule-condition .target-rule-condition-delete {
+    cursor: pointer;
+    color: #a0a5aa;
+    font-size: 18px;
+    line-height: 1;
+    text-decoration: none;
+    background: #f0f0f1;
+    border: 1px solid #dcdcde;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.royal-hf-target-rule-condition .target-rule-condition-delete:hover {
+    color: #d63638;
+    border-color: #d63638;
+}
+
+.royal-hf-options-row .button {
+    margin-right: 5px;
+}
+
+.royal-hf-specifics-search-wrapper {
+    margin-top: 10px;
+    width: 100%; /* Ensure it takes full width and new line */
+    clear: both; /* Force it to a new line */
+}

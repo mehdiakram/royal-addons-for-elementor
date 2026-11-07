@@ -1,0 +1,187 @@
+/************ Royal Image Scroll ************/
+
+.royal-image-scroll-section,
+.royal-image-scroll-container {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.royal-image-scroll-section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  mask-image: -webkit-radial-gradient(white, black);
+}
+
+.royal-image-scroll-container {
+  width: 100%;
+}
+
+.royal-image-scroll-container .royal-image-scroll-mask-media {
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.royal-container-scroll {
+  overflow: auto;
+}
+
+.royal-image-scroll-container .royal-image-scroll-horizontal {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.royal-image-scroll-container .royal-image-scroll-horizontal img {
+  max-width: none;
+  height: 100%;
+}
+
+.royal-image-scroll-container .royal-image-scroll-vertical img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.royal-image-scroll-ver {
+  position: relative;
+}
+
+.royal-image-scroll-container .royal-image-scroll-overlay {
+  background: rgba(2, 2, 2, 0.3);
+}
+
+.royal-image-scroll-container .royal-image-scroll-link,
+.royal-image-scroll-container .royal-image-scroll-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+}
+
+.royal-image-scroll-content {
+  display: inline-block;
+  position: absolute;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  z-index: 5;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.royal-container-scroll-instant .royal-image-scroll-image {
+  -webkit-transition: all 0s ease-in-out !important;
+  transition: all 0s ease-in-out !important;
+}
+
+.royal-image-scroll-container img {
+  -webkit-transition: -webkit-transform 3s ease-in-out;
+  transition: -webkit-transform 3s ease-in-out;
+  transition: transform 3s ease-in-out;
+  transition: transform 3s ease-in-out, -webkit-transform 3s ease-in-out;
+}
+
+.royal-image-scroll-container .royal-image-scroll-overlay,
+.royal-image-scroll-container .royal-image-scroll-content {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.royal-image-scroll-container:hover .royal-image-scroll-overlay {
+  opacity: 0;
+}
+
+.royal-image-scroll-container:hover .royal-image-scroll-content {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.royal-image-scroll-content .royal-image-scroll-icon {
+  display: inline-block;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.royal-horizontal-mouse-scroll:before {
+  content: "\e901";
+}
+
+.royal-vertical-mouse-scroll:before {
+  content: "\e93c";
+}
+
+.royal-horizontal-mouse-scroll {
+  -webkit-animation-name: royal-scroll-horizontal;
+  animation-name: royal-scroll-horizontal;
+}
+
+.royal-vertical-mouse-scroll {
+  -webkit-animation-name: royal-scroll-vertical;
+  animation-name: royal-scroll-vertical;
+}
+
+@-webkit-keyframes royal-scroll-vertical {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+}
+
+@keyframes royal-scroll-vertical {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+}
+
+@-webkit-keyframes royal-scroll-horizontal {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+}
+
+@keyframes royal-scroll-horizontal {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+}

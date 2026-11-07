@@ -1,0 +1,754 @@
+.royalalert{
+	margin: 1rem;
+	padding: 1rem 1.25rem;
+	border-left: 5px solid #f5c848;
+	color: #856404;
+	background-color: #fff3cd;
+}
+
+.royal-license-error{
+    padding: 15px;
+    border: 1px solid red;
+    color: red;
+    text-align: center;
+}
+
+/* Royal Addons for Elementor CSS */
+.royalblock{width: 100%;}
+
+
+/* Fix twentytwentyone*/
+button.sub-menu-toggle {display: none!important}
+.site a:focus {text-decoration: none!important;}
+
+
+
+ /* Royal lottie Animation ====================================== */
+ .royallottieplayerwarper{
+  display: flex;
+}
+
+
+
+
+
+/* Hover ====================================== */
+/* stroke */
+.royalhoverstroke{
+    position: relative;
+}
+
+.royalhoverstroke:after{
+  transition: all .5s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #FFDA00;
+  height: 3px;
+}
+
+.royalhoverstroke:hover:after {
+  width: 100%;
+}
+
+
+
+/* royal Hover Shift*/
+.royalhovershift {
+  position:relative;
+  z-index: 1;
+}
+
+.royalhovershift:after {
+  transition: all .5s;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 3px;
+  content: '.';
+  color: transparent;
+  background: #F1C40F;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+}
+
+.royalhovershift:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Royal Property START ====================================== */
+.royalpropertygrid{
+    display: grid;
+    gap:20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr) ) ;
+}
+
+.royalpropertygrid .propertygridsingle{
+    box-shadow: 0 0 30px #f1f1f1dd;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+
+.royalpropertygrid .propertygridsingle:hover{
+    box-shadow: 0px 0px 32px 0px rgba(122,122,122,0.4);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  
+  .royalpropertygrid .propertygridsingle:nth-child(4n),
+  .royalpropertygrid .propertygridsingle:last-child{
+    margin-right: 0px; 
+  }
+  
+  .royalpropertygrid .propertygridsingle .title{
+    text-align: center;
+    padding: 15px 15px 10px;
+  }
+  
+  .royalpropertygrid .propertygridsingle a.royalthumbnail{
+      overflow: hidden;
+      display: block;
+  }
+  
+  .royalpropertygrid .propertygridsingle img{
+      max-width: 100%;
+      width: 300px;
+      height: 400px;
+      object-fit: cover;
+      transition: transform .2s;
+  }
+  .royalpropertygrid .propertygridsingle img:hover{
+      transform: scale(1.1);
+      transition: transform .2s;
+  }
+
+/* Royal Property END ====================================== */
+
+
+
+
+
+/* Royal Image Compare  ====================================== */
+.royalimagecompare {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+ 
+.royalimagecompare img {
+    width: 100%;
+    display:block;
+    max-width: inherit!important;
+}
+ 
+.royalimagecompare .resize {
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+}
+
+
+.royalimagecompare .handle {
+    position:absolute; 
+    left:50%;
+    top:0;
+    bottom:0;
+    width:4px;
+    margin-left:-2px;
+    background: rgba(0,0,0,.5);
+    cursor: ew-resize;
+    z-index: 9999;
+    display: block!important;
+}
+ 
+
+.royalimagecompare .handle .icon{
+    position: absolute;
+    top: 50%;
+    width: 64px;
+    height: 64px;
+    margin-top: -32px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: -32px;
+    color:white;
+    font-weight:bold;
+    text-align:center;
+    line-height:64px;
+
+    border:1px solid #e6a600; 
+    border-radius: 50%;
+    transition:all 0.3s ease;    
+}
+
+.royalimagecompare .handle .icon i{
+    position: absolute;
+    font-size: 36px;
+    top: calc(50% - 18px);
+    left: calc(50% - 18px);    
+}
+
+
+
+.royalimagecompare .draggable:after {
+    width: 48px;
+    height: 48px;
+    margin: -24px 0 0 -24px;
+    line-height:48px;
+    font-size:30px;
+}    
+
+
+
+.royalimagecompare span.beforetext {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #0c0c0c45;
+    padding: 10px;
+    color: #fff;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.royalimagecompare span.aftertext {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background: #0c0c0c45;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px 0px 0px 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Pricing Table */
+.pricing-table {
+    background: #fff;
+}
+.pricing-table .pricing-table-header {
+    position: relative;
+    padding: 40px 30px 30px 30px;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    z-index: 0;
+}
+.pricing-table .pricing-table-header .popular {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: royalblue;
+    color: #fff;
+    z-index: 10;
+    padding: 5px 10px;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    border-radius: 4px;
+    font-family: monospace;
+}
+.pricing-table .pricing-table-header .header-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 30px 0 0 0;
+}
+.pricing-table .pricing-table-header .header-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 15px 0;
+    line-height: 30px;
+}
+.pricing-table .pricing-table-price {
+    background-color: #f9f9f9;
+    padding: 30px;
+    font-family: 'Nunito Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pricing-table .pricing-table-price .price {
+    font-family: 'Nunito Sans', monospace;
+    font-size: 48px;
+    font-weight: 700;
+    padding: 0px 5px;
+}
+.pricing-table .pricing-table-price .price-divider {
+    font-size: 48px;
+}
+.pricing-table .pricing-table-price .price-duration {
+    height: 50px;
+    display: flex;
+    align-items: flex-end;
+}
+.pricing-table .pricing-table-feature {
+    padding: 20px;
+    text-align: center;
+}
+.pricing-table .pricing-table-feature div {
+    padding: 10px 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 1px solid rgba( 0, 0, 0, 0.02 );
+}
+.pricing-table .pricing-table-feature div:last-child {
+    border: 0;
+}
+.pricing-table .pricing-table-action {
+    padding: 30px;
+    text-align: center;
+}
+.pricing-table .pricing-table-action a {
+    display: inline-block;
+    padding: 12px 26px;
+    background-color: #707070;
+    color: #fff;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.9;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+.pricing-table .pricing-table-action a:hover {
+    background-color: #562dd4;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.panel-elements-category-title-eb-elementor-extended {
+    background-color: #9b0a46;
+    color: #fff;
+    margin: 5px 10px;
+    border-radius: 3px;
+}
+
+
+
+
+
+/* royalelementormenu ----------------------------*/
+.royalelementormenu{
+    width: 100%;
+    position: absolute;    
+}
+
+
+
+
+/* Royal Scroll to Top ------------------------------------------------- */
+#royalscrolltotop:not(.royal-scroll-to-top-btn){ 
+    position:fixed;
+    bottom:105px;
+    right:32px;
+    display:none;
+    -webkit-transition-duration: 0.1s; 
+    -moz-transition-duration: 0.1s; 
+    transition-duration: 0.1s; 
+    z-index: 999999;
+  }
+  
+  #royalscrolltotop:not(.royal-scroll-to-top-btn) i{
+    text-align: center;
+    height: 40px; 
+    width: 40px; 
+    font-size: 28px;
+    -webkit-transition-duration: 0.1s; 
+    -moz-transition-duration: 0.1s; 
+    transition-duration: 0.1s;   
+    display: grid;
+    place-items: center;
+  }
+  
+  #royalscrolltotop:not(.royal-scroll-to-top-btn) i:hover{
+    -webkit-transition-duration: 0.1s; 
+    -moz-transition-duration: 0.1s; 
+    transition-duration: 0.1s;   
+  }
+  
+
+/* Royal Travel ------------------------------------------------- */
+.royaltravel .travelgrid {
+    grid-template-columns: repeat(auto-fit, minmax(max(200px, 100%/5), 1fr));
+    display: grid;
+    gap: 20px;
+}
+
+
+.royaltravel .travelgrid .travelgridsingle:hover{
+  margin-top: -3px;
+  box-shadow: 0px 0px 32px 0px rgba(122,122,122,0.4);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* .royalsocialicon background-color */
+.royalsocialicon-android {
+    background-color: #a4c639!important;
+}
+.royalsocialicon-apple {
+    background-color: #999!important;
+}
+.royalsocialicon-behance {
+    background-color: #1769ff!important;
+}
+.royalsocialicon-bitbucket {
+    background-color: #205081!important;
+}
+.royalsocialicon-codepen {
+    background-color: #000!important;
+}
+.royalsocialicon-delicious {
+    background-color: #39f!important;
+}
+.royalsocialicon-deviantart {
+    background-color: #05cc47!important;
+}
+.royalsocialicon-digg {
+    background-color: #005be2!important;
+}
+.royalsocialicon-dribbble {
+    background-color: #ea4c89!important;
+}
+.royalsocialicon-elementor {
+    background-color: #d30c5c!important;
+}
+.royalsocialicon-envelope {
+    background-color: #ea4335!important;
+}
+.royalsocialicon-facebook,
+.royalsocialicon-facebook-f {
+    background-color: #3b5998!important;
+}
+.royalsocialicon-flickr {
+    background-color: #0063dc!important;
+}
+.royalsocialicon-foursquare {
+    background-color: #2d5be3!important;
+}
+.royalsocialicon-free-code-camp,
+.royalsocialicon-freecodecamp {
+    background-color: #006400!important;
+}
+.royalsocialicon-github {
+    background-color: #333!important;
+}
+.royalsocialicon-gitlab {
+    background-color: #e24329!important;
+}
+.royalsocialicon-globe {
+    background-color: #818a91!important;
+}
+.royalsocialicon-google-plus,
+.royalsocialicon-google-plus-g {
+    background-color: #dd4b39!important;
+}
+.royalsocialicon-houzz {
+    background-color: #7ac142!important;
+}
+.royalsocialicon-instagram {
+    background-color: #262626!important;
+}
+.royalsocialicon-jsfiddle {
+    background-color: #487aa2!important;
+}
+.royalsocialicon-link {
+    background-color: #818a91!important;
+}
+.royalsocialicon-linkedin,
+.royalsocialicon-linkedin-in {
+    background-color: #0077b5!important;
+}
+.royalsocialicon-medium {
+    background-color: #00ab6b!important;
+}
+.royalsocialicon-meetup {
+    background-color: #ec1c40!important;
+}
+.royalsocialicon-mixcloud {
+    background-color: #273a4b!important;
+}
+.royalsocialicon-odnoklassniki {
+    background-color: #f4731c!important;
+}
+.royalsocialicon-pinterest {
+    background-color: #bd081c!important;
+}
+.royalsocialicon-product-hunt {
+    background-color: #da552f!important;
+}
+.royalsocialicon-reddit {
+    background-color: #ff4500!important;
+}
+.royalsocialicon-rss {
+    background-color: #f26522!important;
+}
+.royalsocialicon-shopping-cart {
+    background-color: #4caf50!important;
+}
+.royalsocialicon-skype {
+    background-color: #00aff0!important;
+}
+.royalsocialicon-slideshare {
+    background-color: #0077b5!important;
+}
+.royalsocialicon-snapchat {
+    background-color: #fffc00!important;
+}
+.royalsocialicon-soundcloud {
+    background-color: #f80!important;
+}
+.royalsocialicon-spotify {
+    background-color: #2ebd59!important;
+}
+.royalsocialicon-stack-overflow {
+    background-color: #fe7a15!important;
+}
+.royalsocialicon-steam {
+    background-color: #00adee!important;
+}
+.royalsocialicon-stumbleupon {
+    background-color: #eb4924!important;
+}
+.royalsocialicon-telegram {
+    background-color: #2ca5e0!important;
+}
+.royalsocialicon-thumb-tack {
+    background-color: #1aa1d8!important;
+}
+.royalsocialicon-tripadvisor {
+    background-color: #589442!important;
+}
+.royalsocialicon-tumblr {
+    background-color: #35465c!important;
+}
+.royalsocialicon-twitch {
+    background-color: #6441a5!important;
+}
+.royalsocialicon-twitter {
+    background-color: #1da1f2!important;
+}
+.royalsocialicon-viber {
+    background-color: #665cac!important;
+}
+.royalsocialicon-vimeo {
+    background-color: #1ab7ea!important;
+}
+.royalsocialicon-vk {
+    background-color: #45668e!important;
+}
+.royalsocialicon-weibo {
+    background-color: #dd2430!important;
+}
+.royalsocialicon-weixin {
+    background-color: #31a918!important;
+}
+.royalsocialicon-whatsapp {
+    background-color: #25d366!important;
+}
+.royalsocialicon-wordpress {
+    background-color: #21759b!important;
+}
+.royalsocialicon-xing {
+    background-color: #026466!important;
+}
+.royalsocialicon-yelp {
+    background-color: #af0606!important;
+}
+.royalsocialicon-youtube {
+    background-color: #cd201f!important;
+}
+
+
+
+/* royalmagiccard */
+.royalmagiccard{
+    --first-color: #5ddcff; 
+    --second-color: #3c67e3;
+    --third-color: #4e00c2;
+  }
+
+  @property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+
+  .royalmagiccard::before,
+  .royalmagiccard::after{
+    opacity: 0;
+    content: "";
+    transition: all 0.5s ease-in-out;
+  }
+
+  .royalmagiccard:hover::before, 
+  .royalmagiccard:hover::after{
+    position: absolute;
+    z-index: -1;
+    background-image: linear-gradient(
+      var(--rotate), 
+      var(--first-color), 
+      var(--second-color) 43%, 
+      var(--third-color));
+    animation: royalmagiccardspin 2.5s linear infinite;
+    opacity: 1;
+  }
+
+  .royalmagiccard:hover::before {
+    width: 104%;
+    height: 104%;
+    border-radius: 8px;
+    top: -2%;
+    left: -2%;
+  }
+  
+  .royalmagiccard:hover::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.9);
+    filter: blur(70px);
+  }
+  
+  @keyframes royalmagiccardspin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+
+
+  /* Image Mask  */
+.royalimagemask .image-clipping-mask {
+	position: relative;
+	display: inline-block;
+}
+
+.royalimagemask .image-clipping-mask .overlay-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.royalimagemask .image-clipping-mask .image {
+	width: 100%;
+    height: 100%;
+}
+
+
+/**************** Royal Particles Section *****************/
+.royal-particles-yes .tsparticles-canvas-el {
+    position: absolute !important;
+    top: 0;
+    height: 100%; 
+}
+
+.royal-particles-yes .royal-global-particles {
+    position: absolute;
+}
+
+.royal-particles-yes .royal-global-particles .tsparticles-canvas-el {
+    position: fixed !important;
+}
+
+
+
+/**************** Royal Extentions *****************/
+/* RoyalOverlayUnderlay */
+.royal-has-background-overlay > .elementor-widget-container {
+	position: relative; 
+}
+.royal-has-background-overlay > .elementor-widget-container:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	pointer-events: none;
+}
+.royal-has-background-overlay > .elementor-widget-container:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	pointer-events: none;
+}
+
+
+/* Hovernimator */
+.royal-is-hoveranimator .royal-is-hoveranimal > .elementor-widget-container {
+	transition-property: opacity, top, left, transform, filter;
+	position: relative;
+}
+
+/* Sticky Inner Section - Stay in Column */
+.elementor-widget-wrap.royal-sssic-wrapper {
+	display: block !important;
+}
+.elementor-inner-section.ob-is-sticky-inner-section {
+	top: 0;
+	position: sticky;
+}

@@ -1,0 +1,180 @@
+/* =============================================
+   Royal Ads Widget - CSS
+   ============================================= */
+
+.royalads-wrapper {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+/* Ad Container */
+.royaladscontainer {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+/* Individual Ad */
+.royalad {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.royalad.royalad-active {
+	display: block;
+}
+
+/* Image Style */
+.royalad-image-wrap {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.royalad-image-wrap img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+}
+
+/* Transition / Fade effect */
+.royalads-wrapper.royalads-fade .royalad {
+	opacity: 0;
+	transition: opacity 0.6s ease;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.royalads-wrapper.royalads-fade .royalad.royalad-active {
+	opacity: 1;
+	position: relative;
+}
+
+/* Slide effect */
+.royalads-wrapper.royalads-slide {
+	overflow: hidden;
+}
+
+.royalads-wrapper.royalads-slide .royaladscontainer {
+	display: flex;
+	transition: transform 0.5s ease;
+}
+
+.royalads-wrapper.royalads-slide .royalad {
+	display: block;
+	flex: 0 0 100%;
+	min-width: 100%;
+}
+
+/* Navigation dots */
+.royalads-dots {
+	text-align: center;
+	margin-top: 10px;
+	line-height: 1;
+}
+
+.royalads-dots .royalads-dot {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #ccc;
+	margin: 0 4px;
+	cursor: pointer;
+	transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.royalads-dots .royalads-dot.active {
+	background: #333;
+	transform: scale(1.3);
+}
+
+/* Navigation arrows */
+.royalads-nav {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 10;
+	background: rgba(0,0,0,0.4);
+	color: #fff;
+	border: none;
+	padding: 8px 14px;
+	cursor: pointer;
+	font-size: 18px;
+	border-radius: 3px;
+	transition: background 0.3s;
+}
+
+.royalads-nav:hover {
+	background: rgba(0,0,0,0.7);
+}
+
+.royalads-nav-prev {
+	left: 8px;
+}
+
+.royalads-nav-next {
+	right: 8px;
+}
+
+/* Close button (popup use) */
+.royalads-close {
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	z-index: 20;
+	background: rgba(0,0,0,0.5);
+	color: #fff;
+	border: none;
+	border-radius: 50%;
+	width: 28px;
+	height: 28px;
+	font-size: 16px;
+	line-height: 28px;
+	text-align: center;
+	cursor: pointer;
+	transition: background 0.3s;
+}
+
+.royalads-close:hover {
+	background: rgba(200,0,0,0.8);
+}
+
+/* Popup overlay */
+.royalads-popup-overlay {
+	display: none;
+	position: fixed;
+	inset: 0;
+	background: rgba(0,0,0,0.6);
+	z-index: 99998;
+	align-items: center;
+	justify-content: center;
+}
+
+.royalads-popup-overlay.is-open {
+	display: flex;
+}
+
+.royalads-popup-box {
+	position: relative;
+	background: #fff;
+	border-radius: 6px;
+	overflow: hidden;
+	max-width: 90vw;
+	max-height: 90vh;
+}
+
+/* Responsive helpers */
+@media (max-width: 767px) {
+	.royalads-nav {
+		padding: 5px 10px;
+		font-size: 14px;
+	}
+}

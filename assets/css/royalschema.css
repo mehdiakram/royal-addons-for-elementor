@@ -1,0 +1,86 @@
+/*
+ * RoyalSchema Widget Styles
+ */
+
+.royal-schema-widget {
+    /* Base styles for the entire widget container */
+    position: relative;
+    /* This widget is primarily for invisible schema, but may contain visible elements */
+}
+
+    .royal-schema-widget .royal-schema-faq-display {
+        /* Styling for the FAQ display, if you choose to make it visible */
+        margin-bottom: 20px;
+    }
+
+        .royal-schema-widget .royal-schema-faq-display .royal-schema-faq-item {
+            border: 1px solid #eee;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+            .royal-schema-widget .royal-schema-faq-display .royal-schema-faq-item .royal-schema-faq-question {
+                background-color: #f9f9f9;
+                padding: 15px;
+                cursor: pointer;
+            }
+
+                .royal-schema-widget .royal-schema-faq-display .royal-schema-faq-item .royal-schema-faq-question h3 {
+                    margin: 0;
+                    font-size: 18px;
+                    color: #333;
+                }
+
+            .royal-schema-widget .royal-schema-faq-display .royal-schema-faq-item .royal-schema-faq-answer {
+                padding: 15px;
+                background-color: #fff;
+                border-top: 1px solid #eee;
+                display: none; /* Hidden by default, JS will toggle */
+            }
+
+    .royal-schema-widget .royal-schema-howto-display {
+        /* Styling for the HowTo display */
+        margin-bottom: 20px;
+    }
+
+        .royal-schema-widget .royal-schema-howto-display h2,
+        .royal-schema-widget .royal-schema-howto-display h4 {
+            color: #222;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .royal-schema-widget .royal-schema-howto-display p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .royal-schema-widget .royal-schema-howto-display .royal-schema-howto-steps {
+            list-style: decimal;
+            padding-left: 25px;
+        }
+
+            .royal-schema-widget .royal-schema-howto-display .royal-schema-howto-steps li {
+                margin-bottom: 15px;
+                line-height: 1.6;
+            }
+
+                .royal-schema-widget .royal-schema-howto-display .royal-schema-howto-steps li h4 {
+                    margin-top: 0;
+                    margin-bottom: 5px;
+                }
+
+                .royal-schema-widget .royal-schema-howto-display .royal-schema-howto-steps li img {
+                    max-width: 100%;
+                    height: auto;
+                    display: block;
+                    margin-top: 10px;
+                    border-radius: 4px;
+                }
+
+        .royal-schema-widget .royal-schema-howto-display ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }

@@ -1,0 +1,718 @@
+/**
+ * Royal Templates Library - CSS Styles
+ *
+ * @package RoyalAddonsForElementor
+ */
+
+/* ========================================
+   Modal Base
+   ======================================== */
+.royal-templates-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.royal-templates-modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.royal-templates-modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 1400px;
+    height: 90%;
+    max-height: 900px;
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    animation: royalModalFadeIn 0.3s ease;
+}
+
+@keyframes royalModalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ========================================
+   Modal Header
+   ======================================== */
+.royal-templates-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    background: linear-gradient(135deg, #0073aa 0%, #005177 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.royal-templates-header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.royal-templates-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.royal-templates-modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* Header Tabs */
+.royal-templates-header-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.royal-templates-tabs {
+    display: flex;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.royal-templates-tab {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.royal-templates-tab:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.royal-templates-tab.active {
+    background: #fff;
+    color: #0073aa;
+}
+
+.royal-templates-tab .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/* Close Button */
+.royal-templates-header-right {
+    display: flex;
+    align-items: center;
+}
+
+.royal-templates-close {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.royal-templates-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+.royal-templates-close .dashicons {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+/* ========================================
+   Toolbar
+   ======================================== */
+.royal-templates-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.royal-templates-toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Type Filter */
+.royal-templates-filter-type {
+    display: flex;
+    gap: 5px;
+    background: #fff;
+    padding: 4px;
+    border-radius: 6px;
+    border: 1px solid #e5e5e5;
+}
+
+.royal-templates-type-btn {
+    padding: 6px 14px;
+    background: transparent;
+    border: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.royal-templates-type-btn:hover {
+    background: #f0f0f0;
+}
+
+.royal-templates-type-btn.active {
+    background: #0073aa;
+    color: #fff;
+}
+
+/* Category Filter */
+.royal-templates-filter-category select {
+    padding: 10px 35px 10px 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #333;
+    background: #fff url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="%23666" stroke-width="2"><polyline points="6,9 12,15 18,9"/></svg>') no-repeat right 10px center;
+    appearance: none;
+    cursor: pointer;
+    min-width: 160px;
+    height: inherit;
+}
+
+.royal-templates-filter-category select:focus {
+    outline: none;
+    border-color: #0073aa;
+}
+
+/* Search */
+.royal-templates-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.royal-templates-search .dashicons {
+    position: absolute;
+    left: 12px;
+    color: #999;
+    font-size: 18px;
+}
+
+.royal-templates-search input {
+    padding: 8px 15px 8px 38px;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    font-size: 13px;
+    width: 250px;
+    transition: all 0.2s ease;
+}
+
+.royal-templates-search input:focus {
+    outline: none;
+    border-color: #0073aa;
+    box-shadow: 0 0 0 3px rgba(0, 115, 170, 0.1);
+}
+
+/* ========================================
+   Body / Templates Grid
+   ======================================== */
+.royal-templates-body {
+    flex: 1;
+    padding: 25px;
+    overflow-y: auto;
+    background: #f5f5f5;
+}
+
+.royal-templates-grid {
+    column-count: 4;
+    column-gap: 25px;
+}
+
+/* Template Card */
+.royal-template-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    break-inside: avoid;
+    margin-bottom: 25px;
+}
+
+.royal-template-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Thumbnail */
+.royal-template-thumbnail {
+    position: relative;
+    /* height: 200px; - Removed fixed height */
+    overflow: hidden;
+    background: #f0f0f0;
+}
+
+.royal-template-thumbnail {
+    /* height: 320px; - Removed fixed height */
+    /* overflow: hidden; */
+    position: relative;
+    background: #f9f9f9;
+}
+
+.royal-template-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Ensure no bottom space */
+    /* position: absolute; - Removed absolute positioning */
+    /* top: 0; */
+    /* left: 0; */
+    /* transition: transform 3.5s ease-in-out; - Removed transition */
+}
+
+/* Scroll to bottom on hover - Removed */
+/* .royal-template-card:hover .royal-template-thumbnail img {
+    transform: translateY(calc(-100% + 320px));
+} */
+
+/* Badges */
+.royal-template-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.royal-template-badge.free {
+    background: #27ae60;
+    color: #fff;
+}
+
+.royal-template-badge.pro {
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+    color: #fff;
+}
+
+/* Overlay */
+.royal-template-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.royal-template-card:hover .royal-template-overlay {
+    opacity: 1;
+}
+
+.royal-template-overlay button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.royal-template-import-btn {
+    background: #0073aa;
+    color: #fff;
+}
+
+.royal-template-import-btn:hover {
+    background: #005177;
+}
+
+.royal-template-preview-btn {
+    background: #fff;
+    color: #333;
+}
+
+.royal-template-preview-btn:hover {
+    background: #f0f0f0;
+}
+
+/* Locked Overlay */
+.royal-template-locked {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.royal-template-locked .dashicons {
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    color: #f39c12;
+}
+
+.royal-template-unlock-btn {
+    padding: 10px 25px;
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.royal-template-unlock-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Template Info */
+.royal-template-info {
+    padding: 15px;
+}
+
+.royal-template-info h4 {
+    margin: 0 0 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+.royal-template-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.royal-template-tags span {
+    padding: 3px 8px;
+    background: #f0f0f0;
+    border-radius: 3px;
+    font-size: 11px;
+    color: #666;
+}
+
+/* ========================================
+   Loading & Empty States
+   ======================================== */
+.royal-templates-loading,
+.royal-templates-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    color: #666;
+}
+
+.royal-templates-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #e5e5e5;
+    border-top-color: #0073aa;
+    border-radius: 50%;
+    animation: royalSpin 0.8s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes royalSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.royal-templates-loading p,
+.royal-templates-empty p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.royal-templates-empty .dashicons {
+    font-size: 60px;
+    width: 60px;
+    height: 60px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+/* ========================================
+   Modal Footer
+   ======================================== */
+.royal-templates-modal-footer {
+    padding: 12px 25px;
+    background: #f8f9fa;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+}
+
+.royal-templates-modal-footer p {
+    margin: 0;
+    font-size: 12px;
+    color: #888;
+}
+
+/* ========================================
+   Preview Modal
+   ======================================== */
+.royal-template-preview-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.royal-template-preview-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.royal-template-preview-content {
+    position: relative;
+    width: 95%;
+    max-width: 1600px;
+    height: 95%;
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.royal-template-preview-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.royal-template-preview-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.royal-template-preview-close {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.royal-template-preview-close:hover {
+    background: #e0e0e0;
+}
+
+.royal-template-preview-body {
+    flex: 1;
+    background: #f5f5f5;
+}
+
+.royal-template-preview-body iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.royal-template-preview-footer {
+    padding: 15px 25px;
+    background: #fff;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+}
+
+#royal-preview-import-btn {
+    padding: 12px 30px;
+    background: #0073aa;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+#royal-preview-import-btn:hover {
+    background: #005177;
+}
+
+/* ========================================
+   Elementor Editor Button (Add Section Area)
+   ======================================== */
+.royal-templates-add-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    background: linear-gradient(135deg, #e8d5ff 0%, #d4c1f0 100%) !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    margin: 0 5px !important;
+    vertical-align: middle !important;
+    box-sizing: border-box !important;
+}
+
+.royal-templates-add-btn:hover {
+    transform: scale(1.1) !important;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4) !important;
+    background: linear-gradient(135deg, #d4c1f0 0%, #c0a8e0 100%) !important;
+}
+
+.royal-templates-add-btn img {
+    width: 22px !important;
+    height: 22px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+@media (max-width: 1200px) {
+    .royal-templates-grid {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 900px) {
+    .royal-templates-grid {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .royal-templates-modal-content {
+        width: 98%;
+        height: 98%;
+        border-radius: 8px;
+    }
+
+    .royal-templates-modal-header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .royal-templates-toolbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .royal-templates-toolbar-left,
+    .royal-templates-toolbar-right {
+        width: 100%;
+    }
+
+    .royal-templates-search input {
+        width: 100%;
+    }
+
+    .royal-templates-grid {
+        column-count: 1;
+    }
+}
+
+/* ========================================
+   SweetAlert Override for Modal
+   ======================================== */
+.swal2-container {
+    z-index: 9999999 !important;
+}

@@ -1,0 +1,17 @@
+/* Royal Motion Effects - Pro Sticky Clone */
+.royal-custom-sticky-el {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+    will-change: transform, position, width;
+}
+
+.royal-is-sticky {
+    /* Fixed state base styles */
+    animation: royalStickyFadeIn 0.3s ease-in-out;
+}
+
+@keyframes royalStickyFadeIn {
+    from { opacity: 0.8; }
+    to { opacity: 1; }
+}
+
+/* User can hook into .royal-sticky-effects for custom transition states */

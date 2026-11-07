@@ -1,0 +1,285 @@
+/* Royal Morph Menu - Complete CSS */
+.royal-morph-menu-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 50px;
+	position: relative;
+	--bgColorMenu: #1d1d27;
+	--bgColorItem: #ff8c00;
+	--iconColorItem: #ffffff; /* Default for the per-item icon color */
+	--globaliconColorItem: #ffffff; /* Default for the per-item icon color */
+	--duration: 0.7s;
+	--menuWidth: 32.05em;
+	--menuFontSize: 1.5em;
+	--iconSize: 2.6em;
+	--iconColor: #ffffff; /* This is the global icon color (used as fallback in PHP) */
+	--iconStrokeWidth: 1pt;
+}
+
+.royal-morph-menu-wrapper * {
+	box-sizing: border-box;
+}
+
+/* Menu Container */
+.royal-morph-menu-wrapper .menu {
+	margin: 0;
+	display: flex;
+	width: var(--menuWidth);
+	font-size: var(--menuFontSize);
+	padding: 0 2.85em;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--bgColorMenu);
+	border-radius: 2.5em;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+	overflow: visible;
+	height: 4.5em;
+}
+
+/* Menu Items */
+.royal-morph-menu-wrapper .menu__item {
+	all: unset;
+	flex-grow: 1;
+	z-index: 100;
+	display: flex;
+	cursor: pointer;
+	position: relative;
+	border-radius: 50%;
+	align-items: center;
+	will-change: transform;
+	justify-content: center;
+	padding: 0.55em 0 0.85em;
+	transition: transform var(--duration) cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	min-width: 4.2em;
+	min-height: 4.2em;
+}
+
+/* Item Jump-up and Icon Color on Hover */
+.royal-morph-menu-wrapper .menu__item:hover {
+	transform: translate3d(0, -0.8em, 0); 
+}
+
+
+.royal-morph-menu-wrapper .menu__item::before {
+	content: "";
+	z-index: -1;
+	width: 4.2em;
+	height: 4.2em;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0); /* Hidden by default */
+	transition: all var(--duration) cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	background-color: var(--bgColorItem);
+	opacity: 0; /* Hidden by default */
+}
+
+.royal-morph-menu-wrapper .menu__item:hover::before,
+.royal-morph-menu-wrapper .menu__item.active::before {
+	transform: translate(-50%, -50%) scale(1);
+	opacity: 1;
+}
+
+.royal-morph-menu-wrapper .icon {
+	width: var(--iconSize);
+	height: var(--iconSize);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	fill: var(--globaliconColorItem);
+	font-size: var(--iconSize);
+	position: relative;
+	z-index: 1;
+	stroke-width: var(--iconStrokeWidth);
+	stroke-miterlimit: 10;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-dasharray: 400;
+	transition: all var(--duration) ease;
+}
+
+.royal-morph-menu-wrapper .icon.eicon:before,
+.royal-morph-menu-wrapper .icon.fa:before,
+.royal-morph-menu-wrapper .icon.far:before,
+.royal-morph-menu-wrapper .icon.fas:before,
+.royal-morph-menu-wrapper .icon.fab:before {
+	stroke: none; /* Ensure no stroke on font icons */
+	color: currentColor; /* Ensure font icons use the 'color' property set on parent */
+	font-size: inherit;
+	line-height: 1;
+}
+
+.royal-morph-menu-wrapper .menu__item:hover .icon,
+.royal-morph-menu-wrapper .menu__item.active .icon {
+	fill: var(--iconColorItem) !important;
+	animation: iconPulse 0.6s ease-out;
+}
+
+
+.royal-morph-menu-wrapper .menu__item:hover .icon {
+    animation: strokeAnimation 5.5s ease-out;
+}
+
+@keyframes iconPulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes strokeAnimation {
+	0% {
+		stroke-dashoffset: 400;
+	}
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+
+/* Menu Border (Morphing Element) */
+.royal-morph-menu-wrapper .menu__border {
+	left: 0;
+	bottom: 99%;
+	width: 10.9em;
+	height: 2.4em;
+	position: absolute;
+	will-change: transform;
+	background-color: var(--bgColorMenu);
+	transition: transform var(--duration) cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	z-index: 50;
+}
+
+.royal-morph-menu-wrapper .svg-container {
+	width: 0;
+	height: 0;
+	position: absolute;
+	overflow: hidden;
+	pointer-events: none;
+}
+
+/* Data Container (Hidden) */
+.royal-morph-menu-wrapper .royal-morph-menu-data {
+	display: none;
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	pointer-events: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+	.royal-morph-menu-wrapper .menu {
+		font-size: 1.2em;
+		width: 28em;
+		padding: 0 2em;
+	}
+	
+	.royal-morph-menu-wrapper .menu__item {
+		min-width: 3.5em;
+		min-height: 3.5em;
+	}
+	
+	.royal-morph-menu-wrapper .menu__item::before {
+		width: 3.5em;
+		height: 3.5em;
+	}
+	
+	.royal-morph-menu-wrapper .icon {
+		width: 2.2em;
+		height: 2.2em;
+		font-size: 2.2em;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.royal-morph-menu-wrapper .menu {
+		font-size: 1em;
+		width: 24em;
+		padding: 0 1.5em;
+	}
+	
+	.royal-morph-menu-wrapper .menu__item {
+		min-width: 3em;
+		min-height: 3em;
+		padding: 0.4em 0 0.6em;
+	}
+	
+	.royal-morph-menu-wrapper .menu__item::before {
+		width: 3em;
+		height: 3em;
+	}
+	
+	.royal-morph-menu-wrapper .menu__item.active {
+		transform: translate3d(0, -0.6em, 0);
+	}
+}
+
+/* Loading Animation */
+.royal-morph-menu-wrapper .menu {
+	animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Focus States for Accessibility */
+.royal-morph-menu-wrapper .menu__item:focus {
+	outline: 2px solid var(--bgColorItem);
+	outline-offset: 2px;
+}
+
+.royal-morph-menu-wrapper .menu__item:focus:not(:focus-visible) {
+	outline: none;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+	.royal-morph-menu-wrapper .menu {
+		border: 2px solid currentColor;
+	}
+	
+	.royal-morph-menu-wrapper .menu__item {
+		border: 1px solid transparent;
+	}
+	
+	.royal-morph-menu-wrapper .menu__item:hover,
+	.royal-morph-menu-wrapper .menu__item.active {
+		border-color: currentColor;
+	}
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+	.royal-morph-menu-wrapper .menu__item,
+	.royal-morph-menu-wrapper .menu__item::before,
+	.royal-morph-menu-wrapper .menu__border,
+	.royal-morph-menu-wrapper .icon {
+		transition: none !important;
+		animation: none !important;
+	}
+}
+
+/* Print Styles */
+@media print {
+	.royal-morph-menu-wrapper {
+		display: none;
+	}
+}

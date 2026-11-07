@@ -1,0 +1,33 @@
+!(function (n, i) {
+    "use strict";
+    var t = function (n, i) {
+        var t = n.find(".royaltech-prime-slider-dragon"),
+            e = i(t).find(".royaltech-slideshow").data("settings");
+        if (t.length) {
+            var o = i(e.id + " ul > li");
+            i(t)
+                .find(".royaltech-slideshow-item")
+                .each(function (n, t) {
+                    var r = i(this).find(e.animation_of),
+                        a = new SplitText(r, { type: "chars, words, lines" }),
+                        s = gsap.timeline();
+                    function d() {
+                        s.clear().time(0), a.revert(), a.split({ type: "chars, words, lines" });
+                        var n = "";
+                        (n = "lines" == e.animation_on ? a.lines : "chars" == e.animation_on ? a.chars : a.words),
+                            s.staggerFrom(n, 0.5, { opacity: 0, scale: e.anim_scale, y: e.anim_rotation_y, rotationX: e.anim_rotation_x, transformOrigin: e.anim_transform_origin }, 0.1).then(function () {}),
+                            s.play();
+                    }
+                    gsap.set(r, { perspective: 400 }),
+                        "yes" == e.animation_status &&
+                            (o.on("itemshow", function () {
+                                d();
+                            }),
+                            d());
+                });
+        }
+    };
+    jQuery(window).on("elementor/frontend/init", function () {
+        elementorFrontend.hooks.addAction("frontend/element_ready/royalsliderdragon.default", t);
+    });
+})(jQuery, window.elementorFrontend);

@@ -1,0 +1,260 @@
+/* Hide Notice */
+#elementor-preview #e-notice-bar,
+#elementor-panel-get-pro-elements,
+#elementor-panel-get-pro-elements-sticky,
+#elementor-navigator__footer__promotion {
+    display: none !important;
+}
+
+/* Panel */
+.elementor-panel-menu-item-royalscrolltotopkitsettings .elementor-panel-menu-item-title {
+    position: relative;
+}
+
+.elementor-panel-menu-item-royalscrolltotopkitsettings .elementor-panel-menu-item-title::after {
+    position: absolute;
+    content: "";
+    background-image: url(../icon-svg/royaltechlogo.svg);
+    height: 14px;
+    width: 14px;
+    display: inline-block;
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+    top: 0px;
+    right: 16px
+}
+
+/* Control */
+[class*="elementor-control-royalcontrolsection_"]::after {
+    position: absolute;
+    content: "";
+    background-image: url(../icon-svg/royaltechlogo.svg);
+    height: 14px;
+    width: 14px;
+    display: inline-block;
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+    top: 12px;
+    right: 16px;
+}
+
+/* [class*="elementor-control-royalcontrolsection_"] > .elementor-control-content:not(:has(.elementor-control-field)) {
+    background: #0066ff3b;
+} */
+
+
+
+/* Widget Category */
+#elementor-panel-category-royaltech .elementor-panel-category-title,
+#elementor-panel-category-royaltech_3rdparty .elementor-panel-category-title,
+#elementor-panel-category-royaltech_headerfooter .elementor-panel-category-title,
+#elementor-panel-category-royaltech_singleproduct .elementor-panel-category-title,
+#elementor-panel-category-royaltech_singlepost .elementor-panel-category-title,
+#elementor-panel-category-royaltech_shoparchive .elementor-panel-category-title,
+#elementor-panel-category-royaltech_postarchive .elementor-panel-category-title {
+    font-weight: bold;
+    font-size: 14px;
+    color: #82bcfd !important;
+}
+
+#elementor-panel-category-royaltech .elementor-panel-category-title::after,
+#elementor-panel-category-royaltech_3rdparty .elementor-panel-category-title::after,
+#elementor-panel-category-royaltech_headerfooter .elementor-panel-category-title::after,
+#elementor-panel-category-royaltech_singleproduct .elementor-panel-category-title::after,
+#elementor-panel-category-royaltech_singlepost .elementor-panel-category-title::after,
+#elementor-panel-category-royaltech_shoparchive .elementor-panel-category-title::after,
+#elementor-panel-category-royaltech_postarchive .elementor-panel-category-title::after {
+    position: absolute;
+    content: "";
+    background-image: url(../icon-svg/royaltechlogo.svg);
+    height: 14px;
+    width: 14px;
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+    right: 16px;
+}
+
+.elementor-panel .elementor-element .rtbranding:before,
+.elementor-panel .elementor-element .icon i:has(.rtbranding) {
+    color: #82bcfd;
+}
+
+.elementor-panel .elementor-element .rtbranding:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url(../icon-svg/royaltechlogo.svg);
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    margin: 3px;
+}
+
+.elementor-panel .elementor-element .royalprobadge::after {
+    content: 'Pro';
+    background-color: #d00;
+    color: #fff;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+
+.elementor-panel .elementor-element .icon {
+    height: 32px;
+}
+
+.elementor-panel .elementor-element [class*="royal"]:before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 7px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    margin: 0;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+/* Navigator */
+.elementor-navigator__element__element-type i {
+    height: 14px;
+    width: 14px;
+}
+
+.elementor-navigator__element__element-type i.rtbranding::before {
+    color: #82bcfd;
+}
+
+/* Element Manager */
+#elementor-element-manager-wrap .rtbranding::before {
+    color: #82bcfd;
+}
+
+#elementor-element-manager-wrap [class*="royal"]::before {
+    width: 13px;
+    height: 13px;
+    content: "";
+    display: inline-block;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+/* Element Manager, Navigator, Widget */
+#elementor-element-manager-wrap [data-key-id="royalticker"] i.royalticker::before,
+.elementor-navigator__element__element-type i.royalticker,
+.elementor-element i.royalticker:before {
+    background-image: url(../icon-svg/royalticker.svg);
+}
+
+#elementor-element-manager-wrap [data-key-id="royalcopyright"] i.royalcopyright::before,
+.elementor-navigator__element__element-type i.royalcopyright,
+.elementor-element i.royalcopyright:before {
+    background-image: url(../icon-svg/royalcopyright.svg);
+}
+
+#elementor-element-manager-wrap [data-key-id="royalpreloader"] i.royalpreloader::before,
+.elementor-navigator__element__element-type i.royalpreloader,
+.elementor-element i.royalpreloader:before {
+    background-image: url(../icon-svg/royalpreloader.svg);
+}
+
+#elementor-element-manager-wrap [data-key-id="royalsliderdragon"] i.royalsliderdragon::before,
+.elementor-navigator__element__element-type i.royalsliderdragon,
+.elementor-element i.royalsliderdragon:before {
+    background-image: url(../icon-svg/royalsliderdragon.svg);
+}
+
+#elementor-element-manager-wrap [data-key-id="royalsliderlanding"] i.royalsliderlanding::before,
+.elementor-navigator__element__element-type i.royalsliderlanding,
+.elementor-element i.royalsliderlanding:before {
+    background-image: url(../icon-svg/royalsliderdragon.svg);
+}
+
+#elementor-element-manager-wrap [data-key-id="royalslidergeneral"] i.royalslidergeneral::before,
+.elementor-navigator__element__element-type i.royalslidergeneral,
+.elementor-element i.royalslidergeneral:before {
+    background-image: url(../icon-svg/royalslidergeneral.svg);
+}
+
+#elementor-element-manager-wrap [data-key-id="royalagegate"] i.royalagegate::before,
+.elementor-navigator__element__element-type i.royalagegate,
+.elementor-element i.royalagegate:before {
+    background-image: url(../icon-svg/royalagegate.svg);
+}
+
+#elementor-element-manager-wrap [data-key-id="royalcalendly"] i.royalcalendly::before,
+.elementor-navigator__element__element-type i.royalcalendly,
+.elementor-element i.royalcalendly:before {
+    background-image: url(../icon-svg/royalcalendly.svg);
+}
+
+#elementor-element-manager-wrap [data-key-id="royalimagestack"] i.royalimagestack::before,
+.elementor-navigator__element__element-type i.royalimagestack,
+.elementor-element i.royalimagestack:before {
+    background-image: url(../icon-svg/royalimagestack.svg);
+}
+
+#elementor-element-manager-wrap [data-key-id="royalinfinitescroll"] i.royalinfinitescroll::before,
+.elementor-navigator__element__element-type i.royalinfinitescroll,
+.elementor-element i.royalinfinitescroll:before {
+    background-image: url(../icon-svg/royalinfinitescroll.svg);
+}
+
+#elementor-element-manager-wrap [data-key-id="royalimagecarousel3d"] i.royalimagecarousel3d::before,
+.elementor-navigator__element__element-type i.royalimagecarousel3d,
+.elementor-element i.royalimagecarousel3d:before {
+    background-image: url(../icon-svg/royalimagecarousel3d.svg);
+}
+
+#elementor-element-manager-wrap [data-key-id="royalclockworld"] i.royalclockworld::before,
+.elementor-navigator__element__element-type i.royalclockworld,
+.elementor-element i.royalclockworld:before {
+    background-image: url(../icon-svg/clock.svg);
+}
+
+#elementor-element-manager-wrap [data-key-id="royalimagescroll"] i.royalimagescroll::before,
+.elementor-navigator__element__element-type i.royalimagescroll,
+.elementor-element i.royalimagescroll:before {
+    background-image: url(../icon-svg/scrolldown.svg);
+}
+
+
+
+.exad-selector-wrapper {
+    overflow-y: scroll;
+    margin-top: 10px;
+    max-height: 160px;
+    width: 100%;
+}
+
+.exad-selector-wrapper input[type="radio"] {
+    display: none;
+}
+
+.exad-selector-label {
+    height: 70px;
+    width: 70px;
+    display: block;
+    float: left;
+    cursor: pointer;
+}
+
+.exad-selector-label img {
+    height: 100% !important;
+    width: 100%;
+    padding: 5px;
+}
+
+.exad-selector-wrapper input[type="radio"]:checked+.exad-selector-label {
+    border: 1px solid #ffffff;
+}

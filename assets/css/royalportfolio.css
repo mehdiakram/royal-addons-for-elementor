@@ -1,0 +1,104 @@
+
+/* Portfolia Start */ 
+#royalportfoliofilters button {
+    display: inline-block;
+    padding: 8px 22px;
+    font-size: 16px;
+    line-height: 1.3333333;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    outline: none;
+    border: 1px dashed #3e9bd5;
+    background-color: #fff;
+    color: #3e9bd5;
+    }
+    
+    #royalportfoliofilters button:hover, 
+    #royalportfoliofilters button.active {
+    background-color: #3e9bd5;
+    color: #fff;
+    }
+    
+    #royalportfoliofilters{
+        text-align: center;
+        margin: 5px 0;
+    }
+    
+    #royalportfolio .tile { 
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    display: inline-block;
+    }
+    
+    
+    #royalportfolio a.button {
+    background-color: #F78121;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 5px 0;
+    border-radius: 0;
+    position: initial!important;
+    display: block;
+    }
+    
+    
+    
+    
+    #royalportfolio .style101 a{
+        display: grid;
+    }
+    
+    #royalportfolio .style101 figure{
+      position:relative;
+      background: #03A679;
+    }
+    
+    #royalportfolio .style101 figure img {
+        width: 100%;
+        height: 100%;
+        opacity: .25;
+        -webkit-transition: all 350ms ease;
+        transition: all 350ms ease;	
+        }
+    
+    #royalportfolio .style101 figure:hover img {
+        opacity: 1!important;
+        -webkit-transition: all 350ms ease;
+        transition: all 350ms ease;	
+    }	
+    
+    #royalportfolio .style101 figure figcaption{  
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 20px;
+        left: 20px;
+        width: calc(100% - 40px);
+        height: calc(100% - 40px);	
+    }
+    
+    
+    
+    
+    
+    @media only screen and (max-width: 992px){
+    
+    #filters button {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 4px;
+    }
+    
+    #royalportfolio .tile,
+    .rp_col_3 .tile,
+    .rp_col_4 .tile,
+    .rp_col_5 .tile{
+        width:100%;
+    }
+    
+    }
+    /* Portfolia END */ 
+    

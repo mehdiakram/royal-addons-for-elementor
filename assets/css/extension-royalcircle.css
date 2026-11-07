@@ -1,0 +1,122 @@
+.royal-background-circles-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+.royal-circle-graphic {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* == SVG Circle Styles == */
+.royal-circle-svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+/* == Simple Circle Styles == */
+.rcg-dotted-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border-color: var(--main-color);
+    border-style: var(--border-style, dotted);
+    border-width: var(--border-width, 2px);
+}
+
+/* == Common Styles (Dots & Animation) == */
+.rcg-dot-arm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+.rcg-dot {
+    position: absolute;
+    border-radius: 50%;
+    top: calc(0% - (var(--dot-size) / 2));
+    left: calc(50% - (var(--dot-size) / 2));
+    background-color: var(--dot-color);
+    width: var(--dot-size);
+    height: var(--dot-size);
+}
+.rcg-dot-arm2 {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.royal-circle-graphic.anim-clockwise,
+.rcg-dotted-circle.anim-clockwise,
+.rcg-dot-arm.anim-clockwise {
+    animation-name: royal-rotate-cw;
+    animation-duration: var(--speed);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.royal-circle-graphic.anim-counter-clockwise,
+.rcg-dotted-circle.anim-counter-clockwise,
+.rcg-dot-arm.anim-counter-clockwise {
+    animation-name: royal-rotate-ccw;
+    animation-duration: var(--speed);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes royal-rotate-cw {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@keyframes royal-rotate-ccw {
+    from { transform: translate(-50%, -50%) rotate(360deg); }
+    to { transform: translate(-50%, -50%) rotate(0deg); }
+}
+.rcg-dotted-circle.anim-clockwise, .rcg-dotted-circle.anim-counter-clockwise {
+    transform: rotate(0); /* Reset transform for simple circle animation */
+    animation-name: royal-rotate-simple;
+}
+@keyframes royal-rotate-simple {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.rcg-dotted-circle.anim-counter-clockwise {
+    animation-direction: reverse;
+}
+
+/* == Corner Deco Rings (Stats Card Style) == */
+.royal-corner-rings-wrap {
+    position: absolute;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+    transform: none !important;
+    pointer-events: none;
+    overflow: hidden;
+}
+.royal-corner-ring {
+    position: absolute;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: royal-rotate-simple var(--speed, 40s) linear infinite;
+}
+.royal-corner-ring.r1 {
+    top: -30%;
+    right: -20%;
+}
+.royal-corner-ring.r2 {
+    bottom: -25%;
+    left: -15%;
+    animation-direction: reverse;
+}

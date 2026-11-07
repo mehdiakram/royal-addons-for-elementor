@@ -1,0 +1,115 @@
+
+.royalweathermap form{
+    border: 1px solid #5552;
+    display: flex;
+    border-radius: 30px;
+    justify-content: space-between;
+}
+
+.royalweathermap form input, 
+.royalweathermap form button{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+   
+}
+
+.royalweathermap form button{
+    width: 36px;
+}
+
+.royalweathermap form button svg{
+    fill: #fff;
+}
+
+.royalweathermap .result{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.royalweathermap .result .name{
+    font-weight: bold;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.royalweathermap .temperature img{
+    width: 150px;
+    filter: drop-shadow(0 10px 50px #555);
+}
+
+.royalweathermap .temperature figcaption{
+    font-size: 3em;
+}
+
+.royalweathermap .description{
+    padding: 10px 0 30px;
+}
+
+.royalweathermap ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.royalweathermap li{
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px 10px;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 50%,
+        #0003 50%
+    );
+    font-weight: bold;
+    display: grid;
+    justify-content: center;
+}
+
+.royalweathermap ul li .icon{
+    margin: 20px 0;
+}
+
+.royalweathermap ul li .icon svg{
+    width: 36px;
+    fill: #fff;
+}
+
+.royalweathermap li:nth-child(1){
+    background-color: #f78a55;
+}
+
+.royalweathermap li:nth-child(2){
+    background-color: #b56291;
+}
+
+.royalweathermap li:nth-child(3){
+    background-color: #48567b;
+}
+
+.royalweathermap.error{
+    animation: royalweathermaperrorEffect 0.3s linear 1;
+}
+@keyframes royalweathermaperrorEffect{
+    0%{
+        transform: translate(10px, 5px)
+    }
+    25%{
+        transform: translate(-5px, 0)
+    }
+    50%{
+        transform: translate(8px, 2px)
+    }
+    75%{
+        transform: translate(-2px, 5px)
+    }
+    100%{
+        transform: translate(0, 0); 
+    }
+}

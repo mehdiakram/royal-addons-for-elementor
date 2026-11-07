@@ -1,0 +1,27 @@
+.royal-gradient-heading {
+	margin: 0;
+}
+
+.royal-gradient-heading>a {
+	text-decoration: none;
+	color: inherit;
+	word-break: break-all;
+}
+
+@keyframes animationhue {
+	from {
+	  -webkit-filter: hue-rotate(0deg);
+	}
+	to {
+	  -webkit-filter: hue-rotate(-360deg);
+	}
+  }
+
+@keyframes animationtextshine {
+	0% {
+		background-position: 0% 400%;
+	}
+	100% {
+		background-position: 400% 0%;
+	}
+}

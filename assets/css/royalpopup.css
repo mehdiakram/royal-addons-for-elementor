@@ -1,0 +1,54 @@
+/* Rule to prevent body scroll when popup is active */
+body.royal-popup-is-active {
+  overflow: hidden;
+}
+
+/* Trigger Button Styles */
+.royal-popup-trigger-button-wrapper { display: flex; }
+.elementor-align-left .royal-popup-trigger-button-wrapper { justify-content: flex-start; }
+.elementor-align-center .royal-popup-trigger-button-wrapper { justify-content: center; }
+.elementor-align-right .royal-popup-trigger-button-wrapper { justify-content: flex-end; }
+
+.royal-popup-trigger-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background-color: #673ab7;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.royal-popup-trigger-button span{
+  color: #ffffff;
+}
+
+.royal-popup-trigger-button:hover { background-color: #512da8; }
+.royal-popup-trigger-button i, .royal-popup-trigger-button svg { margin-right: 8px; transition: color 0.3s ease, fill 0.3s ease; }
+.royal-popup-trigger-button span + i, .royal-popup-trigger-button span + svg { margin-right: 0; margin-left: 8px; }
+
+/* Base Popup Styles */
+.royal-popup { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 999999; justify-content: center; align-items: center; }
+.royal-popup.show { display: flex; }
+.royal-popup__overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.75); }
+.royal-popup__content { position: relative; z-index: 1; background-color: #ffffff; border-radius: 5px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);}
+.royal-popup__content-inner { padding: 20px; }
+.royal-popup__close { position: absolute; width: 30px; height: 30px; background-color: #fff; color: #000; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 16px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); transition: all 0.3s ease; z-index: 10001; visibility: visible; opacity: 1; }
+.royal-popup__close i, .royal-popup__close svg { transition: color 0.3s ease, fill 0.3s ease; }
+.royal-popup__close svg { max-width: 50%; max-height: 50%; }
+.royal-popup__close:hover { transform: rotate(90deg); }
+.royal-popup__close.is-delayed { visibility: hidden; opacity: 0; }
+.royal-popup__close.is-visible { visibility: visible; opacity: 1; }
+
+/* Fullscreen Modifier */
+.royal-popup-fullscreen--yes .royal-popup__content { width: 100vw; height: 100vh; border-radius: 0; max-width: none; }
+
+/* Editor Placeholder Styles */
+.royal-popup-editor-placeholder { text-align: center; padding: 20px; background: #f7f7f7; border: 2px dashed #dcdcdc; border-radius: 5px; color: #333; }
+.royal-popup-editor-placeholder .placeholder-icon i { font-size: 30px; color: #673ab7; margin-bottom: 10px; }
+.royal-popup-editor-placeholder .placeholder-title { font-size: 18px; font-weight: 600; }
+.royal-popup-editor-placeholder .placeholder-text { font-size: 13px; margin-top: 8px; }
+.elementor-widget-royalpopup .royal-popup-trigger-button-wrapper { margin-top: 20px; }

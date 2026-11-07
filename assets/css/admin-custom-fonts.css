@@ -1,0 +1,125 @@
+.royal-font-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.royal-font-table th,
+.royal-font-table td {
+    padding: 8px 10px;
+    border: 3px solid #e0e0e0;
+    vertical-align: top; 
+}
+
+.royal-font-table th {
+    background-color: #f7f7f7;
+    text-align: left;
+}
+
+.royal-font-table select {
+    width: 100%;
+    min-width: 120px;
+    box-sizing: border-box;
+    padding: 8px; /* Added padding */
+    border: 1px solid #ddd; /* Added border */
+    border-radius: 3px;
+}
+
+/* New: Styling for the combined options column */
+.royal-font-options-group {
+    display: flex;
+    flex-direction: column; /* Stack options vertically */
+    gap: 10px; /* Space between option wrappers and remove button */
+    padding: 5px; /* Little padding inside the options cell */
+}
+
+.royal-font-option-wrapper {
+    display: flex;
+    flex-direction: column; /* Label and select/input stacked */
+    gap: 5px;
+}
+
+.royal-font-option-wrapper label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0;
+}
+
+/* Remove row button in options group */
+.royal-font-options-group .royal-remove-row {
+    width: auto; /* Allow button to size naturally */
+    align-self: flex-start; /* Align to the start of the flex container */
+    margin-top: 10px; /* Space above the button */
+}
+
+
+/* Existing: Styling for font files group */
+.royal-font-files-group {
+    display: flex;
+    flex-direction: column; /* Stack file inputs vertically by default */
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@media (min-width: 783px) {
+    /* Font files in two columns on wider screens */
+    .royal-font-files-group {
+        flex-direction: row;
+    }
+    .royal-font-file-input-wrapper {
+        flex-basis: 100%;
+        min-width: 0;
+    }
+}
+
+.royal-font-file-input-wrapper {
+    display: flex;
+    gap: 5px;
+    border: 1px solid #eee;
+    padding: 2px;
+    border-radius: 4px;
+    background-color: #fcfcfc;
+    align-items: center;
+}
+
+.royal-font-file-input-wrapper label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0;
+    width: 145px;
+}
+
+.royal-font-file-input-wrapper input.royal-font-file-url {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 0;
+    padding: 2px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.royal-font-file-input-wrapper .button-group {
+    display: flex;
+    gap: 5px;
+    flex-shrink: 0;
+    /* Optional: justify-content: flex-end; if you want buttons aligned right within their box */
+}
+
+.royal-font-file-input-wrapper .button {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+/* Global remove row button in table if not moved to options group */
+/* This specific style for .royal-remove-row is now redundant if moved inside royal-font-options-group */
+/* .royal-font-table .royal-remove-row {
+    margin-left: 10px;
+} */
+
+#royal-font-files-wrapper .description {
+    font-style: italic;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 15px;
+}

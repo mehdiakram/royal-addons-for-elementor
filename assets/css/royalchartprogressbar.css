@@ -1,0 +1,149 @@
+/* Royal Progress Bar   ====================================== */
+.royalprogressbarwwarper{
+    overflow: hidden;
+    padding: 35px 21px 0 0
+}
+
+.royalprogressbar{
+	position: relative;
+}
+
+.rpbtooltip1::before{
+	content: attr(data-percent);
+	position: absolute;
+	padding: 4px 6px;
+	background-color: #000;
+	color: #fff;
+	font-size: 12px;
+	border-radius: 4px;
+	top: -32px;
+	right: 0;
+	transform: translateX(50%);
+}
+
+.rpbtooltip1::after{
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background-color: #000;
+	border-radius: 2px;
+	top: -12px;
+	right: 0;
+	transform: translateX(50%) rotate(45deg);
+}
+
+.rpbtooltip2::before{
+	content: attr(data-percent);
+	position: absolute;
+	padding: 4px 6px;
+	background-color: #000;
+	color: #fff;
+	font-size: 12px;
+	border-radius: 4px;
+	top: -32px;
+	right: 0;
+}
+
+.rpbtooltip2::after{
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	top: -10px;
+	right: 0;
+	border: 10px solid transparent;
+	border-bottom-width: 0px;
+	border-right-width: 0px;
+	border-top-color: #000;
+}
+
+.completed .progressbarpercent {
+	color: #ddd;
+}
+
+/* Style 1 */
+.rpb-style1 .progressbartitle{
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.rpb-style1 .progressbarwarp{
+    height: 20px;
+    background: #cacaca;
+    border-radius: 8px;
+	position: relative;
+}
+
+.rpb-style1 .progressbar{
+	height: 20px;
+	background-color: mediumseagreen;
+	border-radius: 8px;
+	width: 0;
+	transition: 1s linear;
+	position: relative;
+}
+
+.rpb-style1 .progressbarpercent {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	font-size: 11px;
+	line-height: 100%;
+	color: rgba( 0, 0, 0, 0.4 );
+	transform: translateY(-50%);
+	transition: color 500ms ease-out;
+}
+
+
+
+/* Style 2 */
+.rpb-style2 {
+	position:relative;
+	margin-bottom: 15px;
+	width: 100%;
+	background: #eee;
+	height: 35px;
+}
+
+.rpb-style2 .progressbartitle {
+	position:absolute;
+	top:0;
+	left:0;
+	width:110px;
+	font-weight: bold;
+	font-size: 13px;
+	color: #fff;
+	margin: 0;
+}
+
+.rpb-style2 .progressbartitle span {
+	display: flex;
+    align-items: center;
+	background: rgba(0, 0, 0, 0.1);
+	padding: 0 20px;
+	height:35px;
+	line-height: 100%;
+}
+
+
+.rpb-style2 .progressbar{
+	height: 35px;
+	background-color: mediumseagreen;
+	width: 0;
+	transition: 1s linear;
+	position: relative;
+}
+
+.rpb-style2 .progressbarpercent {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	font-size: 11px;
+	line-height: 100%;
+	color: rgba( 0, 0, 0, 0.4 );
+	transform: translateY(-50%);
+	transition: color 500ms ease-out;
+}

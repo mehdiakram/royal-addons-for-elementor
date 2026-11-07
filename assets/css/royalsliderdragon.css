@@ -1,0 +1,321 @@
+.royaltech-prime-slider li {
+    list-style: none;
+}
+
+.royaltech-ps-blur-effect--yes .royaltech-ps-dragon-bg .royaltech-ps-slide-img {
+    filter: blur(8px) brightness(90%);
+}
+.royaltech-prime-slider-dragon {
+    position: relative;
+}
+.royaltech-prime-slider-dragon .royaltech-slideshow-items li {
+    margin: 0;
+}
+.royaltech-prime-slider-dragon .royaltech-ps-dragon-bg {
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    z-index: 0;
+    position: fixed;
+    overflow: hidden;
+}
+.royaltech-prime-slider-dragon .royaltech-ps-dragon-bg .royaltech-ps-slide-img {
+    position: absolute;
+    min-width: calc(100% + 50px);
+    height: 100%;
+    max-width: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.royaltech-prime-slider-dragon .royaltech-ps-dragon-slide-image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.royaltech-prime-slider-dragon .royaltech-ps-dragon-slide-image .royaltech-ps-slide-img {
+    position: absolute;
+    min-width: calc(100% + 50px);
+    height: 100%;
+    max-width: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.royaltech-prime-slider-dragon .royaltech-prime-slider-wrapper {
+    position: relative;
+}
+.royaltech-prime-slider-dragon .royaltech-prime-slider-wrapper .royaltech-prime-slider-content {
+    max-width: 270px;
+    margin-left: 20px;
+}
+.royaltech-prime-slider-dragon .royaltech-prime-slider-wrapper .royaltech-prime-slider-content .royaltech-sub-title .royaltech-sub-title-inner {
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.7;
+    margin: 0;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+.royaltech-prime-slider-dragon .royaltech-prime-slider-wrapper .royaltech-prime-slider-content .royaltech-main-title .royaltech-title-tag {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+    padding-bottom: 20px;
+}
+.royaltech-prime-slider-dragon .royaltech-prime-slider-wrapper .royaltech-prime-slider-content .royaltech-slider-excerpt {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    max-width: 270px;
+}
+.royaltech-prime-slider-dragon .royaltech-ps-dragon-button .royaltech-ps-button {
+    display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+    padding-right: 40px;
+}
+.royaltech-prime-slider-dragon .royaltech-ps-dragon-button .royaltech-ps-button:hover .royaltech-ps-button-border-circle {
+    transform: translateX(60px);
+}
+.royaltech-prime-slider-dragon .royaltech-ps-dragon-button .royaltech-ps-button:hover .royaltech-ps-button-mask-circle {
+    clip-path: circle(25px at 85px);
+}
+.royaltech-prime-slider-dragon .royaltech-ps-dragon-button .royaltech-ps-button-text {
+    z-index: 1;
+    font-size: 14px;
+    margin-right: -18px;
+    color: #fafafa;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+.royaltech-prime-slider-dragon .royaltech-ps-dragon-button .royaltech-ps-button-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.royaltech-prime-slider-dragon .royaltech-ps-dragon-button .royaltech-ps-button-arrow {
+    left: 30px;
+    height: 3px;
+    width: 50px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    background-color: #fe506c;
+}
+.royaltech-prime-slider-dragon .royaltech-ps-dragon-button .royaltech-ps-button-arrow:after {
+    content: "";
+    width: 0;
+    height: 0;
+    top: -5px;
+    right: -7px;
+    position: absolute;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 7px solid #fe506c;
+}
+.royaltech-prime-slider-dragon .royaltech-ps-dragon-button .royaltech-ps-button-border-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #bfbfbf;
+    transition: transform 987ms;
+}
+.royaltech-prime-slider-dragon .royaltech-ps-dragon-button .royaltech-ps-button-mask-circle {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: circle(25px);
+    transition: clip-path 987ms;
+}
+.royaltech-prime-slider-dragon .royaltech-ps-dragon-button .royaltech-ps-button-small-circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transform: translateX(60px);
+    background-color: #fe506c;
+}
+.royaltech-prime-slider-dragon .royaltech-prime-slider-social-icon {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+.royaltech-prime-slider-dragon .royaltech-prime-slider-social-icon a {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-right: 5px;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-flex;
+}
+.royaltech-prime-slider-dragon .royaltech-prime-slider-social-icon a:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.7s ease;
+    opacity: 0;
+    transform: translate(0, -50%);
+}
+.royaltech-prime-slider-dragon .royaltech-prime-slider-social-icon a:hover:before {
+    opacity: 1;
+    transform: translate(100%, -50%);
+}
+.royaltech-prime-slider-dragon .royaltech-prime-slider-social-icon .royaltech-social-share-title {
+    z-index: 1;
+    position: relative;
+}
+.royaltech-text-stroke--yes .royaltech-prime-slider .royaltech-prime-slider-content .royaltech-main-title .royaltech-title-tag {
+    color: transparent !important;
+    -webkit-text-stroke: 1px #fff;
+}
+.royaltech-prime-slider-dragon .royaltech-dotnav {
+    position: absolute;
+    top: auto;
+    bottom: 15px;
+    right: 30px;
+    transform: translateY(0);
+}
+.royaltech-prime-slider-dragon .royaltech-dotnav li {
+    position: relative;
+    padding: 5px 0;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+.royaltech-prime-slider-dragon .royaltech-dotnav li:after {
+    content: attr(data-label);
+    font-size: 15px;
+    color: #fff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.royaltech-prime-slider-dragon .royaltech-dotnav li:before {
+    content: "";
+    position: absolute;
+    right: 20px;
+    background: #fff;
+    height: 1px;
+    width: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    border-radius: 3px;
+    opacity: 0;
+}
+.royaltech-prime-slider-dragon .royaltech-dotnav li a {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    left: -10px;
+    top: 4px;
+}
+.royaltech-prime-slider-dragon .royaltech-dotnav li.royaltech-active {
+    opacity: 1;
+}
+.royaltech-prime-slider-dragon .royaltech-dotnav li.royaltech-active:before {
+    width: 40px;
+    opacity: 1;
+}
+@media (min-width: 768px) {
+    .royaltech-prime-slider-dragon .royaltech-prime-slider-wrapper .royaltech-prime-slider-content {
+        max-width: 480px;
+        margin-left: 50px;
+    }
+    .royaltech-prime-slider-dragon .royaltech-prime-slider-wrapper .royaltech-prime-slider-content .royaltech-sub-title .royaltech-sub-title-inner {
+        font-size: 20px;
+    }
+    .royaltech-prime-slider-dragon .royaltech-prime-slider-wrapper .royaltech-prime-slider-content .royaltech-main-title .royaltech-title-tag {
+        font-size: 55px;
+        padding-bottom: 40px;
+    }
+    .royaltech-prime-slider-dragon .royaltech-prime-slider-wrapper .royaltech-prime-slider-content .royaltech-slider-excerpt {
+        font-size: 16px;
+        margin-bottom: 40px;
+        max-width: 440px;
+        line-height: 1.7;
+    }
+    .royaltech-prime-slider-dragon .royaltech-ps-dragon-button .royaltech-ps-button {
+        margin-bottom: 50px;
+    }
+    .royaltech-prime-slider-dragon .royaltech-ps-dragon-button .royaltech-ps-button-arrow {
+        left: 35px;
+    }
+    .royaltech-prime-slider-dragon .royaltech-ps-dragon-button .royaltech-ps-button-border-circle {
+        width: 50px;
+        height: 50px;
+    }
+    .royaltech-prime-slider-dragon .royaltech-ps-dragon-button .royaltech-ps-button-mask-circle {
+        width: 50px;
+        height: 50px;
+    }
+    .royaltech-prime-slider-dragon .royaltech-prime-slider-social-icon {
+        left: 50px;
+        bottom: 30px;
+    }
+    .royaltech-prime-slider-dragon .royaltech-prime-slider-social-icon a {
+        font-size: 11px;
+        margin-right: 10px;
+        letter-spacing: 2px;
+    }
+    .royaltech-prime-slider-dragon .royaltech-dotnav {
+        top: 50%;
+        bottom: auto;
+        transform: translateY(-50%);
+    }
+    .royaltech-prime-slider-dragon .royaltech-dotnav li {
+        padding: 10px 0;
+    }
+    .royaltech-prime-slider-dragon .royaltech-dotnav li:after {
+        font-size: 18px;
+    }
+    .royaltech-prime-slider-dragon .royaltech-dotnav li:before {
+        right: 25px;
+    }
+    .royaltech-prime-slider-dragon .royaltech-dotnav li.royaltech-active:before {
+        width: 50px;
+    }
+}
+@media (min-width: 1024px) {
+    .royaltech-prime-slider-dragon .royaltech-prime-slider-wrapper .royaltech-prime-slider-content {
+        max-width: 840px;
+        margin-left: 100px;
+    }
+    .royaltech-prime-slider-dragon .royaltech-prime-slider-wrapper .royaltech-prime-slider-content .royaltech-sub-title .royaltech-sub-title-inner {
+        font-size: 32px;
+        letter-spacing: 3px;
+    }
+    .royaltech-prime-slider-dragon .royaltech-prime-slider-wrapper .royaltech-prime-slider-content .royaltech-main-title .royaltech-title-tag {
+        font-size: 90px;
+        padding-bottom: 50px;
+        letter-spacing: 2px;
+    }
+    .royaltech-prime-slider-dragon .royaltech-prime-slider-wrapper .royaltech-prime-slider-content .royaltech-slider-excerpt {
+        font-size: 18px;
+        margin-bottom: 50px;
+        max-width: 620px;
+    }
+    .royaltech-prime-slider-dragon .royaltech-prime-slider-social-icon {
+        left: 100px;
+        bottom: 50px;
+    }
+    .royaltech-prime-slider-dragon .royaltech-dotnav {
+        right: 100px;
+    }
+}

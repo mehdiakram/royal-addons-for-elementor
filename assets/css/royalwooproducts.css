@@ -1,0 +1,187 @@
+.royalwooproducts.gridstyle1 .wooproduct .productinner{
+  position: relative;
+  transition: transform .4s;
+}
+
+.royalwooproducts.gridstyle1 .wooproduct .productsummary{
+  transition: transform .4s;
+  background: #fff;
+}
+
+.royalwooproducts.gridstyle1 .wooproduct .productinner:hover .productsummary{
+  transition: transform .4s;
+  position: absolute;
+  transform: translateY(-40px);
+  width: 100%;
+}
+
+.royalwooproducts.gridstyle1 .wooproduct .addtocart{
+  opacity: 0;
+  transform: translateY(50%);
+  transition: .4s;
+}
+
+.royalwooproducts.gridstyle1 .wooproduct .productinner:hover .addtocart {
+  transform: none;
+  opacity: 1;
+}
+
+
+
+/* Royal Woo Category */
+
+.royalwoocategory .catstyle1 a{
+  display: inline-block;
+  position: relative;
+}
+
+.royalwoocategory .catstyle1 img {
+  display: block;
+  margin: 0 0 1em;
+  box-shadow: none;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.royalwoocategory .catstyle1 .categorytitle {
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.5;
+  font-family: Lato;
+  border: 1px dashed #ccc;
+  position: absolute;
+  transition: all .3s;
+  text-align: center;
+  left: 1em;
+  right: 1em;
+  bottom: 1.8em;
+  font-size: .9em;
+  padding: 0.5em 0 0.7em;
+}
+
+.royalwoocategory .catstyle1 .categorytitle .count {
+    display: block;
+    background: 0 0;
+    opacity: .5;
+    font-size: .75em;
+}
+
+
+
+.royalwoocategory .catstyle2{
+  overflow: hidden;
+}
+
+.royalwoocategory .catstyle2 a{
+  display: inline-block;
+  position: relative;
+}
+
+.royalwoocategory .catstyle2 img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: all 1s;
+}
+
+.royalwoocategory .catstyle2:hover img{
+  transform: translateX(20px);
+  transform: scale(1.1);
+}
+
+.royalwoocategory .catstyle2 .catinfo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: grid;
+  padding: 50px;
+}
+
+.royalwoocategory .catstyle2 .count {
+  font-size: 19px;
+  position: relative;
+  width: fit-content;
+  color: #1d1d1d;
+}
+
+
+.royalwoocategory .catstyle2 .count::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 1px;
+  width: 100%;
+  transform: scaleX(1);
+  transform-origin: 100% 0px;
+  background-color: currentcolor;
+  will-change: transform;
+}
+
+.royalwoocategory .catstyle2 .count:hover::after {
+  animation-timeline: auto;
+  animation-range-start: normal;
+  animation-range-end: normal;
+  animation: 1s cubic-bezier(0.54, 0.32, 0.05, 0.96) 0s 1 normal forwards running catstyle2animation;
+}
+
+@keyframes catstyle2animation{
+  0% {
+    transform: scaleX(1);
+    transform-origin: 100% 0px;
+  }
+
+  50% {
+    transform: scaleX(0);
+    transform-origin: 100% 0px;
+  }
+
+  51% {
+    transform: scaleX(0);
+    transform-origin: 0px 0px;
+  }
+
+  100% {
+    transform: scaleX(1);
+    transform-origin: 0px 0px;
+  }
+  
+}
+
+.royalwoocategory .catstyle2 .catinfo .aditiontext{
+  align-items: end;
+  display: grid;
+  font-family: "The Gwathmey", serif;
+  font-size: 36px;
+  color: #1d1d1d;
+  font-style: italic;
+}
+
+
+
+/* RoyalWooProductSingle */
+.royalwooproductsingle .singleproductstyle1{
+  display: grid;
+  column-gap: 40px;
+  row-gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr) ) ;
+}
+
+.royalwooproductsingle .singleproductstyle1 .productsummary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.royalwooproductsingle .title a{
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.royalwooproductsingle .title .description{
+  margin: 5px 0;
+}

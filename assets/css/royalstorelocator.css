@@ -1,0 +1,1499 @@
+/**
+ * Royal Store Locator - Stylesheet
+ * Scoped to .royal-store-locator-app to guarantee zero CSS collisions
+ */
+
+.royal-store-locator-app {
+  --rsl-primary: #047857;
+  --rsl-primary-hover: #065f46;
+  --rsl-primary-light: #ecfdf5;
+  --rsl-primary-rgb: 4, 120, 87;
+
+  --rsl-secondary: #1e293b;
+  --rsl-secondary-light: #334155;
+
+  --rsl-accent-flagship: #d97706;
+  --rsl-accent-dealer: #047857;
+  --rsl-accent-corporate: #0284c7;
+
+  --rsl-cluster-start: #059669;
+  --rsl-cluster-end: #047857;
+  --rsl-user-pin-color: #2563eb;
+
+  --rsl-bg-main: #f8fafc;
+  --rsl-bg-surface: #ffffff;
+  --rsl-bg-subtle: #f1f5f9;
+
+  --rsl-text-primary: #0f172a;
+  --rsl-text-secondary: #475569;
+  --rsl-text-muted: #94a3b8;
+
+  --rsl-border: #e2e8f0;
+  --rsl-border-focus: #cbd5e1;
+
+  --rsl-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --rsl-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --rsl-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --rsl-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.15), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  --rsl-radius-sm: 6px;
+  --rsl-radius-md: 10px;
+  --rsl-radius-lg: 16px;
+  --rsl-radius-full: 9999px;
+
+  --rsl-sidebar-width: 430px;
+  --rsl-transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 740px;
+  max-width: 100%;
+  overflow: hidden;
+  font-family: inherit;
+  color: var(--rsl-text-primary);
+  background-color: var(--rsl-bg-main);
+  box-sizing: border-box;
+}
+
+.royal-store-locator-app *,
+.royal-store-locator-app *::before,
+.royal-store-locator-app *::after {
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Layout Modes
+   ========================================================================== */
+
+/* 1. Sidebar Right */
+.royal-store-locator-app.layout-sidebar_right {
+  flex-direction: row-reverse;
+}
+.royal-store-locator-app.layout-sidebar_right .rsl-sidebar {
+  border-right: none;
+  border-left: 1px solid var(--rsl-border);
+}
+.royal-store-locator-app.layout-sidebar_right .rsl-sidebar-collapse-btn {
+  left: auto;
+  right: calc(var(--rsl-sidebar-width) - 13px);
+}
+.royal-store-locator-app.layout-sidebar_right.sidebar-hidden .rsl-sidebar-collapse-btn {
+  right: 12px;
+  left: auto;
+}
+
+/* 2. Stacked (Map Top, Stores Bottom) */
+.royal-store-locator-app.layout-stacked {
+  flex-direction: column-reverse;
+  height: 900px;
+}
+.royal-store-locator-app.layout-stacked .rsl-sidebar {
+  width: 100%;
+  height: 450px;
+  border-right: none;
+  border-top: 1px solid var(--rsl-border);
+}
+.royal-store-locator-app.layout-stacked .rsl-store-list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+/* 3. Map Only with Floating Drawer */
+.royal-store-locator-app.layout-map_only .rsl-sidebar {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  height: calc(100% - 3rem);
+  max-height: 680px;
+  border-radius: var(--rsl-radius-lg);
+  box-shadow: var(--rsl-shadow-xl);
+  z-index: 1000;
+}
+
+/* ==========================================================================
+   Sidebar Styling
+   ========================================================================== */
+.rsl-sidebar {
+  width: var(--rsl-sidebar-width);
+  height: 100%;
+  background: var(--rsl-bg-surface);
+  border-right: 1px solid var(--rsl-border);
+  display: flex;
+  flex-direction: column;
+  z-index: 500;
+  box-shadow: var(--rsl-shadow-lg);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+  position: relative;
+}
+
+.rsl-sidebar.collapsed {
+  transform: translateX(-100%);
+}
+
+.royal-store-locator-app.layout-sidebar_right .rsl-sidebar.collapsed {
+  transform: translateX(100%);
+}
+
+/* Sidebar Header */
+.rsl-sidebar-header {
+  padding: 1.25rem 1.5rem !important;
+  background: linear-gradient(135deg, #064e3b 0%, #047857 55%, #059669 100%) !important;
+  color: #ffffff !important;
+  position: relative !important;
+  display: block !important;
+}
+
+.rsl-brand-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 0.75rem !important;
+}
+
+.rsl-brand-info {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+}
+
+.rsl-brand-icon {
+  width: 42px !important;
+  height: 42px !important;
+  background: rgba(255, 255, 255, 0.18) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border-radius: var(--rsl-radius-md) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  flex-shrink: 0 !important;
+}
+
+.rsl-brand-icon svg {
+  fill: #ffffff !important;
+}
+
+.rsl-brand-text .rsl-header-title {
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.25 !important;
+  color: #ffffff !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.rsl-brand-text .rsl-header-subtitle {
+  font-size: 0.78rem !important;
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.rsl-total-badge {
+  background: rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(6px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  padding: 0.3rem 0.65rem !important;
+  border-radius: var(--rsl-radius-full) !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   Filter Section
+   ========================================================================== */
+.rsl-filter-section {
+  padding: 1rem 1.25rem 0.85rem;
+  background: var(--rsl-bg-surface);
+  border-bottom: 1px solid var(--rsl-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 30;
+}
+
+/* Search Box */
+.rsl-search-box-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.rsl-search-icon {
+  position: absolute;
+  left: 0.9rem;
+  color: var(--rsl-text-muted);
+  font-size: 0.95rem;
+  pointer-events: none;
+}
+
+.rsl-search-input {
+  width: 100% !important;
+  height: 42px !important;
+  padding: 0.5rem 2.2rem 0.5rem 2.4rem !important;
+  border: 1px solid var(--rsl-border) !important;
+  border-radius: var(--rsl-radius-md) !important;
+  font-size: 0.88rem !important;
+  color: var(--rsl-text-primary) !important;
+  background-color: var(--rsl-bg-main) !important;
+  transition: var(--rsl-transition) !important;
+  outline: none !important;
+  box-shadow: none !important;
+  line-height: normal !important;
+}
+
+.rsl-search-input:focus {
+  border-color: var(--rsl-primary) !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(var(--rsl-primary-rgb), 0.15) !important;
+}
+
+.rsl-clear-search-btn {
+  position: absolute;
+  right: 0.6rem;
+  background: transparent;
+  border: none;
+  color: var(--rsl-text-muted);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0.35rem;
+  display: none;
+  border-radius: var(--rsl-radius-full);
+}
+.rsl-clear-search-btn:hover {
+  color: var(--rsl-text-primary);
+}
+
+/* Filter Row: Division Select & Near Me Button */
+.rsl-filter-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.rsl-division-select {
+  flex: 1;
+  height: 38px;
+  padding: 0 0.85rem;
+  border: 1px solid var(--rsl-border);
+  border-radius: var(--rsl-radius-md);
+  font-size: 0.82rem;
+  color: var(--rsl-text-primary);
+  background-color: var(--rsl-bg-main);
+  cursor: pointer;
+  outline: none;
+  transition: var(--rsl-transition);
+}
+
+.rsl-division-select:focus {
+  border-color: var(--rsl-primary);
+}
+
+.rsl-near-me-btn {
+  height: 38px;
+  padding: 0 0.9rem;
+  background: var(--rsl-primary-light);
+  color: var(--rsl-primary);
+  border: 1px solid rgba(var(--rsl-primary-rgb), 0.25);
+  border-radius: var(--rsl-radius-md);
+  font-size: 0.82rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--rsl-transition);
+}
+
+.rsl-near-me-btn svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+.rsl-near-me-btn:hover {
+  background: var(--rsl-primary);
+  color: #ffffff;
+  border-color: var(--rsl-primary);
+}
+
+.rsl-near-me-btn.active {
+  background: var(--rsl-primary);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(var(--rsl-primary-rgb), 0.35);
+}
+
+/* Category Pills */
+.rsl-category-pills {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.45rem !important;
+  overflow: visible !important;
+  padding-bottom: 0.2rem;
+}
+
+.rsl-category-pill {
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--rsl-border);
+  background: var(--rsl-bg-main);
+  border-radius: var(--rsl-radius-full);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--rsl-text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: var(--rsl-transition);
+}
+
+.rsl-category-pill svg {
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
+}
+
+.rsl-category-pill:hover {
+  border-color: var(--rsl-primary);
+  color: var(--rsl-primary);
+  background: #ffffff;
+}
+
+.rsl-category-pill.active {
+  background: var(--rsl-primary);
+  border-color: var(--rsl-primary);
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(var(--rsl-primary-rgb), 0.25);
+}
+
+/* Quick Filters (Open Now & Amenities) */
+.rsl-quick-filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 0.25rem;
+  font-size: 0.8rem;
+}
+
+.rsl-filter-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+  color: var(--rsl-text-secondary);
+}
+
+.rsl-filter-checkbox-label input[type="checkbox"] {
+  display: none;
+}
+
+.rsl-checkbox-custom {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--rsl-border);
+  border-radius: 4px;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--rsl-transition);
+}
+
+.rsl-filter-checkbox-label input[type="checkbox"]:checked + .rsl-checkbox-custom {
+  background: var(--rsl-primary);
+  border-color: var(--rsl-primary);
+}
+
+.rsl-filter-checkbox-label input[type="checkbox"]:checked + .rsl-checkbox-custom::after {
+  content: "✓";
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.rsl-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.rsl-status-dot.online {
+  background-color: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25);
+}
+
+.rsl-status-dot.offline {
+  background-color: #ef4444;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.25);
+}
+
+/* Amenities Dropdown Wrap */
+.rsl-amenities-dropdown-wrap {
+  position: relative;
+}
+
+.rsl-amenity-toggle-btn {
+  background: var(--rsl-bg-subtle);
+  border: 1px solid var(--rsl-border);
+  border-radius: var(--rsl-radius-sm);
+  padding: 0.35rem 0.65rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--rsl-text-secondary);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: var(--rsl-transition);
+}
+
+.rsl-amenity-toggle-btn:hover {
+  color: var(--rsl-text-primary);
+  background: #ffffff;
+  border-color: var(--rsl-primary);
+}
+
+.rsl-amenity-toggle-btn.active {
+  background: var(--rsl-primary-light);
+  border-color: var(--rsl-primary);
+  color: var(--rsl-primary);
+}
+
+.rsl-amenities-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: #ffffff;
+  border: 1px solid var(--rsl-border);
+  border-radius: var(--rsl-radius-md);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  min-width: 210px;
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.rsl-amenities-menu.show {
+  display: flex !important;
+}
+
+.rsl-amenity-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--rsl-text-secondary);
+  cursor: pointer;
+  padding: 0.35rem 0.6rem;
+  border-radius: var(--rsl-radius-sm);
+  transition: var(--rsl-transition);
+}
+
+.rsl-amenity-item:hover {
+  background: var(--rsl-bg-subtle);
+  color: var(--rsl-text-primary);
+}
+
+.rsl-amenity-item.active {
+  background: var(--rsl-primary-light);
+  color: var(--rsl-primary);
+  font-weight: 600;
+}
+
+.rsl-amenity-check {
+  visibility: hidden;
+  color: var(--rsl-primary);
+  flex-shrink: 0;
+}
+
+.rsl-amenity-item.active .rsl-amenity-check {
+  visibility: visible;
+}
+
+/* Radius Slider Container */
+.rsl-radius-container {
+  display: none;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.65rem 0.85rem;
+  background: var(--rsl-primary-light);
+  border: 1px dashed rgba(var(--rsl-primary-rgb), 0.35);
+  border-radius: var(--rsl-radius-md);
+  animation: rslFadeIn 0.3s ease;
+}
+
+.rsl-radius-container.visible {
+  display: flex;
+}
+
+.rsl-radius-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--rsl-primary);
+}
+
+.rsl-radius-slider {
+  width: 100%;
+  accent-color: var(--rsl-primary);
+  cursor: pointer;
+  height: 5px;
+}
+
+/* Results Info Bar */
+.rsl-results-info-bar {
+  padding: 0.6rem 1.25rem;
+  background: var(--rsl-bg-subtle);
+  border-bottom: 1px solid var(--rsl-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--rsl-text-secondary);
+}
+
+.rsl-results-count {
+  font-weight: 600;
+  color: var(--rsl-text-primary);
+}
+
+.rsl-sort-select {
+  background: transparent;
+  border: 1px solid var(--rsl-border);
+  border-radius: var(--rsl-radius-sm);
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  color: var(--rsl-text-secondary);
+  cursor: pointer;
+  outline: none;
+}
+
+/* ==========================================================================
+   Store List & Cards
+   ========================================================================== */
+.rsl-store-list-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--rsl-border) transparent;
+}
+
+.rsl-store-list-container::-webkit-scrollbar {
+  width: 6px;
+}
+.rsl-store-list-container::-webkit-scrollbar-thumb {
+  background: var(--rsl-border);
+  border-radius: var(--rsl-radius-full);
+}
+
+/* Store Card */
+.rsl-store-card {
+  background: #ffffff !important;
+  border: 1px solid var(--rsl-border) !important;
+  border-radius: var(--rsl-radius-md) !important;
+  padding: 1.1rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.7rem !important;
+  cursor: pointer !important;
+  transition: var(--rsl-transition) !important;
+  position: relative !important;
+  flex-shrink: 0 !important;
+  height: auto !important;
+  min-height: auto !important;
+  overflow: hidden !important;
+}
+
+.rsl-store-card:hover {
+  border-color: var(--rsl-primary) !important;
+  box-shadow: var(--rsl-shadow-md) !important;
+  transform: translateY(-2px) !important;
+}
+
+.rsl-store-card.active {
+  border-color: var(--rsl-primary) !important;
+  background: #f0fdf4 !important;
+  box-shadow: 0 0 0 2px rgba(var(--rsl-primary-rgb), 0.25), var(--rsl-shadow-md) !important;
+}
+
+.rsl-store-card.featured-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #d97706, #f59e0b);
+}
+
+/* Store Image Header */
+.rsl-card-img-wrap {
+  width: 100%;
+  height: 130px;
+  border-radius: calc(var(--rsl-radius-md) - 2px);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 0.25rem;
+}
+
+.rsl-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.rsl-store-card:hover .rsl-card-img-wrap img {
+  transform: scale(1.04);
+}
+
+/* Card Header Row */
+.rsl-card-header-row {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 0.5rem !important;
+}
+
+.rsl-card-title-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.35rem !important;
+  flex: 1 !important;
+}
+
+.rsl-store-type-badge {
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  padding: 0.2rem 0.55rem !important;
+  border-radius: var(--rsl-radius-full) !important;
+  display: inline-block !important;
+  align-self: flex-start !important;
+}
+
+.rsl-type-flagship {
+  background: #fef3c7 !important;
+  color: #92400e !important;
+  border: 1px solid #fde68a !important;
+}
+
+.rsl-type-dealer {
+  background: #ecfdf5 !important;
+  color: #065f46 !important;
+  border: 1px solid #a7f3d0 !important;
+}
+
+.rsl-type-corporate {
+  background: #e0f2fe !important;
+  color: #0369a1 !important;
+  border: 1px solid #bae6fd !important;
+}
+
+.rsl-store-title {
+  font-size: 1.02rem !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  color: #0f172a !important;
+  margin: 0 !important;
+  display: block !important;
+}
+
+.rsl-distance-badge {
+  background: #ecfdf5 !important;
+  color: var(--rsl-primary) !important;
+  border: 1px solid rgba(var(--rsl-primary-rgb), 0.25) !important;
+  padding: 0.25rem 0.55rem !important;
+  border-radius: var(--rsl-radius-full) !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.3rem !important;
+}
+
+.rsl-distance-badge svg {
+  width: 11px;
+  height: 11px;
+  fill: currentColor;
+}
+
+/* Card Details */
+.rsl-card-details {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.45rem !important;
+  font-size: 0.82rem !important;
+  color: var(--rsl-text-secondary) !important;
+}
+
+.rsl-detail-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 0.6rem !important;
+  line-height: 1.4 !important;
+}
+
+.rsl-detail-item i,
+.rsl-detail-item svg {
+  color: var(--rsl-primary) !important;
+  fill: var(--rsl-primary) !important;
+  width: 14px !important;
+  height: 14px !important;
+  font-size: 0.88rem;
+  margin-top: 0.15rem !important;
+  flex-shrink: 0 !important;
+  text-align: center;
+}
+
+.rsl-detail-link {
+  color: var(--rsl-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+.rsl-detail-link:hover {
+  text-decoration: underline;
+  color: var(--rsl-primary-hover);
+}
+
+/* Status Indicator (Open Now / Closed) */
+.rsl-status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+}
+
+.rsl-status-indicator.open {
+  color: #059669;
+}
+
+.rsl-status-indicator.closed {
+  color: #dc2626;
+}
+
+/* Amenities Chips */
+.rsl-amenities-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.2rem;
+}
+
+.rsl-amenity-chip {
+  background: var(--rsl-bg-subtle);
+  border: 1px solid var(--rsl-border);
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  font-size: 0.68rem;
+  color: var(--rsl-text-secondary);
+  font-weight: 500;
+}
+
+/* Card Action Buttons */
+.rsl-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.35rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--rsl-border);
+}
+
+.rsl-card-btn {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 34px;
+  padding: 0 0.4rem;
+  border-radius: var(--rsl-radius-sm);
+  font-size: 0.74rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  white-space: nowrap !important;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: var(--rsl-transition);
+  box-sizing: border-box;
+}
+
+.rsl-card-btn svg {
+  flex-shrink: 0 !important;
+  width: 13px !important;
+  height: 13px !important;
+}
+
+.rsl-card-btn span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap !important;
+}
+
+.rsl-btn-primary {
+  background: var(--rsl-primary);
+  color: #ffffff !important;
+}
+.rsl-btn-primary:hover {
+  background: var(--rsl-primary-hover);
+  color: #ffffff !important;
+}
+
+.rsl-btn-secondary {
+  background: var(--rsl-bg-main);
+  border-color: var(--rsl-border);
+  color: var(--rsl-text-primary);
+}
+.rsl-btn-secondary:hover {
+  background: #ffffff;
+  border-color: var(--rsl-primary);
+  color: var(--rsl-primary);
+}
+
+.rsl-btn-icon-only {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  padding: 0;
+  background: var(--rsl-bg-main);
+  border: 1px solid var(--rsl-border);
+  color: var(--rsl-text-secondary);
+  border-radius: var(--rsl-radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--rsl-transition);
+}
+.rsl-btn-icon-only:hover {
+  background: #ffffff;
+  border-color: var(--rsl-primary);
+  color: var(--rsl-primary);
+}
+
+/* Empty State */
+.rsl-empty-state {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: var(--rsl-text-muted);
+}
+
+.rsl-empty-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--rsl-bg-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: var(--rsl-text-muted);
+  margin-bottom: 1rem;
+}
+
+.rsl-empty-state h3 {
+  font-size: 1.05rem;
+  color: var(--rsl-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.rsl-empty-state p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  max-width: 300px;
+}
+
+/* ==========================================================================
+   Collapse Toggle Button (Modern Clean Floating Circle)
+   ========================================================================== */
+.rsl-sidebar-collapse-btn {
+  position: absolute;
+  top: 50%;
+  left: calc(var(--rsl-sidebar-width) - 13px);
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rsl-sidebar-collapse-btn:hover {
+  background: #ffffff;
+  color: var(--rsl-primary, #059669);
+  border-color: var(--rsl-primary, #059669);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  transform: translateY(-50%) scale(1.15);
+}
+
+.rsl-sidebar-collapse-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.royal-store-locator-app.sidebar-hidden .rsl-sidebar-collapse-btn {
+  left: 12px;
+}
+
+/* ==========================================================================
+   Map Viewport & Leaflet Canvas
+   ========================================================================== */
+.rsl-map-viewport {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  background: #e5e7eb;
+}
+
+.rsl-map-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* Floating Controls on Map */
+.rsl-map-floating-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  pointer-events: auto;
+  z-index: 990;
+}
+
+/* Fallback when still in viewport before JS mounts into Leaflet control container */
+.rsl-map-viewport > .rsl-map-floating-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 990;
+}
+
+.royal-store-locator-app.has-layer-control .rsl-map-viewport > .rsl-map-floating-controls {
+  top: 60px; /* 10px margin + 40px layer button + 10px gap */
+}
+
+/* When mounted as Leaflet Control in topright */
+.leaflet-right .rsl-map-floating-controls.leaflet-control {
+  float: right;
+  clear: both;
+  margin-top: 8px !important;
+  margin-right: 10px !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.rsl-map-control-btn {
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid var(--rsl-border);
+  border-radius: var(--rsl-radius-md);
+  box-shadow: var(--rsl-shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rsl-text-primary);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--rsl-transition);
+}
+
+.rsl-map-control-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.rsl-map-control-btn:hover svg {
+  fill: #ffffff;
+}
+
+.rsl-map-control-btn:hover {
+  background: var(--rsl-primary);
+  color: #ffffff;
+  border-color: var(--rsl-primary);
+  box-shadow: var(--rsl-shadow-lg);
+}
+
+/* Leaflet Built-in Layer Control Styling */
+.royal-store-locator-app .leaflet-control-layers {
+  border-radius: var(--rsl-radius-md) !important;
+  border: 1px solid var(--rsl-border) !important;
+  box-shadow: var(--rsl-shadow-md) !important;
+  background: #ffffff !important;
+  margin-top: 10px !important;
+  margin-right: 10px !important;
+  transition: var(--rsl-transition) !important;
+  z-index: 1001 !important;
+}
+
+.royal-store-locator-app .leaflet-control-layers:hover {
+  border-color: var(--rsl-primary) !important;
+  box-shadow: var(--rsl-shadow-lg) !important;
+}
+
+.royal-store-locator-app .leaflet-control-layers-toggle {
+  width: 40px !important;
+  height: 40px !important;
+  background-size: 22px 22px !important;
+}
+
+.royal-store-locator-app .leaflet-control-layers-expanded {
+  padding: 0.75rem 1rem !important;
+  font-family: inherit !important;
+  font-size: 0.82rem !important;
+  color: var(--rsl-text-primary) !important;
+  border-radius: var(--rsl-radius-md) !important;
+  min-width: 220px !important;
+  margin-right: 56px !important; /* Opens cleanly to the left of the floating buttons stack */
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+  z-index: 1050 !important;
+}
+
+.royal-store-locator-app .leaflet-control-layers-expanded label {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.45rem !important;
+  cursor: pointer !important;
+  font-weight: 500 !important;
+  margin-bottom: 0.35rem !important;
+}
+
+.royal-store-locator-app .leaflet-control-layers-expanded input[type="radio"] {
+  accent-color: var(--rsl-primary) !important;
+  cursor: pointer !important;
+  margin: 0 !important;
+}
+
+/* Leaflet Zoom Control Styling */
+.royal-store-locator-app .leaflet-control-zoom {
+  border-radius: var(--rsl-radius-md) !important;
+  border: 1px solid var(--rsl-border) !important;
+  box-shadow: var(--rsl-shadow-md) !important;
+  overflow: hidden !important;
+  margin-top: 10px !important;
+  margin-left: 10px !important;
+}
+
+.royal-store-locator-app .leaflet-control-zoom a {
+  width: 36px !important;
+  height: 36px !important;
+  line-height: 36px !important;
+  color: var(--rsl-text-primary) !important;
+  background: #ffffff !important;
+  transition: var(--rsl-transition) !important;
+}
+
+.royal-store-locator-app .leaflet-control-zoom a:hover {
+  background: var(--rsl-primary) !important;
+  color: #ffffff !important;
+}
+
+/* Mobile Toggle Button */
+.rsl-mobile-toggle-btn {
+  display: none;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--rsl-secondary);
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.4rem;
+  border-radius: var(--rsl-radius-full);
+  font-size: 0.88rem;
+  font-weight: 700;
+  box-shadow: var(--rsl-shadow-xl);
+  z-index: 999;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Custom Map Pins & Markers
+   ========================================================================== */
+.rsl-custom-pin {
+  background: transparent;
+  border: none;
+}
+
+.rsl-pin-icon-wrap {
+  width: 36px;
+  height: 42px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.25));
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.rsl-pin-icon-wrap:hover {
+  transform: scale(1.18) translateY(-4px);
+}
+
+.rsl-pin-icon-wrap::before {
+  content: "";
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  top: 0;
+  left: 1px;
+  border: 2px solid #ffffff;
+  transition: all 0.2s ease;
+}
+
+.rsl-pin-flagship .rsl-pin-icon-wrap::before {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+}
+
+.rsl-pin-dealer .rsl-pin-icon-wrap::before {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+.rsl-pin-corporate .rsl-pin-icon-wrap::before {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+}
+
+.rsl-pin-icon-wrap[style*="--rsl-pin-color"]::before {
+  background: var(--rsl-pin-color) !important;
+}
+
+/* Custom Marker Image Pin */
+.rsl-pin-custom-image {
+  background: transparent !important;
+  border: none !important;
+}
+
+.rsl-pin-image-wrap {
+  width: 38px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+}
+
+.rsl-pin-image-wrap:hover {
+  transform: scale(1.18) translateY(-4px);
+}
+
+.rsl-pin-image-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.rsl-pin-icon-wrap i,
+.rsl-pin-icon-wrap svg {
+  position: relative;
+  z-index: 2;
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  width: 15px !important;
+  height: 15px !important;
+  font-size: 0.85rem;
+  margin-top: -6px;
+}
+
+/* User Location Pin with Animated Radar Wave */
+.rsl-user-location-pin {
+  background: transparent;
+  border: none;
+}
+
+.rsl-user-location-pulse {
+  width: 18px;
+  height: 18px;
+  background-color: var(--rsl-user-pin-color);
+  border: 2.5px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.6);
+  position: relative;
+}
+
+.rsl-user-location-pulse::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.35);
+  animation: rslRadarPulse 1.8s infinite cubic-bezier(0, 0.2, 0.8, 1);
+}
+
+@keyframes rslRadarPulse {
+  0% { transform: scale(0.6); opacity: 1; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+@keyframes rslFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cluster Marker */
+.rsl-cluster-badge {
+  background: linear-gradient(135deg, var(--rsl-cluster-start) 0%, var(--rsl-cluster-end) 100%);
+  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(4, 120, 87, 0.45);
+  border: 2.5px solid #ffffff;
+  transition: transform 0.2s ease;
+}
+
+.rsl-cluster-badge:hover {
+  transform: scale(1.1);
+}
+
+/* ==========================================================================
+   Leaflet Popup Custom Styling
+   ========================================================================== */
+.leaflet-popup-content-wrapper {
+  padding: 0 !important;
+  border-radius: var(--rsl-radius-lg) !important;
+  overflow: hidden !important;
+  box-shadow: var(--rsl-shadow-xl) !important;
+  border: 1px solid var(--rsl-border) !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: normal !important;
+}
+
+.rsl-popup-card {
+  width: 290px;
+  background: #ffffff;
+  font-family: inherit;
+}
+
+.rsl-popup-header {
+  padding: 1rem 1.15rem;
+  background: linear-gradient(135deg, #064e3b 0%, #047857 100%);
+  color: #ffffff;
+}
+
+.rsl-popup-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.18rem 0.5rem;
+  border-radius: var(--rsl-radius-full);
+  display: inline-block;
+  margin-bottom: 0.35rem;
+}
+
+.rsl-popup-title {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.rsl-popup-body {
+  padding: 0.9rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--rsl-text-secondary);
+}
+
+.rsl-popup-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  line-height: 1.35;
+}
+
+.rsl-popup-item i {
+  color: var(--rsl-primary);
+  width: 14px;
+  font-size: 0.85rem;
+  margin-top: 0.15rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.rsl-popup-footer {
+  padding: 0.75rem 1.15rem;
+  background: var(--rsl-bg-subtle);
+  border-top: 1px solid var(--rsl-border);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.rsl-popup-btn {
+  flex: 1;
+  height: 34px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  border-radius: var(--rsl-radius-sm);
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--rsl-transition);
+}
+
+.rsl-popup-btn.btn-call {
+  background: #ffffff;
+  border: 1px solid var(--rsl-border);
+  color: var(--rsl-text-primary);
+}
+.rsl-popup-btn.btn-call:hover {
+  background: var(--rsl-bg-main);
+  color: var(--rsl-primary);
+  border-color: var(--rsl-primary);
+}
+
+/* Toast Notifications */
+.rsl-toast-msg {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(30px);
+  background: rgba(15, 23, 42, 0.92);
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--rsl-radius-full);
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: var(--rsl-shadow-xl);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 99999;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  backdrop-filter: blur(8px);
+}
+
+.rsl-toast-msg.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media (max-width: 992px) {
+  .royal-store-locator-app {
+    --rsl-sidebar-width: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .royal-store-locator-app {
+    height: 600px;
+    flex-direction: column !important;
+  }
+
+  .rsl-sidebar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100% !important;
+    height: 75% !important;
+    border-right: none !important;
+    border-top: 1px solid var(--rsl-border);
+    border-radius: var(--rsl-radius-lg) var(--rsl-radius-lg) 0 0;
+    transform: translateY(calc(100% - 65px));
+    z-index: 1000;
+    box-shadow: 0 -10px 25px -5px rgba(0, 0, 0, 0.15);
+  }
+
+  .rsl-sidebar.expanded {
+    transform: translateY(0);
+  }
+
+  .rsl-sidebar-collapse-btn {
+    display: none !important;
+  }
+
+  .rsl-mobile-toggle-btn {
+    display: inline-flex;
+  }
+
+  .rsl-sidebar-header {
+    cursor: pointer;
+    border-radius: var(--rsl-radius-lg) var(--rsl-radius-lg) 0 0;
+  }
+
+  .rsl-sidebar-header::before {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: var(--rsl-radius-full);
+    margin: -0.35rem auto 0.65rem;
+  }
+}

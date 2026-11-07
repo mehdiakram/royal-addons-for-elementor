@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+<style type="text/css">
+	.st0{opacity:0.6;}
+	.st1{opacity:0.4;}
+	.st2{opacity:0.3;}
+	.st3{opacity:0.8;}
+</style>
+<g>
+	<polygon class="elementor-shape-fill st0" points="429.7,68.7 574.8,38.4 475.2,0 282.6,0 178.2,46.1 	"/>
+	<polygon class="elementor-shape-fill" points="282.6,0 0,0 0,30 178.2,46.1 	"/>
+	<polygon class="elementor-shape-fill" points="429.7,68.7 721.2,94.9 574.8,38.4 	"/>
+	<polygon class="elementor-shape-fill st1" points="721.2,94.9 721.2,94.9 721.2,94.9 721.2,94.9 1000,31.2 1000,0 759.1,0 574.8,38.4 	"/>
+	<polygon class="elementor-shape-fill st2" points="178.2,46.1 0,30 0,70.7 98.8,81.1 	"/>
+	<polygon class="elementor-shape-fill st3" points="178.2,46.1 98.8,81.1 279.5,100 429.7,68.7 	"/>
+</g>
+</svg>

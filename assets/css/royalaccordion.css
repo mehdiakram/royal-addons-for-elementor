@@ -1,0 +1,366 @@
+/* ==========================================================================
+   Royal Accordion - Modern & Responsive (1 / 2 Columns)
+   ========================================================================== */
+
+/* Main Wrapper */
+.royalaccwrapper {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Grid Container for 1 / 2 Columns */
+.royalacc-items-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 16px;
+  align-items: start;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Individual Column Container (Independent Flex Columns) */
+.royalacc-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  .royalacc-items-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Single Accordion Card / Item */
+.royalaccitem {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Item Heading */
+.royalaccitemheading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  user-select: none;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  outline: none;
+}
+
+.royalaccitemheading span.ui-accordion-header-icon {
+  display: none !important;
+}
+
+.royalaccitemheading .title {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+  flex-grow: 1;
+}
+
+/* Icon Container */
+.royalaccicon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;
+  font-size: 16px;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.royalaccicon svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.royalaccicon i {
+  line-height: 1;
+}
+
+/* Icon Behavior: Swap Mode */
+.royalacc-icon-anim-swap .icon-open {
+  display: none;
+}
+.royalacc-icon-anim-swap .icon-closed {
+  display: inline-flex;
+}
+.royalacc-icon-anim-swap .ui-accordion-header-active .icon-open {
+  display: inline-flex;
+}
+.royalacc-icon-anim-swap .ui-accordion-header-active .icon-closed {
+  display: none;
+}
+.royalacc-icon-anim-swap .ui-accordion-header-collapsed .icon-open {
+  display: none;
+}
+.royalacc-icon-anim-swap .ui-accordion-header-collapsed .icon-closed {
+  display: inline-flex;
+}
+
+/* Icon Behavior: Rotate Mode (Modern clean rotation e.g. + rotates 45deg to x) */
+.royalacc-icon-anim-rotate .icon-open {
+  display: none !important;
+}
+.royalacc-icon-anim-rotate .icon-closed {
+  display: inline-flex;
+}
+.royalacc-icon-anim-rotate .ui-accordion-header-active .royalaccicon {
+  transform: rotate(var(--royalacc-icon-rotate, 45deg));
+}
+
+/* Content Panel */
+.royalaccitemcontent {
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.royalaccitemcontent-inner {
+  box-sizing: border-box;
+}
+
+.royalaccitemcontent-inner p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   PRESET 1: Modern Card / Boxed (Screenshot Style - Default)
+   ========================================================================== */
+.royalacc-preset-modern_card .royalaccitem {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.royalacc-preset-modern_card .royalaccitem:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.royalacc-preset-modern_card .royalaccitem.royalacc-active {
+  border-color: #2563eb;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.07);
+}
+
+.royalacc-preset-modern_card .royalaccitemheading {
+  padding: 16px 22px;
+  background: transparent;
+  color: #0f172a;
+}
+
+.royalacc-preset-modern_card .royalaccitemheading .title {
+  color: #0f172a;
+  font-weight: 600;
+  font-size: 15.5px;
+}
+
+.royalacc-preset-modern_card .royalaccicon {
+  color: #2563eb;
+  font-size: 16px;
+}
+
+.royalacc-preset-modern_card .royalaccitemcontent {
+  padding: 0 22px 18px 22px;
+  background: transparent;
+  color: #475569;
+  font-size: 14.5px;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   PRESET 2: Minimal Line / Borderless (Dividers only)
+   ========================================================================== */
+.royalacc-preset-minimal_line .royalaccitem {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #e2e8f0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.royalacc-preset-minimal_line .royalaccitem:last-child {
+  border-bottom: none;
+}
+
+.royalacc-preset-minimal_line .royalaccitemheading {
+  padding: 16px 0;
+  background: transparent;
+}
+
+.royalacc-preset-minimal_line .royalaccitemcontent {
+  padding: 0 0 16px 0;
+  background: transparent;
+  border: none;
+}
+
+/* ==========================================================================
+   PRESET 3: Soft Tinted / Filled
+   ========================================================================== */
+.royalacc-preset-soft_filled .royalaccitem {
+  background: #f8fafc;
+  border: 1px solid #f1f5f9;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.royalacc-preset-soft_filled .royalaccitem.royalacc-active {
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+}
+
+.royalacc-preset-soft_filled .royalaccitemheading {
+  padding: 16px 20px;
+  background: transparent;
+}
+
+.royalacc-preset-soft_filled .royalaccitemcontent {
+  padding: 0 20px 16px 20px;
+  background: transparent;
+  border: none;
+}
+
+/* ==========================================================================
+   PRESET 4: Left Accent Border
+   ========================================================================== */
+.royalacc-preset-left_accent .royalaccitem {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #cbd5e1;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+}
+
+.royalacc-preset-left_accent .royalaccitem.royalacc-active {
+  border-left-color: #2563eb;
+  border-color: #e2e8f0;
+  border-left-width: 4px;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.08);
+}
+
+.royalacc-preset-left_accent .royalaccitemheading {
+  padding: 16px 20px;
+  background: transparent;
+}
+
+.royalacc-preset-left_accent .royalaccitemcontent {
+  padding: 0 20px 16px 20px;
+  background: transparent;
+  border: none;
+}
+
+/* ==========================================================================
+   PRESET 5: Classic Boxed (Legacy Compatibility)
+   ========================================================================== */
+.royalacc-preset-classic_boxed .royalaccitem {
+  margin-bottom: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.royalacc-preset-classic_boxed .royalaccitemheading {
+  padding: 12px 15px;
+  background: #0099ff;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.royalacc-preset-classic_boxed .royalaccitemheading.ui-accordion-header-active {
+  background: #0066ff;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.royalacc-preset-classic_boxed .royalaccitemcontent {
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* ==========================================================================
+   Search Bar / FAQ Filter Component
+   ========================================================================== */
+.royalacc-search-wrap {
+  position: relative;
+  margin-bottom: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.royalacc-search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  font-size: 15px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.royalacc-search-icon svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.royalacc-search-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 16px 12px 42px;
+  font-size: 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #1e293b;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.royalacc-search-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.royalacc-search-input::placeholder {
+  color: #94a3b8;
+}
+
+.royalacc-no-results {
+  padding: 20px;
+  text-align: center;
+  color: #64748b;
+  font-size: 15px;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}

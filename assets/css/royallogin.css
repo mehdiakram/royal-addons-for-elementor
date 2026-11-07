@@ -1,0 +1,395 @@
+/* =============================================
+   Royal Login Widget — Default Styles
+   ============================================= */
+
+.royal-login-widget {
+    font-family: inherit;
+    width: 100%;
+    max-width: 460px;
+    margin: 0 auto;
+}
+
+/* ---- Form Container ---- */
+.royal-login-form-wrap {
+    background: #ffffff;
+    border: 1px solid #e8ecf0;
+    border-radius: 16px;
+    padding: 40px 36px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.royal-login-form-wrap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 16px 16px 0 0;
+}
+
+/* ---- Form Fields ---- */
+.royal-login-field-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.royal-login-field-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 8px;
+    letter-spacing: 0.3px;
+}
+
+.royal-login-field-group input[type="text"],
+.royal-login-field-group input[type="password"],
+.royal-login-field-group input[type="email"] {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    font-size: 15px;
+    font-family: inherit;
+    color: #1f2937;
+    background: #f9fafb;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.royal-login-field-group input[type="text"]:focus,
+.royal-login-field-group input[type="password"]:focus,
+.royal-login-field-group input[type="email"]:focus {
+    border-color: #667eea;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.12);
+}
+
+/* ---- Remember Me Row ---- */
+.royal-login-remember-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 8px;
+}
+
+.royal-login-remember-row input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: #667eea;
+    cursor: pointer;
+    flex-shrink: 0;
+    border-radius: 4px;
+}
+
+.royal-login-remember-row label {
+    font-size: 14px;
+    color: #6b7280;
+    cursor: pointer;
+    user-select: none;
+    margin: 0;
+}
+
+/* ---- Submit Button ---- */
+.royal-login-submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 50px;
+    padding: 0 24px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+    color: #ffffff;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.royal-login-submit-btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0);
+    transition: background 0.2s ease;
+}
+
+.royal-login-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.royal-login-submit-btn:hover::after {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.royal-login-submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.royal-login-submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ---- Loading Spinner ---- */
+.royal-login-spinner {
+    display: none;
+    width: 18px;
+    height: 18px;
+    border: 2.5px solid rgba(255,255,255,0.4);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: royal-spin 0.7s linear infinite;
+    flex-shrink: 0;
+}
+
+.royal-login-submit-btn.is-loading .royal-login-spinner {
+    display: block;
+}
+
+.royal-login-submit-btn.is-loading .royal-login-btn-text {
+    opacity: 0.8;
+}
+
+@keyframes royal-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ---- Error Message ---- */
+.royal-login-error {
+    display: none;
+    align-items: flex-start;
+    gap: 10px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-left: 4px solid #ef4444;
+    color: #dc2626;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-top: 16px;
+    line-height: 1.5;
+    animation: royal-shake 0.3s ease;
+}
+
+.royal-login-error.is-visible {
+    display: flex;
+}
+
+.royal-login-error-icon {
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+@keyframes royal-shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+}
+
+/* ---- Lost Password Link ---- */
+.royal-login-lost-password {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
+    opacity: 0.85;
+}
+
+.royal-login-lost-password:hover {
+    color: #764ba2;
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* ---- Logged In State ---- */
+.royal-login-logged-in {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.royal-logged-in-avatar {
+    margin-bottom: 16px;
+}
+
+.royal-logged-in-avatar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.royal-logged-in-msg {
+    color: #374151;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.royal-logged-in-msg strong {
+    color: #111827;
+}
+
+.royal-logged-in-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    width: 100%;
+}
+
+.royal-logged-in-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    background: #667eea;
+    color: #ffffff;
+}
+
+.royal-logged-in-actions a:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102,126,234,0.3);
+}
+
+.royal-logged-in-actions .royal-btn-logout {
+    background: #f3f4f6;
+    color: #4b5563;
+}
+
+.royal-logged-in-actions .royal-btn-logout:hover {
+    background: #e5e7eb;
+    box-shadow: none;
+}
+
+/* ---- Divider (lost pass separator) ---- */
+.royal-login-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0 0;
+    color: #d1d5db;
+    font-size: 12px;
+}
+
+.royal-login-divider::before,
+.royal-login-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #e5e7eb;
+}
+
+/* ---- Social Login Separator ---- */
+.royal-social-login-separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #6b7280;
+    font-size: 14px;
+    margin: 24px 0 20px;
+}
+
+.royal-social-login-separator::before,
+.royal-social-login-separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.royal-social-login-separator span {
+    padding: 0 10px;
+}
+
+/* ---- Social Login Buttons ---- */
+.royal-social-login-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.royal-social-login-buttons[data-layout="block"] {
+    flex-direction: column;
+}
+
+.royal-social-login-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.royal-social-login-buttons[data-layout="inline"] .royal-social-login-btn {
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.royal-social-login-btn:hover {
+    background: #f9fafb;
+    border-color: #d1d5db;
+}
+
+.royal-social-login-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    transition: fill 0.2s ease;
+}
+
+/* Social Brand Colors - only used if not overridden by Elementor settings */
+.royal-social-google svg { fill: #4285F4; }
+.royal-social-facebook svg { fill: #1877F2; }
+.royal-social-twitter svg { fill: #000000; }
+.royal-social-linkedin svg { fill: #0A66C2; }
+.royal-social-instagram svg { fill: #E1306C; }
