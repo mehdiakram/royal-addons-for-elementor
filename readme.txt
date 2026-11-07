@@ -5,7 +5,7 @@ Tags: elementor, addons, widgets, elementor page builder, royal addons
 Requires at least: 6.4
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 26.11.11
+Stable tag: 26.11.12
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -66,6 +66,11 @@ Please check the `docs` folder inside the plugin directory for the complete user
 3. Custom Fonts Manager - Upload and manage local fonts.
 
 == Changelog ==
+
+= 26.11.12 =
+* Feature: WordPress Automatic Updates option support in plugins dashboard (enable/disable auto-updates toggle).
+* Enhancement: Moved updater initialization to `init` hook to ensure compatibility with WordPress background WP-Cron auto-updates.
+* Performance: Optimized updater initialization and lightweight fallback state injection.
 
 = 26.11.11 =
 * Enhancement: GitHub Release & Cloud Distribution automation, asset delivery optimizations, and stability improvements.

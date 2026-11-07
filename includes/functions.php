@@ -7,9 +7,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Initializes the plugin updater. */
 function royal_addons_initialize_updater() {
-    if ( ! is_admin() ) {
-        return;
-    }
     // Ensure the updater class file is explicitly included here if it's not autoloaded
     if ( ! class_exists( 'Royal_Addons_Updater' ) ) {
         require_once ROYAL_ADDONS_DIR_PATH . 'includes/updater.php';
@@ -17,7 +14,7 @@ function royal_addons_initialize_updater() {
     $update_url = 'https://raw.githubusercontent.com/mehdiakram/royal-addons-for-elementor/main/royal-addons-for-elementor.json';
     new Royal_Addons_Updater( ROYALADDONSFILE, $update_url ); // Use ROYALADDONSFILE constant
 }
-add_action( 'admin_init', 'royal_addons_initialize_updater' );
+add_action( 'init', 'royal_addons_initialize_updater' );
 
 
 function royal_addons_force_update_check() {
