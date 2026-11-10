@@ -172,6 +172,31 @@ function royaladdons_is_license_valid() {
     // Online Check: শুধুমাত্র তখনই পিং করো যদি:
     // (১) transient lock নেই, এবং (২) valid license key আছে
     if (false === get_transient('ra_license_check_lock')) {
+        // 1. Lightweight Version Check (GET, ~50 bytes)
+        if ($cache_valid) {
+            $cachedVersion = (int) get_option('royaladdons_license_version', 0);
+            $vUrl = add_query_arg([
+                'k' => $saved_license,
+                's' => 'royaladdonsforelementor',
+                'v' => $cachedVersion,
+            ], 'https://auth.royaltechbd.com/api/license/version');
+
+            $vResponse = wp_remote_get($vUrl, [
+                'timeout'   => 5,
+                'sslverify' => false,
+            ]);
+
+            if (!is_wp_error($vResponse) && wp_remote_retrieve_response_code($vResponse) === 200) {
+                $vData = json_decode(wp_remote_retrieve_body($vResponse), true);
+                if (isset($vData['version'])) {
+                    update_option('royaladdons_license_version', (int) $vData['version']);
+                }
+                if (!($vData['changed'] ?? false)) {
+                    set_transient('ra_license_check_lock', 'locked', 24 * 60 * 60);
+                    return true;
+                }
+            }
+        }
         global $wp_version;
         $active_theme = wp_get_theme();
         $theme_name   = $active_theme ? $active_theme->get('Name') : 'Unknown';
@@ -198,27 +223,63 @@ function royaladdons_is_license_valid() {
             ],
         ]);
 
-        if (!is_wp_error($response)) {
-            $body = json_decode(wp_remote_retrieve_body($response), true);
+        if (is_wp_error($response)) {
+            set_transient('ra_license_check_lock', 'locked', 60 * 60);
+            return $cache_valid;
+        }
 
-            if (isset($body['success']) && $body['success'] === true && isset($body['signature'])) {
-                if (royaladdons_verify_license_cache($body)) {
-                    update_option('royaladdons_license_cache', $body);
-                    set_transient('ra_license_check_lock', 'locked', 24 * 60 * 60);
-                    return true;
-                } else {
-                    delete_option('royaladdons_license_cache');
-                    set_transient('ra_license_check_lock', 'locked', 2 * 60 * 60);
-                    return false;
+        $statusCode = wp_remote_retrieve_response_code($response);
+        $body       = json_decode(wp_remote_retrieve_body($response), true);
+
+        // Server 5xx Error — NEVER wipe local cache on server failure!
+        if ($statusCode >= 500) {
+            set_transient('ra_license_check_lock', 'locked', 60 * 60);
+            return $cache_valid;
+        }
+
+        // Valid signed response
+        if (isset($body['success']) && $body['success'] === true && isset($body['signature'])) {
+            if (royaladdons_verify_license_cache($body)) {
+                update_option('royaladdons_license_cache', $body);
+                if (isset($body['license_data']['version'])) {
+                    update_option('royaladdons_license_version', (int) $body['license_data']['version']);
                 }
-            } elseif (isset($body['success']) && $body['success'] === false) {
+                set_transient('ra_license_check_lock', 'locked', 24 * 60 * 60);
+                return true;
+            } else {
                 delete_option('royaladdons_license_cache');
                 set_transient('ra_license_check_lock', 'locked', 2 * 60 * 60);
                 return false;
             }
         }
-        // HTTP error হলে lock সেট করো যাতে বার বার retry না হয়
-        set_transient('ra_license_check_lock', 'locked', 60 * 60); // 1 ঘণ্টা
+
+        // Server explicitly rejected the license
+        if (isset($body['success']) && $body['success'] === false) {
+            $msg = $body['message'] ?? '';
+            $definitelyInvalid = stripos($msg, 'suspended') !== false ||
+                                 stripos($msg, 'expired') !== false   ||
+                                 stripos($msg, 'invalid') !== false   ||
+                                 stripos($msg, 'blocked') !== false   ||
+                                 $statusCode === 403                  ||
+                                 $statusCode === 404;
+
+            if ($definitelyInvalid) {
+                delete_option('royaladdons_license_cache');
+                set_transient('ra_license_check_lock', 'locked', 2 * 60 * 60);
+                return false;
+            }
+
+            if ($cache_valid) {
+                set_transient('ra_license_check_lock', 'locked', 60 * 60);
+                return true;
+            }
+
+            delete_option('royaladdons_license_cache');
+            set_transient('ra_license_check_lock', 'locked', 2 * 60 * 60);
+            return false;
+        }
+
+        set_transient('ra_license_check_lock', 'locked', 60 * 60);
     }
 
     // লোকাল Ed25519 ক্যাশ থেকে যাচাই করো
