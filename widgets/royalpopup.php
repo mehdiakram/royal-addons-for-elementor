@@ -392,6 +392,8 @@ class RoyalPopup extends Widget_Base {
         if ( 'yes' === ( $settings['hide_on_mobile'] ?? '' ) ) {
             $this->add_render_attribute( 'wrapper', 'data-hide-mobile', 'yes' );
         }
+        // Inline style ensures popup is hidden BEFORE the external CSS loads, preventing FOUC (Flash of Unstyled Content).
+        $this->add_render_attribute( 'wrapper', 'style', 'display:none;' );
         ?>
         <div <?php $this->print_render_attribute_string( 'wrapper' ); ?>>
             <?php if ( 'yes' === $settings['enable_overlay'] ) : ?>

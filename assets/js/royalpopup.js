@@ -63,6 +63,9 @@ var RoyalPopupHandler = function ($scope, $) {
         
         contentWrapper.removeClass('animate__animated ' + entranceAnimation + ' ' + exitAnimation);
         
+        // Remove inline display:none (FOUC protection) before showing
+        popupWrapper.css('display', '');
+
         body.addClass('royal-popup-is-active');
         popupWrapper.addClass('show');
 
