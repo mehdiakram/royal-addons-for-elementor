@@ -5,7 +5,7 @@ Tags: elementor, addons, widgets, elementor page builder, royal addons
 Requires at least: 6.4
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 26.11.13
+Stable tag: 26.11.14
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -66,6 +66,9 @@ Please check the `docs` folder inside the plugin directory for the complete user
 3. Custom Fonts Manager - Upload and manage local fonts.
 
 == Changelog ==
+
+= 26.11.14 =
+* Fix: Prevented Royal Popup widget FOUC (Flash of Unstyled Content) where popup content briefly loaded or flashed at the bottom of the page before external stylesheets finished loading.
 
 = 26.11.13 =
 * Feature: Royal Popup Widget (RoyalPopup) Major Modernization & Page-Level Display Targeting:
