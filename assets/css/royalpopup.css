@@ -52,3 +52,7 @@ body.royal-popup-is-active {
 .royal-popup-editor-placeholder .placeholder-title { font-size: 18px; font-weight: 600; }
 .royal-popup-editor-placeholder .placeholder-text { font-size: 13px; margin-top: 8px; }
 .elementor-widget-royalpopup .royal-popup-trigger-button-wrapper { margin-top: 20px; }
+.royal-popup-close-btn, [data-royal-popup-close] { cursor: pointer; }
+@media (max-width: 767px) {
+  .royal-popup[data-hide-mobile="yes"] { display: none !important; }
+}

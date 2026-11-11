@@ -2,16 +2,36 @@ var RoyalPopupHandler = function ($scope, $) {
     var popupWrapper = $scope.find('.royal-popup');
     if (!popupWrapper.length) return;
 
+    var body = $('body');
+    if (body.hasClass('elementor-editor-active')) {
+        return;
+    }
+
     var trigger = popupWrapper.data('trigger');
     var entranceAnimation = 'animate__' + popupWrapper.data('animation-in');
     var exitAnimation = 'animate__' + popupWrapper.data('animation-out');
     var exitDuration = popupWrapper.data('animation-out-duration') || 500;
-    var cookieName = 'royal_popup_visited_' + popupWrapper.data('popup-id');
+    var popupId = popupWrapper.data('popup-id');
+
+    // Responsive: check hide on mobile (< 768px)
+    var hideOnMobile = popupWrapper.data('hide-mobile') === 'yes';
+    if (hideOnMobile && $(window).width() < 768) {
+        return;
+    }
+
+    // Cookie & session management
+    var enableCookie = popupWrapper.data('enable-cookie') !== 'no';
+    var cookiePerPage = popupWrapper.data('cookie-per-page') === 'yes';
+    var cookieName = 'royal_popup_visited_' + popupId;
+    if (cookiePerPage) {
+        var pageSlug = window.location.pathname.replace(/[^a-zA-Z0-9]/g, '_') || 'home';
+        cookieName += '_' + pageSlug;
+    }
     
-    var body = $('body');
     var contentWrapper = popupWrapper.find('.royal-popup__content');
     var closeButton = popupWrapper.find('.royal-popup__close');
     var autoCloseTimer;
+    var inactivityTimer;
 
     var getCookie = function(name) {
         var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
@@ -20,8 +40,13 @@ var RoyalPopupHandler = function ($scope, $) {
     };
     
     var setCookie = function() {
-        var time = popupWrapper.data('cookie-time');
+        if (!enableCookie) return;
         var unit = popupWrapper.data('cookie-time-unit');
+        if (unit === 'session') {
+            document.cookie = cookieName + "=true; path=/";
+            return;
+        }
+        var time = popupWrapper.data('cookie-time');
         if (typeof time === 'undefined' || typeof unit === 'undefined') return;
         var expires = "";
         var date = new Date();
@@ -60,7 +85,7 @@ var RoyalPopupHandler = function ($scope, $) {
         if (!popupWrapper.hasClass('show')) return;
         clearTimeout(autoCloseTimer);
         
-        if (trigger !== 'on_click') {
+        if (trigger !== 'on_click' && enableCookie) {
             setCookie();
         }
         
@@ -77,23 +102,62 @@ var RoyalPopupHandler = function ($scope, $) {
             popupWrapper.removeClass('show');
         }
     };
-    
-    if (body.hasClass('elementor-editor-active')) {
-        return;
-    }
 
-    if (trigger !== 'on_click' && getCookie(cookieName)) {
+    if (trigger !== 'on_click' && enableCookie && getCookie(cookieName)) {
         return;
     }
 
     if (trigger === 'onload') {
-        $(window).on('load', showPopup);
+        var onloadDelay = parseInt(popupWrapper.data('onload-delay'), 10) || 0;
+        var triggerOnload = function() {
+            if (onloadDelay > 0) {
+                setTimeout(showPopup, onloadDelay * 1000);
+            } else {
+                showPopup();
+            }
+        };
+
+        if (document.readyState === 'complete') {
+            triggerOnload();
+        } else {
+            $(window).on('load', triggerOnload);
+        }
     } 
+    else if (trigger === 'after_scroll') {
+        var scrollTargetPercent = parseInt(popupWrapper.data('scroll-progress'), 10) || 50;
+        var scrollEventName = 'scroll.royalPopupScroll_' + popupId;
+        var onScrollHandler = function() {
+            var scrollTop = $(window).scrollTop();
+            var docHeight = $(document).height() - $(window).height();
+            if (docHeight > 0) {
+                var currentScrollPercent = (scrollTop / docHeight) * 100;
+                if (currentScrollPercent >= scrollTargetPercent) {
+                    showPopup();
+                    $(window).off(scrollEventName);
+                }
+            }
+        };
+        $(window).on(scrollEventName, onScrollHandler);
+    }
+    else if (trigger === 'inactivity') {
+        var inactivityDelay = (parseInt(popupWrapper.data('inactivity-delay'), 10) || 10) * 1000;
+        var inactivityEventName = '.royalInactivity_' + popupId;
+        var resetInactivity = function() {
+            clearTimeout(inactivityTimer);
+            inactivityTimer = setTimeout(function() {
+                showPopup();
+                $(document).off(inactivityEventName);
+            }, inactivityDelay);
+        };
+        resetInactivity();
+        $(document).on('mousemove' + inactivityEventName + ' keydown' + inactivityEventName + ' scroll' + inactivityEventName + ' touchstart' + inactivityEventName, resetInactivity);
+    }
     else if (trigger === 'exit_intent') {
-        $(document).on('mouseout.royalPopup', function(e) {
+        var exitEventName = 'mouseout.royalPopup_' + popupId;
+        $(document).on(exitEventName, function(e) {
             if (e.clientY <= 0) {
                 showPopup();
-                $(document).off('mouseout.royalPopup');
+                $(document).off(exitEventName);
             }
         });
     } 
@@ -104,13 +168,29 @@ var RoyalPopupHandler = function ($scope, $) {
         });
     }
 
+    // Default close button
     closeButton.on('click', hidePopup);
-    popupWrapper.find('.royal-popup__overlay').on('click', hidePopup);
-    $(document).on('keydown', function(e) {
-        if (e.key === "Escape" && popupWrapper.hasClass('show')) {
-            hidePopup();
-        }
+
+    // Custom close elements inside template (.royal-popup-close-btn or [data-royal-popup-close])
+    popupWrapper.on('click', '.royal-popup-close-btn, [data-royal-popup-close]', function(e) {
+        e.preventDefault();
+        hidePopup();
     });
+
+    // Close on overlay
+    if (popupWrapper.data('close-on-overlay') !== 'no') {
+        popupWrapper.find('.royal-popup__overlay').on('click', hidePopup);
+    }
+
+    // Close on ESC key
+    if (popupWrapper.data('close-on-esc') !== 'no') {
+        var escEventName = 'keydown.royalPopupEsc_' + popupId;
+        $(document).on(escEventName, function(e) {
+            if (e.key === "Escape" && popupWrapper.hasClass('show')) {
+                hidePopup();
+            }
+        });
+    }
 };
 
 jQuery(window).on('elementor/frontend/init', function () {

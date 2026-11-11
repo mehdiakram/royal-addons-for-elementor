@@ -5,7 +5,7 @@ Tags: elementor, addons, widgets, elementor page builder, royal addons
 Requires at least: 6.4
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 26.11.12
+Stable tag: 26.11.13
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -66,6 +66,14 @@ Please check the `docs` folder inside the plugin directory for the complete user
 3. Custom Fonts Manager - Upload and manage local fonts.
 
 == Changelog ==
+
+= 26.11.13 =
+* Feature: Royal Popup Widget (RoyalPopup) Major Modernization & Page-Level Display Targeting:
+  - Page-Level Display Conditions: Added "This Page Only", "Specific Pages" (Select2 multi-selector), and "All Single Posts" display conditions alongside Entire Site, Home Page, and All Pages.
+  - Advanced Display Triggers: Added configurable "Open Delay (sec)" for Page Load trigger, "After Page Scroll" (Scroll depth percentage slider 5% - 95%), and "After Inactivity" (user idle detection 3s - 120s).
+  - Smart Cookie & Session Rules: Added toggle to disable cookies for live testing and instant reload, "Until Browser Closed (Session)" time unit, and "Cookie Per Page Only" option to prevent cross-page suppression.
+  - Interactive Close Actions: Added custom close triggers (.royal-popup-close-btn & [data-royal-popup-close]) for inner template buttons, plus switches for "Close on Overlay Click" and "Close on ESC Key".
+  - Responsive & Editor Experience: Added "Hide on Mobile (< 768px)" responsive toggle and "Preview in Editor" mode for seamless canvas styling without popup interference.
 
 = 26.11.12 =
 * Feature: WordPress Automatic Updates option support in plugins dashboard (enable/disable auto-updates toggle).
