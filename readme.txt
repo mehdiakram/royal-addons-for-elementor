@@ -5,7 +5,7 @@ Tags: elementor, addons, widgets, elementor page builder, royal addons
 Requires at least: 6.4
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 26.11.15
+Stable tag: 26.11.16
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -66,6 +66,9 @@ Please check the `docs` folder inside the plugin directory for the complete user
 3. Custom Fonts Manager - Upload and manage local fonts.
 
 == Changelog ==
+
+= 26.11.16 =
+* Fix: Resolved undefined array key "_royal_use_counterz" PHP warning in RoyalCounterz extension.
 
 = 26.11.15 =
 * Fix: Resolved missing SweetAlert2 vendor assets (sweetalert2.min.css & sweetalert2.all.min.js) by updating git ignore rules to ensure assets/vendor files are packaged and distributed properly in updates.

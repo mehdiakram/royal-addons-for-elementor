@@ -56,7 +56,7 @@ class RoyalCounterz {
 		$settings = $element->get_settings();
         $is_counterz = isset( $settings[ '_royal_use_counterz' ] ) ? $settings[ '_royal_use_counterz' ] : '';
         
-        if( 'yes' === $settings[ '_royal_use_counterz' ] ) 
+        if( 'yes' === $is_counterz ) 
             $element->add_render_attribute( '_wrapper', 'class', 'royal-use-counterz' );
 
     }
