@@ -11,7 +11,7 @@ Thumbs.db
 # Sensitive / Temporary
 .env
 node_modules/
-vendor/
+//vendor/
 
 # Internal Server API (Keep local only, do not track in public repo)
 server-api/

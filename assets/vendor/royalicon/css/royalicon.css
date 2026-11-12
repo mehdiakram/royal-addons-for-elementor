@@ -1,0 +1,98 @@
+@font-face {
+  font-family: 'royalicon';
+  src: url('../font/royalicon.eot?26450807');
+  src: url('../font/royalicon.eot?26450807#iefix') format('embedded-opentype'),
+       url('../font/royalicon.woff2?26450807') format('woff2'),
+       url('../font/royalicon.woff?26450807') format('woff'),
+       url('../font/royalicon.ttf?26450807') format('truetype'),
+       url('../font/royalicon.svg?26450807#royalicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'royalicon';
+    src: url('../font/royalicon.svg?26450807#royalicon') format('svg');
+  }
+}
+*/
+[class^="royalicon-"]:before, [class*=" royalicon-"]:before {
+  font-family: "royalicon";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.royalicon-down-open:before { content: '\e800'; } /* '' */
+.royalicon-right-open:before { content: '\e801'; } /* '' */
+.royalicon-down-open-big:before { content: '\e802'; } /* '' */
+.royalicon-up-open:before { content: '\e803'; } /* '' */
+.royalicon-up-open-big:before { content: '\e804'; } /* '' */
+.royalicon-right-open-big:before { content: '\e805'; } /* '' */
+.royalicon-plus:before { content: '\e806'; } /* '' */
+.royalicon-plus-1:before { content: '\e807'; } /* '' */
+.royalicon-minus:before { content: '\e808'; } /* '' */
+.royalicon-minus-1:before { content: '\e809'; } /* '' */
+.royalicon-basket:before { content: '\e80a'; } /* '' */
+.royalicon-bell:before { content: '\e80b'; } /* '' */
+.royalicon-mail:before { content: '\e80c'; } /* '' */
+.royalicon-mail-1:before { content: '\e80d'; } /* '' */
+.royalicon-left-open:before { content: '\e80e'; } /* '' */
+.royalicon-left-open-big:before { content: '\e80f'; } /* '' */
+.royalicon-left-open-1:before { content: '\e810'; } /* '' */
+.royalicon-user:before { content: '\e811'; } /* '' */
+.royalicon-search:before { content: '\e812'; } /* '' */
+.royalicon-cancel:before { content: '\e813'; } /* '' */
+.royalicon-info-circled:before { content: '\e814'; } /* '' */
+.royalicon-fast-food:before { content: '\e815'; } /* '' */
+.royalicon-globe:before { content: '\e816'; } /* '' */
+.royalicon-bars-solid:before { content: '\e911'; } /* '' */
+.royalicon-cancel-1:before { content: '\e915'; } /* '' */
+.royalicon-twitter:before { content: '\f099'; } /* '' */
+.royalicon-facebook:before { content: '\f09a'; } /* '' */
+.royalicon-linkedin:before { content: '\f0e1'; } /* '' */
+.royalicon-bell-alt:before { content: '\f0f3'; } /* '' */
+.royalicon-angle-left:before { content: '\f104'; } /* '' */
+.royalicon-angle-right:before { content: '\f105'; } /* '' */
+.royalicon-angle-up:before { content: '\f106'; } /* '' */
+.royalicon-angle-down:before { content: '\f107'; } /* '' */
+.royalicon-cart-plus:before { content: '\f217'; } /* '' */
+.royalicon-whatsapp:before { content: '\f232'; } /* '' */
+.royalicon-vimeo:before { content: '\f27d'; } /* '' */
+.royalicon-shopping-bag:before { content: '\f290'; } /* '' */
+.royalicon-shopping-basket:before { content: '\f291'; } /* '' */
+.royalicon-envelope-open:before { content: '\f2b6'; } /* '' */
+.royalicon-envelope-open-o:before { content: '\f2b7'; } /* '' */
+.royalicon-linkedin-squared:before { content: '\f30c'; } /* '' */
+.royalicon-facebook-circled:before { content: '\f30d'; } /* '' */

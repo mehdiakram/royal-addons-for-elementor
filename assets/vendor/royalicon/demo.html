@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <meta charset="UTF-8">
+  <style>
+    html {
+      font-size: 100%;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+    a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px;
+    }
+    a:hover,
+    a:active {
+      outline: 0;
+    }
+    input {
+      margin: 0;
+      font-size: 100%;
+      vertical-align: middle;
+      *overflow: visible;
+      line-height: normal;
+    }
+    input::-moz-focus-inner {
+      padding: 0;
+      border: 0;
+    }
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+      color: #333;
+      background-color: #fff;
+    }
+    a {
+      color: #08c;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #005580;
+      text-decoration: underline;
+    }
+    .row {
+      margin-left: -20px;
+      *zoom: 1;
+    }
+    .row:before,
+    .row:after {
+      display: table;
+      content: "";
+      line-height: 0;
+    }
+    .row:after {
+      clear: both;
+    }
+    .span3 {
+      float: left;
+      min-height: 1px;
+      margin-left: 20px;
+      width: 220px;
+    }
+    .container {
+      width: 940px;
+      margin-right: auto;
+      margin-left: auto;
+      *zoom: 1;
+    }
+    .container:before,
+    .container:after {
+      display: table;
+      content: "";
+      line-height: 0;
+    }
+    .container:after {
+      clear: both;
+    }
+    small {
+      font-size: 85%;
+    }
+    h1 {
+      margin: 10px 0;
+      font-family: inherit;
+      font-weight: bold;
+      line-height: 20px;
+      color: inherit;
+      text-rendering: optimizelegibility;
+      line-height: 40px;
+      font-size: 38.5px;
+    }
+    h1 small {
+      font-weight: normal;
+      line-height: 1;
+      color: #999;
+      font-size: 24.5px;
+    }
+
+    body {
+      margin-top: 90px;
+    }
+    .header {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      margin-left: -480px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      padding-top: 10px;
+      z-index: 10;
+    }
+    .footer {
+      color: #ddd;
+      font-size: 12px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .footer a {
+      color: #ccc;
+      text-decoration: underline;
+    }
+    .the-icons {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    .switch {
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+      color: #666;
+    }
+    .switch input {
+      margin-right: 0.3em;
+    }
+    .codesOn .i-name {
+      display: none;
+    }
+    .codesOn .i-code {
+      display: inline;
+    }
+    .i-code {
+      display: none;
+    }
+    @font-face {
+      font-family: 'royalicon';
+      src: url('./font/royalicon.eot?99060667');
+      src: url('./font/royalicon.eot?99060667#iefix') format('embedded-opentype'),
+           url('./font/royalicon.woff?99060667') format('woff'),
+           url('./font/royalicon.ttf?99060667') format('truetype'),
+           url('./font/royalicon.svg?99060667#royalicon') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    .demo-icon {
+      font-family: "royalicon";
+      font-style: normal;
+      font-weight: normal;
+      speak: never;
+     
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+      /* opacity: .8; */
+     
+      /* For safety - reset parent styles, that can break glyph codes*/
+      font-variant: normal;
+      text-transform: none;
+     
+      /* fix buttons height, for twitter bootstrap */
+      line-height: 1em;
+     
+      /* Animation center compensation - margins should be symmetric */
+      /* remove if not needed */
+      margin-left: .2em;
+     
+      /* You can be more comfortable with increased icons size */
+      /* font-size: 120%; */
+     
+      /* Font smoothing. That was taken from TWBS */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+     
+      /* Uncomment for 3D effect */
+      /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    }
+    </style>
+    <link rel="stylesheet" href="css/animation.css"><!--[if IE 7]><link rel="stylesheet" href="css/" + font.fontname + "-ie7.css"><![endif]-->
+    <script>
+      function toggleCodes(on) {
+        var obj = document.getElementById('icons');
+      
+        if (on) {
+          obj.className += ' codesOn';
+        } else {
+          obj.className = obj.className.replace(' codesOn', '');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container header">
+      <h1>royalicon <small>font demo</small></h1>
+      <label class="switch">
+        <input type="checkbox" onclick="toggleCodes(this.checked)">show codes
+      </label>
+    </div>
+    <div class="container" id="icons">
+      <div class="row">
+        <div class="span3" title="Code: 0xe800">
+          <i class="demo-icon royalicon-down-open">&#xe800;</i> <span class="i-name">royalicon-down-open</span><span class="i-code">0xe800</span>
+        </div>
+        <div class="span3" title="Code: 0xe801">
+          <i class="demo-icon royalicon-right-open">&#xe801;</i> <span class="i-name">royalicon-right-open</span><span class="i-code">0xe801</span>
+        </div>
+        <div class="span3" title="Code: 0xe802">
+          <i class="demo-icon royalicon-down-open-big">&#xe802;</i> <span class="i-name">royalicon-down-open-big</span><span class="i-code">0xe802</span>
+        </div>
+        <div class="span3" title="Code: 0xe803">
+          <i class="demo-icon royalicon-up-open">&#xe803;</i> <span class="i-name">royalicon-up-open</span><span class="i-code">0xe803</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe804">
+          <i class="demo-icon royalicon-up-open-big">&#xe804;</i> <span class="i-name">royalicon-up-open-big</span><span class="i-code">0xe804</span>
+        </div>
+        <div class="span3" title="Code: 0xe805">
+          <i class="demo-icon royalicon-right-open-big">&#xe805;</i> <span class="i-name">royalicon-right-open-big</span><span class="i-code">0xe805</span>
+        </div>
+        <div class="span3" title="Code: 0xe806">
+          <i class="demo-icon royalicon-plus">&#xe806;</i> <span class="i-name">royalicon-plus</span><span class="i-code">0xe806</span>
+        </div>
+        <div class="span3" title="Code: 0xe807">
+          <i class="demo-icon royalicon-plus-1">&#xe807;</i> <span class="i-name">royalicon-plus-1</span><span class="i-code">0xe807</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe808">
+          <i class="demo-icon royalicon-minus">&#xe808;</i> <span class="i-name">royalicon-minus</span><span class="i-code">0xe808</span>
+        </div>
+        <div class="span3" title="Code: 0xe809">
+          <i class="demo-icon royalicon-minus-1">&#xe809;</i> <span class="i-name">royalicon-minus-1</span><span class="i-code">0xe809</span>
+        </div>
+        <div class="span3" title="Code: 0xe80a">
+          <i class="demo-icon royalicon-basket">&#xe80a;</i> <span class="i-name">royalicon-basket</span><span class="i-code">0xe80a</span>
+        </div>
+        <div class="span3" title="Code: 0xe80b">
+          <i class="demo-icon royalicon-bell">&#xe80b;</i> <span class="i-name">royalicon-bell</span><span class="i-code">0xe80b</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe80c">
+          <i class="demo-icon royalicon-mail">&#xe80c;</i> <span class="i-name">royalicon-mail</span><span class="i-code">0xe80c</span>
+        </div>
+        <div class="span3" title="Code: 0xe80d">
+          <i class="demo-icon royalicon-mail-1">&#xe80d;</i> <span class="i-name">royalicon-mail-1</span><span class="i-code">0xe80d</span>
+        </div>
+        <div class="span3" title="Code: 0xe80e">
+          <i class="demo-icon royalicon-left-open">&#xe80e;</i> <span class="i-name">royalicon-left-open</span><span class="i-code">0xe80e</span>
+        </div>
+        <div class="span3" title="Code: 0xe80f">
+          <i class="demo-icon royalicon-left-open-big">&#xe80f;</i> <span class="i-name">royalicon-left-open-big</span><span class="i-code">0xe80f</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe810">
+          <i class="demo-icon royalicon-left-open-1">&#xe810;</i> <span class="i-name">royalicon-left-open-1</span><span class="i-code">0xe810</span>
+        </div>
+        <div class="span3" title="Code: 0xe811">
+          <i class="demo-icon royalicon-user">&#xe811;</i> <span class="i-name">royalicon-user</span><span class="i-code">0xe811</span>
+        </div>
+        <div class="span3" title="Code: 0xe812">
+          <i class="demo-icon royalicon-search">&#xe812;</i> <span class="i-name">royalicon-search</span><span class="i-code">0xe812</span>
+        </div>
+        <div class="span3" title="Code: 0xe813">
+          <i class="demo-icon royalicon-cancel">&#xe813;</i> <span class="i-name">royalicon-cancel</span><span class="i-code">0xe813</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe814">
+          <i class="demo-icon royalicon-info-circled">&#xe814;</i> <span class="i-name">royalicon-info-circled</span><span class="i-code">0xe814</span>
+        </div>
+        <div class="span3" title="Code: 0xe815">
+          <i class="demo-icon royalicon-fast-food">&#xe815;</i> <span class="i-name">royalicon-fast-food</span><span class="i-code">0xe815</span>
+        </div>
+        <div class="span3" title="Code: 0xe816">
+          <i class="demo-icon royalicon-globe">&#xe816;</i> <span class="i-name">royalicon-globe</span><span class="i-code">0xe816</span>
+        </div>
+        <div class="span3" title="Code: 0xe911">
+          <i class="demo-icon royalicon-bars-solid">&#xe911;</i> <span class="i-name">royalicon-bars-solid</span><span class="i-code">0xe911</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe915">
+          <i class="demo-icon royalicon-cancel-1">&#xe915;</i> <span class="i-name">royalicon-cancel-1</span><span class="i-code">0xe915</span>
+        </div>
+        <div class="span3" title="Code: 0xf099">
+          <i class="demo-icon royalicon-twitter">&#xf099;</i> <span class="i-name">royalicon-twitter</span><span class="i-code">0xf099</span>
+        </div>
+        <div class="span3" title="Code: 0xf09a">
+          <i class="demo-icon royalicon-facebook">&#xf09a;</i> <span class="i-name">royalicon-facebook</span><span class="i-code">0xf09a</span>
+        </div>
+        <div class="span3" title="Code: 0xf0e1">
+          <i class="demo-icon royalicon-linkedin">&#xf0e1;</i> <span class="i-name">royalicon-linkedin</span><span class="i-code">0xf0e1</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xf0f3">
+          <i class="demo-icon royalicon-bell-alt">&#xf0f3;</i> <span class="i-name">royalicon-bell-alt</span><span class="i-code">0xf0f3</span>
+        </div>
+        <div class="span3" title="Code: 0xf104">
+          <i class="demo-icon royalicon-angle-left">&#xf104;</i> <span class="i-name">royalicon-angle-left</span><span class="i-code">0xf104</span>
+        </div>
+        <div class="span3" title="Code: 0xf105">
+          <i class="demo-icon royalicon-angle-right">&#xf105;</i> <span class="i-name">royalicon-angle-right</span><span class="i-code">0xf105</span>
+        </div>
+        <div class="span3" title="Code: 0xf106">
+          <i class="demo-icon royalicon-angle-up">&#xf106;</i> <span class="i-name">royalicon-angle-up</span><span class="i-code">0xf106</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xf107">
+          <i class="demo-icon royalicon-angle-down">&#xf107;</i> <span class="i-name">royalicon-angle-down</span><span class="i-code">0xf107</span>
+        </div>
+        <div class="span3" title="Code: 0xf217">
+          <i class="demo-icon royalicon-cart-plus">&#xf217;</i> <span class="i-name">royalicon-cart-plus</span><span class="i-code">0xf217</span>
+        </div>
+        <div class="span3" title="Code: 0xf232">
+          <i class="demo-icon royalicon-whatsapp">&#xf232;</i> <span class="i-name">royalicon-whatsapp</span><span class="i-code">0xf232</span>
+        </div>
+        <div class="span3" title="Code: 0xf27d">
+          <i class="demo-icon royalicon-vimeo">&#xf27d;</i> <span class="i-name">royalicon-vimeo</span><span class="i-code">0xf27d</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xf290">
+          <i class="demo-icon royalicon-shopping-bag">&#xf290;</i> <span class="i-name">royalicon-shopping-bag</span><span class="i-code">0xf290</span>
+        </div>
+        <div class="span3" title="Code: 0xf291">
+          <i class="demo-icon royalicon-shopping-basket">&#xf291;</i> <span class="i-name">royalicon-shopping-basket</span><span class="i-code">0xf291</span>
+        </div>
+        <div class="span3" title="Code: 0xf2b6">
+          <i class="demo-icon royalicon-envelope-open">&#xf2b6;</i> <span class="i-name">royalicon-envelope-open</span><span class="i-code">0xf2b6</span>
+        </div>
+        <div class="span3" title="Code: 0xf2b7">
+          <i class="demo-icon royalicon-envelope-open-o">&#xf2b7;</i> <span class="i-name">royalicon-envelope-open-o</span><span class="i-code">0xf2b7</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xf30c">
+          <i class="demo-icon royalicon-linkedin-squared">&#xf30c;</i> <span class="i-name">royalicon-linkedin-squared</span><span class="i-code">0xf30c</span>
+        </div>
+        <div class="span3" title="Code: 0xf30d">
+          <i class="demo-icon royalicon-facebook-circled">&#xf30d;</i> <span class="i-name">royalicon-facebook-circled</span><span class="i-code">0xf30d</span>
+        </div>
+      </div>
+    </div>
+    <div class="container footer">Generated by <a href="https://fontello.com">fontello.com</a></div>
+  </body>
+</html>

@@ -3,7 +3,7 @@
 Plugin Name: Royal Addons for Elementor
 Description: Royal Addons for Elementor is one of the best Elementor addons comes with free Elementor widgets & custom css feature.
 Requires Plugins: Elementor
-Version: 26.11.14
+Version: 26.11.15
 Author: Royal Technologies
 Author URI: https://www.royaltechbd.com
 License: GPLv2
@@ -31,7 +31,7 @@ if ( ! defined( 'ROYAL_ADDONS_VERSION' ) ) {
     if ( ! empty( $plugin_data['version'] ) ) {
         define( 'ROYAL_ADDONS_VERSION', $plugin_data['version'] );
     } else {
-        define('ROYAL_ADDONS_VERSION', '26.11.14');
+        define('ROYAL_ADDONS_VERSION', '26.11.15');
     }
 }
 

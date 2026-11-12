@@ -1,0 +1,845 @@
+/*********** Premium Animated Gradient ***********/
+/*************************************************/
+.elementor-element.royal-gradient-yes:not(.royal-gradient-wave-yes) {
+  background-size: 400% 400% !important;
+  -webkit-animation: Gradient 15s ease-in-out infinite;
+  animation: Gradient 15s ease-in-out infinite;
+}
+
+.elementor-element.royal-gradient-yes.royal-gradient-wave-yes {
+  z-index: 0;
+  background-size: 100% 100% !important;
+  position: relative;
+}
+
+.elementor-element.royal-gradient-yes.royal-gradient-wave-yes .royal-wave-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  -webkit-animation: pa-gradient-wave 5s ease-in-out infinite;
+  animation: pa-gradient-wave 5s ease-in-out infinite;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-webkit-keyframes pa-gradient-wave {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+
+  to {
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes pa-gradient-wave {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+
+  to {
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+/**************** Premium Particles Section *****************/
+/***********************************************************/
+.royal-particles-yes .tsparticles-canvas-el {
+  position: absolute !important;
+  top: 0;
+  height: 100%;
+}
+
+.royal-particles-yes .royal-global-particles {
+  position: absolute;
+}
+
+.royal-particles-yes .royal-global-particles .tsparticles-canvas-el {
+  position: fixed !important;
+}
+
+body.royal-particles-yes {
+  position: relative;
+}
+
+body.royal-particles-yes .royal-global-particles {
+  width: 100%;
+  height: 100%;
+}
+
+/**************** Premium Parallax Section *****************/
+/***********************************************************/
+.elementor-element.royal-prallax-multi {
+  overflow: hidden;
+}
+
+.royal-parallax-section-hide {
+  opacity: 0;
+}
+
+.elementor-editor-active .royal-parallax-section .elementor-empty-view {
+  z-index: 9999;
+}
+
+.elementor-element .royal-parallax-layer {
+  position: absolute;
+  display: block;
+  background-repeat: no-repeat;
+}
+
+.elementor-element .royal-parallax-layer img {
+  width: 100%;
+}
+
+.royal-parallax-no-trans {
+  -webkit-transition: background-position 70ms !important;
+  transition: background-position 70ms !important;
+}
+
+.parallax-no-trans {
+  -webkit-transform: none !important;
+  -ms-transform: none !important;
+  transform: none !important;
+}
+
+.royal-parallax-left {
+  left: 0;
+}
+
+.royal-parallax-center {
+  left: 50%;
+}
+
+.royal-parallax-center:not(.royal-parallax-vcenter) {
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.royal-parallax-center.royal-parallax-vcenter {
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.royal-parallax-right {
+  right: 0;
+}
+
+.royal-parallax-top {
+  top: 0;
+}
+
+.royal-parallax-vcenter {
+  top: 50%;
+}
+
+.royal-parallax-vcenter:not(.royal-parallax-center) {
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.royal-parallax-bottom {
+  bottom: 0;
+}
+
+.elementor-editor-active .elementor-element .royal-parallax-layer,
+.elementor-editor-active .elementor-element .royal-blob-layer,
+.elementor-editor-active .elementor-element .royal-lottie-layer {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.elementor-editor-active .elementor-element .royal-parallax-layer:hover,
+.elementor-editor-active .elementor-element .royal-blob-layer:hover,
+.elementor-editor-active .elementor-element .royal-lottie-layer:hover {
+  outline: 2px dashed #6ec1e4;
+}
+
+.elementor-editor-active .elementor-element .royal-parallax-layer.ui-draggable-dragging,
+.elementor-editor-active .elementor-element .royal-blob-layer.ui-draggable-dragging,
+.elementor-editor-active .elementor-element .royal-lottie-layer.ui-draggable-dragging {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+/**************** Premium Ken Burns Section *****************/
+/************************************************************/
+.elementor-element.cycle-slideshow {
+  overflow: hidden !important;
+}
+
+.royal-kenburns-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.elementor-element.cycle-slideshow .royal-kenburns-img {
+  position: absolute;
+  display: block;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  height: 100%;
+}
+
+.royal-kenburns-img.pa-fill {
+  object-fit: fill;
+}
+
+.royal-kenburns-img.pa-cover {
+  object-fit: cover;
+}
+
+.royal-kenburns-img.pa-contain {
+  object-fit: contain;
+}
+
+img.royal-kenburns-img {
+  -webkit-animation-duration: 6.5s;
+  animation-duration: 6.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.royal-kenburns-zoom-in {
+  -webkit-animation-name: kenburns-scale-in;
+  animation-name: kenburns-scale-in;
+}
+
+.royal-kenburns-zoom-out {
+  -webkit-animation-name: kenburns-scale-out;
+  animation-name: kenburns-scale-out;
+}
+
+img.kenburns-scale-infinite-in,
+img.kenburns-scale-infinite-out {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+img.kenburns-scale-infinite-in {
+  -webkit-animation-name: kenburns-scale-infinite-in;
+  animation-name: kenburns-scale-infinite-in;
+}
+
+img.kenburns-scale-infinite-out {
+  -webkit-animation-name: kenburns-scale-infinite-out;
+  animation-name: kenburns-scale-infinite-out;
+}
+
+.cycle-slideshow .royal-kenburns-center {
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+}
+
+.cycle-slideshow .royal-kenburns-cl {
+  -webkit-transform-origin: left center;
+  -ms-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.cycle-slideshow .royal-kenburns-cr {
+  -webkit-transform-origin: right center;
+  -ms-transform-origin: right center;
+  transform-origin: right center;
+}
+
+.cycle-slideshow .royal-kenburns-tc {
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+}
+
+.cycle-slideshow .royal-kenburns-bc {
+  -webkit-transform-origin: bottom center;
+  -ms-transform-origin: bottom center;
+  transform-origin: bottom center;
+}
+
+.cycle-slideshow .royal-kenburns-bl {
+  -webkit-transform-origin: bottom left;
+  -ms-transform-origin: bottom left;
+  transform-origin: bottom left;
+}
+
+.cycle-slideshow .royal-kenburns-tl {
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+}
+
+.cycle-slideshow .royal-kenburns-tr {
+  -webkit-transform-origin: top right;
+  -ms-transform-origin: top right;
+  transform-origin: top right;
+}
+
+.cycle-slideshow .royal-kenburns-br {
+  -webkit-transform-origin: bottom right;
+  -ms-transform-origin: bottom right;
+  transform-origin: bottom right;
+}
+
+@-webkit-keyframes kenburns-scale-in {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes kenburns-scale-in {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@-webkit-keyframes kenburns-scale-out {
+  from {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes kenburns-scale-out {
+  from {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes kenburns-scale-infinite-in {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes kenburns-scale-infinite-in {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes kenburns-scale-infinite-out {
+  0% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes kenburns-scale-infinite-out {
+  0% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+/********* Premium Lottie Animation *********/
+/********************************************/
+.royal-lottie-yes .royal-lottie-layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.royal-lottie-yes .royal-lottie-layer svg {
+  width: 120px;
+  height: 120px;
+}
+
+/************* Premium Global/Custom Cursor *************/
+/********************************************************/
+.royal-global-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+  cursor: none;
+  pointer-events: none;
+  text-align: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.royal-global-cursor .royal-cursor-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.royal-global-cursor .royal-cursor-follow-text {
+  display: inline;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.royal-global-cursor .royal-cursor-icon-svg {
+  display: block;
+}
+
+.royal-cursor-ftext .royal-global-cursor,
+.royal-cursor-fimage .royal-global-cursor {
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+.royal-cursor-icon .royal-global-cursor,
+.royal-cursor-img .royal-global-cursor,
+.royal-cursor-lottie .royal-global-cursor {
+  -webkit-transition: left 0s linear, top 0s linear;
+  transition: left 0s linear, top 0s linear;
+}
+
+.royal-pulse-yes {
+  -webkit-animation: hvr-pulse-grow 0.5s ease-in-out alternate infinite;
+  animation: hvr-pulse-grow 0.5s ease-in-out alternate infinite;
+}
+
+.royal-buzz-yes {
+  -webkit-animation: hvr-buzz 0.5s ease-in-out alternate infinite;
+  animation: hvr-buzz 0.5s ease-in-out alternate infinite;
+}
+
+.royal-cursor-not-active>.royal-global-cursor {
+  display: none !important;
+}
+
+.royal-gCursor-yes:not(.royal-gCursor-custom-yes):not(.royal-cursor-fimage):not(.royal-cursor-ftext) *,
+.royal-gCursor-yes:not(.royal-gCursor-custom-yes).magnet-effect * {
+  cursor: none !important;
+}
+
+.royal-cursor-icon-svg {
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.royal-cursor-dot .eicon-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.royal-image-hotspots-main-icons .magnet-spot {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: -webkit-calc(100% + 30px);
+  width: calc(100% + 30px);
+  height: -webkit-calc(100% + 30px);
+  height: calc(100% + 30px);
+}
+
+/* Buzz */
+@-webkit-keyframes hvr-buzz {
+  50% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+}
+
+@keyframes hvr-buzz {
+  50% {
+    -webkit-transform: translateX(3px) rotate(3deg);
+    transform: translateX(3px) rotate(3deg);
+  }
+
+  100% {
+    -webkit-transform: translateX(-3px) rotate(-3deg);
+    transform: translateX(-3px) rotate(-3deg);
+  }
+}
+
+/* Pulse Grow */
+@-webkit-keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+/************** Premium Badge **************/
+/*******************************************/
+.royal-gbadge-yes {
+  position: relative;
+  /**Flag*/
+  /**Circle*/
+  /**Triangle*/
+  /**Bookmark*/
+  /**Custom*/
+}
+
+.royal-gbadge-yes .royal-badge-icon,
+.royal-gbadge-yes .royal-lottie-animation {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+
+.royal-gbadge-yes .royal-lottie-animation svg,
+.royal-gbadge-yes .royal-badge-icon svg,
+.royal-gbadge-yes .royal-gbadge-svg svg {
+  width: 100%;
+  height: 100%;
+}
+
+.royal-gbadge-yes .royal-badge-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.royal-gbadge-yes .royal-gbadge-svg {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+}
+
+.royal-gbadge-yes .royal-badge-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.royal-gbadge-yes .royal-badge-icon {
+  display: inline-block;
+  text-align: center;
+}
+
+.royal-gbadge-yes.royal-gbadge-column .royal-badge-text {
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.royal-gbadge-yes.royal-gbadge-column .royal-badge-icon {
+  margin-top: 5px;
+}
+
+.royal-gbadge-yes.royal-gbadge-row .royal-badge-icon {
+  text-indent: 5px;
+}
+
+.royal-gbadge-yes .royal-global-badge {
+  position: absolute;
+  z-index: 5;
+}
+
+.royal-gbadge-yes.royal-gbadge-stripe>.royal-global-badge {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  width: 15em;
+  overflow: hidden;
+  height: 15em;
+}
+
+.royal-gbadge-yes.royal-gbadge-stripe>.royal-global-badge .royal-badge-container {
+  text-align: center;
+  width: 150%;
+  -webkit-transform: translateY(-50%) translateX(-50%) translateX(35px) rotate(-45deg);
+  -ms-transform: translateY(-50%) translateX(-50%) translateX(35px) rotate(-45deg);
+  transform: translateY(-50%) translateX(-50%) translateX(35px) rotate(-45deg);
+  margin-top: 35px;
+  font-size: 13px;
+  line-height: 2;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.royal-gbadge-yes.royal-gbadge-stripe.royal-gbadge-left>.royal-global-badge {
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+}
+
+.royal-gbadge-yes.royal-gbadge-tri>.royal-global-badge .royal-badge-container,
+.royal-gbadge-yes.royal-gbadge-bookmark>.royal-global-badge .royal-badge-container,
+.royal-gbadge-yes.royal-gbadge-flag>.royal-global-badge .royal-badge-container {
+  background: transparent;
+}
+
+.royal-gbadge-yes.royal-gbadge-flag>.royal-global-badge {
+  text-align: center;
+  border-radius: 4px 4px 0 4px;
+  top: 10%;
+}
+
+.royal-gbadge-yes.royal-gbadge-flag>.royal-global-badge::before,
+.royal-gbadge-yes.royal-gbadge-flag>.royal-global-badge::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 100%;
+  border-bottom: 8px solid transparent;
+}
+
+.royal-gbadge-yes.royal-gbadge-flag>.royal-global-badge::before {
+  right: 0;
+}
+
+.royal-gbadge-yes.royal-gbadge-flag .royal-badge-container {
+  padding: 3px 15px;
+}
+
+.royal-gbadge-yes.royal-gbadge-flag.royal-gbadge-left>.royal-global-badge {
+  left: -8px;
+}
+
+.royal-gbadge-yes.royal-gbadge-flag.royal-gbadge-left>.royal-global-badge::after {
+  left: 0;
+  border-right: 8px solid rgba(0, 0, 0, 0.2);
+}
+
+.royal-gbadge-yes.royal-gbadge-flag.royal-gbadge-right>.royal-global-badge {
+  right: -8px;
+}
+
+.royal-gbadge-yes.royal-gbadge-flag.royal-gbadge-right>.royal-global-badge::after {
+  right: 0;
+  border-left: 8px solid rgba(0, 0, 0, 0.2);
+}
+
+.royal-gbadge-yes.royal-gbadge-circle>.royal-global-badge .royal-badge-container {
+  min-width: 4em;
+  min-height: 4em;
+  border-radius: 50%;
+}
+
+.royal-gbadge-yes.royal-gbadge-tri .royal-badge-text {
+  white-space: nowrap;
+}
+
+.royal-gbadge-yes.royal-gbadge-tri>.royal-global-badge {
+  width: 0;
+  height: 0;
+}
+
+.royal-gbadge-yes.royal-gbadge-tri>.royal-global-badge .royal-badge-container {
+  position: absolute;
+}
+
+.royal-gbadge-yes.royal-gbadge-tri.royal-gbadge-left>.royal-global-badge {
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-right: 100px solid transparent;
+}
+
+.royal-gbadge-yes.royal-gbadge-tri.royal-gbadge-left>.royal-global-badge .royal-badge-container {
+  left: 15px;
+  bottom: 53px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.royal-gbadge-yes.royal-gbadge-tri.royal-gbadge-right>.royal-global-badge {
+  border-bottom: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-left: 100px solid transparent;
+}
+
+.royal-gbadge-yes.royal-gbadge-tri.royal-gbadge-right>.royal-global-badge .royal-badge-container {
+  left: 56px;
+  top: 20px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.royal-gbadge-yes.royal-gbadge-bookmark:not(.royal-gbadge-column)>.royal-global-badge .royal-badge-container {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.royal-gbadge-yes.royal-gbadge-bookmark>.royal-global-badge {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 32px;
+  line-height: 32px;
+  padding: 20px 0;
+}
+
+.royal-gbadge-yes.royal-gbadge-bookmark>.royal-global-badge::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border-top: 0;
+  border-bottom: 8px solid transparent;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+}
+
+.royal-gbadge-yes.royal-gbadge-bookmark>.royal-global-badge .royal-badge-icon {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.royal-gbadge-yes.royal-gbadge-tri .royal-badge-text,
+.royal-gbadge-yes.royal-gbadge-bookmark .royal-badge-text {
+  white-space: nowrap;
+}
+
+.royal-gbadge-yes.royal-gbadge-custom>.royal-global-badge .royal-badge-container {
+  min-width: 2em;
+  min-height: 2em;
+  line-height: 2em;
+  padding: 0.5em 0.8em;
+}
